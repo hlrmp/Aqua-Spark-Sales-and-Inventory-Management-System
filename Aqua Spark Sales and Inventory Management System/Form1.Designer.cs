@@ -31,13 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             button1 = new Button();
             label1 = new Label();
+            button2 = new Button();
             SuspendLayout();
             // 
             // button1
             // 
             button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button1.BackColor = Color.Cyan;
-            button1.Location = new Point(654, 299);
+            button1.BackColor = Color.Lime;
+            button1.Location = new Point(239, 251);
             button1.Name = "button1";
             button1.Size = new Size(172, 70);
             button1.TabIndex = 0;
@@ -59,6 +60,18 @@
             label1.Text = "aqua spark sales and inventory management system";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            button2.BackColor = Color.Red;
+            button2.Location = new Point(447, 251);
+            button2.Name = "button2";
+            button2.Size = new Size(172, 70);
+            button2.TabIndex = 3;
+            button2.Text = "exit";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 19F);
@@ -67,11 +80,12 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(873, 422);
+            Controls.Add(button2);
             Controls.Add(label1);
             Controls.Add(button1);
             DoubleBuffered = true;
             Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            FormBorderStyle = FormBorderStyle.Fixed3D;
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4);
             Name = "Form1";
             Text = "Main Form";
@@ -84,5 +98,6 @@
 
         private Button button1;
         private Label label1;
+        private Button button2;
     }
 }

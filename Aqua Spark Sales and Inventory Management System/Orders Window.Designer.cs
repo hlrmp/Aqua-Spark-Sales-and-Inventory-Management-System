@@ -84,7 +84,7 @@
             textBox1.Location = new Point(557, 74);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(210, 33);
+            textBox1.Size = new Size(170, 23);
             textBox1.TabIndex = 31;
             // 
             // pictureBox1
@@ -125,6 +125,7 @@
             Controls.Add(dataGridView_order);
             Controls.Add(button1);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Orders_Window";
             Text = "Orders_Window";
             WindowState = FormWindowState.Maximized;
