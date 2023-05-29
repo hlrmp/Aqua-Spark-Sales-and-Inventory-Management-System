@@ -6,6 +6,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         {
             InitializeComponent();
         }
+
         log_in_window lw = new log_in_window();
 
         private void button1_Click(object sender, EventArgs e)

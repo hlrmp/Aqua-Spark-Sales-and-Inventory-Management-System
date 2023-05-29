@@ -52,7 +52,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Stencil", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(-16, 30);
+            label1.Location = new Point(-39, 32);
             label1.Name = "label1";
             label1.Size = new Size(995, 42);
             label1.TabIndex = 2;

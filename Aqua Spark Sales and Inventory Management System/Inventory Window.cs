@@ -10,20 +10,19 @@ using System.Windows.Forms;
 
 namespace Aqua_Spark_Sales_and_Inventory_Management_System
 {
-    public partial class main_window : Form
+    public partial class Inventory_Wiindow : Form
     {
-        public main_window()
+        public Inventory_Wiindow()
         {
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)  // inventory window
+        private void button1_Click(object sender, EventArgs e)  // HOME
         {
-            Inventory_Wiindow iw = new Inventory_Wiindow();
-            iw.Show();
+            main_window mw = new main_window();
+            mw.Show();
             this.Hide();
-
-        }  // inventory window
+        } // HOME
 
 
     }

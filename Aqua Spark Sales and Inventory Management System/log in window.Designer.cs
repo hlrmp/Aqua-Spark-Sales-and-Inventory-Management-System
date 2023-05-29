@@ -140,6 +140,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Location = new Point(100, 100);
             Name = "log_in_window";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "log_in_window";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
