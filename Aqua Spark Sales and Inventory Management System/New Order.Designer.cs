@@ -91,7 +91,7 @@
             // monthCalendar1
             // 
             monthCalendar1.Location = new Point(363, 69);
-            monthCalendar1.Margin = new Padding(10, 10, 10, 10);
+            monthCalendar1.Margin = new Padding(10);
             monthCalendar1.Name = "monthCalendar1";
             monthCalendar1.TabIndex = 39;
             // 
@@ -234,7 +234,7 @@
             Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Name = "New_Order";
-            StartPosition = FormStartPosition.CenterParent;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "New_Order";
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
