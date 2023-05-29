@@ -37,9 +37,9 @@
             // 
             button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button1.BackColor = Color.Cyan;
-            button1.Location = new Point(690, 356);
+            button1.Location = new Point(654, 299);
             button1.Name = "button1";
-            button1.Size = new Size(153, 44);
+            button1.Size = new Size(172, 70);
             button1.TabIndex = 0;
             button1.Text = "LOG IN";
             button1.UseVisualStyleBackColor = false;
@@ -75,6 +75,7 @@
             Margin = new Padding(4);
             Name = "Form1";
             Text = "Main Form";
+            WindowState = FormWindowState.Maximized;
             ResumeLayout(false);
             PerformLayout();
         }

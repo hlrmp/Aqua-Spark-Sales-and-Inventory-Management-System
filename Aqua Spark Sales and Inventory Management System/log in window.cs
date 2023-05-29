@@ -27,6 +27,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private void button1_Click(object sender, EventArgs e)   // log in button
         {
 
+
             if (textBox1_username.Text == "")
             {
                 MessageBox.Show(" Enter your user name ");
@@ -37,68 +38,84 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             }
             else
             {
+               
 
-                try   // try
+                try
                 {
 
                     string username, password;
 
-                    // username = textBox1_username.Text;
-                    //  password = textBox2_password.Text;
+                    username = textBox1_username.Text;
+                    password = textBox2_password.Text;
 
 
-                    string quer = "SELECT * FROM log in WHERE username = '" + textBox1_username.Text + "' AND password = '" + textBox2_password.Text + "'";
-                    //  SqlDataAdapter sd = new SqlDataAdapter(querry);
+                    string quer = "SELECT * FROM log in WHERE user name = '" + textBox1_username.Text + "' AND password = '" + textBox2_password.Text + "'";
+                    //  SqlDataAdapter sd = new SqlDataAdapter(quer,conn);
 
                     DataTable table = new DataTable(quer);
-                    //sd.fill(table);
+                    //sd.Fill(table);
 
-                    string querlognum = "SELECT * FROM log in WHERE lid IN('1')"; // user name and password 1 
-                    string querlognum2 = "SELECT * FROM log in WHERE lid IN('1')"; // user name and password 2
+                    //string querlognum = "SELECT * FROM log in WHERE lid IN('1')"; // user name and password 1 
+                    //string querlognum2 = "SELECT * FROM log in WHERE lid IN('1')"; // user name and password 2
                     //   string queruser = " SELECT USER NAME FROM log in WHERE condition";
 
                     int c = 1;
                     int a = 1;
 
-                    if (table.Rows.Count >= 0)  // if correct
+                    if (table.Rows.Count >= 0 )
                     {
                         username = textBox1_username.Text;
                         password = textBox2_password.Text;
 
-                        if (username == querlognum && password == querlognum)
-                        { // if user name & pass == to cashier
+                        textBox1_username.Clear();
+                        textBox2_password.Clear();
+
+                        MessageBox.Show("log in succesfully", "thank you", MessageBoxButtons.OK);
+
+                        //  if (username == querlognum && password == querlognum)
+                        // { // if user name & pass == to cashier
 
 
-                            string querlogcount = " INSERT INTO CASHIER ACC (LOG COUNT) VALUES(c);";
-                        }
+                        //string querlogcount = " INSERT INTO CASHIER ACC (LOG COUNT) VALUES(c);";
+                        //    }
 
-                        else if (username == querlognum2 && password == querlognum2) // if user name & pass == to admin
-                        {
+                        //  if (username == querlognum2 && password == querlognum2) // if user name & pass == to admin
+                        //  {
 
-                            string querlogcount2 = " INSERT INTO ADMIN ACC (LOG COUNT) VALUES(a);";
-                        }
+                        //       string querlogcount2 = " INSERT INTO ADMIN ACC (LOG COUNT) VALUES(a);";
+                        //  }
 
-                        //  fmain.Show();   // show main form 
-                        //     this.Hide();   // hide this form 
+                        main_window fmain = new main_window();    // main window instance
+
+                        fmain.Show();   // show main form 
+                        this.Hide();   // hide this form 
 
 
-                    } // if correct
-
-                    else  // else not correct
+                    }
+                    else
                     {
                         MessageBox.Show("user name or password incorrect", "error", MessageBoxButtons.OK);
                         textBox1_username.Clear();
                         textBox2_password.Clear();
 
-                    }   // else not correct
+                    }
 
-                } // try
-
-                catch (Exception ) // catch
+                }
+                catch (Exception )
                 {
-                    MessageBox.Show(" invalid input");
-                } //catch
+                    
+                 
+                    
+                        MessageBox.Show("error", "error", MessageBoxButtons.OK);
+                      
+              
+                }
+                //     finally
+                //    {
+                //         conn.Close();
+                //    }
             }
+
         }  // log in button 
 
 
@@ -108,9 +125,9 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         {
             if (button2 != null)
             {
-                Form1 f1 = new Form1();
+               
                 this.Hide();
-                f1.Show();
+                
 
 
             }

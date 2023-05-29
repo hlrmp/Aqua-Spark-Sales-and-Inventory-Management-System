@@ -42,33 +42,33 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(115, 133);
+            label1.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(76, 118);
             label1.Name = "label1";
-            label1.Size = new Size(75, 16);
+            label1.Size = new Size(96, 19);
             label1.TabIndex = 2;
             label1.Text = "user name";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(120, 180);
+            label2.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(76, 173);
             label2.Name = "label2";
-            label2.Size = new Size(70, 16);
+            label2.Size = new Size(91, 19);
             label2.TabIndex = 3;
             label2.Text = "password";
             // 
             // textBox1_username
             // 
-            textBox1_username.Location = new Point(196, 126);
+            textBox1_username.Location = new Point(187, 114);
             textBox1_username.Name = "textBox1_username";
             textBox1_username.Size = new Size(206, 23);
             textBox1_username.TabIndex = 4;
             // 
             // textBox2_password
             // 
-            textBox2_password.Location = new Point(196, 180);
+            textBox2_password.Location = new Point(187, 173);
             textBox2_password.Name = "textBox2_password";
             textBox2_password.Size = new Size(206, 23);
             textBox2_password.TabIndex = 5;
@@ -90,7 +90,7 @@
             // 
             button1.BackColor = Color.FromArgb(255, 192, 128);
             button1.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(221, 306);
+            button1.Location = new Point(235, 295);
             button1.Name = "button1";
             button1.Size = new Size(116, 37);
             button1.TabIndex = 8;
@@ -103,11 +103,11 @@
             button2.BackColor = Color.Red;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Arial Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(0, -1);
+            button2.Location = new Point(702, -1);
             button2.Name = "button2";
-            button2.Size = new Size(24, 30);
+            button2.Size = new Size(39, 30);
             button2.TabIndex = 9;
-            button2.Text = "<";
+            button2.Text = "X";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
@@ -115,7 +115,7 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Top;
             pictureBox1.Image = Properties.Resources.Cpture;
-            pictureBox1.Location = new Point(494, 133);
+            pictureBox1.Location = new Point(466, 114);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(220, 218);
             pictureBox1.TabIndex = 10;
@@ -127,7 +127,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(738, 405);
             Controls.Add(pictureBox1);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -137,6 +137,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
+            Location = new Point(100, 100);
             Name = "log_in_window";
             Text = "log_in_window";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
