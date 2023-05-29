@@ -84,6 +84,7 @@
             Controls.Add(label1);
             Controls.Add(button1);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Sales_window";
             Text = "Sales_window";
             WindowState = FormWindowState.Maximized;

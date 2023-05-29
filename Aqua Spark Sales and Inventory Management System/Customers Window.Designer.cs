@@ -80,17 +80,17 @@
             // 
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(532, 71);
+            textBox1.Location = new Point(554, 71);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(217, 35);
+            textBox1.Size = new Size(182, 23);
             textBox1.TabIndex = 32;
             // 
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox1.Image = Properties.Resources.search;
-            pictureBox1.Location = new Point(720, 71);
+            pictureBox1.Location = new Point(742, 71);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(29, 23);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -110,7 +110,7 @@
             Controls.Add(dataGridView_customers);
             Controls.Add(button1);
             DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.Fixed3D;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Customers_Window";
             Text = "Customers_Window";
             WindowState = FormWindowState.Maximized;

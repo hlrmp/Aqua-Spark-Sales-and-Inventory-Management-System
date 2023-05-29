@@ -55,10 +55,10 @@
             listBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 18;
-            listBox1.Location = new Point(212, 97);
+            listBox1.Location = new Point(212, 151);
             listBox1.Margin = new Padding(6);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(602, 364);
+            listBox1.Size = new Size(602, 310);
             listBox1.TabIndex = 21;
             // 
             // button1
@@ -171,7 +171,7 @@
             Controls.Add(button5);
             DoubleBuffered = true;
             Font = new Font("Stencil", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            FormBorderStyle = FormBorderStyle.Fixed3D;
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4);
             Name = "main_window";
             Text = "main_window";

@@ -112,7 +112,7 @@
             Controls.Add(button1);
             Controls.Add(dataGridView_inventory);
             DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.Fixed3D;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Inventory_Wiindow";
             Text = "Inventory_Wiindow";
             WindowState = FormWindowState.Maximized;
