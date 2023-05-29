@@ -25,6 +25,15 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         }  // inventory window
 
+        private void button2_Click(object sender, EventArgs e) // sales window
+        {
+            Sales_window sw = new Sales_window();
+            sw.Show();
+            this.Hide();
+
+        } // sales window
+
+
 
     }
 }

@@ -43,7 +43,7 @@
             // 
             button5.BackColor = Color.FromArgb(128, 128, 255);
             button5.Location = new Point(36, 161);
-            button5.Margin = new Padding(4, 4, 4, 4);
+            button5.Margin = new Padding(4);
             button5.Name = "button5";
             button5.Size = new Size(114, 67);
             button5.TabIndex = 18;
@@ -56,7 +56,7 @@
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 18;
             listBox1.Location = new Point(212, 97);
-            listBox1.Margin = new Padding(6, 6, 6, 6);
+            listBox1.Margin = new Padding(6);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(602, 346);
             listBox1.TabIndex = 21;
@@ -66,7 +66,7 @@
             button1.Anchor = AnchorStyles.Right;
             button1.BackColor = Color.FromArgb(255, 192, 128);
             button1.Location = new Point(850, 64);
-            button1.Margin = new Padding(4, 4, 4, 4);
+            button1.Margin = new Padding(4);
             button1.Name = "button1";
             button1.Size = new Size(163, 72);
             button1.TabIndex = 22;
@@ -78,7 +78,7 @@
             button4.Anchor = AnchorStyles.Right;
             button4.BackColor = Color.FromArgb(255, 192, 128);
             button4.Location = new Point(850, 161);
-            button4.Margin = new Padding(4, 4, 4, 4);
+            button4.Margin = new Padding(4);
             button4.Name = "button4";
             button4.Size = new Size(163, 72);
             button4.TabIndex = 23;
@@ -91,12 +91,13 @@
             button2.Anchor = AnchorStyles.Right;
             button2.BackColor = Color.FromArgb(255, 192, 128);
             button2.Location = new Point(850, 265);
-            button2.Margin = new Padding(4, 4, 4, 4);
+            button2.Margin = new Padding(4);
             button2.Name = "button2";
             button2.Size = new Size(163, 72);
             button2.TabIndex = 24;
             button2.Text = "sales info";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button8
             // 
@@ -104,7 +105,7 @@
             button8.BackColor = Color.Red;
             button8.Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button8.Location = new Point(850, 456);
-            button8.Margin = new Padding(4, 4, 4, 4);
+            button8.Margin = new Padding(4);
             button8.Name = "button8";
             button8.Size = new Size(163, 70);
             button8.TabIndex = 26;
@@ -116,7 +117,7 @@
             button3.Anchor = AnchorStyles.Right;
             button3.BackColor = Color.FromArgb(255, 192, 128);
             button3.Location = new Point(850, 361);
-            button3.Margin = new Padding(4, 4, 4, 4);
+            button3.Margin = new Padding(4);
             button3.Name = "button3";
             button3.Size = new Size(163, 72);
             button3.TabIndex = 25;
@@ -142,7 +143,7 @@
             // 
             button6.BackColor = Color.FromArgb(128, 128, 255);
             button6.Location = new Point(36, 270);
-            button6.Margin = new Padding(4, 4, 4, 4);
+            button6.Margin = new Padding(4);
             button6.Name = "button6";
             button6.Size = new Size(114, 67);
             button6.TabIndex = 28;
@@ -168,7 +169,7 @@
             DoubleBuffered = true;
             Font = new Font("Stencil", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.Fixed3D;
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "main_window";
             Text = "main_window";
             WindowState = FormWindowState.Maximized;
