@@ -41,7 +41,7 @@
             // 
             // button5
             // 
-            button5.BackColor = Color.FromArgb(128, 128, 255);
+            button5.BackColor = Color.FromArgb(192, 192, 255);
             button5.Location = new Point(36, 161);
             button5.Margin = new Padding(4);
             button5.Name = "button5";
@@ -103,8 +103,8 @@
             // button8
             // 
             button8.Anchor = AnchorStyles.Right;
-            button8.BackColor = Color.Red;
-            button8.Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button8.BackColor = Color.FromArgb(0, 0, 192);
+            button8.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button8.Location = new Point(850, 465);
             button8.Margin = new Padding(4);
             button8.Name = "button8";
@@ -144,7 +144,7 @@
             // 
             // button6
             // 
-            button6.BackColor = Color.FromArgb(128, 128, 255);
+            button6.BackColor = Color.FromArgb(192, 192, 255);
             button6.Location = new Point(36, 270);
             button6.Margin = new Padding(4);
             button6.Name = "button6";

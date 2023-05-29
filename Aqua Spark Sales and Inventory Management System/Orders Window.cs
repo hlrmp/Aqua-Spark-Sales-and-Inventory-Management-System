@@ -24,5 +24,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             this.Hide();
 
         } // HOME WINDOWS
+
+
     }
 }
