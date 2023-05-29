@@ -37,7 +37,7 @@
             // button1
             // 
             button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button1.BackColor = Color.Lime;
+            button1.BackColor = Color.Blue;
             button1.Location = new Point(239, 251);
             button1.Name = "button1";
             button1.Size = new Size(172, 70);
