@@ -36,6 +36,7 @@
             button1 = new Button();
             button2 = new Button();
             pictureBox1 = new PictureBox();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -90,9 +91,9 @@
             // 
             button1.BackColor = Color.FromArgb(255, 192, 128);
             button1.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(235, 295);
+            button1.Location = new Point(232, 293);
             button1.Name = "button1";
-            button1.Size = new Size(116, 37);
+            button1.Size = new Size(148, 39);
             button1.TabIndex = 8;
             button1.Text = "log in";
             button1.UseVisualStyleBackColor = false;
@@ -115,11 +116,21 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Top;
             pictureBox1.Image = Properties.Resources.Cpture;
-            pictureBox1.Location = new Point(466, 114);
+            pictureBox1.Location = new Point(460, 100);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(220, 218);
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Stencil", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(159, 32);
+            label3.Name = "label3";
+            label3.Size = new Size(409, 34);
+            label3.TabIndex = 11;
+            label3.Text = "wellcome have a good day";
             // 
             // log_in_window
             // 
@@ -128,6 +139,7 @@
             BackColor = SystemColors.ActiveCaption;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(738, 405);
+            Controls.Add(label3);
             Controls.Add(pictureBox1);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -157,5 +169,6 @@
         private Button button1;
         private Button button2;
         private PictureBox pictureBox1;
+        private Label label3;
     }
 }

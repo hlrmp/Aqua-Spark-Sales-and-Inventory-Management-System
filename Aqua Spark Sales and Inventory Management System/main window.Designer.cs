@@ -58,26 +58,27 @@
             listBox1.Location = new Point(212, 97);
             listBox1.Margin = new Padding(6);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(602, 346);
+            listBox1.Size = new Size(602, 364);
             listBox1.TabIndex = 21;
             // 
             // button1
             // 
             button1.Anchor = AnchorStyles.Right;
             button1.BackColor = Color.FromArgb(255, 192, 128);
-            button1.Location = new Point(850, 64);
+            button1.Location = new Point(850, 73);
             button1.Margin = new Padding(4);
             button1.Name = "button1";
             button1.Size = new Size(163, 72);
             button1.TabIndex = 22;
             button1.Text = "orders";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button4
             // 
             button4.Anchor = AnchorStyles.Right;
             button4.BackColor = Color.FromArgb(255, 192, 128);
-            button4.Location = new Point(850, 161);
+            button4.Location = new Point(850, 170);
             button4.Margin = new Padding(4);
             button4.Name = "button4";
             button4.Size = new Size(163, 72);
@@ -90,7 +91,7 @@
             // 
             button2.Anchor = AnchorStyles.Right;
             button2.BackColor = Color.FromArgb(255, 192, 128);
-            button2.Location = new Point(850, 265);
+            button2.Location = new Point(850, 274);
             button2.Margin = new Padding(4);
             button2.Name = "button2";
             button2.Size = new Size(163, 72);
@@ -104,25 +105,27 @@
             button8.Anchor = AnchorStyles.Right;
             button8.BackColor = Color.Red;
             button8.Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button8.Location = new Point(850, 456);
+            button8.Location = new Point(850, 465);
             button8.Margin = new Padding(4);
             button8.Name = "button8";
             button8.Size = new Size(163, 70);
             button8.TabIndex = 26;
             button8.Text = "log out";
             button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
             // button3
             // 
             button3.Anchor = AnchorStyles.Right;
             button3.BackColor = Color.FromArgb(255, 192, 128);
-            button3.Location = new Point(850, 361);
+            button3.Location = new Point(850, 370);
             button3.Margin = new Padding(4);
             button3.Name = "button3";
             button3.Size = new Size(163, 72);
             button3.TabIndex = 25;
             button3.Text = "Customers";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // label1
             // 
@@ -156,7 +159,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1029, 540);
+            ClientSize = new Size(1029, 559);
             Controls.Add(button6);
             Controls.Add(label1);
             Controls.Add(button8);
