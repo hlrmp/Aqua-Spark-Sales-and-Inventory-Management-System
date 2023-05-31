@@ -42,7 +42,7 @@
             // button5
             // 
             button5.BackColor = Color.FromArgb(192, 192, 255);
-            button5.Location = new Point(36, 161);
+            button5.Location = new Point(36, 97);
             button5.Margin = new Padding(4);
             button5.Name = "button5";
             button5.Size = new Size(114, 67);
@@ -58,14 +58,14 @@
             listBox1.Location = new Point(212, 151);
             listBox1.Margin = new Padding(6);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(602, 310);
+            listBox1.Size = new Size(602, 328);
             listBox1.TabIndex = 21;
             // 
             // button1
             // 
             button1.Anchor = AnchorStyles.Right;
             button1.BackColor = Color.FromArgb(255, 192, 128);
-            button1.Location = new Point(850, 73);
+            button1.Location = new Point(853, 36);
             button1.Margin = new Padding(4);
             button1.Name = "button1";
             button1.Size = new Size(163, 72);
@@ -78,7 +78,7 @@
             // 
             button4.Anchor = AnchorStyles.Right;
             button4.BackColor = Color.FromArgb(255, 192, 128);
-            button4.Location = new Point(850, 170);
+            button4.Location = new Point(853, 148);
             button4.Margin = new Padding(4);
             button4.Name = "button4";
             button4.Size = new Size(163, 72);
@@ -91,7 +91,7 @@
             // 
             button2.Anchor = AnchorStyles.Right;
             button2.BackColor = Color.FromArgb(255, 192, 128);
-            button2.Location = new Point(850, 274);
+            button2.Location = new Point(853, 264);
             button2.Margin = new Padding(4);
             button2.Name = "button2";
             button2.Size = new Size(163, 72);
@@ -103,9 +103,9 @@
             // button8
             // 
             button8.Anchor = AnchorStyles.Right;
-            button8.BackColor = Color.FromArgb(0, 0, 192);
+            button8.BackColor = Color.FromArgb(0, 192, 192);
             button8.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button8.Location = new Point(850, 465);
+            button8.Location = new Point(853, 487);
             button8.Margin = new Padding(4);
             button8.Name = "button8";
             button8.Size = new Size(163, 70);
@@ -118,7 +118,7 @@
             // 
             button3.Anchor = AnchorStyles.Right;
             button3.BackColor = Color.FromArgb(255, 192, 128);
-            button3.Location = new Point(850, 370);
+            button3.Location = new Point(853, 370);
             button3.Margin = new Padding(4);
             button3.Name = "button3";
             button3.Size = new Size(163, 72);
@@ -133,7 +133,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Stencil", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
+            label1.ForeColor = Color.Cyan;
             label1.Location = new Point(-21, 11);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
@@ -145,7 +145,7 @@
             // button6
             // 
             button6.BackColor = Color.FromArgb(192, 192, 255);
-            button6.Location = new Point(36, 270);
+            button6.Location = new Point(36, 244);
             button6.Margin = new Padding(4);
             button6.Name = "button6";
             button6.Size = new Size(114, 67);
@@ -159,7 +159,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1029, 559);
+            ClientSize = new Size(1029, 581);
             Controls.Add(button6);
             Controls.Add(label1);
             Controls.Add(button8);
