@@ -37,6 +37,10 @@
             button3 = new Button();
             label1 = new Label();
             button6 = new Button();
+            button7 = new Button();
+            checkedListBox1 = new CheckedListBox();
+            buttonpay = new Button();
+            buttoncncel = new Button();
             SuspendLayout();
             // 
             // button5
@@ -49,17 +53,21 @@
             button5.TabIndex = 18;
             button5.Text = "items";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // listBox1
             // 
             listBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            listBox1.BorderStyle = BorderStyle.FixedSingle;
             listBox1.FormattingEnabled = true;
+            listBox1.HorizontalScrollbar = true;
             listBox1.ItemHeight = 18;
             listBox1.Location = new Point(212, 151);
             listBox1.Margin = new Padding(6);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(602, 328);
+            listBox1.Size = new Size(602, 326);
             listBox1.TabIndex = 21;
+            listBox1.Visible = false;
             // 
             // button1
             // 
@@ -150,8 +158,55 @@
             button6.Name = "button6";
             button6.Size = new Size(114, 67);
             button6.TabIndex = 28;
-            button6.Text = "list ";
+            button6.Text = "sell";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
+            // 
+            // button7
+            // 
+            button7.BackColor = Color.FromArgb(192, 192, 255);
+            button7.Location = new Point(36, 395);
+            button7.Margin = new Padding(4);
+            button7.Name = "button7";
+            button7.Size = new Size(114, 67);
+            button7.TabIndex = 29;
+            button7.Text = "add order";
+            button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
+            // 
+            // checkedListBox1
+            // 
+            checkedListBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            checkedListBox1.FormattingEnabled = true;
+            checkedListBox1.Location = new Point(212, 152);
+            checkedListBox1.Name = "checkedListBox1";
+            checkedListBox1.Size = new Size(602, 184);
+            checkedListBox1.TabIndex = 30;
+            checkedListBox1.Visible = false;
+            // 
+            // buttonpay
+            // 
+            buttonpay.Anchor = AnchorStyles.Bottom;
+            buttonpay.BackColor = Color.FromArgb(128, 255, 128);
+            buttonpay.Location = new Point(460, 486);
+            buttonpay.Name = "buttonpay";
+            buttonpay.Size = new Size(131, 42);
+            buttonpay.TabIndex = 31;
+            buttonpay.Text = "pay";
+            buttonpay.UseVisualStyleBackColor = false;
+            buttonpay.Visible = false;
+            // 
+            // buttoncncel
+            // 
+            buttoncncel.Anchor = AnchorStyles.Bottom;
+            buttoncncel.BackColor = Color.FromArgb(255, 128, 128);
+            buttoncncel.Location = new Point(622, 487);
+            buttoncncel.Name = "buttoncncel";
+            buttoncncel.Size = new Size(131, 42);
+            buttoncncel.TabIndex = 32;
+            buttoncncel.Text = "cancel";
+            buttoncncel.UseVisualStyleBackColor = false;
+            buttoncncel.Visible = false;
             // 
             // main_window
             // 
@@ -160,6 +215,10 @@
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1029, 581);
+            Controls.Add(buttoncncel);
+            Controls.Add(buttonpay);
+            Controls.Add(checkedListBox1);
+            Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(label1);
             Controls.Add(button8);
@@ -191,5 +250,9 @@
         private Button button3;
         private Label label1;
         private Button button6;
+        private Button button7;
+        private CheckedListBox checkedListBox1;
+        private Button buttonpay;
+        private Button buttoncncel;
     }
 }

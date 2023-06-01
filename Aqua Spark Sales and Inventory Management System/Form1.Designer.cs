@@ -37,7 +37,7 @@
             // button1
             // 
             button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button1.BackColor = Color.Blue;
+            button1.BackColor = Color.FromArgb(128, 255, 128);
             button1.Location = new Point(239, 251);
             button1.Name = "button1";
             button1.Size = new Size(172, 70);
@@ -63,7 +63,7 @@
             // button2
             // 
             button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button2.BackColor = Color.Red;
+            button2.BackColor = Color.FromArgb(255, 128, 128);
             button2.Location = new Point(447, 251);
             button2.Name = "button2";
             button2.Size = new Size(172, 70);

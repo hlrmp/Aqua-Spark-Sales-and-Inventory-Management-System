@@ -60,5 +60,33 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             this.Hide();
 
         } // customers windows 
+
+        private void button5_Click(object sender, EventArgs e) // list button
+        {
+            listBox1.Show();
+            buttonpay.Hide();
+            buttoncncel.Hide();
+            checkedListBox1.Hide();
+        }// list button
+
+        private void button6_Click(object sender, EventArgs e) // sell button
+        {
+            checkedListBox1.Show();
+            buttonpay.Show();
+            buttoncncel.Show();
+            listBox1.Hide();
+        }// sell button
+
+        private void button7_Click(object sender, EventArgs e) // add order
+        {
+            New_Order no = new New_Order();
+            no.Show();
+
+            checkedListBox1.Hide();
+            buttonpay.Hide();
+            buttoncncel.Hide();
+            listBox1.Hide();
+
+        }// add order
     }
 }
