@@ -84,14 +84,14 @@
             listBox1.Location = new Point(270, 131);
             listBox1.Margin = new Padding(6);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(602, 308);
+            listBox1.Size = new Size(602, 422);
             listBox1.TabIndex = 31;
             // 
             // button2
             // 
             button2.Anchor = AnchorStyles.Right;
             button2.BackColor = Color.FromArgb(255, 192, 128);
-            button2.Location = new Point(935, 29);
+            button2.Location = new Point(935, 92);
             button2.Margin = new Padding(4);
             button2.Name = "button2";
             button2.Size = new Size(163, 72);
@@ -103,7 +103,7 @@
             // 
             button4.Anchor = AnchorStyles.Right;
             button4.BackColor = Color.FromArgb(255, 192, 128);
-            button4.Location = new Point(935, 131);
+            button4.Location = new Point(935, 194);
             button4.Margin = new Padding(4);
             button4.Name = "button4";
             button4.Size = new Size(163, 72);
@@ -115,7 +115,7 @@
             // 
             button3.Anchor = AnchorStyles.Right;
             button3.BackColor = Color.FromArgb(255, 192, 128);
-            button3.Location = new Point(935, 249);
+            button3.Location = new Point(935, 312);
             button3.Margin = new Padding(4);
             button3.Name = "button3";
             button3.Size = new Size(163, 72);
@@ -127,7 +127,7 @@
             // 
             button6.Anchor = AnchorStyles.Right;
             button6.BackColor = Color.FromArgb(255, 192, 128);
-            button6.Location = new Point(935, 367);
+            button6.Location = new Point(935, 430);
             button6.Margin = new Padding(4);
             button6.Name = "button6";
             button6.Size = new Size(163, 72);
@@ -140,7 +140,7 @@
             button8.Anchor = AnchorStyles.Right;
             button8.BackColor = Color.FromArgb(0, 192, 192);
             button8.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button8.Location = new Point(935, 487);
+            button8.Location = new Point(935, 550);
             button8.Margin = new Padding(4);
             button8.Name = "button8";
             button8.Size = new Size(163, 70);
@@ -154,7 +154,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1143, 570);
+            ClientSize = new Size(1143, 696);
             Controls.Add(button8);
             Controls.Add(button6);
             Controls.Add(button3);
@@ -164,9 +164,10 @@
             Controls.Add(button1);
             Controls.Add(button5);
             Controls.Add(label1);
+            DoubleBuffered = true;
             Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "Home_window";
             Text = "Home_window";
             ResumeLayout(false);

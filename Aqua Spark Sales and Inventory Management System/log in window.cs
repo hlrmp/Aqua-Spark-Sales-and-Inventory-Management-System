@@ -20,9 +20,9 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         }
 
 
-        SqlConnection conn = new SqlConnection("Data Source=REICHEL28\\SQLEXPRESS01;Initial Catalog=db_form;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("@Data Source=REICHEL28\\SQLEXPRESS01;Initial Catalog=db_form;Integrated Security=True");
         // (@"Data Source=REICHEL28\SQLEXPRESS01;Initial Catalog=db_form;Integrated Security=True");
-
+        conn.Open();
 
         private void button1_Click(object sender, EventArgs e)   // log in button
         {
@@ -38,13 +38,13 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             }
             else
             {
-                main_window fmain = new main_window();    // main window instance
-                fmain.Show();   // show main form 
-                this.Hide();   // hide this form 
-            }
+            //    main_window fmain = new main_window();    // main window instance
+              //  fmain.Show();   // show main form 
+               // this.Hide();   // hide this form 
+        //    }
 
 
-            /*     try
+            try
                  {
 
                      string username, password;
@@ -53,24 +53,33 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                      password = textBox2_password.Text;
 
 
-                     string quer = "SELECT * FROM log in WHERE user name = '" + textBox1_username.Text + "' AND password = '" + textBox2_password.Text + "'";
-                     SqlDataAdapter sd = new SqlDataAdapter(quer,conn);
+                     string querusername = ("SELECT [USER NAME]  FROM [log in] where lid = 1");
+                     string querpass = "SELECT PASSWORD FROM [log in] where lid = 1 ";
 
-                     DataTable table = new DataTable(quer);
-                     sd.Fill(table);
 
-                     //string querlognum = "SELECT * FROM log in WHERE lid IN('1')"; // user name and password 1 
-                     //string querlognum2 = "SELECT * FROM log in WHERE lid IN('1')"; // user name and password 2
-                     //   string queruser = " SELECT USER NAME FROM log in WHERE condition";
 
-                     int c = 1;
+                    string querusername2 = "SELECT USER NAME FROM log in WHERE lid = 2 ";
+                    string querpass2 = "SELECT PASSWORD FROM log in WHERE lid = 2 ";
+
+
+
+                    // SqlDataAdapter sd = new SqlDataAdapter(quer,conn);
+
+                    //DataTable table = new DataTable(quer);
+                    //sd.Fill(table);
+
+                    //string querlognum = "SELECT * FROM log in WHERE lid IN('1')"; // user name and password 1 
+                    //string querlognum2 = "SELECT * FROM log in WHERE lid IN('1')"; // user name and password 2
+                    //   string queruser = " SELECT USER NAME FROM log in WHERE condition";
+
+                    int c = 1;
                      int a = 1;
 
 
-                     if (table.Rows.Count > 0 )
+                     if (username == (querusername) && password == (querpass))   // admin acc
                      {
-                         username = textBox1_username.Text;
-                         password = textBox2_password.Text;
+                      //   username = textBox1_username.Text;
+                        // password = textBox2_password.Text;
 
                          textBox1_username.Clear();
                          textBox2_password.Clear();
@@ -94,14 +103,27 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
                          fmain.Show();   // show main form 
                          this.Hide();   // hide this form 
+                     } // admin acc
 
+                     else if (username.Equals(querusername2) && password.Equals(querpass2))  // cashier acc
+                    {
+                        textBox1_username.Clear();
+                        textBox2_password.Clear();
 
-                     }
+                        MessageBox.Show("log in succesfully", "thank you", MessageBoxButtons.OK);
+
+                        Home_window hm = new Home_window();   // home window
+                        hm.Show();     // show home form 
+                        this.Hide();    // hide this form 
+
+                    } // caher acc
                      else
                      {
                          MessageBox.Show("user name or password incorrect", "error", MessageBoxButtons.OK);
                          textBox1_username.Clear();
                          textBox2_password.Clear();
+
+                        MessageBox.Show(querpass + querusername);
 
                      }
 
@@ -121,7 +143,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                  //    }
              }
 
-                  */
+                  
 
         }  // log in button 
 
