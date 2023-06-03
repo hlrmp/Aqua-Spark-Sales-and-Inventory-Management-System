@@ -34,6 +34,7 @@
             textBox1 = new TextBox();
             pictureBox1 = new PictureBox();
             button2 = new Button();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView_order).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -104,13 +105,25 @@
             button2.Anchor = AnchorStyles.Left;
             button2.BackColor = Color.FromArgb(255, 192, 128);
             button2.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(46, 162);
+            button2.Location = new Point(46, 193);
             button2.Name = "button2";
             button2.Size = new Size(127, 60);
             button2.TabIndex = 33;
             button2.Text = "Add orders";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
+            // 
+            // button3
+            // 
+            button3.Anchor = AnchorStyles.Left;
+            button3.BackColor = Color.FromArgb(255, 192, 128);
+            button3.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.Location = new Point(46, 316);
+            button3.Name = "button3";
+            button3.Size = new Size(127, 60);
+            button3.TabIndex = 34;
+            button3.Text = "edit";
+            button3.UseVisualStyleBackColor = false;
             // 
             // Orders_Window
             // 
@@ -119,6 +132,7 @@
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(805, 450);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(pictureBox1);
             Controls.Add(textBox1);
@@ -144,5 +158,6 @@
         private TextBox textBox1;
         private PictureBox pictureBox1;
         private Button button2;
+        private Button button3;
     }
 }

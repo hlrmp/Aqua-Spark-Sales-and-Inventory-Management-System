@@ -46,7 +46,7 @@
             // 
             button5.Anchor = AnchorStyles.Left;
             button5.BackColor = Color.FromArgb(192, 192, 255);
-            button5.Location = new Point(36, 41);
+            button5.Location = new Point(36, 93);
             button5.Margin = new Padding(4);
             button5.Name = "button5";
             button5.Size = new Size(114, 67);
@@ -73,7 +73,7 @@
             // 
             button1.Anchor = AnchorStyles.Right;
             button1.BackColor = Color.FromArgb(255, 192, 128);
-            button1.Location = new Point(853, 36);
+            button1.Location = new Point(853, 88);
             button1.Margin = new Padding(4);
             button1.Name = "button1";
             button1.Size = new Size(163, 72);
@@ -86,7 +86,7 @@
             // 
             button4.Anchor = AnchorStyles.Right;
             button4.BackColor = Color.FromArgb(255, 192, 128);
-            button4.Location = new Point(853, 153);
+            button4.Location = new Point(853, 197);
             button4.Margin = new Padding(4);
             button4.Name = "button4";
             button4.Size = new Size(163, 72);
@@ -99,7 +99,7 @@
             // 
             button2.Anchor = AnchorStyles.Right;
             button2.BackColor = Color.FromArgb(255, 192, 128);
-            button2.Location = new Point(853, 280);
+            button2.Location = new Point(853, 310);
             button2.Margin = new Padding(4);
             button2.Name = "button2";
             button2.Size = new Size(163, 72);
@@ -113,7 +113,7 @@
             button8.Anchor = AnchorStyles.Right;
             button8.BackColor = Color.FromArgb(0, 192, 192);
             button8.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button8.Location = new Point(853, 519);
+            button8.Location = new Point(853, 543);
             button8.Margin = new Padding(4);
             button8.Name = "button8";
             button8.Size = new Size(163, 70);
@@ -126,7 +126,7 @@
             // 
             button3.Anchor = AnchorStyles.Right;
             button3.BackColor = Color.FromArgb(255, 192, 128);
-            button3.Location = new Point(853, 405);
+            button3.Location = new Point(853, 424);
             button3.Margin = new Padding(4);
             button3.Name = "button3";
             button3.Size = new Size(163, 72);
@@ -140,21 +140,21 @@
             label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Stencil", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Cyan;
-            label1.Location = new Point(-10, 36);
+            label1.Location = new Point(-22, 22);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(995, 42);
+            label1.Size = new Size(1059, 114);
             label1.TabIndex = 27;
-            label1.Text = "aqua spark sales and inventory management system";
+            label1.Text = "     aqua spark \r\nsales and inventory management system";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // button6
             // 
             button6.Anchor = AnchorStyles.Left;
             button6.BackColor = Color.FromArgb(192, 192, 255);
-            button6.Location = new Point(36, 158);
+            button6.Location = new Point(36, 202);
             button6.Margin = new Padding(4);
             button6.Name = "button6";
             button6.Size = new Size(114, 67);
@@ -167,7 +167,7 @@
             // 
             button7.Anchor = AnchorStyles.Left;
             button7.BackColor = Color.FromArgb(192, 192, 255);
-            button7.Location = new Point(36, 285);
+            button7.Location = new Point(36, 315);
             button7.Margin = new Padding(4);
             button7.Name = "button7";
             button7.Size = new Size(114, 67);

@@ -51,13 +51,13 @@
             label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Stencil", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(-39, 32);
+            label1.Location = new Point(-134, 27);
             label1.Name = "label1";
-            label1.Size = new Size(995, 42);
+            label1.Size = new Size(1071, 114);
             label1.TabIndex = 2;
-            label1.Text = "aqua spark sales and inventory management system";
+            label1.Text = "       aqua spark \r\n sales and inventory management system";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // button2
