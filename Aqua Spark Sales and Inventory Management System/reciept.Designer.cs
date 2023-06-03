@@ -37,6 +37,7 @@
             label7 = new Label();
             dateTimePicker1 = new DateTimePicker();
             label8 = new Label();
+            button1 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -118,12 +119,24 @@
             label8.TabIndex = 64;
             label8.Text = "DATE AND TIME";
             // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(255, 128, 128);
+            button1.Location = new Point(314, 436);
+            button1.Name = "button1";
+            button1.Size = new Size(33, 23);
+            button1.TabIndex = 65;
+            button1.Text = "X";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // reciept
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(345, 457);
+            Controls.Add(button1);
             Controls.Add(label8);
             Controls.Add(dateTimePicker1);
             Controls.Add(label7);
@@ -135,7 +148,9 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "reciept";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "reciept";
+        
             ResumeLayout(false);
             PerformLayout();
         }
@@ -151,5 +166,6 @@
         private Label label7;
         private DateTimePicker dateTimePicker1;
         private Label label8;
+        private Button button1;
     }
 }

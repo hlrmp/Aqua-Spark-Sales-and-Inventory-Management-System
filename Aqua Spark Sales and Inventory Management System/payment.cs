@@ -29,5 +29,12 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             this.Hide();
 
         }// cancel button
+
+        private void button2_Click(object sender, EventArgs e)  // PAY BUTTON
+        {
+            reciept r = new reciept();
+            r.Show();
+
+        } // PAY BUTTON
     }
 }
