@@ -38,15 +38,15 @@
             label1 = new Label();
             button6 = new Button();
             button7 = new Button();
-            checkedListBox1 = new CheckedListBox();
             buttonpay = new Button();
             buttoncncel = new Button();
             SuspendLayout();
             // 
             // button5
             // 
+            button5.Anchor = AnchorStyles.Left;
             button5.BackColor = Color.FromArgb(192, 192, 255);
-            button5.Location = new Point(36, 97);
+            button5.Location = new Point(36, 41);
             button5.Margin = new Padding(4);
             button5.Name = "button5";
             button5.Size = new Size(114, 67);
@@ -86,7 +86,7 @@
             // 
             button4.Anchor = AnchorStyles.Right;
             button4.BackColor = Color.FromArgb(255, 192, 128);
-            button4.Location = new Point(853, 148);
+            button4.Location = new Point(853, 153);
             button4.Margin = new Padding(4);
             button4.Name = "button4";
             button4.Size = new Size(163, 72);
@@ -99,7 +99,7 @@
             // 
             button2.Anchor = AnchorStyles.Right;
             button2.BackColor = Color.FromArgb(255, 192, 128);
-            button2.Location = new Point(853, 264);
+            button2.Location = new Point(853, 280);
             button2.Margin = new Padding(4);
             button2.Name = "button2";
             button2.Size = new Size(163, 72);
@@ -113,7 +113,7 @@
             button8.Anchor = AnchorStyles.Right;
             button8.BackColor = Color.FromArgb(0, 192, 192);
             button8.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button8.Location = new Point(853, 487);
+            button8.Location = new Point(853, 519);
             button8.Margin = new Padding(4);
             button8.Name = "button8";
             button8.Size = new Size(163, 70);
@@ -126,7 +126,7 @@
             // 
             button3.Anchor = AnchorStyles.Right;
             button3.BackColor = Color.FromArgb(255, 192, 128);
-            button3.Location = new Point(853, 370);
+            button3.Location = new Point(853, 405);
             button3.Margin = new Padding(4);
             button3.Name = "button3";
             button3.Size = new Size(163, 72);
@@ -142,7 +142,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Stencil", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Cyan;
-            label1.Location = new Point(-21, 11);
+            label1.Location = new Point(-10, 36);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(995, 42);
@@ -152,8 +152,9 @@
             // 
             // button6
             // 
+            button6.Anchor = AnchorStyles.Left;
             button6.BackColor = Color.FromArgb(192, 192, 255);
-            button6.Location = new Point(36, 244);
+            button6.Location = new Point(36, 158);
             button6.Margin = new Padding(4);
             button6.Name = "button6";
             button6.Size = new Size(114, 67);
@@ -164,8 +165,9 @@
             // 
             // button7
             // 
+            button7.Anchor = AnchorStyles.Left;
             button7.BackColor = Color.FromArgb(192, 192, 255);
-            button7.Location = new Point(36, 395);
+            button7.Location = new Point(36, 285);
             button7.Margin = new Padding(4);
             button7.Name = "button7";
             button7.Size = new Size(114, 67);
@@ -173,16 +175,6 @@
             button7.Text = "add order";
             button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
-            // 
-            // checkedListBox1
-            // 
-            checkedListBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            checkedListBox1.FormattingEnabled = true;
-            checkedListBox1.Location = new Point(212, 152);
-            checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(602, 184);
-            checkedListBox1.TabIndex = 30;
-            checkedListBox1.Visible = false;
             // 
             // buttonpay
             // 
@@ -217,7 +209,6 @@
             ClientSize = new Size(1029, 581);
             Controls.Add(buttoncncel);
             Controls.Add(buttonpay);
-            Controls.Add(checkedListBox1);
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(label1);
@@ -251,7 +242,6 @@
         private Label label1;
         private Button button6;
         private Button button7;
-        private CheckedListBox checkedListBox1;
         private Button buttonpay;
         private Button buttoncncel;
     }

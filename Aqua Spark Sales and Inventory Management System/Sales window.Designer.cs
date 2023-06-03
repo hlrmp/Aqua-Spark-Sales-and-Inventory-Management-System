@@ -37,7 +37,7 @@
             // button1
             // 
             button1.Anchor = AnchorStyles.Left;
-            button1.BackColor = Color.FromArgb(255, 192, 128);
+            button1.BackColor = Color.FromArgb(128, 255, 128);
             button1.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             button1.Location = new Point(46, 112);
             button1.Name = "button1";
@@ -67,10 +67,10 @@
             dataGridView_sales.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView_sales.BackgroundColor = SystemColors.ControlLight;
             dataGridView_sales.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_sales.Location = new Point(195, 93);
+            dataGridView_sales.Location = new Point(244, 144);
             dataGridView_sales.Name = "dataGridView_sales";
             dataGridView_sales.RowTemplate.Height = 25;
-            dataGridView_sales.Size = new Size(564, 325);
+            dataGridView_sales.Size = new Size(409, 232);
             dataGridView_sales.TabIndex = 30;
             // 
             // Sales_window

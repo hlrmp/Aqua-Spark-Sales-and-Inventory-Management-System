@@ -41,7 +41,7 @@
             // button1
             // 
             button1.Anchor = AnchorStyles.Left;
-            button1.BackColor = Color.FromArgb(255, 192, 128);
+            button1.BackColor = Color.FromArgb(128, 255, 128);
             button1.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             button1.Location = new Point(46, 74);
             button1.Name = "button1";
@@ -59,7 +59,7 @@
             dataGridView_order.Location = new Point(244, 144);
             dataGridView_order.Name = "dataGridView_order";
             dataGridView_order.RowTemplate.Height = 25;
-            dataGridView_order.Size = new Size(523, 294);
+            dataGridView_order.Size = new Size(409, 232);
             dataGridView_order.TabIndex = 25;
             // 
             // label1
@@ -79,24 +79,25 @@
             // 
             // textBox1
             // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(557, 74);
+            textBox1.Location = new Point(490, 71);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(170, 23);
+            textBox1.Size = new Size(237, 23);
             textBox1.TabIndex = 31;
             // 
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox1.Image = Properties.Resources.search;
-            pictureBox1.Location = new Point(733, 74);
+            pictureBox1.Location = new Point(733, 71);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(34, 23);
+            pictureBox1.Size = new Size(29, 23);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 32;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // button2
             // 

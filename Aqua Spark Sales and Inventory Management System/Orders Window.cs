@@ -31,5 +31,10 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             nw.Show();
 
         }// add order button 
+
+        private void pictureBox1_Click(object sender, EventArgs e) // seaarch 
+        {
+
+        }// seaarch 
     }
 }

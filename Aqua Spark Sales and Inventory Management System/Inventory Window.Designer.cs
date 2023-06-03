@@ -44,13 +44,13 @@
             dataGridView_inventory.Location = new Point(227, 80);
             dataGridView_inventory.Name = "dataGridView_inventory";
             dataGridView_inventory.RowTemplate.Height = 25;
-            dataGridView_inventory.Size = new Size(547, 337);
+            dataGridView_inventory.Size = new Size(489, 307);
             dataGridView_inventory.TabIndex = 0;
             // 
             // button1
             // 
             button1.Anchor = AnchorStyles.Left;
-            button1.BackColor = Color.FromArgb(255, 192, 128);
+            button1.BackColor = Color.FromArgb(128, 255, 128);
             button1.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             button1.Location = new Point(47, 92);
             button1.Name = "button1";

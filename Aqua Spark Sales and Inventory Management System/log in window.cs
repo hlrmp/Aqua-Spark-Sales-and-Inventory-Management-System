@@ -22,7 +22,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         SqlConnection conn = new SqlConnection(@"Data Source=REICHEL28\\SQLEXPRESS01;Initial Catalog=db_form;Integrated Security=True");
         // (@"Data Source=REICHEL28\SQLEXPRESS01;Initial Catalog=db_form;Integrated Security=True");
-       // conn.Open();
+        
 
         private void button1_Click(object sender, EventArgs e)   // log in button
         {

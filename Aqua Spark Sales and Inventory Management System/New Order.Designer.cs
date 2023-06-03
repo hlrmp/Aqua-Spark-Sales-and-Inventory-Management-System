@@ -42,9 +42,9 @@
             numericUpDown2 = new NumericUpDown();
             numericUpDown3 = new NumericUpDown();
             button1 = new Button();
-            button2 = new Button();
             label5 = new Label();
             label6 = new Label();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
@@ -167,7 +167,7 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.Red;
+            button1.BackColor = Color.FromArgb(255, 128, 128);
             button1.Location = new Point(169, 422);
             button1.Name = "button1";
             button1.Size = new Size(108, 39);
@@ -175,16 +175,6 @@
             button1.Text = "cancel";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.Lime;
-            button2.Location = new Point(404, 422);
-            button2.Name = "button2";
-            button2.Size = new Size(108, 39);
-            button2.TabIndex = 50;
-            button2.Text = "add";
-            button2.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -207,6 +197,17 @@
             label6.Size = new Size(281, 22);
             label6.TabIndex = 52;
             label6.Text = "AQUA SPARK NEW ORDERS";
+            
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(128, 255, 128);
+            button2.Location = new Point(404, 422);
+            button2.Name = "button2";
+            button2.Size = new Size(108, 39);
+            button2.TabIndex = 50;
+            button2.Text = "add";
+            button2.UseVisualStyleBackColor = false;
             // 
             // New_Order
             // 
@@ -259,8 +260,8 @@
         private NumericUpDown numericUpDown2;
         private NumericUpDown numericUpDown3;
         private Button button1;
-        private Button button2;
         private Label label5;
         private Label label6;
+        private Button button2;
     }
 }

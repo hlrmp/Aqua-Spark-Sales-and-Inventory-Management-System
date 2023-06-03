@@ -37,6 +37,7 @@
             button3 = new Button();
             button6 = new Button();
             button8 = new Button();
+            button7 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -46,7 +47,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Stencil", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Cyan;
-            label1.Location = new Point(-19, 9);
+            label1.Location = new Point(-16, 30);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(995, 42);
@@ -56,24 +57,27 @@
             // 
             // button5
             // 
+            button5.Anchor = AnchorStyles.Left;
             button5.BackColor = Color.FromArgb(192, 192, 255);
-            button5.Location = new Point(70, 124);
+            button5.Location = new Point(59, 81);
             button5.Margin = new Padding(4);
             button5.Name = "button5";
             button5.Size = new Size(114, 67);
             button5.TabIndex = 29;
             button5.Text = "items";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.Left;
             button1.BackColor = Color.FromArgb(192, 192, 255);
-            button1.Location = new Point(70, 229);
+            button1.Location = new Point(59, 232);
             button1.Margin = new Padding(4);
             button1.Name = "button1";
             button1.Size = new Size(114, 67);
             button1.TabIndex = 30;
-            button1.Text = "list";
+            button1.Text = "sell";
             button1.UseVisualStyleBackColor = false;
             // 
             // listBox1
@@ -86,12 +90,13 @@
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(602, 422);
             listBox1.TabIndex = 31;
+            listBox1.Visible = false;
             // 
             // button2
             // 
             button2.Anchor = AnchorStyles.Right;
             button2.BackColor = Color.FromArgb(255, 192, 128);
-            button2.Location = new Point(935, 92);
+            button2.Location = new Point(935, 76);
             button2.Margin = new Padding(4);
             button2.Name = "button2";
             button2.Size = new Size(163, 72);
@@ -138,7 +143,7 @@
             // button8
             // 
             button8.Anchor = AnchorStyles.Right;
-            button8.BackColor = Color.FromArgb(0, 192, 192);
+            button8.BackColor = Color.FromArgb(128, 255, 128);
             button8.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button8.Location = new Point(935, 550);
             button8.Margin = new Padding(4);
@@ -148,6 +153,19 @@
             button8.Text = "log out";
             button8.UseVisualStyleBackColor = false;
             // 
+            // button7
+            // 
+            button7.Anchor = AnchorStyles.Left;
+            button7.BackColor = Color.FromArgb(192, 192, 255);
+            button7.Location = new Point(59, 388);
+            button7.Margin = new Padding(4);
+            button7.Name = "button7";
+            button7.Size = new Size(114, 67);
+            button7.TabIndex = 37;
+            button7.Text = "add orders";
+            button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
+            // 
             // Home_window
             // 
             AutoScaleDimensions = new SizeF(10F, 19F);
@@ -155,6 +173,7 @@
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1143, 696);
+            Controls.Add(button7);
             Controls.Add(button8);
             Controls.Add(button6);
             Controls.Add(button3);
@@ -185,5 +204,6 @@
         private Button button3;
         private Button button6;
         private Button button8;
+        private Button button7;
     }
 }

@@ -66,23 +66,28 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             listBox1.Show();
             buttonpay.Hide();
             buttoncncel.Hide();
-            checkedListBox1.Hide();
+
         }// list button
 
+        payment py = new payment();
         private void button6_Click(object sender, EventArgs e) // sell button
         {
-            checkedListBox1.Show();
-            buttonpay.Show();
-            buttoncncel.Show();
+
+
+            py.Show();
+            no.Hide();
+
+
             listBox1.Hide();
         }// sell button
 
+        New_Order no = new New_Order();
         private void button7_Click(object sender, EventArgs e) // add order
         {
-            New_Order no = new New_Order();
-            no.Show();
 
-            checkedListBox1.Hide();
+            no.Show();
+            py.Hide();
+
             buttonpay.Hide();
             buttoncncel.Hide();
             listBox1.Hide();

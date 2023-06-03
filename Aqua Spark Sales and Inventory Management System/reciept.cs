@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Aqua_Spark_Sales_and_Inventory_Management_System
 {
-    public partial class side_window : Form
+    public partial class reciept : Form
     {
-        public side_window()
+        public reciept()
         {
             InitializeComponent();
         }

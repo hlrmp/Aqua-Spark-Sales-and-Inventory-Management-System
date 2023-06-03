@@ -23,7 +23,9 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             textBox2.Clear();
             textBox3.Clear();
 
-            this.Close();
+            this.Hide();
         }// cancel button
+
+       
     }
 }
