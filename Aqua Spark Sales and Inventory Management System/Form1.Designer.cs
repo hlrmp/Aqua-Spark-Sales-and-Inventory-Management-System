@@ -38,6 +38,7 @@
             // 
             button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button1.BackColor = Color.FromArgb(128, 255, 128);
+            button1.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             button1.Location = new Point(239, 251);
             button1.Name = "button1";
             button1.Size = new Size(172, 70);
@@ -52,7 +53,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
+            label1.ForeColor = Color.Cyan;
             label1.Location = new Point(-134, 27);
             label1.Name = "label1";
             label1.Size = new Size(1071, 114);
@@ -64,6 +65,7 @@
             // 
             button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button2.BackColor = Color.FromArgb(255, 128, 128);
+            button2.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             button2.Location = new Point(447, 251);
             button2.Name = "button2";
             button2.Size = new Size(172, 70);

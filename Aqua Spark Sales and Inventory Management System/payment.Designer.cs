@@ -41,12 +41,10 @@
             label4 = new Label();
             label5 = new Label();
             textBox1 = new TextBox();
-            dataGridView1 = new DataGridView();
-            ITEMNAME = new DataGridViewTextBoxColumn();
-            QUANTITY = new DataGridViewTextBoxColumn();
             label7 = new Label();
             button6 = new Button();
             button7 = new Button();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -167,32 +165,6 @@
             textBox1.Size = new Size(151, 23);
             textBox1.TabIndex = 63;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ITEMNAME, QUANTITY });
-            dataGridView1.Location = new Point(421, 112);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(342, 247);
-            dataGridView1.TabIndex = 64;
-            // 
-            // ITEMNAME
-            // 
-            ITEMNAME.HeaderText = "ITEM NAME";
-            ITEMNAME.Name = "ITEMNAME";
-            ITEMNAME.ReadOnly = true;
-            // 
-            // QUANTITY
-            // 
-            QUANTITY.HeaderText = "QUANTITY";
-            QUANTITY.Name = "QUANTITY";
-            QUANTITY.ReadOnly = true;
-            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -207,7 +179,7 @@
             // button6
             // 
             button6.BackColor = Color.FromArgb(128, 255, 128);
-            button6.Location = new Point(583, 307);
+            button6.Location = new Point(556, 337);
             button6.Name = "button6";
             button6.Size = new Size(75, 23);
             button6.TabIndex = 66;
@@ -218,12 +190,21 @@
             // button7
             // 
             button7.BackColor = Color.FromArgb(255, 128, 128);
-            button7.Location = new Point(678, 308);
+            button7.Location = new Point(652, 337);
             button7.Name = "button7";
             button7.Size = new Size(75, 23);
             button7.TabIndex = 67;
             button7.Text = "DELETE";
             button7.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(450, 108);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(312, 263);
+            dataGridView1.TabIndex = 68;
             // 
             // payment
             // 
@@ -234,7 +215,6 @@
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(label7);
-            Controls.Add(dataGridView1);
             Controls.Add(textBox1);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -248,6 +228,7 @@
             Controls.Add(label6);
             Controls.Add(button2);
             Controls.Add(button1);
+            Controls.Add(dataGridView1);
             Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Name = "payment";
@@ -274,11 +255,9 @@
         private Label label4;
         private Label label5;
         private TextBox textBox1;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn ITEMNAME;
-        private DataGridViewTextBoxColumn QUANTITY;
         private Label label7;
         private Button button6;
         private Button button7;
+        private DataGridView dataGridView1;
     }
 }
