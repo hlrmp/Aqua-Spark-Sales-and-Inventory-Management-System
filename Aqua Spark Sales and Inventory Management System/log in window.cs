@@ -39,10 +39,13 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             else
 
             {
-                main_window fmain = new main_window();    // main window instance
+               // Home_window hm1 = new Home_window();
+               // hm1.Show();
+              //  this.Hide();
 
-                fmain.Show();   // show main form 
-                this.Hide();
+               main_window fmain = new main_window();    // main window instance
+               fmain.Show();   // show main form 
+               this.Hide();
             }
             //    main_window fmain = new main_window();    // main window instance
             //  fmain.Show();   // show main form 

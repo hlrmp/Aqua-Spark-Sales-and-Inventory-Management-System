@@ -20,6 +20,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private void button5_Click(object sender, EventArgs e) // list button
         {
             listBox1.Show();
+            button12.Show();
+
 
         }// list button
 
