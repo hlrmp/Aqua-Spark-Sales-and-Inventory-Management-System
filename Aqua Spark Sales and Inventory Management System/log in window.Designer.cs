@@ -45,7 +45,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(76, 118);
+            label1.Location = new Point(85, 114);
             label1.Name = "label1";
             label1.Size = new Size(96, 19);
             label1.TabIndex = 2;
@@ -55,7 +55,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(76, 173);
+            label2.Location = new Point(90, 173);
             label2.Name = "label2";
             label2.Size = new Size(91, 19);
             label2.TabIndex = 3;
@@ -105,9 +105,9 @@
             button2.BackColor = Color.Red;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Arial Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(702, -1);
+            button2.Location = new Point(694, -1);
             button2.Name = "button2";
-            button2.Size = new Size(39, 30);
+            button2.Size = new Size(47, 35);
             button2.TabIndex = 9;
             button2.Text = "X";
             button2.UseVisualStyleBackColor = false;

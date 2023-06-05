@@ -33,5 +33,41 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             listBox1.Hide();
 
         } // add orders
+
+        private void button2minmize_Click(object sender, EventArgs e) // see more button
+        {
+            button4inventory.Show();
+            button3customers.Show();
+            button2salesinfo.Show();
+            button1orders.Show();
+            button2minmize.Show();
+            pictureBox1.Show();
+
+
+            button1.Hide();
+
+            button5.Hide();
+            button6.Hide();
+            button7.Hide();
+            button8logout.Hide();
+        }// see more button
+
+        private void button1_Click(object sender, EventArgs e)  // minimize button
+        {
+            button4inventory.Hide();
+            button3customers.Hide();
+            button2salesinfo.Hide();
+            button1orders.Hide();
+            button2minmize.Hide();
+            pictureBox1.Hide();
+
+            button1.Show();
+
+            button5.Show();
+            button6.Show();
+            button7.Show();
+            button8logout.Show();
+
+        } //minimimze button
     }
 }

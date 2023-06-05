@@ -44,6 +44,17 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             lg.Show();
             this.Close();
 
+            button4inventory.Hide();
+            button3customers.Hide();
+            button2salesinfo.Hide();
+            button1orders.Hide();
+            button12.Hide();
+            listBox1.Hide();
+            no.Hide();
+            py.Hide();
+
+
+
         } // log out window
 
         private void button1_Click(object sender, EventArgs e)  // orders window

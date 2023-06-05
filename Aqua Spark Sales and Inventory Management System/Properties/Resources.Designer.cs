@@ -63,6 +63,26 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _113 {
+            get {
+                object obj = ResourceManager.GetObject("113", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1131 {
+            get {
+                object obj = ResourceManager.GetObject("1131", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _int {
             get {
                 object obj = ResourceManager.GetObject("int", resourceCulture);
