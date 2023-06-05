@@ -1,6 +1,6 @@
 ﻿namespace Aqua_Spark_Sales_and_Inventory_Management_System
 {
-    partial class sales2
+    partial class customer2
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             dataGridView_sales = new DataGridView();
-            label1 = new Label();
-            comboBox1 = new ComboBox();
             button1 = new Button();
             pictureBox2 = new PictureBox();
-            button2 = new Button();
             button3 = new Button();
             button4 = new Button();
+            comboBox1 = new ComboBox();
+            button2 = new Button();
+            label1 = new Label();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView_sales).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -50,34 +51,6 @@
             dataGridView_sales.RowTemplate.Height = 25;
             dataGridView_sales.Size = new Size(700, 307);
             dataGridView_sales.TabIndex = 31;
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.Top;
-            label1.AutoSize = true;
-            label1.BackColor = Color.FromArgb(192, 192, 0);
-            label1.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(-2, -2);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(991, 57);
-            label1.TabIndex = 32;
-            label1.Text = "        aqua spark sales information        ";
-            label1.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // comboBox1
-            // 
-            comboBox1.Anchor = AnchorStyles.Top;
-            comboBox1.BackColor = Color.FromArgb(192, 192, 0);
-            comboBox1.FlatStyle = FlatStyle.Flat;
-            comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(680, 94);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(239, 29);
-            comboBox1.TabIndex = 36;
-            comboBox1.Text = "           SORT BY";
             // 
             // button1
             // 
@@ -103,21 +76,6 @@
             pictureBox2.TabIndex = 45;
             pictureBox2.TabStop = false;
             // 
-            // button2
-            // 
-            button2.Anchor = AnchorStyles.Left;
-            button2.BackColor = Color.Transparent;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(12, 164);
-            button2.Name = "button2";
-            button2.Size = new Size(175, 41);
-            button2.TabIndex = 46;
-            button2.Text = "ordered";
-            button2.UseMnemonic = false;
-            button2.UseVisualStyleBackColor = false;
-            // 
             // button3
             // 
             button3.Anchor = AnchorStyles.Left;
@@ -129,7 +87,7 @@
             button3.Name = "button3";
             button3.Size = new Size(175, 41);
             button3.TabIndex = 47;
-            button3.Text = "walk in";
+            button3.Text = "remove";
             button3.UseMnemonic = false;
             button3.UseVisualStyleBackColor = false;
             // 
@@ -140,25 +98,84 @@
             button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button4.ForeColor = SystemColors.ActiveCaptionText;
-            button4.Location = new Point(12, 322);
+            button4.Location = new Point(12, 315);
             button4.Name = "button4";
             button4.Size = new Size(175, 41);
             button4.TabIndex = 48;
-            button4.Text = "total sales";
+            button4.Text = "with order";
             button4.UseMnemonic = false;
             button4.UseVisualStyleBackColor = false;
             // 
-            // sales2
+            // comboBox1
+            // 
+            comboBox1.Anchor = AnchorStyles.Top;
+            comboBox1.BackColor = Color.FromArgb(192, 192, 0);
+            comboBox1.FlatStyle = FlatStyle.Flat;
+            comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(680, 94);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(239, 29);
+            comboBox1.TabIndex = 49;
+            comboBox1.Text = "           SORT BY";
+            // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.Left;
+            button2.BackColor = Color.Transparent;
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = SystemColors.ActiveCaptionText;
+            button2.Location = new Point(12, 164);
+            button2.Name = "button2";
+            button2.Size = new Size(175, 41);
+            button2.TabIndex = 46;
+            button2.Text = "add";
+            button2.UseMnemonic = false;
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top;
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(192, 192, 0);
+            label1.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(1, -2);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(988, 57);
+            label1.TabIndex = 32;
+            label1.Text = "             aqua spark customer list            ";
+            label1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // button5
+            // 
+            button5.Anchor = AnchorStyles.Left;
+            button5.BackColor = Color.Transparent;
+            button5.FlatStyle = FlatStyle.Popup;
+            button5.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            button5.ForeColor = SystemColors.ActiveCaptionText;
+            button5.Location = new Point(12, 396);
+            button5.Name = "button5";
+            button5.Size = new Size(175, 41);
+            button5.TabIndex = 50;
+            button5.Text = "see all";
+            button5.UseMnemonic = false;
+            button5.UseVisualStyleBackColor = false;
+            // 
+            // customer2
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(954, 464);
+            Controls.Add(button5);
+            Controls.Add(comboBox1);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(comboBox1);
             Controls.Add(label1);
             Controls.Add(dataGridView_sales);
             Controls.Add(pictureBox2);
@@ -166,7 +183,7 @@
             ForeColor = SystemColors.ButtonFace;
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(5, 6, 5, 6);
-            Name = "sales2";
+            Name = "customer2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "sales2";
             ((System.ComponentModel.ISupportInitialize)dataGridView_sales).EndInit();
@@ -178,12 +195,13 @@
         #endregion
 
         private DataGridView dataGridView_sales;
-        private Label label1;
-        private ComboBox comboBox1;
         private Button button1;
         private PictureBox pictureBox2;
-        private Button button2;
         private Button button3;
         private Button button4;
+        private ComboBox comboBox1;
+        private Button button2;
+        private Label label1;
+        private Button button5;
     }
 }

@@ -28,121 +28,147 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "inventory2";
-
-
-
-            dataGridView_inventory = new DataGridView();
-            button1 = new Button();
-            button2 = new Button();
+            dataGridView_sales = new DataGridView();
             label1 = new Label();
-            button3 = new Button();
+            button1 = new Button();
             pictureBox2 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView_inventory).BeginInit();
+            button3 = new Button();
+            button4 = new Button();
+            comboBox1 = new ComboBox();
+            button2 = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_sales).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView_inventory
+            // dataGridView_sales
             // 
-            dataGridView_inventory.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView_inventory.BackgroundColor = SystemColors.ControlLight;
-            dataGridView_inventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_inventory.Location = new Point(303, 118);
-            dataGridView_inventory.Name = "dataGridView_inventory";
-            dataGridView_inventory.RowTemplate.Height = 25;
-            dataGridView_inventory.Size = new Size(521, 296);
-            dataGridView_inventory.TabIndex = 0;
+            dataGridView_sales.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView_sales.BackgroundColor = SystemColors.ControlLight;
+            dataGridView_sales.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView_sales.Location = new Point(219, 130);
+            dataGridView_sales.Name = "dataGridView_sales";
+            dataGridView_sales.RowTemplate.Height = 25;
+            dataGridView_sales.Size = new Size(700, 307);
+            dataGridView_sales.TabIndex = 31;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top;
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(192, 192, 0);
+            label1.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(-10, -2);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(981, 57);
+            label1.TabIndex = 32;
+            label1.Text = "         AQUA SPARK INVENTORY REPORT       \r\n";
+            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // button1
             // 
             button1.Anchor = AnchorStyles.Left;
             button1.BackColor = Color.Transparent;
             button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.ButtonFace;
-            button1.Location = new Point(58, 37);
+            button1.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ActiveCaptionText;
+            button1.Location = new Point(12, 86);
             button1.Name = "button1";
-            button1.Size = new Size(184, 65);
-            button1.TabIndex = 23;
-            button1.Text = "HOME";
+            button1.Size = new Size(175, 41);
+            button1.TabIndex = 37;
+            button1.Text = "home";
             button1.UseVisualStyleBackColor = false;
-           
             // 
-            // button2
+            // pictureBox2
             // 
-            button2.Anchor = AnchorStyles.Left;
-            button2.BackColor = Color.Transparent;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.ButtonFace;
-            button2.Location = new Point(58, 169);
-            button2.Name = "button2";
-            button2.Size = new Size(184, 65);
-            button2.TabIndex = 24;
-            button2.Text = "edit ";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.Top;
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.Cyan;
-            label1.Location = new Point(274, 32);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(591, 57);
-            label1.TabIndex = 28;
-            label1.Text = "aqua spark inventory";
-            label1.TextAlign = ContentAlignment.TopCenter;
+            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            pictureBox2.BackColor = Color.CadetBlue;
+            pictureBox2.Location = new Point(-10, -2);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(206, 470);
+            pictureBox2.TabIndex = 45;
+            pictureBox2.TabStop = false;
             // 
             // button3
             // 
             button3.Anchor = AnchorStyles.Left;
             button3.BackColor = Color.Transparent;
             button3.FlatStyle = FlatStyle.Popup;
-            button3.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.ForeColor = SystemColors.ButtonFace;
-            button3.Location = new Point(58, 306);
+            button3.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.ForeColor = SystemColors.ActiveCaptionText;
+            button3.Location = new Point(12, 242);
             button3.Name = "button3";
-            button3.Size = new Size(184, 60);
-            button3.TabIndex = 29;
-            button3.Text = "save";
+            button3.Size = new Size(175, 41);
+            button3.TabIndex = 47;
+            button3.UseMnemonic = false;
             button3.UseVisualStyleBackColor = false;
             // 
-            // pictureBox2
+            // button4
             // 
-            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            pictureBox2.BackColor = Color.CadetBlue;
-            pictureBox2.Location = new Point(-3, 2);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(271, 448);
-            pictureBox2.TabIndex = 42;
-            pictureBox2.TabStop = false;
+            button4.Anchor = AnchorStyles.Left;
+            button4.BackColor = Color.Transparent;
+            button4.FlatStyle = FlatStyle.Popup;
+            button4.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            button4.ForeColor = SystemColors.ActiveCaptionText;
+            button4.Location = new Point(12, 322);
+            button4.Name = "button4";
+            button4.Size = new Size(175, 41);
+            button4.TabIndex = 48;
+            button4.Text = "TOTAL";
+            button4.UseMnemonic = false;
+            button4.UseVisualStyleBackColor = false;
             // 
-            // Inventory_Wiindow
+            // comboBox1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            comboBox1.Anchor = AnchorStyles.Top;
+            comboBox1.BackColor = Color.FromArgb(192, 192, 0);
+            comboBox1.FlatStyle = FlatStyle.Flat;
+            comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(680, 94);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(239, 29);
+            comboBox1.TabIndex = 49;
+            comboBox1.Text = "           SORT BY";
+            // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.Left;
+            button2.BackColor = Color.Transparent;
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = SystemColors.ActiveCaptionText;
+            button2.Location = new Point(12, 164);
+            button2.Name = "button2";
+            button2.Size = new Size(175, 41);
+            button2.TabIndex = 46;
+            button2.Text = "BOTTLES";
+            button2.UseMnemonic = false;
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // inventory2
+            // 
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources._int;
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(883, 450);
+            BackColor = Color.FromArgb(192, 192, 255);
+            ClientSize = new Size(954, 464);
+            Controls.Add(comboBox1);
+            Controls.Add(button4);
             Controls.Add(button3);
-            Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(dataGridView_inventory);
+            Controls.Add(label1);
+            Controls.Add(dataGridView_sales);
             Controls.Add(pictureBox2);
-            DoubleBuffered = true;
+            Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            ForeColor = SystemColors.ButtonFace;
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Inventory_Wiindow";
-            Text = "Inventory_Wiindow";
-            WindowState = FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)dataGridView_inventory).EndInit();
+            Margin = new Padding(5, 6, 5, 6);
+            Name = "inventory2";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "sales2";
+            ((System.ComponentModel.ISupportInitialize)dataGridView_sales).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -150,11 +176,13 @@
 
         #endregion
 
-        private DataGridView dataGridView_inventory;
-        private Button button1;
-        private Button button2;
+        private DataGridView dataGridView_sales;
         private Label label1;
-        private Button button3;
+        private Button button1;
         private PictureBox pictureBox2;
+        private Button button3;
+        private Button button4;
+        private ComboBox comboBox1;
+        private Button button2;
     }
 }
