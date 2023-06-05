@@ -229,7 +229,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             dateTimePicker1.CalendarForeColor = Color.Black;
             dateTimePicker1.CalendarMonthBackground = SystemColors.InactiveBorder;
             dateTimePicker1.CalendarTitleBackColor = Color.White;
-            dateTimePicker1.Location = new Point(276, 136);
+            dateTimePicker1.Location = new Point(319, 128);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(290, 25);
             dateTimePicker1.TabIndex = 36;

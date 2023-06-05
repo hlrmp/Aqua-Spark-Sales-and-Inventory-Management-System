@@ -48,7 +48,7 @@
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ButtonFace;
-            button1.Location = new Point(46, 66);
+            button1.Location = new Point(58, 37);
             button1.Name = "button1";
             button1.Size = new Size(184, 65);
             button1.TabIndex = 24;
@@ -64,7 +64,7 @@
             dataGridView_order.Location = new Point(296, 134);
             dataGridView_order.Name = "dataGridView_order";
             dataGridView_order.RowTemplate.Height = 25;
-            dataGridView_order.Size = new Size(409, 232);
+            dataGridView_order.Size = new Size(466, 239);
             dataGridView_order.TabIndex = 25;
             // 
             // label1
@@ -74,7 +74,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Cyan;
-            label1.Location = new Point(276, 9);
+            label1.Location = new Point(305, 9);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(513, 57);
@@ -86,7 +86,7 @@
             // 
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(490, 80);
+            textBox1.Location = new Point(547, 80);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(237, 23);
@@ -96,7 +96,7 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox1.Image = Properties.Resources.search;
-            pictureBox1.Location = new Point(733, 80);
+            pictureBox1.Location = new Point(790, 80);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(29, 23);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -111,7 +111,7 @@
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ButtonFace;
-            button2.Location = new Point(46, 187);
+            button2.Location = new Point(58, 169);
             button2.Name = "button2";
             button2.Size = new Size(184, 65);
             button2.TabIndex = 33;
@@ -126,7 +126,7 @@
             button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.ButtonFace;
-            button3.Location = new Point(46, 306);
+            button3.Location = new Point(58, 306);
             button3.Name = "button3";
             button3.Size = new Size(184, 60);
             button3.TabIndex = 34;
@@ -139,7 +139,7 @@
             pictureBox2.BackColor = Color.CadetBlue;
             pictureBox2.Location = new Point(-2, 0);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(271, 452);
+            pictureBox2.Size = new Size(271, 459);
             pictureBox2.TabIndex = 42;
             pictureBox2.TabStop = false;
             // 
@@ -149,7 +149,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(805, 450);
+            ClientSize = new Size(862, 457);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(pictureBox1);
