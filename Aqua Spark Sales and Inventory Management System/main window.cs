@@ -40,21 +40,29 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         private void button8_Click(object sender, EventArgs e)  // log out window
         {
-            log_in_window lg = new log_in_window();
-            lg.Show();
-            this.Close();
-
-            button4inventory.Hide();
-            button3customers.Hide();
-            button2salesinfo.Hide();
-            button1orders.Hide();
-            button12.Hide();
-            listBox1.Hide();
-            no.Hide();
-            py.Hide();
+            /*  log_in_window lg = new log_in_window();
+              lg.Show(); */
+            if (button8logout != null)
+            {
+                Form1 f = new Form1();
+                f.Show();
+                this.Close();
 
 
 
+                MessageBox.Show(" are yu sure o log out ? ", "log out", MessageBoxButtons.YesNo);
+
+                button4inventory.Hide();
+                button3customers.Hide();
+                button2salesinfo.Hide();
+                button1orders.Hide();
+                button12.Hide();
+                listBox1.Hide();
+                no.Hide();
+                py.Hide();
+
+
+            }
         } // log out window
 
         private void button1_Click(object sender, EventArgs e)  // orders window

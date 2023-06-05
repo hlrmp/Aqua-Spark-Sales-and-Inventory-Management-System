@@ -86,7 +86,7 @@
             button1orders.Anchor = AnchorStyles.Left;
             button1orders.BackColor = Color.FromArgb(255, 192, 128);
             button1orders.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button1orders.Location = new Point(25, 503);
+            button1orders.Location = new Point(27, 459);
             button1orders.Margin = new Padding(4);
             button1orders.Name = "button1orders";
             button1orders.Size = new Size(227, 55);

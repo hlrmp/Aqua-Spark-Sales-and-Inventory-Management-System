@@ -1,6 +1,6 @@
 ﻿namespace Aqua_Spark_Sales_and_Inventory_Management_System
 {
-    partial class Orders_Window
+    partial class order_2
     {
         /// <summary>
         /// Required designer variable.
@@ -55,7 +55,7 @@
             button1.TabIndex = 24;
             button1.Text = "HOME";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+          
             // 
             // dataGridView_order
             // 
@@ -103,7 +103,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 32;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+           
             // 
             // button2
             // 
@@ -118,7 +118,7 @@
             button2.TabIndex = 33;
             button2.Text = "Add orders";
             button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+          
             // 
             // button3
             // 
@@ -182,10 +182,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
+
+            #endregion
         }
-
-        #endregion
-
         private Button button1;
         private DataGridView dataGridView_order;
         private Label label1;

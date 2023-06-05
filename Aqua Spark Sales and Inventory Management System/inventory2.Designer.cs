@@ -1,6 +1,6 @@
 ﻿namespace Aqua_Spark_Sales_and_Inventory_Management_System
 {
-    partial class Inventory_Wiindow
+    partial class inventory2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "inventory2";
+
+
+
             dataGridView_inventory = new DataGridView();
             button1 = new Button();
             button2 = new Button();
@@ -62,7 +69,7 @@
             button1.TabIndex = 23;
             button1.Text = "HOME";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+           
             // 
             // button2
             // 
@@ -142,6 +149,7 @@
         }
 
         #endregion
+
         private DataGridView dataGridView_inventory;
         private Button button1;
         private Button button2;
