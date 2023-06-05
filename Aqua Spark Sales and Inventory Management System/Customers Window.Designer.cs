@@ -36,18 +36,22 @@
             button2 = new Button();
             button3 = new Button();
             comboBox1 = new ComboBox();
+            pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_customers).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
             button1.Anchor = AnchorStyles.Left;
-            button1.BackColor = Color.FromArgb(0, 192, 192);
-            button1.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(65, 71);
+            button1.BackColor = Color.Transparent;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ButtonFace;
+            button1.Location = new Point(58, 37);
             button1.Name = "button1";
-            button1.Size = new Size(127, 60);
+            button1.Size = new Size(184, 65);
             button1.TabIndex = 25;
             button1.Text = "HOME";
             button1.UseVisualStyleBackColor = false;
@@ -60,7 +64,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Cyan;
-            label1.Location = new Point(134, 9);
+            label1.Location = new Point(169, 9);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(602, 57);
@@ -96,21 +100,23 @@
             dataGridView_customers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView_customers.BackgroundColor = SystemColors.ControlLight;
             dataGridView_customers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_customers.Location = new Point(244, 144);
+            dataGridView_customers.Location = new Point(296, 134);
             dataGridView_customers.Name = "dataGridView_customers";
             dataGridView_customers.ReadOnly = true;
             dataGridView_customers.RowTemplate.Height = 25;
-            dataGridView_customers.Size = new Size(409, 232);
+            dataGridView_customers.Size = new Size(466, 239);
             dataGridView_customers.TabIndex = 26;
             // 
             // button2
             // 
             button2.Anchor = AnchorStyles.Left;
-            button2.BackColor = Color.FromArgb(255, 192, 128);
-            button2.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(65, 189);
+            button2.BackColor = Color.Transparent;
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = SystemColors.ButtonFace;
+            button2.Location = new Point(58, 169);
             button2.Name = "button2";
-            button2.Size = new Size(127, 60);
+            button2.Size = new Size(184, 65);
             button2.TabIndex = 34;
             button2.Text = "add customer";
             button2.UseVisualStyleBackColor = false;
@@ -119,11 +125,13 @@
             // button3
             // 
             button3.Anchor = AnchorStyles.Left;
-            button3.BackColor = Color.FromArgb(255, 192, 128);
-            button3.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Location = new Point(65, 304);
+            button3.BackColor = Color.Transparent;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.ForeColor = SystemColors.ButtonFace;
+            button3.Location = new Point(58, 306);
             button3.Name = "button3";
-            button3.Size = new Size(127, 60);
+            button3.Size = new Size(184, 65);
             button3.TabIndex = 35;
             button3.Text = "REMOVE CUSTOMER";
             button3.UseVisualStyleBackColor = false;
@@ -140,6 +148,16 @@
             comboBox1.TabIndex = 36;
             comboBox1.Text = "sort by ";
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            pictureBox2.BackColor = Color.CadetBlue;
+            pictureBox2.Location = new Point(-3, 9);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(271, 444);
+            pictureBox2.TabIndex = 43;
+            pictureBox2.TabStop = false;
+            // 
             // Customers_Window
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -155,6 +173,7 @@
             Controls.Add(label1);
             Controls.Add(dataGridView_customers);
             Controls.Add(button1);
+            Controls.Add(pictureBox2);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Name = "Customers_Window";
@@ -162,6 +181,7 @@
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_customers).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -176,5 +196,6 @@
         private Button button2;
         private Button button3;
         private ComboBox comboBox1;
+        private PictureBox pictureBox2;
     }
 }
