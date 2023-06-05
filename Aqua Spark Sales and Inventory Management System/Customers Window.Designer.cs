@@ -43,7 +43,7 @@
             // button1
             // 
             button1.Anchor = AnchorStyles.Left;
-            button1.BackColor = Color.FromArgb(128, 255, 128);
+            button1.BackColor = Color.FromArgb(0, 192, 192);
             button1.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             button1.Location = new Point(65, 71);
             button1.Name = "button1";
@@ -58,12 +58,12 @@
             label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Stencil", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(233, 9);
+            label1.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.Cyan;
+            label1.Location = new Point(134, 9);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(439, 42);
+            label1.Size = new Size(602, 57);
             label1.TabIndex = 28;
             label1.Text = "aqua spark customers\r\n";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -111,21 +111,25 @@
             button2.TabIndex = 34;
             button2.Text = "add customer";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
             button3.Anchor = AnchorStyles.Left;
             button3.BackColor = Color.FromArgb(255, 192, 128);
             button3.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Location = new Point(65, 316);
+            button3.Location = new Point(65, 304);
             button3.Name = "button3";
             button3.Size = new Size(127, 60);
             button3.TabIndex = 35;
+            button3.Text = "REMOVE CUSTOMER";
             button3.UseVisualStyleBackColor = false;
             // 
             // comboBox1
             // 
             comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            comboBox1.BackColor = Color.FromArgb(255, 192, 128);
+            comboBox1.FlatStyle = FlatStyle.Flat;
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(499, 100);
             comboBox1.Name = "comboBox1";

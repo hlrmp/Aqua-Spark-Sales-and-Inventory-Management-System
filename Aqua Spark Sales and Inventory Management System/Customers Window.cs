@@ -24,5 +24,12 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             this.Hide();
 
         }  // HOME WINDOWS
+
+        private void button2_Click(object sender, EventArgs e) // add customer
+        {
+            new_customer nc = new new_customer();
+            nc.Show();
+
+        }// add customer
     }
 }

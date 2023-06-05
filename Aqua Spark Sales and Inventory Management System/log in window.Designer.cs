@@ -89,7 +89,7 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.FromArgb(255, 192, 128);
+            button1.BackColor = Color.FromArgb(128, 255, 128);
             button1.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.Location = new Point(232, 293);
             button1.Name = "button1";

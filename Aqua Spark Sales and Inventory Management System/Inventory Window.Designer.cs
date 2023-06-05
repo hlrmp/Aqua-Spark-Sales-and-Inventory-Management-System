@@ -50,7 +50,7 @@
             // button1
             // 
             button1.Anchor = AnchorStyles.Left;
-            button1.BackColor = Color.FromArgb(128, 255, 128);
+            button1.BackColor = Color.FromArgb(0, 192, 192);
             button1.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             button1.Location = new Point(47, 92);
             button1.Name = "button1";

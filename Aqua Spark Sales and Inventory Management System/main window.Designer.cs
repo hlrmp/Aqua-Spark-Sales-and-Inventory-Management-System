@@ -43,6 +43,10 @@
             button9 = new Button();
             button10 = new Button();
             button11 = new Button();
+            dateTimePicker1 = new DateTimePicker();
+            button12 = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button5
@@ -68,7 +72,7 @@
             listBox1.Location = new Point(212, 151);
             listBox1.Margin = new Padding(6);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(602, 326);
+            listBox1.Size = new Size(612, 326);
             listBox1.TabIndex = 21;
             listBox1.Visible = false;
             // 
@@ -207,37 +211,68 @@
             // 
             button9.Anchor = AnchorStyles.Left;
             button9.BackColor = Color.FromArgb(128, 255, 128);
-            button9.Location = new Point(36, 527);
+            button9.Location = new Point(71, 527);
             button9.Name = "button9";
-            button9.Size = new Size(131, 42);
+            button9.Size = new Size(195, 42);
             button9.TabIndex = 33;
             button9.Text = "logout";
             button9.UseVisualStyleBackColor = false;
-            button9.Visible = false;
             // 
             // button10
             // 
             button10.Anchor = AnchorStyles.Left;
             button10.BackColor = Color.FromArgb(128, 255, 128);
-            button10.Location = new Point(36, 454);
+            button10.Location = new Point(72, 470);
             button10.Name = "button10";
-            button10.Size = new Size(131, 42);
+            button10.Size = new Size(194, 42);
             button10.TabIndex = 34;
             button10.Text = "orders";
             button10.UseVisualStyleBackColor = false;
-            button10.Visible = false;
             // 
             // button11
             // 
             button11.Anchor = AnchorStyles.Left;
             button11.BackColor = Color.FromArgb(128, 255, 128);
-            button11.Location = new Point(36, 386);
+            button11.Location = new Point(71, 408);
             button11.Name = "button11";
-            button11.Size = new Size(131, 42);
+            button11.Size = new Size(195, 42);
             button11.TabIndex = 35;
             button11.Text = "sales";
             button11.UseVisualStyleBackColor = false;
-            button11.Visible = false;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Anchor = AnchorStyles.Left;
+            dateTimePicker1.CalendarForeColor = Color.Black;
+            dateTimePicker1.CalendarMonthBackground = SystemColors.InactiveBorder;
+            dateTimePicker1.CalendarTitleBackColor = Color.White;
+            dateTimePicker1.Location = new Point(36, 88);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(290, 25);
+            dateTimePicker1.TabIndex = 36;
+            // 
+            // button12
+            // 
+            button12.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button12.BackColor = Color.FromArgb(255, 128, 128);
+            button12.FlatStyle = FlatStyle.Flat;
+            button12.Location = new Point(800, 151);
+            button12.Name = "button12";
+            button12.Size = new Size(24, 26);
+            button12.TabIndex = 37;
+            button12.Text = "X";
+            button12.UseVisualStyleBackColor = false;
+            button12.Visible = false;
+            button12.Click += button12_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            pictureBox1.Location = new Point(-2, 151);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(268, 428);
+            pictureBox1.TabIndex = 38;
+            pictureBox1.TabStop = false;
             // 
             // main_window
             // 
@@ -246,6 +281,8 @@
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1029, 581);
+            Controls.Add(button12);
+            Controls.Add(dateTimePicker1);
             Controls.Add(button11);
             Controls.Add(button10);
             Controls.Add(button9);
@@ -261,6 +298,7 @@
             Controls.Add(button1);
             Controls.Add(listBox1);
             Controls.Add(button5);
+            Controls.Add(pictureBox1);
             DoubleBuffered = true;
             Font = new Font("Stencil", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
@@ -268,6 +306,7 @@
             Name = "main_window";
             Text = "main_window";
             WindowState = FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -289,5 +328,8 @@
         private Button button9;
         private Button button10;
         private Button button11;
+        private DateTimePicker dateTimePicker1;
+        private Button button12;
+        private PictureBox pictureBox1;
     }
 }

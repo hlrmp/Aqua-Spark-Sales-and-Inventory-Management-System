@@ -64,6 +64,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private void button5_Click(object sender, EventArgs e) // list button
         {
             listBox1.Show();
+            button12.Show();
             buttonpay.Hide();
             buttoncncel.Hide();
 
@@ -77,7 +78,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             py.Show();
             no.Hide();
 
-
+            button12.Hide();
             listBox1.Hide();
         }// sell button
 
@@ -88,10 +89,20 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             no.Show();
             py.Hide();
 
+            button12.Hide();
             buttonpay.Hide();
             buttoncncel.Hide();
             listBox1.Hide();
 
         }// add order
+
+        private void button12_Click(object sender, EventArgs e) // x button list box
+        {
+            listBox1.Hide();
+            button12.Hide();
+            buttonpay.Hide();
+            buttoncncel.Hide();
+
+        }// x button list box
     }
 }

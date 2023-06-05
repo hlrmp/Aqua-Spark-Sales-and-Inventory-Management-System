@@ -26,6 +26,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         private void button1_Click(object sender, EventArgs e) // cancel button
         {
+            textBox1.Clear();
             this.Hide();
 
         }// cancel button

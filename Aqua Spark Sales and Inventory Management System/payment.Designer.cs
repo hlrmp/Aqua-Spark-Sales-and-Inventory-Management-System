@@ -93,7 +93,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(43, 218);
+            label2.Location = new Point(43, 246);
             label2.Name = "label2";
             label2.Size = new Size(75, 15);
             label2.TabIndex = 55;
@@ -110,32 +110,41 @@
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(43, 236);
+            numericUpDown1.Location = new Point(43, 265);
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(134, 23);
             numericUpDown1.TabIndex = 57;
             // 
             // button3
             // 
-            button3.Location = new Point(158, 112);
+            button3.BackgroundImage = Properties.Resources.galon1;
+            button3.BackgroundImageLayout = ImageLayout.Stretch;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Location = new Point(164, 102);
             button3.Name = "button3";
-            button3.Size = new Size(98, 81);
+            button3.Size = new Size(122, 117);
             button3.TabIndex = 58;
             button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            button4.Location = new Point(43, 112);
+            button4.BackgroundImage = Properties.Resources.bote1;
+            button4.BackgroundImageLayout = ImageLayout.Stretch;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Location = new Point(43, 102);
             button4.Name = "button4";
-            button4.Size = new Size(98, 81);
+            button4.Size = new Size(105, 117);
             button4.TabIndex = 59;
             button4.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            button5.Location = new Point(271, 110);
+            button5.BackgroundImage = Properties.Resources.th;
+            button5.BackgroundImageLayout = ImageLayout.Stretch;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Location = new Point(303, 102);
             button5.Name = "button5";
-            button5.Size = new Size(98, 83);
+            button5.Size = new Size(121, 117);
             button5.TabIndex = 60;
             button5.UseVisualStyleBackColor = true;
             // 
@@ -152,7 +161,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(218, 218);
+            label5.Location = new Point(222, 246);
             label5.Name = "label5";
             label5.Size = new Size(68, 15);
             label5.TabIndex = 62;
@@ -160,7 +169,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(218, 236);
+            textBox1.Location = new Point(222, 264);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(151, 23);
             textBox1.TabIndex = 63;
@@ -199,6 +208,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(450, 108);
             dataGridView1.Name = "dataGridView1";
@@ -211,7 +221,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 478);
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(label7);
