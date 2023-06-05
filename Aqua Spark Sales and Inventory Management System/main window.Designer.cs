@@ -40,13 +40,16 @@
             button7 = new Button();
             buttonpay = new Button();
             buttoncncel = new Button();
+            button9 = new Button();
+            button10 = new Button();
+            button11 = new Button();
             SuspendLayout();
             // 
             // button5
             // 
             button5.Anchor = AnchorStyles.Left;
             button5.BackColor = Color.FromArgb(192, 192, 255);
-            button5.Location = new Point(36, 93);
+            button5.Location = new Point(36, 127);
             button5.Margin = new Padding(4);
             button5.Name = "button5";
             button5.Size = new Size(114, 67);
@@ -167,7 +170,7 @@
             // 
             button7.Anchor = AnchorStyles.Left;
             button7.BackColor = Color.FromArgb(192, 192, 255);
-            button7.Location = new Point(36, 315);
+            button7.Location = new Point(36, 277);
             button7.Margin = new Padding(4);
             button7.Name = "button7";
             button7.Size = new Size(114, 67);
@@ -200,6 +203,42 @@
             buttoncncel.UseVisualStyleBackColor = false;
             buttoncncel.Visible = false;
             // 
+            // button9
+            // 
+            button9.Anchor = AnchorStyles.Left;
+            button9.BackColor = Color.FromArgb(128, 255, 128);
+            button9.Location = new Point(36, 527);
+            button9.Name = "button9";
+            button9.Size = new Size(131, 42);
+            button9.TabIndex = 33;
+            button9.Text = "logout";
+            button9.UseVisualStyleBackColor = false;
+            button9.Visible = false;
+            // 
+            // button10
+            // 
+            button10.Anchor = AnchorStyles.Left;
+            button10.BackColor = Color.FromArgb(128, 255, 128);
+            button10.Location = new Point(36, 454);
+            button10.Name = "button10";
+            button10.Size = new Size(131, 42);
+            button10.TabIndex = 34;
+            button10.Text = "orders";
+            button10.UseVisualStyleBackColor = false;
+            button10.Visible = false;
+            // 
+            // button11
+            // 
+            button11.Anchor = AnchorStyles.Left;
+            button11.BackColor = Color.FromArgb(128, 255, 128);
+            button11.Location = new Point(36, 386);
+            button11.Name = "button11";
+            button11.Size = new Size(131, 42);
+            button11.TabIndex = 35;
+            button11.Text = "sales";
+            button11.UseVisualStyleBackColor = false;
+            button11.Visible = false;
+            // 
             // main_window
             // 
             AutoScaleDimensions = new SizeF(9F, 18F);
@@ -207,6 +246,9 @@
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1029, 581);
+            Controls.Add(button11);
+            Controls.Add(button10);
+            Controls.Add(button9);
             Controls.Add(buttoncncel);
             Controls.Add(buttonpay);
             Controls.Add(button7);
@@ -244,5 +286,8 @@
         private Button button7;
         private Button buttonpay;
         private Button buttoncncel;
+        private Button button9;
+        private Button button10;
+        private Button button11;
     }
 }
