@@ -37,6 +37,7 @@
             button2 = new Button();
             pictureBox1 = new PictureBox();
             label3 = new Label();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -91,7 +92,7 @@
             // 
             button1.BackColor = Color.FromArgb(128, 255, 128);
             button1.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(232, 293);
+            button1.Location = new Point(76, 293);
             button1.Name = "button1";
             button1.Size = new Size(148, 39);
             button1.TabIndex = 8;
@@ -132,6 +133,18 @@
             label3.TabIndex = 11;
             label3.Text = "wellcome have a good day";
             // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(255, 128, 128);
+            button3.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Location = new Point(276, 293);
+            button3.Name = "button3";
+            button3.Size = new Size(148, 39);
+            button3.TabIndex = 12;
+            button3.Text = "clear";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
             // log_in_window
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -139,6 +152,7 @@
             BackColor = SystemColors.ActiveCaption;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(738, 405);
+            Controls.Add(button3);
             Controls.Add(label3);
             Controls.Add(pictureBox1);
             Controls.Add(button2);
@@ -170,5 +184,6 @@
         private Button button2;
         private PictureBox pictureBox1;
         private Label label3;
+        private Button button3;
     }
 }

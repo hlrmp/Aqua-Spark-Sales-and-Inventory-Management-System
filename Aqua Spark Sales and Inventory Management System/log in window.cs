@@ -39,13 +39,13 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             else
 
             {
-               // Home_window hm1 = new Home_window();
-               // hm1.Show();
-              //  this.Hide();
+                // Home_window hm1 = new Home_window();
+                // hm1.Show();
+                //  this.Hide();
 
-               main_window fmain = new main_window();    // main window instance
-               fmain.Show();   // show main form 
-               this.Hide();
+                main_window fmain = new main_window();    // main window instance
+                fmain.Show();   // show main form 
+                this.Hide();
             }
             //    main_window fmain = new main_window();    // main window instance
             //  fmain.Show();   // show main form 
@@ -188,12 +188,11 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             }
         }    // password show
 
+        private void button3_Click(object sender, EventArgs e) // clear button
+        {
+            textBox1_username.Clear();
+            textBox2_password.Clear();
 
-
-
-
-
-
-
+        }// clear button
     }
 }

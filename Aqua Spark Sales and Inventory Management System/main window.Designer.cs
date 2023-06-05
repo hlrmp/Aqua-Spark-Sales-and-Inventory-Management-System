@@ -249,7 +249,7 @@
             // button1
             // 
             button1.BackColor = Color.White;
-            button1.BackgroundImage = Properties.Resources.trepng;
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
             button1.BackgroundImageLayout = ImageLayout.Stretch;
             button1.Font = new Font("Stencil", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.Location = new Point(-2, -3);
