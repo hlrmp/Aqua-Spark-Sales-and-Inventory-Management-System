@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main_window));
             button5 = new Button();
             listBox1 = new ListBox();
-            button1 = new Button();
-            button4 = new Button();
-            button2 = new Button();
-            button8 = new Button();
-            button3 = new Button();
+            button1orders = new Button();
+            button4inventory = new Button();
+            button2salesinfo = new Button();
+            button8logout = new Button();
+            button3customers = new Button();
             label1 = new Label();
             button6 = new Button();
             button7 = new Button();
             buttonpay = new Button();
             buttoncncel = new Button();
-            button9 = new Button();
-            button10 = new Button();
-            button11 = new Button();
             dateTimePicker1 = new DateTimePicker();
             button12 = new Button();
             pictureBox1 = new PictureBox();
+            button1 = new Button();
+            button2minmize = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -53,10 +53,10 @@
             // 
             button5.Anchor = AnchorStyles.Left;
             button5.BackColor = Color.FromArgb(192, 192, 255);
-            button5.Location = new Point(36, 127);
+            button5.Location = new Point(88, 132);
             button5.Margin = new Padding(4);
             button5.Name = "button5";
-            button5.Size = new Size(114, 67);
+            button5.Size = new Size(164, 85);
             button5.TabIndex = 18;
             button5.Text = "items";
             button5.UseVisualStyleBackColor = false;
@@ -69,78 +69,82 @@
             listBox1.FormattingEnabled = true;
             listBox1.HorizontalScrollbar = true;
             listBox1.ItemHeight = 18;
-            listBox1.Location = new Point(212, 151);
+            listBox1.Location = new Point(276, 169);
             listBox1.Margin = new Padding(6);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(612, 326);
+            listBox1.Size = new Size(612, 308);
             listBox1.TabIndex = 21;
             listBox1.Visible = false;
             // 
-            // button1
+            // button1orders
             // 
-            button1.Anchor = AnchorStyles.Right;
-            button1.BackColor = Color.FromArgb(255, 192, 128);
-            button1.Location = new Point(853, 88);
-            button1.Margin = new Padding(4);
-            button1.Name = "button1";
-            button1.Size = new Size(163, 72);
-            button1.TabIndex = 22;
-            button1.Text = "orders";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            button1orders.Anchor = AnchorStyles.Left;
+            button1orders.BackColor = Color.FromArgb(255, 192, 128);
+            button1orders.Location = new Point(56, 462);
+            button1orders.Margin = new Padding(4);
+            button1orders.Name = "button1orders";
+            button1orders.Size = new Size(194, 55);
+            button1orders.TabIndex = 22;
+            button1orders.Text = "orders";
+            button1orders.UseVisualStyleBackColor = false;
+            button1orders.Visible = false;
+            button1orders.Click += button1_Click;
             // 
-            // button4
+            // button4inventory
             // 
-            button4.Anchor = AnchorStyles.Right;
-            button4.BackColor = Color.FromArgb(255, 192, 128);
-            button4.Location = new Point(853, 197);
-            button4.Margin = new Padding(4);
-            button4.Name = "button4";
-            button4.Size = new Size(163, 72);
-            button4.TabIndex = 23;
-            button4.Text = "inventory";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
+            button4inventory.Anchor = AnchorStyles.Left;
+            button4inventory.BackColor = Color.FromArgb(255, 192, 128);
+            button4inventory.Location = new Point(61, 81);
+            button4inventory.Margin = new Padding(4);
+            button4inventory.Name = "button4inventory";
+            button4inventory.Size = new Size(191, 55);
+            button4inventory.TabIndex = 23;
+            button4inventory.Text = "inventory";
+            button4inventory.UseVisualStyleBackColor = false;
+            button4inventory.Visible = false;
+            button4inventory.Click += button4_Click;
             // 
-            // button2
+            // button2salesinfo
             // 
-            button2.Anchor = AnchorStyles.Right;
-            button2.BackColor = Color.FromArgb(255, 192, 128);
-            button2.Location = new Point(853, 310);
-            button2.Margin = new Padding(4);
-            button2.Name = "button2";
-            button2.Size = new Size(163, 72);
-            button2.TabIndex = 24;
-            button2.Text = "sales info";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            button2salesinfo.Anchor = AnchorStyles.Left;
+            button2salesinfo.BackColor = Color.FromArgb(255, 192, 128);
+            button2salesinfo.Location = new Point(59, 335);
+            button2salesinfo.Margin = new Padding(4);
+            button2salesinfo.Name = "button2salesinfo";
+            button2salesinfo.Size = new Size(193, 55);
+            button2salesinfo.TabIndex = 24;
+            button2salesinfo.Text = "sales info";
+            button2salesinfo.UseVisualStyleBackColor = false;
+            button2salesinfo.Visible = false;
+            button2salesinfo.Click += button2_Click;
             // 
-            // button8
+            // button8logout
             // 
-            button8.Anchor = AnchorStyles.Right;
-            button8.BackColor = Color.FromArgb(0, 192, 192);
-            button8.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button8.Location = new Point(853, 543);
-            button8.Margin = new Padding(4);
-            button8.Name = "button8";
-            button8.Size = new Size(163, 70);
-            button8.TabIndex = 26;
-            button8.Text = "log out";
-            button8.UseVisualStyleBackColor = false;
-            button8.Click += button8_Click;
+            button8logout.Anchor = AnchorStyles.Left;
+            button8logout.BackColor = Color.FromArgb(0, 192, 192);
+            button8logout.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button8logout.Location = new Point(87, 516);
+            button8logout.Margin = new Padding(4);
+            button8logout.Name = "button8logout";
+            button8logout.Size = new Size(162, 80);
+            button8logout.TabIndex = 26;
+            button8logout.Text = "log out";
+            button8logout.UseVisualStyleBackColor = false;
+            button8logout.Click += button8_Click;
             // 
-            // button3
+            // button3customers
             // 
-            button3.Anchor = AnchorStyles.Right;
-            button3.BackColor = Color.FromArgb(255, 192, 128);
-            button3.Location = new Point(853, 424);
-            button3.Margin = new Padding(4);
-            button3.Name = "button3";
-            button3.Size = new Size(163, 72);
-            button3.TabIndex = 25;
-            button3.Text = "Customers";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            button3customers.Anchor = AnchorStyles.Left;
+            button3customers.BackColor = Color.FromArgb(255, 192, 128);
+            button3customers.Location = new Point(61, 206);
+            button3customers.Margin = new Padding(4);
+            button3customers.Name = "button3customers";
+            button3customers.Size = new Size(193, 55);
+            button3customers.TabIndex = 25;
+            button3customers.Text = "Customers";
+            button3customers.UseVisualStyleBackColor = false;
+            button3customers.Visible = false;
+            button3customers.Click += button3_Click;
             // 
             // label1
             // 
@@ -161,10 +165,10 @@
             // 
             button6.Anchor = AnchorStyles.Left;
             button6.BackColor = Color.FromArgb(192, 192, 255);
-            button6.Location = new Point(36, 202);
+            button6.Location = new Point(89, 259);
             button6.Margin = new Padding(4);
             button6.Name = "button6";
-            button6.Size = new Size(114, 67);
+            button6.Size = new Size(163, 80);
             button6.TabIndex = 28;
             button6.Text = "sell";
             button6.UseVisualStyleBackColor = false;
@@ -174,10 +178,10 @@
             // 
             button7.Anchor = AnchorStyles.Left;
             button7.BackColor = Color.FromArgb(192, 192, 255);
-            button7.Location = new Point(36, 277);
+            button7.Location = new Point(87, 385);
             button7.Margin = new Padding(4);
             button7.Name = "button7";
-            button7.Size = new Size(114, 67);
+            button7.Size = new Size(163, 80);
             button7.TabIndex = 29;
             button7.Text = "add order";
             button7.UseVisualStyleBackColor = false;
@@ -207,46 +211,13 @@
             buttoncncel.UseVisualStyleBackColor = false;
             buttoncncel.Visible = false;
             // 
-            // button9
-            // 
-            button9.Anchor = AnchorStyles.Left;
-            button9.BackColor = Color.FromArgb(128, 255, 128);
-            button9.Location = new Point(71, 527);
-            button9.Name = "button9";
-            button9.Size = new Size(195, 42);
-            button9.TabIndex = 33;
-            button9.Text = "logout";
-            button9.UseVisualStyleBackColor = false;
-            // 
-            // button10
-            // 
-            button10.Anchor = AnchorStyles.Left;
-            button10.BackColor = Color.FromArgb(128, 255, 128);
-            button10.Location = new Point(72, 470);
-            button10.Name = "button10";
-            button10.Size = new Size(194, 42);
-            button10.TabIndex = 34;
-            button10.Text = "orders";
-            button10.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            button11.Anchor = AnchorStyles.Left;
-            button11.BackColor = Color.FromArgb(128, 255, 128);
-            button11.Location = new Point(71, 408);
-            button11.Name = "button11";
-            button11.Size = new Size(195, 42);
-            button11.TabIndex = 35;
-            button11.Text = "sales";
-            button11.UseVisualStyleBackColor = false;
-            // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Anchor = AnchorStyles.Left;
+            dateTimePicker1.Anchor = AnchorStyles.Top;
             dateTimePicker1.CalendarForeColor = Color.Black;
             dateTimePicker1.CalendarMonthBackground = SystemColors.InactiveBorder;
             dateTimePicker1.CalendarTitleBackColor = Color.White;
-            dateTimePicker1.Location = new Point(36, 88);
+            dateTimePicker1.Location = new Point(276, 136);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(290, 25);
             dateTimePicker1.TabIndex = 36;
@@ -256,7 +227,7 @@
             button12.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button12.BackColor = Color.FromArgb(255, 128, 128);
             button12.FlatStyle = FlatStyle.Flat;
-            button12.Location = new Point(800, 151);
+            button12.Location = new Point(864, 170);
             button12.Name = "button12";
             button12.Size = new Size(24, 26);
             button12.TabIndex = 37;
@@ -268,11 +239,39 @@
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            pictureBox1.Location = new Point(-2, 151);
+            pictureBox1.Location = new Point(-1, -3);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(268, 428);
+            pictureBox1.Size = new Size(268, 584);
             pictureBox1.TabIndex = 38;
             pictureBox1.TabStop = false;
+            pictureBox1.Visible = false;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.White;
+            button1.BackgroundImage = Properties.Resources.trepng;
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.Font = new Font("Stencil", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(-2, -3);
+            button1.Name = "button1";
+            button1.Size = new Size(54, 37);
+            button1.TabIndex = 39;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
+            // 
+            // button2minmize
+            // 
+            button2minmize.BackColor = Color.White;
+            button2minmize.BackgroundImage = (Image)resources.GetObject("button2minmize.BackgroundImage");
+            button2minmize.BackgroundImageLayout = ImageLayout.Stretch;
+            button2minmize.Font = new Font("Stencil", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button2minmize.Location = new Point(212, -3);
+            button2minmize.Name = "button2minmize";
+            button2minmize.Size = new Size(54, 37);
+            button2minmize.TabIndex = 40;
+            button2minmize.UseVisualStyleBackColor = false;
+            button2minmize.Visible = false;
+            button2minmize.Click += button2minmize_Click;
             // 
             // main_window
             // 
@@ -281,24 +280,23 @@
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1029, 581);
+            Controls.Add(button2minmize);
+            Controls.Add(button1);
             Controls.Add(button12);
             Controls.Add(dateTimePicker1);
-            Controls.Add(button11);
-            Controls.Add(button10);
-            Controls.Add(button9);
             Controls.Add(buttoncncel);
             Controls.Add(buttonpay);
             Controls.Add(button7);
             Controls.Add(button6);
-            Controls.Add(label1);
-            Controls.Add(button8);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button4);
-            Controls.Add(button1);
+            Controls.Add(button8logout);
+            Controls.Add(button3customers);
+            Controls.Add(button2salesinfo);
+            Controls.Add(button4inventory);
+            Controls.Add(button1orders);
             Controls.Add(listBox1);
             Controls.Add(button5);
             Controls.Add(pictureBox1);
+            Controls.Add(label1);
             DoubleBuffered = true;
             Font = new Font("Stencil", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
@@ -315,21 +313,20 @@
 
         private Button button5;
         private ListBox listBox1;
-        private Button button1;
-        private Button button4;
-        private Button button2;
-        private Button button8;
-        private Button button3;
+        private Button button1orders;
+        private Button button4inventory;
+        private Button button2salesinfo;
+        private Button button8logout;
+        private Button button3customers;
         private Label label1;
         private Button button6;
         private Button button7;
         private Button buttonpay;
         private Button buttoncncel;
-        private Button button9;
-        private Button button10;
-        private Button button11;
         private DateTimePicker dateTimePicker1;
         private Button button12;
         private PictureBox pictureBox1;
+        private Button button1;
+        private Button button2minmize;
     }
 }

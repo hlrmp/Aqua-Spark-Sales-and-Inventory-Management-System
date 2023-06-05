@@ -75,7 +75,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Calisto MT", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(271, 31);
+            label6.Location = new Point(265, 23);
             label6.Name = "label6";
             label6.Size = new Size(258, 22);
             label6.TabIndex = 53;
@@ -84,16 +84,17 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(43, 84);
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(43, 69);
             label1.Name = "label1";
-            label1.Size = new Size(46, 15);
+            label1.Size = new Size(63, 21);
             label1.TabIndex = 54;
             label1.Text = "ITEM  *";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(43, 246);
+            label2.Location = new Point(43, 274);
             label2.Name = "label2";
             label2.Size = new Size(75, 15);
             label2.TabIndex = 55;
@@ -102,7 +103,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(43, 308);
+            label3.Location = new Point(43, 337);
             label3.Name = "label3";
             label3.Size = new Size(105, 15);
             label3.TabIndex = 56;
@@ -110,7 +111,7 @@
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(43, 265);
+            numericUpDown1.Location = new Point(43, 293);
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(134, 23);
             numericUpDown1.TabIndex = 57;
@@ -122,7 +123,7 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Location = new Point(164, 102);
             button3.Name = "button3";
-            button3.Size = new Size(122, 117);
+            button3.Size = new Size(122, 129);
             button3.TabIndex = 58;
             button3.UseVisualStyleBackColor = true;
             // 
@@ -133,7 +134,7 @@
             button4.FlatStyle = FlatStyle.Flat;
             button4.Location = new Point(43, 102);
             button4.Name = "button4";
-            button4.Size = new Size(105, 117);
+            button4.Size = new Size(105, 129);
             button4.TabIndex = 59;
             button4.UseVisualStyleBackColor = true;
             // 
@@ -144,7 +145,7 @@
             button5.FlatStyle = FlatStyle.Flat;
             button5.Location = new Point(303, 102);
             button5.Name = "button5";
-            button5.Size = new Size(121, 117);
+            button5.Size = new Size(121, 129);
             button5.TabIndex = 60;
             button5.UseVisualStyleBackColor = true;
             // 
@@ -152,7 +153,7 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.White;
-            label4.Location = new Point(158, 307);
+            label4.Location = new Point(164, 337);
             label4.Name = "label4";
             label4.Size = new Size(39, 15);
             label4.TabIndex = 61;
@@ -161,7 +162,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(222, 246);
+            label5.Location = new Point(222, 274);
             label5.Name = "label5";
             label5.Size = new Size(68, 15);
             label5.TabIndex = 62;
@@ -169,7 +170,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(222, 264);
+            textBox1.Location = new Point(222, 292);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(151, 23);
             textBox1.TabIndex = 63;
@@ -179,11 +180,12 @@
             label7.AutoSize = true;
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(544, 84);
+            label7.ForeColor = Color.Black;
+            label7.Location = new Point(450, 69);
             label7.Name = "label7";
-            label7.Size = new Size(87, 21);
+            label7.Size = new Size(92, 21);
             label7.TabIndex = 65;
-            label7.Text = "ITEM  LIST";
+            label7.Text = "ITEM CART";
             // 
             // button6
             // 
@@ -210,7 +212,7 @@
             // 
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(450, 108);
+            dataGridView1.Location = new Point(450, 102);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(312, 263);

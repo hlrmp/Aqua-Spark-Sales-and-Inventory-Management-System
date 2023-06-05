@@ -80,9 +80,9 @@
             comboBox1.BackColor = Color.FromArgb(255, 192, 128);
             comboBox1.FlatStyle = FlatStyle.Flat;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(614, 66);
+            comboBox1.Location = new Point(551, 66);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(176, 23);
+            comboBox1.Size = new Size(239, 23);
             comboBox1.TabIndex = 35;
             // 
             // Sales_window

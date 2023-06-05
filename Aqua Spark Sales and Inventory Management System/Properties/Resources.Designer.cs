@@ -119,5 +119,15 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trepng {
+            get {
+                object obj = ResourceManager.GetObject("trepng", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

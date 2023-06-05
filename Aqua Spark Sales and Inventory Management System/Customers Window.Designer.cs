@@ -72,10 +72,10 @@
             // 
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(499, 71);
+            textBox1.Location = new Point(419, 71);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(237, 23);
+            textBox1.Size = new Size(317, 23);
             textBox1.TabIndex = 32;
             // 
             // pictureBox1
@@ -91,11 +91,14 @@
             // 
             // dataGridView_customers
             // 
+            dataGridView_customers.AllowUserToAddRows = false;
+            dataGridView_customers.AllowUserToDeleteRows = false;
             dataGridView_customers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView_customers.BackgroundColor = SystemColors.ControlLight;
             dataGridView_customers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_customers.Location = new Point(244, 144);
             dataGridView_customers.Name = "dataGridView_customers";
+            dataGridView_customers.ReadOnly = true;
             dataGridView_customers.RowTemplate.Height = 25;
             dataGridView_customers.Size = new Size(409, 232);
             dataGridView_customers.TabIndex = 26;
@@ -131,7 +134,7 @@
             comboBox1.BackColor = Color.FromArgb(255, 192, 128);
             comboBox1.FlatStyle = FlatStyle.Flat;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(499, 100);
+            comboBox1.Location = new Point(534, 100);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(237, 23);
             comboBox1.TabIndex = 36;
