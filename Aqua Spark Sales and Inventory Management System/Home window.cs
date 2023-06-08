@@ -40,16 +40,17 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button3customers.Show();
             button2salesinfo.Show();
             button1orders.Show();
-            button2minmize.Show();
+            button1.Show();
             pictureBox1.Show();
 
 
-            button1.Hide();
+            button2.Hide();
 
             button5.Hide();
             button6.Hide();
             button7.Hide();
             button8logout.Hide();
+
         }// see more button
 
         private void button1_Click(object sender, EventArgs e)  // minimize button
@@ -58,10 +59,10 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button3customers.Hide();
             button2salesinfo.Hide();
             button1orders.Hide();
-            button2minmize.Hide();
+            button1.Hide();
             pictureBox1.Hide();
 
-            button1.Show();
+            button2.Show();
 
             button5.Show();
             button6.Show();
@@ -69,5 +70,37 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button8logout.Show();
 
         } //minimimze button
+
+        private void button3customers_Click(object sender, EventArgs e) // customer button
+        {
+            customer2 c2 = new customer2();
+            c2.Show();
+            this.Hide();
+
+        }// customer button
+
+        private void button4inventory_Click(object sender, EventArgs e) // inventory button
+        {
+            inventory2 i2 = new inventory2();
+            i2.Show();
+            this.Hide();
+
+        }// inventory button
+
+        private void button1orders_Click(object sender, EventArgs e) // order button 
+        {
+            order_2 o2 = new order_2();
+            o2.Show();
+            this.Hide();
+
+        } // order button 
+
+        private void button2salesinfo_Click(object sender, EventArgs e) // sales button
+        {
+            sales2 s2 = new sales2();
+            s2.Show();
+            this.Hide();
+
+        } // sales button
     }
 }

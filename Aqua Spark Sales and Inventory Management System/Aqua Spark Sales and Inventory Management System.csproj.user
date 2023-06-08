@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="customer2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Customers Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Home window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Inventory Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="inventory2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="log in window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="main window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="new customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="New Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="order 2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Orders Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="reciept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Sales window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="sales2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
