@@ -13,13 +13,13 @@ namespace Aqua_Spark
 {
     internal class connection_class
     {
-
-        public string Connection()
+        public string data_connection()
         {
-        public string conn = "@Data Source=LAPTOP-3JRG23SL;Initial Catalog=aquasparkdata;Integrated Security=True";
-        return conn;
-        
-    }
+            string conn = "@Data Source=LAPTOP-3JRG23SL;Initial Catalog=aquasparkdata;Integrated Security=True ";
+            return conn;
+
+        }
+     
       
     }
 }  
