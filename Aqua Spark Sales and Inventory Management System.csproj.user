@@ -50,5 +50,8 @@
     <Compile Update="sales2.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="sign up.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

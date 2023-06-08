@@ -39,7 +39,7 @@
             button1log.Anchor = AnchorStyles.Bottom;
             button1log.BackColor = Color.FromArgb(128, 255, 128);
             button1log.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button1log.Location = new Point(169, 251);
+            button1log.Location = new Point(263, 361);
             button1log.Name = "button1log";
             button1log.Size = new Size(172, 70);
             button1log.TabIndex = 0;
@@ -54,9 +54,9 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Cyan;
-            label1.Location = new Point(3, 33);
+            label1.Location = new Point(-9, 9);
             label1.Name = "label1";
-            label1.Size = new Size(858, 114);
+            label1.Size = new Size(1068, 142);
             label1.TabIndex = 2;
             label1.Text = "aqua spark sales and inventory \r\nmanagement system";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -66,7 +66,7 @@
             button2exit.Anchor = AnchorStyles.Bottom;
             button2exit.BackColor = Color.FromArgb(255, 128, 128);
             button2exit.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button2exit.Location = new Point(501, 251);
+            button2exit.Location = new Point(584, 361);
             button2exit.Name = "button2exit";
             button2exit.Size = new Size(172, 70);
             button2exit.TabIndex = 3;
@@ -76,12 +76,12 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 19F);
+            AutoScaleDimensions = new SizeF(13F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 128, 255);
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(873, 422);
+            ClientSize = new Size(1044, 520);
             Controls.Add(button2exit);
             Controls.Add(label1);
             Controls.Add(button1log);

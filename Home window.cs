@@ -102,5 +102,13 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             this.Hide();
 
         } // sales button
+
+        private void button8logout_Click(object sender, EventArgs e) // log out button
+        {
+            Form1 f2 = new Form1();
+            f2.Show();
+            this.Close();
+
+        }// log out button
     }
 }
