@@ -41,7 +41,6 @@
             button7 = new Button();
             buttonpay = new Button();
             buttoncncel = new Button();
-            dateTimePicker1 = new DateTimePicker();
             button12 = new Button();
             pictureBox1 = new PictureBox();
             button1 = new Button();
@@ -58,7 +57,7 @@
             button5.FlatStyle = FlatStyle.Popup;
             button5.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button5.ForeColor = SystemColors.ButtonFace;
-            button5.Location = new Point(25, 68);
+            button5.Location = new Point(23, 38);
             button5.Margin = new Padding(4);
             button5.Name = "button5";
             button5.Size = new Size(229, 85);
@@ -73,11 +72,11 @@
             listBox1.BorderStyle = BorderStyle.FixedSingle;
             listBox1.FormattingEnabled = true;
             listBox1.HorizontalScrollbar = true;
-            listBox1.ItemHeight = 18;
-            listBox1.Location = new Point(319, 159);
+            listBox1.ItemHeight = 22;
+            listBox1.Location = new Point(319, 175);
             listBox1.Margin = new Padding(6);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(612, 308);
+            listBox1.Size = new Size(941, 288);
             listBox1.TabIndex = 21;
             listBox1.Visible = false;
             // 
@@ -86,7 +85,7 @@
             button1orders.Anchor = AnchorStyles.Left;
             button1orders.BackColor = Color.FromArgb(255, 192, 128);
             button1orders.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button1orders.Location = new Point(27, 459);
+            button1orders.Location = new Point(25, 474);
             button1orders.Margin = new Padding(4);
             button1orders.Name = "button1orders";
             button1orders.Size = new Size(227, 55);
@@ -133,7 +132,7 @@
             button8logout.FlatStyle = FlatStyle.Popup;
             button8logout.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button8logout.ForeColor = Color.FromArgb(255, 128, 128);
-            button8logout.Location = new Point(25, 525);
+            button8logout.Location = new Point(25, 449);
             button8logout.Margin = new Padding(4);
             button8logout.Name = "button8logout";
             button8logout.Size = new Size(229, 80);
@@ -167,7 +166,7 @@
             label1.Location = new Point(273, 19);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(846, 114);
+            label1.Size = new Size(1053, 142);
             label1.TabIndex = 27;
             label1.Text = "aqua spark sales and inventory\r\n  management system";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -179,7 +178,7 @@
             button6.FlatStyle = FlatStyle.Popup;
             button6.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button6.ForeColor = SystemColors.ButtonFace;
-            button6.Location = new Point(25, 221);
+            button6.Location = new Point(25, 174);
             button6.Margin = new Padding(4);
             button6.Name = "button6";
             button6.Size = new Size(229, 80);
@@ -195,7 +194,7 @@
             button7.FlatStyle = FlatStyle.Popup;
             button7.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button7.ForeColor = SystemColors.ButtonFace;
-            button7.Location = new Point(25, 371);
+            button7.Location = new Point(25, 309);
             button7.Margin = new Padding(4);
             button7.Name = "button7";
             button7.Size = new Size(229, 80);
@@ -208,7 +207,7 @@
             // 
             buttonpay.Anchor = AnchorStyles.Bottom;
             buttonpay.BackColor = Color.FromArgb(128, 255, 128);
-            buttonpay.Location = new Point(645, 516);
+            buttonpay.Location = new Point(810, 516);
             buttonpay.Name = "buttonpay";
             buttonpay.Size = new Size(131, 42);
             buttonpay.TabIndex = 31;
@@ -220,7 +219,7 @@
             // 
             buttoncncel.Anchor = AnchorStyles.Bottom;
             buttoncncel.BackColor = Color.FromArgb(255, 128, 128);
-            buttoncncel.Location = new Point(823, 516);
+            buttoncncel.Location = new Point(988, 516);
             buttoncncel.Name = "buttoncncel";
             buttoncncel.Size = new Size(131, 42);
             buttoncncel.TabIndex = 32;
@@ -228,25 +227,13 @@
             buttoncncel.UseVisualStyleBackColor = false;
             buttoncncel.Visible = false;
             // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Anchor = AnchorStyles.Top;
-            dateTimePicker1.CalendarForeColor = Color.Black;
-            dateTimePicker1.CalendarMonthBackground = SystemColors.InactiveBorder;
-            dateTimePicker1.CalendarTitleBackColor = Color.White;
-            dateTimePicker1.Location = new Point(276, 136);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(290, 25);
-            dateTimePicker1.TabIndex = 36;
-            // 
             // button12
             // 
             button12.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button12.BackColor = Color.FromArgb(255, 128, 128);
-            button12.FlatStyle = FlatStyle.Flat;
-            button12.Location = new Point(907, 159);
+            button12.Location = new Point(1223, 175);
             button12.Name = "button12";
-            button12.Size = new Size(24, 26);
+            button12.Size = new Size(37, 31);
             button12.TabIndex = 37;
             button12.Text = "X";
             button12.UseVisualStyleBackColor = false;
@@ -302,18 +289,17 @@
             // 
             // main_window
             // 
-            AutoScaleDimensions = new SizeF(9F, 18F);
+            AutoScaleDimensions = new SizeF(12F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1029, 581);
+            ClientSize = new Size(1358, 581);
             Controls.Add(button1);
             Controls.Add(button1orders);
             Controls.Add(button2salesinfo);
             Controls.Add(button3customers);
             Controls.Add(button2minmize);
             Controls.Add(button12);
-            Controls.Add(dateTimePicker1);
             Controls.Add(buttoncncel);
             Controls.Add(buttonpay);
             Controls.Add(button7);
@@ -352,7 +338,6 @@
         private Button button7;
         private Button buttonpay;
         private Button buttoncncel;
-        private DateTimePicker dateTimePicker1;
         private Button button12;
         private PictureBox pictureBox1;
         private Button button1;

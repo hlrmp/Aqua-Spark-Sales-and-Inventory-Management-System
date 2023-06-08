@@ -20,9 +20,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         }
 
 
-        SqlConnection conn = new SqlConnection(@"Data Source=REICHEL28\\SQLEXPRESS01;Initial Catalog=db_form;Integrated Security=True");
-        // (@"Data Source=REICHEL28\SQLEXPRESS01;Initial Catalog=db_form;Integrated Security=True");
-
+        SqlConnection conn = new SqlConnection(@"");
+       
 
         private void button1_Click(object sender, EventArgs e)   // log in button
         {
@@ -39,12 +38,12 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             else
 
             {
-                // Home_window hm1 = new Home_window();
-                // hm1.Show();
+                Home_window hm1 = new Home_window();
+                 hm1.Show();
                 //  this.Hide();
 
-                main_window fmain = new main_window();    // main window instance
-                fmain.Show();   // show main form 
+             // main_window fmain = new main_window();    // main window instance
+              //  fmain.Show();   // show main form 
                 this.Hide();
             }
             //    main_window fmain = new main_window();    // main window instance

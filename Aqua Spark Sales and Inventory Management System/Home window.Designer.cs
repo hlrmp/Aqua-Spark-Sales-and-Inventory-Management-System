@@ -42,14 +42,15 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button7 = new Button();
             buttonpay = new Button();
             buttoncncel = new Button();
-            dateTimePicker1 = new DateTimePicker();
             button12 = new Button();
             pictureBox1 = new PictureBox();
             button1 = new Button();
             button2 = new Button();
             pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // button5
@@ -59,7 +60,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button5.FlatStyle = FlatStyle.Popup;
             button5.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button5.ForeColor = SystemColors.ButtonFace;
-            button5.Location = new Point(25, 68);
+            button5.Location = new Point(23, 38);
             button5.Margin = new Padding(4);
             button5.Name = "button5";
             button5.Size = new Size(229, 85);
@@ -134,13 +135,14 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button8logout.FlatStyle = FlatStyle.Popup;
             button8logout.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button8logout.ForeColor = Color.FromArgb(255, 128, 128);
-            button8logout.Location = new Point(25, 525);
+            button8logout.Location = new Point(23, 478);
             button8logout.Margin = new Padding(4);
             button8logout.Name = "button8logout";
             button8logout.Size = new Size(229, 80);
             button8logout.TabIndex = 26;
             button8logout.Text = "log out";
             button8logout.UseVisualStyleBackColor = false;
+            button8logout.Click += button8logout_Click;
             // 
             // button3customers
             // 
@@ -179,7 +181,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button6.FlatStyle = FlatStyle.Popup;
             button6.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button6.ForeColor = SystemColors.ButtonFace;
-            button6.Location = new Point(25, 221);
+            button6.Location = new Point(25, 174);
             button6.Margin = new Padding(4);
             button6.Name = "button6";
             button6.Size = new Size(229, 80);
@@ -194,7 +196,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button7.FlatStyle = FlatStyle.Popup;
             button7.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button7.ForeColor = SystemColors.ButtonFace;
-            button7.Location = new Point(25, 371);
+            button7.Location = new Point(25, 309);
             button7.Margin = new Padding(4);
             button7.Name = "button7";
             button7.Size = new Size(229, 80);
@@ -226,17 +228,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             buttoncncel.Text = "cancel";
             buttoncncel.UseVisualStyleBackColor = false;
             buttoncncel.Visible = false;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Anchor = AnchorStyles.Top;
-            dateTimePicker1.CalendarForeColor = Color.Black;
-            dateTimePicker1.CalendarMonthBackground = SystemColors.InactiveBorder;
-            dateTimePicker1.CalendarTitleBackColor = Color.White;
-            dateTimePicker1.Location = new Point(319, 149);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(362, 30);
-            dateTimePicker1.TabIndex = 36;
             // 
             // button12
             // 
@@ -298,6 +289,18 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             pictureBox2.TabIndex = 41;
             pictureBox2.TabStop = false;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pictureBox3.BackColor = SystemColors.ActiveBorder;
+            pictureBox3.BackgroundImage = Properties.Resources._int;
+            pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox3.Location = new Point(261, -3);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(1087, 584);
+            pictureBox3.TabIndex = 42;
+            pictureBox3.TabStop = false;
+            // 
             // Home_window
             // 
             AutoScaleDimensions = new SizeF(12F, 22F);
@@ -311,7 +314,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(button12);
-            Controls.Add(dateTimePicker1);
             Controls.Add(buttoncncel);
             Controls.Add(buttonpay);
             Controls.Add(button7);
@@ -323,6 +325,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             Controls.Add(label1);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
+            Controls.Add(pictureBox3);
             DoubleBuffered = true;
             Font = new Font("Stencil", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
@@ -332,6 +335,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -350,11 +354,11 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private Button button7;
         private Button buttonpay;
         private Button buttoncncel;
-        private DateTimePicker dateTimePicker1;
         private Button button12;
         private PictureBox pictureBox1;
         private Button button1;
         private Button button2;
         private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }

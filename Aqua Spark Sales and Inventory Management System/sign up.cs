@@ -10,21 +10,16 @@ using System.Windows.Forms;
 
 namespace Aqua_Spark_Sales_and_Inventory_Management_System
 {
-    public partial class sales2 : Form
+    public partial class sign_up : Form
     {
-        public sales2()
+        public sign_up()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e) // home button
+        private void buttoncncel_Click(object sender, EventArgs e)
         {
-            Home_window hm4 = new Home_window();
-            hm4.Show();
-            this.Hide();
 
-        }// home button
-
-
+        }
     }
 }
