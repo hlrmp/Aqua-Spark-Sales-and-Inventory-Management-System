@@ -21,52 +21,9 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             InitializeComponent();
         }
 
-                             // user info declaration
-        private int user_id;
-        private int staff_id;
-        private string user_name;
-        private string password;
-        private string user_type;
 
-        public log_in_window(int userid, int staffid ,string username, // user info
-            string pass , string usertype)
-        {
-            this.user_id = userid;
-            this.staff_id = staffid;
-            this.user_name = username;
-            this.password = pass;
-            this.user_type = usertype;
-        } // user info
-
-        public int uid
-        {
-            get { return user_id; }
-            set { user_id = value; }
-        }
-        public int staff
-        {
-            get { return staff_id; }
-            set { staff_id = value; }
-        }
-        public string uname
-        {
-            get { return user_name; }
-            set { user_name = value; }
-        }
-        public string pas
-        {
-            get { return password; }
-            set { password = value; }
-        }
-
-        public string utype
-        {
-            get { return user_type; }
-            set { user_type = value; }
-        }
-
-
-        connection_class cnc = new connection_class();
+        user_class uc = new user_class();  // user class instance
+        connection_class cnc = new connection_class();  // database connection instance
        
 
         private void button1_Click(object sender, EventArgs e)   // log in button
@@ -94,12 +51,13 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                     connection.Open();  // Open the connection
               
                 
+       
 
-                user_name = textBox1_username.Text;
-                password = textBox2_password.Text;
+                uc.username = textBox1_username.Text;
+                uc.userpas = textBox2_password.Text;
 
-                string quer = "SELECT * FROM [users] WHERE user_name = '" + user_name +
-                    "' AND Password = '" + password + "' ";
+                    string quer = "SELECT * FROM [users] WHERE user_name = '" + uc.username +
+                    "' AND Password = '" + uc.userpas + "' ";
 
                 SqlCommand command = new SqlCommand();
                 command = new SqlCommand(quer);
