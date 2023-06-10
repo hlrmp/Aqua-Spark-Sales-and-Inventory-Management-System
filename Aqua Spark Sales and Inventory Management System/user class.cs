@@ -11,7 +11,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
     {
 
         // user info declaration
-        private int user_id;
+        private string user_id;
         private int staff_id;
         private string user_name;
         private string password;
@@ -19,13 +19,13 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         public user_class() {
 
-            this.user_id = 0;
+            this.user_id = " ";
             this.staff_id = 0;
             this.user_name = " ";
             this.password = " ";
             this.user_type = " ";
         }
-        public user_class(int userid, int staffid, string username, // user info
+        public user_class(string userid, int staffid, string username, // user info
             string pass, string usertype)
         {
             this.user_id = userid;
@@ -35,7 +35,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             this.user_type = usertype;
         } // user info
 
-        public int uid
+        public string uid
         {
             get { return user_id; }
             set { user_id = value; }

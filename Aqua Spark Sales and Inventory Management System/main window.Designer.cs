@@ -46,6 +46,7 @@
             button1 = new Button();
             button2minmize = new Button();
             pictureBox2 = new PictureBox();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -57,7 +58,7 @@
             button5.FlatStyle = FlatStyle.Popup;
             button5.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button5.ForeColor = SystemColors.ButtonFace;
-            button5.Location = new Point(23, 38);
+            button5.Location = new Point(23, 51);
             button5.Margin = new Padding(4);
             button5.Name = "button5";
             button5.Size = new Size(229, 85);
@@ -72,11 +73,11 @@
             listBox1.BorderStyle = BorderStyle.FixedSingle;
             listBox1.FormattingEnabled = true;
             listBox1.HorizontalScrollbar = true;
-            listBox1.ItemHeight = 22;
+            listBox1.ItemHeight = 18;
             listBox1.Location = new Point(319, 175);
             listBox1.Margin = new Padding(6);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(941, 288);
+            listBox1.Size = new Size(941, 290);
             listBox1.TabIndex = 21;
             listBox1.Visible = false;
             // 
@@ -85,7 +86,7 @@
             button1orders.Anchor = AnchorStyles.Left;
             button1orders.BackColor = Color.FromArgb(255, 192, 128);
             button1orders.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button1orders.Location = new Point(25, 474);
+            button1orders.Location = new Point(25, 487);
             button1orders.Margin = new Padding(4);
             button1orders.Name = "button1orders";
             button1orders.Size = new Size(227, 55);
@@ -100,7 +101,7 @@
             button4inventory.Anchor = AnchorStyles.Left;
             button4inventory.BackColor = Color.FromArgb(255, 192, 128);
             button4inventory.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button4inventory.Location = new Point(25, 68);
+            button4inventory.Location = new Point(25, 81);
             button4inventory.Margin = new Padding(4);
             button4inventory.Name = "button4inventory";
             button4inventory.Size = new Size(229, 55);
@@ -115,7 +116,7 @@
             button2salesinfo.Anchor = AnchorStyles.Left;
             button2salesinfo.BackColor = Color.FromArgb(255, 192, 128);
             button2salesinfo.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button2salesinfo.Location = new Point(25, 334);
+            button2salesinfo.Location = new Point(25, 347);
             button2salesinfo.Margin = new Padding(4);
             button2salesinfo.Name = "button2salesinfo";
             button2salesinfo.Size = new Size(227, 55);
@@ -132,7 +133,7 @@
             button8logout.FlatStyle = FlatStyle.Popup;
             button8logout.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button8logout.ForeColor = Color.FromArgb(255, 128, 128);
-            button8logout.Location = new Point(25, 449);
+            button8logout.Location = new Point(25, 462);
             button8logout.Margin = new Padding(4);
             button8logout.Name = "button8logout";
             button8logout.Size = new Size(229, 80);
@@ -146,7 +147,7 @@
             button3customers.Anchor = AnchorStyles.Left;
             button3customers.BackColor = Color.FromArgb(255, 192, 128);
             button3customers.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button3customers.Location = new Point(25, 199);
+            button3customers.Location = new Point(25, 212);
             button3customers.Margin = new Padding(4);
             button3customers.Name = "button3customers";
             button3customers.Size = new Size(227, 55);
@@ -166,7 +167,7 @@
             label1.Location = new Point(273, 19);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1053, 142);
+            label1.Size = new Size(846, 114);
             label1.TabIndex = 27;
             label1.Text = "aqua spark sales and inventory\r\n  management system";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -178,7 +179,7 @@
             button6.FlatStyle = FlatStyle.Popup;
             button6.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button6.ForeColor = SystemColors.ButtonFace;
-            button6.Location = new Point(25, 174);
+            button6.Location = new Point(25, 187);
             button6.Margin = new Padding(4);
             button6.Name = "button6";
             button6.Size = new Size(229, 80);
@@ -194,7 +195,7 @@
             button7.FlatStyle = FlatStyle.Popup;
             button7.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button7.ForeColor = SystemColors.ButtonFace;
-            button7.Location = new Point(25, 309);
+            button7.Location = new Point(25, 322);
             button7.Margin = new Padding(4);
             button7.Name = "button7";
             button7.Size = new Size(229, 80);
@@ -207,7 +208,7 @@
             // 
             buttonpay.Anchor = AnchorStyles.Bottom;
             buttonpay.BackColor = Color.FromArgb(128, 255, 128);
-            buttonpay.Location = new Point(810, 516);
+            buttonpay.Location = new Point(810, 542);
             buttonpay.Name = "buttonpay";
             buttonpay.Size = new Size(131, 42);
             buttonpay.TabIndex = 31;
@@ -219,7 +220,7 @@
             // 
             buttoncncel.Anchor = AnchorStyles.Bottom;
             buttoncncel.BackColor = Color.FromArgb(255, 128, 128);
-            buttoncncel.Location = new Point(988, 516);
+            buttoncncel.Location = new Point(988, 542);
             buttoncncel.Name = "buttoncncel";
             buttoncncel.Size = new Size(131, 42);
             buttoncncel.TabIndex = 32;
@@ -245,7 +246,7 @@
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             pictureBox1.Location = new Point(-1, -3);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(270, 584);
+            pictureBox1.Size = new Size(270, 610);
             pictureBox1.TabIndex = 38;
             pictureBox1.TabStop = false;
             pictureBox1.Visible = false;
@@ -283,17 +284,32 @@
             pictureBox2.BackColor = Color.CadetBlue;
             pictureBox2.Location = new Point(-2, -3);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(271, 584);
+            pictureBox2.Size = new Size(271, 610);
             pictureBox2.TabIndex = 41;
             pictureBox2.TabStop = false;
             // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.Left;
+            button2.BackColor = Color.FromArgb(255, 192, 128);
+            button2.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.Location = new Point(23, 572);
+            button2.Margin = new Padding(4);
+            button2.Name = "button2";
+            button2.Size = new Size(227, 55);
+            button2.TabIndex = 42;
+            button2.Text = "orders";
+            button2.UseVisualStyleBackColor = false;
+            button2.Visible = false;
+            // 
             // main_window
             // 
-            AutoScaleDimensions = new SizeF(12F, 22F);
+            AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1358, 581);
+            ClientSize = new Size(1358, 607);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(button1orders);
             Controls.Add(button2salesinfo);
@@ -343,5 +359,6 @@
         private Button button1;
         private Button button2minmize;
         private PictureBox pictureBox2;
+        private Button button2;
     }
 }

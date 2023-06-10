@@ -8,9 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using Aqua_Spark;
+//using Aqua_Spark;
 using Microsoft.VisualBasic.ApplicationServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
+using Microsoft.Identity.Client;
+using System.Drawing.Design;
+using System.Text.RegularExpressions;
+using System.Collections;
 
 namespace Aqua_Spark_Sales_and_Inventory_Management_System
 {
@@ -24,191 +29,138 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         user_class uc = new user_class();  // user class instance
         connection_class cnc = new connection_class();  // database connection instance
-       
+         //          string cn =                                      // SqlConnection connection = new SqlConnection();
+
+      //  SqlConnection connection = new SqlConnection();
+    //  SqlCommand command;
+     //   SqlDataReader rd;
 
         private void button1_Click(object sender, EventArgs e)   // log in button
         {
-
- try {
-            if (string.IsNullOrEmpty(textBox1_username.Text) ||
-                            string.IsNullOrEmpty(textBox2_password.Text))
-            {
-                if (textBox1_username.Text == "")
-                {
-                    MessageBox.Show(" Enter your user name ");
-                }
-                else if (textBox2_password.Text == "")
-                {
-                    MessageBox.Show(" Enter your password ");
-                }
-            }
-            else if (!string.IsNullOrEmpty(textBox1_username.Text) ||
-                 !string.IsNullOrEmpty(textBox2_password.Text))
+            using (SqlConnection connection = new SqlConnection(cnc.conn))
             {
 
-                using (SqlConnection connection = new SqlConnection(cnc.data_connection())) // database connection access
 
-                    connection.Open();  // Open the connection
-              
-                
-       
-
-                uc.username = textBox1_username.Text;
-                uc.userpas = textBox2_password.Text;
-
-                    string quer = "SELECT * FROM [users] WHERE user_name = '" + uc.username +
-                    "' AND Password = '" + uc.userpas + "' ";
-
-                SqlCommand command = new SqlCommand();
-                command = new SqlCommand(quer);
-                SqlDataReader reader = command.ExecuteReader();
-
-                string staff = ("SELECT [user_type]  FROM [log in] where user_type = admin");
-                SqlCommand command1 = new SqlCommand();
-                command1 = new SqlCommand(staff);
-                SqlDataReader reader1 = command1.ExecuteReader();
-
-                string staffs = ("SELECT [user_type]  FROM [log in] where user_type = cashier");
-                SqlCommand command2 = new SqlCommand();
-                command1 = new SqlCommand(staffs);
-                SqlDataReader reader2 = command1.ExecuteReader();
-
-                if (reader.Read() && reader1.Read())
+                try
                 {
-                    main_window fmain = new main_window();    // main window instance
-                    fmain.Show();   // show main form 
-                    this.Hide();
-                }
+                    string txtuser = textBox1_username.Text;
+                    string txtpass = textBox2_password.Text;
 
-                else if (reader.Read() && reader2.Read())
+
+
+
+                    if (string.IsNullOrEmpty(textBox1_username.Text) ||
+                                string.IsNullOrEmpty(textBox2_password.Text))
+                    {
+                        if (textBox1_username.Text == "")
+                        {
+                            MessageBox.Show(" Enter your user name ");
+
+                        }
+                        else if (textBox2_password.Text == "")
+                        {
+                            MessageBox.Show(" Enter your password ");
+                        }
+                    }
+                    else ///if (!string.IsNullOrEmpty(textBox1_username.Text) ||
+                        // !string.IsNullOrEmpty(textBox2_password.Text))
+                    { 
+
+                          // Open the connection
+
+
+                        uc.username = txtuser;
+                        uc.userpas = txtpass;
+
+                        //   uc.uid = "SELECT * FROM users WHERE user_id = '1'";
+                        //     MessageBox.Show(uc.uid);
+                        connection.Open();
+
+                        // string quer = "SELECT * FROM users WHERE user_name = '" + txtuser + "' AND password = ' " + txtpass + "'";
+
+                        string quer = "  SELECT * FROM users WHERE user_name = '" + uc.username + "'  AND password =  '" + uc.userpas + "' ";
+                       
+                        SqlCommand command = new SqlCommand();
+                        command = new SqlCommand(quer, connection);
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        if (reader.Read())
+                        {
+                           // if ( )
+                            //{
+//                                uc.utype = " " + reader[4];
+
+  //                              if (uc.utype == "manager")
+    //                            {
+                                    main_window fmain = new main_window();    // main window instance
+                                    fmain.Show();   // show main form 
+                                    this.Hide();
+        //                       }
+      //                        else if (uc.utype == "cashier")
+          //                     {
+                                    Home_window hm1 = new Home_window();
+            //                      hm1.Show();
+                //                   this.Hide();
+              //                  }
+
+                       //  }
+                      //     else
+                         //  {
+                                MessageBox.Show(" user name or password incorect");
+                       //    }
+//
+                        }
+                        else
+                        {
+                            MessageBox.Show(" user name or password incorect");
+                        }
+
+
+
+                        /*
+                                              string staff = ("SELECT user_type  FROM user where user_type = admin");
+                                               SqlCommand command1 = new SqlCommand();
+                                               command1 = new SqlCommand(staff);
+                                               SqlDataReader reader1 = command1.ExecuteReader();
+
+
+
+                                               string staffs = ("SELECT user_type  FROM user where user_type = cashier");
+                                               SqlCommand command2 = new SqlCommand();
+                                               command1 = new SqlCommand(staffs);
+                                               SqlDataReader reader2 = command1.ExecuteReader();
+
+                                           */
+
+
+                        // else if (reader.Read() && reader2.Read())
+                        //  {
+                        //       Home_window hm1 = new Home_window();
+                        //       this.Hide();
+                        //}
+                        //   } // using connection
+                    }
+                    
+
+                }
+                catch (Exception)
                 {
-                    Home_window hm1 = new Home_window();
-                    hm1.Show();
-                    this.Hide();
+
+                    //MessageBox.Show(" user name or password incorect");
+                    MessageBox.Show("error", "error", MessageBoxButtons.OK);
+
+
+
+
                 }
+                finally     // to close the connection
+                {
+                    connection.Close();
 
-            }
-            else
-            {
-                MessageBox.Show(" user name or password incorect");
-
-            }
-
-        }
- catch (Exception )
-                  {
-
-                   MessageBox.Show("error", "error", MessageBoxButtons.OK);
+                } // to close the connection
 
 
-                  }
-    //     finally
-    //    {
-    //         conn.Close();
-    //    }
-
-            /* try
-                  {
-
-                      string username, password;
-
-                      username = textBox1_username.Text;
-                      password = textBox2_password.Text;
-
-
-                      string querusername = ("SELECT [USER NAME]  FROM [log in] where lid = 1");
-                      string querpass = "SELECT PASSWORD FROM [log in] where lid = 1 ";
-
-
-
-                     string querusername2 = "SELECT USER NAME FROM log in WHERE lid = 2 ";
-                     string querpass2 = "SELECT PASSWORD FROM log in WHERE lid = 2 ";
-
-
-
-                     // SqlDataAdapter sd = new SqlDataAdapter(quer,conn);
-
-                     //DataTable table = new DataTable(quer);
-                     //sd.Fill(table);
-
-                     //string querlognum = "SELECT * FROM log in WHERE lid IN('1')"; // user name and password 1 
-                     //string querlognum2 = "SELECT * FROM log in WHERE lid IN('1')"; // user name and password 2
-                     //   string queruser = " SELECT USER NAME FROM log in WHERE condition";
-
-                     int c = 1;
-                      int a = 1;
-
-
-                      if (username == (querusername) && password == (querpass))   // admin acc
-                      {
-                       //   username = textBox1_username.Text;
-                         // password = textBox2_password.Text;
-
-                          textBox1_username.Clear();
-                          textBox2_password.Clear();
-
-                          MessageBox.Show("log in succesfully", "thank you", MessageBoxButtons.OK);
-
-                          //  if (username == querlognum && password == querlognum)
-                          // { // if user name & pass == to cashier
-
-
-                          //string querlogcount = " INSERT INTO CASHIER ACC (LOG COUNT) VALUES(c);";
-                          //    }
-
-                          //  if (username == querlognum2 && password == querlognum2) // if user name & pass == to admin
-                          //  {
-
-                          //       string querlogcount2 = " INSERT INTO ADMIN ACC (LOG COUNT) VALUES(a);";
-                          //  }
-
-                          main_window fmain = new main_window();    // main window instance
-
-                          fmain.Show();   // show main form 
-                          this.Hide();   // hide this form 
-                      } // admin acc
-
-                      else if (username.Equals(querusername2) && password.Equals(querpass2))  // cashier acc
-                     {
-                         textBox1_username.Clear();
-                         textBox2_password.Clear();
-
-                         MessageBox.Show("log in succesfully", "thank you", MessageBoxButtons.OK);
-
-                         Home_window hm = new Home_window();   // home window
-                         hm.Show();     // show home form 
-                         this.Hide();    // hide this form 
-
-                     } // caher acc
-                      else
-                      {
-                          MessageBox.Show("user name or password incorrect", "error", MessageBoxButtons.OK);
-                          textBox1_username.Clear();
-                          textBox2_password.Clear();
-
-                         MessageBox.Show(querpass + querusername);
-
-                      }
-
-                  }
-                  catch (Exception )
-                  {
-
-
-
-                          MessageBox.Show("error", "error", MessageBoxButtons.OK);
-
-
-                  }
-                  //     finally
-                  //    {
-                  //         conn.Close();
-                  //    }
-              }
-
-                 */
-
-
+            }// using connection
         }  // log in button 
 
 
