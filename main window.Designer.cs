@@ -29,8 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main_window));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             button5 = new Button();
-            listBox1 = new ListBox();
             button1orders = new Button();
             button4inventory = new Button();
             button2salesinfo = new Button();
@@ -46,8 +49,13 @@
             button1 = new Button();
             button2minmize = new Button();
             pictureBox2 = new PictureBox();
+            buttonemp = new Button();
+            sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
+            dataGridView1 = new DataGridView();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // button5
@@ -57,7 +65,7 @@
             button5.FlatStyle = FlatStyle.Popup;
             button5.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button5.ForeColor = SystemColors.ButtonFace;
-            button5.Location = new Point(23, 38);
+            button5.Location = new Point(21, 110);
             button5.Margin = new Padding(4);
             button5.Name = "button5";
             button5.Size = new Size(229, 85);
@@ -66,29 +74,15 @@
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
-            // listBox1
-            // 
-            listBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            listBox1.BorderStyle = BorderStyle.FixedSingle;
-            listBox1.FormattingEnabled = true;
-            listBox1.HorizontalScrollbar = true;
-            listBox1.ItemHeight = 22;
-            listBox1.Location = new Point(319, 175);
-            listBox1.Margin = new Padding(6);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(941, 288);
-            listBox1.TabIndex = 21;
-            listBox1.Visible = false;
-            // 
             // button1orders
             // 
             button1orders.Anchor = AnchorStyles.Left;
             button1orders.BackColor = Color.FromArgb(255, 192, 128);
             button1orders.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button1orders.Location = new Point(25, 474);
+            button1orders.Location = new Point(19, 436);
             button1orders.Margin = new Padding(4);
             button1orders.Name = "button1orders";
-            button1orders.Size = new Size(227, 55);
+            button1orders.Size = new Size(229, 84);
             button1orders.TabIndex = 22;
             button1orders.Text = "orders";
             button1orders.UseVisualStyleBackColor = false;
@@ -100,10 +94,10 @@
             button4inventory.Anchor = AnchorStyles.Left;
             button4inventory.BackColor = Color.FromArgb(255, 192, 128);
             button4inventory.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button4inventory.Location = new Point(25, 68);
+            button4inventory.Location = new Point(21, 0);
             button4inventory.Margin = new Padding(4);
             button4inventory.Name = "button4inventory";
-            button4inventory.Size = new Size(229, 55);
+            button4inventory.Size = new Size(229, 77);
             button4inventory.TabIndex = 23;
             button4inventory.Text = "inventory";
             button4inventory.UseVisualStyleBackColor = false;
@@ -115,10 +109,10 @@
             button2salesinfo.Anchor = AnchorStyles.Left;
             button2salesinfo.BackColor = Color.FromArgb(255, 192, 128);
             button2salesinfo.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button2salesinfo.Location = new Point(25, 334);
+            button2salesinfo.Location = new Point(21, 288);
             button2salesinfo.Margin = new Padding(4);
             button2salesinfo.Name = "button2salesinfo";
-            button2salesinfo.Size = new Size(227, 55);
+            button2salesinfo.Size = new Size(231, 77);
             button2salesinfo.TabIndex = 24;
             button2salesinfo.Text = "sales info";
             button2salesinfo.UseVisualStyleBackColor = false;
@@ -132,7 +126,7 @@
             button8logout.FlatStyle = FlatStyle.Popup;
             button8logout.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button8logout.ForeColor = Color.FromArgb(255, 128, 128);
-            button8logout.Location = new Point(25, 449);
+            button8logout.Location = new Point(21, 623);
             button8logout.Margin = new Padding(4);
             button8logout.Name = "button8logout";
             button8logout.Size = new Size(229, 80);
@@ -146,10 +140,10 @@
             button3customers.Anchor = AnchorStyles.Left;
             button3customers.BackColor = Color.FromArgb(255, 192, 128);
             button3customers.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button3customers.Location = new Point(25, 199);
+            button3customers.Location = new Point(21, 134);
             button3customers.Margin = new Padding(4);
             button3customers.Name = "button3customers";
-            button3customers.Size = new Size(227, 55);
+            button3customers.Size = new Size(231, 77);
             button3customers.TabIndex = 25;
             button3customers.Text = "Customers";
             button3customers.UseVisualStyleBackColor = false;
@@ -158,12 +152,12 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Cyan;
-            label1.Location = new Point(273, 19);
+            label1.Location = new Point(321, -3);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(1053, 142);
@@ -178,7 +172,7 @@
             button6.FlatStyle = FlatStyle.Popup;
             button6.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button6.ForeColor = SystemColors.ButtonFace;
-            button6.Location = new Point(25, 174);
+            button6.Location = new Point(21, 285);
             button6.Margin = new Padding(4);
             button6.Name = "button6";
             button6.Size = new Size(229, 80);
@@ -194,7 +188,7 @@
             button7.FlatStyle = FlatStyle.Popup;
             button7.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button7.ForeColor = SystemColors.ButtonFace;
-            button7.Location = new Point(25, 309);
+            button7.Location = new Point(19, 463);
             button7.Margin = new Padding(4);
             button7.Name = "button7";
             button7.Size = new Size(229, 80);
@@ -207,7 +201,7 @@
             // 
             buttonpay.Anchor = AnchorStyles.Bottom;
             buttonpay.BackColor = Color.FromArgb(128, 255, 128);
-            buttonpay.Location = new Point(810, 516);
+            buttonpay.Location = new Point(810, 737);
             buttonpay.Name = "buttonpay";
             buttonpay.Size = new Size(131, 42);
             buttonpay.TabIndex = 31;
@@ -219,7 +213,7 @@
             // 
             buttoncncel.Anchor = AnchorStyles.Bottom;
             buttoncncel.BackColor = Color.FromArgb(255, 128, 128);
-            buttoncncel.Location = new Point(988, 516);
+            buttoncncel.Location = new Point(988, 737);
             buttoncncel.Name = "buttoncncel";
             buttoncncel.Size = new Size(131, 42);
             buttoncncel.TabIndex = 32;
@@ -231,9 +225,9 @@
             // 
             button12.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button12.BackColor = Color.FromArgb(255, 128, 128);
-            button12.Location = new Point(1223, 175);
+            button12.Location = new Point(1105, 153);
             button12.Name = "button12";
-            button12.Size = new Size(37, 31);
+            button12.Size = new Size(56, 42);
             button12.TabIndex = 37;
             button12.Text = "X";
             button12.UseVisualStyleBackColor = false;
@@ -245,7 +239,7 @@
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             pictureBox1.Location = new Point(-1, -3);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(270, 584);
+            pictureBox1.Size = new Size(270, 805);
             pictureBox1.TabIndex = 38;
             pictureBox1.TabStop = false;
             pictureBox1.Visible = false;
@@ -279,13 +273,95 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             pictureBox2.BackColor = Color.CadetBlue;
-            pictureBox2.Location = new Point(-2, -3);
+            pictureBox2.Dock = DockStyle.Left;
+            pictureBox2.Location = new Point(0, 0);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(271, 584);
+            pictureBox2.Size = new Size(271, 802);
             pictureBox2.TabIndex = 41;
             pictureBox2.TabStop = false;
+            // 
+            // buttonemp
+            // 
+            buttonemp.Anchor = AnchorStyles.Left;
+            buttonemp.BackColor = Color.FromArgb(255, 192, 128);
+            buttonemp.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonemp.Location = new Point(25, 753);
+            buttonemp.Margin = new Padding(4);
+            buttonemp.Name = "buttonemp";
+            buttonemp.Size = new Size(227, 70);
+            buttonemp.TabIndex = 42;
+            buttonemp.Text = "employees";
+            buttonemp.UseVisualStyleBackColor = false;
+            buttonemp.Visible = false;
+            buttonemp.Click += button2_Click_1;
+            // 
+            // sqlCommand1
+            // 
+            sqlCommand1.CommandTimeout = 30;
+            sqlCommand1.EnableOptimizedParameterBinding = false;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(192, 255, 255);
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(192, 192, 255);
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(0, 0, 64);
+            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.BackgroundColor = Color.FromArgb(192, 255, 255);
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(192, 255, 255);
+            dataGridViewCellStyle2.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(192, 192, 255);
+            dataGridViewCellStyle2.SelectionForeColor = Color.Navy;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dataGridView1.GridColor = Color.Black;
+            dataGridView1.Location = new Point(376, 153);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(192, 192, 255);
+            dataGridViewCellStyle3.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(255, 192, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(255, 192, 255);
+            dataGridViewCellStyle4.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(192, 192, 255);
+            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
+            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(785, 494);
+            dataGridView1.TabIndex = 44;
+            dataGridView1.Visible = false;
+            // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.Left;
+            button2.BackColor = Color.FromArgb(255, 192, 128);
+            button2.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.Location = new Point(21, 607);
+            button2.Margin = new Padding(4);
+            button2.Name = "button2";
+            button2.Size = new Size(227, 84);
+            button2.TabIndex = 45;
+            button2.Text = "supplier";
+            button2.UseVisualStyleBackColor = false;
+            button2.Visible = false;
+            button2.Click += button2_Click_2;
             // 
             // main_window
             // 
@@ -293,24 +369,26 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1358, 581);
+            ClientSize = new Size(1354, 802);
+            Controls.Add(button2);
+            Controls.Add(button12);
+            Controls.Add(buttonemp);
             Controls.Add(button1);
             Controls.Add(button1orders);
             Controls.Add(button2salesinfo);
             Controls.Add(button3customers);
             Controls.Add(button2minmize);
-            Controls.Add(button12);
             Controls.Add(buttoncncel);
             Controls.Add(buttonpay);
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(button8logout);
             Controls.Add(button4inventory);
-            Controls.Add(listBox1);
             Controls.Add(button5);
             Controls.Add(label1);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
+            Controls.Add(dataGridView1);
             DoubleBuffered = true;
             Font = new Font("Stencil", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
@@ -320,6 +398,7 @@
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -327,7 +406,6 @@
         #endregion
 
         private Button button5;
-        private ListBox listBox1;
         private Button button1orders;
         private Button button4inventory;
         private Button button2salesinfo;
@@ -343,5 +421,9 @@
         private Button button1;
         private Button button2minmize;
         private PictureBox pictureBox2;
+        private Button buttonemp;
+        private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
+        private DataGridView dataGridView1;
+        private Button button2;
     }
 }

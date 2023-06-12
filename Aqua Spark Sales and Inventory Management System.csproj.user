@@ -53,5 +53,11 @@
     <Compile Update="sign up.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="supplier window%27.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

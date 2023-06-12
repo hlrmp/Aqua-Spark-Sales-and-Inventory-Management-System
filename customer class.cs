@@ -14,7 +14,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private string first_name;
         private string last_name;
         private string address;
-        private string contact_number;
+        private int contact_number;
         private string email;
 
         public customer_class()
@@ -23,16 +23,16 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             this.first_name = " ";
             this.last_name = " ";
             this.address = " ";
-            this.contact_number = " ";
+            this.contact_number = 0;
             this.email = " ";
         }
-        public customer_class(int customerid, string firstname, string lastname, string add, string contactnumber, string em)
+        public customer_class(int customerid, string firstname, string lastname, string add,  string em)
         {
             this.customer_id = customerid;
             this.first_name = firstname;
             this.last_name = lastname;
             this.address = add;
-            this.contact_number = contactnumber;
+            this.contact_number = 0;
             this.email = em;
 
         }
@@ -58,7 +58,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             get { return address; }
             set { address = value; }
         }
-        public string contacnum
+        public int contacnum
         {
             get { return contact_number; }
             set { contact_number = value; }
@@ -66,6 +66,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         public string e
         {
             get { return email; }
+            set { email = value; }
         }
     }
 }

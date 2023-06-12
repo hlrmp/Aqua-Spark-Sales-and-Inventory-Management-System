@@ -1,6 +1,6 @@
 ﻿namespace Aqua_Spark_Sales_and_Inventory_Management_System
 {
-    partial class sign_up
+    partial class supplier_window_
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            button4inventory = new Button();
             button1 = new Button();
-            button3 = new Button();
             pictureBox1 = new PictureBox();
             dataGridView1 = new DataGridView();
             pictureBox2 = new PictureBox();
+            button2 = new Button();
             button4 = new Button();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -56,21 +56,6 @@
             label1.Text = "                     AQUA SPARK  EMPLOYEES AND CUSTOMERS";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
-            // button4inventory
-            // 
-            button4inventory.Anchor = AnchorStyles.Left;
-            button4inventory.BackColor = Color.Transparent;
-            button4inventory.FlatStyle = FlatStyle.Popup;
-            button4inventory.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button4inventory.Location = new Point(14, 423);
-            button4inventory.Margin = new Padding(5, 4, 5, 4);
-            button4inventory.Name = "button4inventory";
-            button4inventory.Size = new Size(175, 78);
-            button4inventory.TabIndex = 43;
-            button4inventory.Text = "add employees";
-            button4inventory.UseVisualStyleBackColor = false;
-            button4inventory.Click += button4inventory_Click;
-            // 
             // button1
             // 
             button1.Anchor = AnchorStyles.Left;
@@ -84,22 +69,6 @@
             button1.TabIndex = 44;
             button1.Text = "home";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
-            // button3
-            // 
-            button3.Anchor = AnchorStyles.Left;
-            button3.BackColor = Color.Transparent;
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Location = new Point(14, 259);
-            button3.Margin = new Padding(5, 4, 5, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(175, 78);
-            button3.TabIndex = 53;
-            button3.Text = "EMPLOYEES";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
             // 
             // pictureBox1
             // 
@@ -120,7 +89,7 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter;
             dataGridView1.GridColor = Color.Black;
-            dataGridView1.Location = new Point(261, 107);
+            dataGridView1.Location = new Point(252, 111);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
@@ -138,37 +107,65 @@
             pictureBox2.TabIndex = 56;
             pictureBox2.TabStop = false;
             // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.Left;
+            button2.BackColor = Color.Transparent;
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.Location = new Point(14, 421);
+            button2.Margin = new Padding(5, 4, 5, 4);
+            button2.Name = "button2";
+            button2.Size = new Size(175, 78);
+            button2.TabIndex = 57;
+            button2.Text = "add supplier";
+            button2.UseVisualStyleBackColor = false;
+            // 
             // button4
             // 
             button4.Anchor = AnchorStyles.Left;
             button4.BackColor = Color.Transparent;
             button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.Location = new Point(14, 585);
+            button4.Location = new Point(14, 260);
             button4.Margin = new Padding(5, 4, 5, 4);
             button4.Name = "button4";
             button4.Size = new Size(175, 78);
             button4.TabIndex = 58;
-            button4.Text = "delete";
+            button4.Text = "supplier";
             button4.UseVisualStyleBackColor = false;
             // 
-            // sign_up
+            // button3
+            // 
+            button3.Anchor = AnchorStyles.Left;
+            button3.BackColor = Color.Transparent;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.Location = new Point(14, 585);
+            button3.Margin = new Padding(5, 4, 5, 4);
+            button3.Name = "button3";
+            button3.Size = new Size(175, 78);
+            button3.TabIndex = 59;
+            button3.Text = "delete";
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // supplier_window_
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1216, 659);
-            Controls.Add(button4);
             Controls.Add(button3);
+            Controls.Add(button4);
+            Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(button4inventory);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(dataGridView1);
             Controls.Add(pictureBox2);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "sign_up";
+            Name = "supplier_window_";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "sign_up";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -181,12 +178,12 @@
         #endregion
 
         private Label label1;
-        private Button button4inventory;
         private Button button1;
-        private Button button3;
         private PictureBox pictureBox1;
         private DataGridView dataGridView1;
         private PictureBox pictureBox2;
+        private Button button2;
         private Button button4;
+        private Button button3;
     }
 }

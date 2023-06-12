@@ -29,5 +29,11 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             this.Hide();
 
         }
+
+        private void button2_Click(object sender, EventArgs e)  // from order
+        {
+            
+        }// from order
+
     }
 }

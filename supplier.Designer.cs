@@ -1,6 +1,6 @@
 ﻿namespace Aqua_Spark_Sales_and_Inventory_Management_System
 {
-    partial class new_customer
+    partial class supplier
     {
         /// <summary>
         /// Required designer variable.
@@ -56,11 +56,11 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Calisto MT", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(288, 43);
+            label6.Location = new Point(271, 49);
             label6.Name = "label6";
-            label6.Size = new Size(409, 28);
+            label6.Size = new Size(374, 28);
             label6.TabIndex = 54;
-            label6.Text = "AQUA SPARK NEW CUSTOMERS";
+            label6.Text = "AQUA SPARK NEW SUPPLIER\r\n";
             // 
             // label2
             // 
@@ -168,7 +168,6 @@
             button2.TabIndex = 66;
             button2.Text = "CANCEL";
             button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -181,9 +180,8 @@
             button3.TabIndex = 67;
             button3.Text = "CLEAR";
             button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
             // 
-            // new_customer
+            // supplier
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -205,7 +203,7 @@
             Controls.Add(textBoxfname);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
-            Name = "new_customer";
+            Name = "supplier";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "new_customer";
             ResumeLayout(false);

@@ -18,7 +18,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             InitializeComponent();
         }
         // 1 encapsulation customer info
-           
+
 
         private void button1_Click(object sender, EventArgs e) // home button 
         {
