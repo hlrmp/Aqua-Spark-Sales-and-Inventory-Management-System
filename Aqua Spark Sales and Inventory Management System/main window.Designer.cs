@@ -86,10 +86,10 @@
             button1orders.Anchor = AnchorStyles.Left;
             button1orders.BackColor = Color.FromArgb(255, 192, 128);
             button1orders.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button1orders.Location = new Point(25, 516);
+            button1orders.Location = new Point(25, 491);
             button1orders.Margin = new Padding(4);
             button1orders.Name = "button1orders";
-            button1orders.Size = new Size(227, 55);
+            button1orders.Size = new Size(229, 55);
             button1orders.TabIndex = 22;
             button1orders.Text = "orders";
             button1orders.UseVisualStyleBackColor = false;
@@ -101,7 +101,7 @@
             button4inventory.Anchor = AnchorStyles.Left;
             button4inventory.BackColor = Color.FromArgb(255, 192, 128);
             button4inventory.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button4inventory.Location = new Point(25, 110);
+            button4inventory.Location = new Point(23, 78);
             button4inventory.Margin = new Padding(4);
             button4inventory.Name = "button4inventory";
             button4inventory.Size = new Size(229, 55);
@@ -116,10 +116,10 @@
             button2salesinfo.Anchor = AnchorStyles.Left;
             button2salesinfo.BackColor = Color.FromArgb(255, 192, 128);
             button2salesinfo.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button2salesinfo.Location = new Point(25, 376);
+            button2salesinfo.Location = new Point(23, 351);
             button2salesinfo.Margin = new Padding(4);
             button2salesinfo.Name = "button2salesinfo";
-            button2salesinfo.Size = new Size(227, 55);
+            button2salesinfo.Size = new Size(231, 55);
             button2salesinfo.TabIndex = 24;
             button2salesinfo.Text = "sales info";
             button2salesinfo.UseVisualStyleBackColor = false;
@@ -147,10 +147,10 @@
             button3customers.Anchor = AnchorStyles.Left;
             button3customers.BackColor = Color.FromArgb(255, 192, 128);
             button3customers.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button3customers.Location = new Point(25, 241);
+            button3customers.Location = new Point(23, 216);
             button3customers.Margin = new Padding(4);
             button3customers.Name = "button3customers";
-            button3customers.Size = new Size(227, 55);
+            button3customers.Size = new Size(231, 55);
             button3customers.TabIndex = 25;
             button3customers.Text = "Customers";
             button3customers.UseVisualStyleBackColor = false;
@@ -293,7 +293,7 @@
             buttonemp.Anchor = AnchorStyles.Left;
             buttonemp.BackColor = Color.FromArgb(255, 192, 128);
             buttonemp.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonemp.Location = new Point(23, 631);
+            buttonemp.Location = new Point(23, 618);
             buttonemp.Margin = new Padding(4);
             buttonemp.Name = "buttonemp";
             buttonemp.Size = new Size(227, 55);
