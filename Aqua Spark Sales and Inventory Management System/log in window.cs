@@ -46,9 +46,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                     string txtuser = textBox1_username.Text;
                     string txtpass = textBox2_password.Text;
 
-
-
-
                     if (string.IsNullOrEmpty(textBox1_username.Text) ||
                                 string.IsNullOrEmpty(textBox2_password.Text))
                     {
@@ -78,12 +75,18 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
                         // string quer = "SELECT * FROM users WHERE user_name = '" + txtuser + "' AND password = ' " + txtpass + "'";
 
-                        string quer = "  SELECT * FROM users WHERE user_name = '" + uc.username + "'  AND password =  '" + uc.userpas + "' ";
-
+                        string quer = "  SELECT user_name ,password , user_type FROM users WHERE user_name = '" + uc.username + "'  AND password =  '" + uc.userpas + "' ";
+                        
                         SqlCommand command = new SqlCommand();
                         command = new SqlCommand(quer, connection);
                         SqlDataReader reader = command.ExecuteReader();
-
+/*
+                          string quer1 = "  SELECT user_type FROM users WHERE user_name = '" + uc.username + "'  AND password =  '" + uc.userpas + "' ";
+                          SqlCommand command1 = new SqlCommand();
+                          command1 = new SqlCommand(quer1, connection);
+                          SqlDataReader reader1 = command1.ExecuteReader();
+ */
+                        
                         if (reader.Read())
                         {
                             // if ( )
@@ -92,12 +95,12 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                             main_window fmain = new main_window();    // main window instance
                             fmain.Show();   // show main form 
                             this.Hide();
-
-                            if (uc.utype == "manager")
+                             //quer1.ToString();
+                            if (uc.utype == ("manager"))
                             {
                                 MessageBox.Show("MANAGER");
                             }
-                            else if (uc.utype == "cashier")
+                            else if (uc.utype == ("cashier"))
                             {
                                 MessageBox.Show("CASHIER");
                                 Home_window hm1 = new Home_window();

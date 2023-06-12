@@ -188,6 +188,7 @@
             Name = "customer2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "sales2";
+            WindowState = FormWindowState.Minimized;
             ((System.ComponentModel.ISupportInitialize)dataGridView_sales).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);

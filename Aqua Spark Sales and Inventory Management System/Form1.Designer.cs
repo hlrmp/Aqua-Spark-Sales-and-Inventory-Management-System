@@ -101,14 +101,14 @@
             label1.ForeColor = Color.FromArgb(251, 251, 255);
             label1.Location = new Point(53, 0);
             label1.Name = "label1";
-            label1.Size = new Size(858, 114);
+            label1.Size = new Size(1068, 142);
             label1.TabIndex = 2;
             label1.Text = "aqua spark sales and inventory \r\nmanagement system";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 19F);
+            AutoScaleDimensions = new SizeF(13F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 128, 255);
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");

@@ -19,7 +19,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         public sign_up()
         {
             InitializeComponent();
-            
+
         }
 
 
@@ -31,22 +31,14 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         private void button3_Click(object sender, EventArgs e) // see employee
         {
+            dataGridView1.Show();
             sign();
 
         } // see employee
 
         private void button4inventory_Click(object sender, EventArgs e) // add employee
         {
-            textBoxpassword.Show();
-            textBoxusername.Show();
-            label1.Show();
-            label2.Show();
-            label3.Show();
-            comboBox1.Show();
-            buttona.Show();
-            buttonb.Show();
-            buttonc.Show();
-
+           
         }// add employee
         connection_class cs = new connection_class();
 
@@ -60,17 +52,23 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 {
 
                     cn.Open();
-                    SqlDataAdapter adapt = new SqlDataAdapter();
-                    SqlCommand command = new SqlCommand();
                     string st = "SELECT * FROM staffs";
+                    SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
+                    SqlCommand command = new SqlCommand();
+
                     command.CommandText = st;
                     command.Parameters.Clear();
                     DataTable table = new DataTable();
                     adapt.Fill(table);
-                  
-                   //   command = new SqlCommand(st, cn);
-                  //   SqlDataReader reader = command.ExecuteReader();
-                   // dataGridView1.DataSource = reader.Read();
+
+                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                    dataGridView1.DataSource = table;
+
+
+                    //   command = new SqlCommand(st, cn);
+                    //   SqlDataReader reader = command.ExecuteReader();
+                    // dataGridView1.DataSource = reader.Read();
 
                     // dataGridView1.Columns.Add("stid", "staff_id");
                     //dataGridView1.Columns.Add("stfn", " firstname");
@@ -121,8 +119,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                     MessageBox.Show("error", "error", MessageBoxButtons.OK);
 
 
-
-
                 }
                 finally     // to close the connection
                 {
@@ -139,10 +135,17 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         private void button1_Click(object sender, EventArgs e) // home button
         {
-           // main_window m2 = new main_window();
-          //  m2.Show();
+            // main_window m2 = new main_window();
+            //  m2.Show();
             this.Hide();
 
         }// home button
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            supplier supp = new supplier();
+            supp.Show();
+
+        }
     }
 }

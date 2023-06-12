@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Data.SqlClient;
 using System.Collections;
+using System.Data.SqlTypes;
 
 namespace Aqua_Spark_Sales_and_Inventory_Management_System
 {
@@ -18,8 +19,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         public New_Order()
         {
             InitializeComponent();
-          //  newaddorder();
-          see();
+            //  newaddorder();
+            see();
         }
         connection_class cc = new connection_class();
 
@@ -43,7 +44,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private string fname;
         private string lname;
 
-        public New_Order(string ln , string fn , string add , string cnum , string em)
+        public New_Order(string ln, string fn, string add, string cnum, string em)
         {
             this.lname = ln;
             this.fname = fn;
@@ -58,19 +59,19 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         public string firstname
         {
             get { return fname; }
-            set { fname = value;  }
+            set { fname = value; }
         }
         public string lastname
         {
             get { return lname; }
             set { lname = value; }
         }
-          public string address
+        public string address
         {
             get { return customer_address; }
             set { customer_address = value; }
         }
-           public string number
+        public string number
         {
             get { return customer_number; }
             set { customer_number = value; }
@@ -116,20 +117,93 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         } // clear button
 
-        private void button2_Click(object sender, EventArgs e) // insert button
+        private void button2_Click(object sender, EventArgs e) // add button
         {
 
+           
+            SqlConnection conect = new SqlConnection(cc.conn);
+            try
+            {
 
-        } // insert button
+                fname = textBoxf.Text;
+                lname = textBoxl.Text;
+                customer_address = textBox3.Text;
+                customer_number = textBox1.Text;
+                customer_email = textBoxe.Text;
+
+                quantity = (int)numericUpDown1.Value;
+                payment = (double)numericUpDown2.Value;
+                total_price = (double)numericUpDown3.Value;
+                SqlDateTime dt = new SqlDateTime();
+
+
+                string quer = " SELECT  customer_id FROM users WHERE first_name = '" + firstname + "'  AND last_name =  '" + lastname + "' ";
+                string quer1 = " ";
+                SqlCommand command = new SqlCommand();
+
+                command = new SqlCommand(quer, conect);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                string quer2 = " INSERT INTO orders(order_id,product_id ,quantity ) VALUES (@order_id,@product_id,@quantity))";
+               
+                int quan = 10;
+                
+                for (int i = 10; quan > i; quan+=10)
+                {
+
+                }
+                if (quantity >= 10 || quantity <= 20)
+                {
+
+                }
+
+           //     string quer2 = " INSERT INTO customer(customer_id,first_name ,last_name,address,contact_number,email ) VALUES (@customer_id,@first_name,@last_name,@address,@contact_number,@email))";
+
+             //   String quer3 = "select customer_id  from  customer";
+
+             //   SqlConnection connection = new SqlConnection(cc.conn);
+               // SqlCommand command = new SqlCommand(quer, connection);
+             
+                    conect.Open();
+
+                    //command.Parameters.AddWithValue("@order_id");
+                  //  command.Parameters.AddWithValue("@product_id", textBox3);
+              
+
+                    command.ExecuteNonQuery();
+                    command.ExecuteScalar();
+                    conect.Close();
+                
+
+
+
+
+            }
+            catch
+            {
+                MessageBox.Show("Error ", "something went wrong", MessageBoxButtons.OK);
+            }
+
+            finally
+            {
+                conect.Close();
+            }
+
+        } // add button
+        public void addtoorders()
+        {
+           
+        }
 
 
         public void see()
         {
             SqlConnection sqlc = new SqlConnection(cc.conn);
             try
-{  
+            {
                 string str = "select product_name from products";
-                SqlCommand cmd = new SqlCommand(str , sqlc);
+                SqlCommand cmd = new SqlCommand(str, sqlc);
                 cmd.CommandText = str;
                 sqlc.Open();
                 SqlDataReader drd = cmd.ExecuteReader();
@@ -142,8 +216,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                      */
                 }
             }
-catch
-{
+            catch
+            {
                 MessageBox.Show("Error ");
             }
 
