@@ -69,6 +69,7 @@
             button1.TabIndex = 44;
             button1.Text = "home";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // pictureBox1
             // 
@@ -120,6 +121,7 @@
             button2.TabIndex = 57;
             button2.Text = "add supplier";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button4
             // 
@@ -134,6 +136,7 @@
             button4.TabIndex = 58;
             button4.Text = "supplier";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 

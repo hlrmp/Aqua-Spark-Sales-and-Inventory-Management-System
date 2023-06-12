@@ -47,12 +47,12 @@
             label1.BackColor = Color.Navy;
             label1.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.BlanchedAlmond;
-            label1.Location = new Point(6, -2);
+            label1.Location = new Point(-5, -2);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1208, 71);
+            label1.Size = new Size(1268, 71);
             label1.TabIndex = 32;
-            label1.Text = "                    aqua spark orders                  ";
+            label1.Text = "                      aqua spark orders                    ";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // button1

@@ -41,7 +41,7 @@
             // dataGridView_inventory
             // 
             dataGridView_inventory.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView_inventory.BackgroundColor = SystemColors.ControlLight;
+            dataGridView_inventory.BackgroundColor = Color.FromArgb(192, 255, 255);
             dataGridView_inventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_inventory.Location = new Point(346, 157);
             dataGridView_inventory.Margin = new Padding(3, 4, 3, 4);
