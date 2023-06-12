@@ -36,7 +36,6 @@
             button2 = new Button();
             button3 = new Button();
             pictureBox2 = new PictureBox();
-            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView_order).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -66,13 +65,13 @@
             dataGridView_order.BackgroundColor = Color.FromArgb(192, 255, 255);
             dataGridView_order.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_order.GridColor = Color.FromArgb(0, 0, 192);
-            dataGridView_order.Location = new Point(338, 201);
+            dataGridView_order.Location = new Point(338, 177);
             dataGridView_order.Margin = new Padding(3, 4, 3, 4);
             dataGridView_order.Name = "dataGridView_order";
             dataGridView_order.ReadOnly = true;
             dataGridView_order.RowHeadersWidth = 51;
             dataGridView_order.RowTemplate.Height = 25;
-            dataGridView_order.Size = new Size(598, 296);
+            dataGridView_order.Size = new Size(598, 320);
             dataGridView_order.TabIndex = 25;
             // 
             // label1
@@ -157,19 +156,6 @@
             pictureBox2.TabIndex = 42;
             pictureBox2.TabStop = false;
             // 
-            // comboBox1
-            // 
-            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox1.BackColor = Color.FromArgb(255, 192, 128);
-            comboBox1.FlatStyle = FlatStyle.Flat;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(665, 145);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(270, 28);
-            comboBox1.TabIndex = 43;
-            comboBox1.Text = "sort by ";
-            // 
             // Orders_Window
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -177,7 +163,6 @@
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(985, 609);
-            Controls.Add(comboBox1);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(pictureBox1);
@@ -209,6 +194,5 @@
         private Button button2;
         private Button button3;
         private PictureBox pictureBox2;
-        private ComboBox comboBox1;
     }
 }

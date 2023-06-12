@@ -35,7 +35,6 @@
             dataGridView_customers = new DataGridView();
             button2 = new Button();
             button3 = new Button();
-            comboBox1 = new ComboBox();
             pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_customers).BeginInit();
@@ -103,13 +102,13 @@
             dataGridView_customers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView_customers.BackgroundColor = Color.FromArgb(192, 255, 255);
             dataGridView_customers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_customers.Location = new Point(338, 179);
+            dataGridView_customers.Location = new Point(338, 175);
             dataGridView_customers.Margin = new Padding(3, 4, 3, 4);
             dataGridView_customers.Name = "dataGridView_customers";
             dataGridView_customers.ReadOnly = true;
             dataGridView_customers.RowHeadersWidth = 51;
             dataGridView_customers.RowTemplate.Height = 25;
-            dataGridView_customers.Size = new Size(803, 352);
+            dataGridView_customers.Size = new Size(803, 356);
             dataGridView_customers.TabIndex = 26;
             // 
             // button2
@@ -143,19 +142,6 @@
             button3.Text = "REMOVE CUSTOMER";
             button3.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
-            // 
-            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox1.BackColor = Color.FromArgb(255, 192, 128);
-            comboBox1.FlatStyle = FlatStyle.Flat;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(841, 134);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(270, 28);
-            comboBox1.TabIndex = 36;
-            comboBox1.Text = "sort by ";
-            // 
             // pictureBox2
             // 
             pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
@@ -174,7 +160,6 @@
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1184, 633);
-            Controls.Add(comboBox1);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(pictureBox1);
@@ -205,7 +190,6 @@
         private DataGridView dataGridView_customers;
         private Button button2;
         private Button button3;
-        private ComboBox comboBox1;
         private PictureBox pictureBox2;
     }
 }
