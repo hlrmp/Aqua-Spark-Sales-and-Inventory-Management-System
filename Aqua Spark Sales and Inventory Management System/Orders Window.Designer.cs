@@ -59,13 +59,17 @@
             // 
             // dataGridView_order
             // 
+            dataGridView_order.AllowUserToAddRows = false;
+            dataGridView_order.AllowUserToDeleteRows = false;
             dataGridView_order.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView_order.BackgroundColor = SystemColors.ControlLight;
+            dataGridView_order.BackgroundColor = Color.FromArgb(192, 192, 255);
             dataGridView_order.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_order.Location = new Point(296, 134);
+            dataGridView_order.GridColor = Color.FromArgb(0, 0, 192);
+            dataGridView_order.Location = new Point(296, 151);
             dataGridView_order.Name = "dataGridView_order";
+            dataGridView_order.ReadOnly = true;
             dataGridView_order.RowTemplate.Height = 25;
-            dataGridView_order.Size = new Size(466, 239);
+            dataGridView_order.Size = new Size(523, 222);
             dataGridView_order.TabIndex = 25;
             // 
             // label1
@@ -87,10 +91,10 @@
             // 
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(467, 80);
+            textBox1.Location = new Point(490, 80);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(317, 23);
+            textBox1.Size = new Size(294, 23);
             textBox1.TabIndex = 31;
             // 
             // pictureBox1
@@ -150,7 +154,7 @@
             comboBox1.BackColor = Color.FromArgb(255, 192, 128);
             comboBox1.FlatStyle = FlatStyle.Flat;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(582, 105);
+            comboBox1.Location = new Point(582, 109);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(237, 23);
             comboBox1.TabIndex = 43;

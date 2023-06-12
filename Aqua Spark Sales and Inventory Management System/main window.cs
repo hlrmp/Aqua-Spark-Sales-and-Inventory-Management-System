@@ -48,18 +48,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 f.Show();
                 this.Close();
 
-
-
-                MessageBox.Show(" are yu sure o log out ? ", "log out", MessageBoxButtons.YesNo);
-
-                button4inventory.Hide();
-                button3customers.Hide();
-                button2salesinfo.Hide();
-                button1orders.Hide();
-                button12.Hide();
-                listBox1.Hide();
-                no.Hide();
-                py.Hide();
+              
 
 
             }
@@ -136,6 +125,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button1orders.Hide();
             button2minmize.Hide();
             pictureBox1.Hide();
+            buttonemp.Hide();
 
             button1.Show();
 
@@ -154,7 +144,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button1orders.Show();
             button2minmize.Show();
             pictureBox1.Show();
-
+            buttonemp.Show();
 
             button1.Hide();
 
@@ -163,5 +153,13 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button7.Hide();
             button8logout.Hide();
         }// see more button
+
+        private void button2_Click_1(object sender, EventArgs e)// employee button
+        {
+            sign_up su = new sign_up();
+            su.Show();
+
+
+        } // employee button
     }
 }

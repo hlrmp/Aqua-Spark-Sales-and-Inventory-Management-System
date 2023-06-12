@@ -29,11 +29,11 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         user_class uc = new user_class();  // user class instance
         connection_class cnc = new connection_class();  // database connection instance
-         //          string cn =                                      // SqlConnection connection = new SqlConnection();
+                                                        //          string cn =                                      // SqlConnection connection = new SqlConnection();
 
-      //  SqlConnection connection = new SqlConnection();
-    //  SqlCommand command;
-     //   SqlDataReader rd;
+        //  SqlConnection connection = new SqlConnection();
+        //  SqlCommand command;
+        //   SqlDataReader rd;
 
         private void button1_Click(object sender, EventArgs e)   // log in button
         {
@@ -64,9 +64,9 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                     }
                     else ///if (!string.IsNullOrEmpty(textBox1_username.Text) ||
                         // !string.IsNullOrEmpty(textBox2_password.Text))
-                    { 
+                    {
 
-                          // Open the connection
+                        // Open the connection
 
 
                         uc.username = txtuser;
@@ -79,36 +79,38 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                         // string quer = "SELECT * FROM users WHERE user_name = '" + txtuser + "' AND password = ' " + txtpass + "'";
 
                         string quer = "  SELECT * FROM users WHERE user_name = '" + uc.username + "'  AND password =  '" + uc.userpas + "' ";
-                       
+
                         SqlCommand command = new SqlCommand();
                         command = new SqlCommand(quer, connection);
                         SqlDataReader reader = command.ExecuteReader();
 
                         if (reader.Read())
                         {
-                           // if ( )
+                            // if ( )
                             //{
-//                                uc.utype = " " + reader[4];
+                            uc.utype = " " + reader;
+                            main_window fmain = new main_window();    // main window instance
+                            fmain.Show();   // show main form 
+                            this.Hide();
 
-  //                              if (uc.utype == "manager")
-    //                            {
-                                    main_window fmain = new main_window();    // main window instance
-                                    fmain.Show();   // show main form 
-                                    this.Hide();
-        //                       }
-      //                        else if (uc.utype == "cashier")
-          //                     {
-                                    Home_window hm1 = new Home_window();
-            //                      hm1.Show();
-                //                   this.Hide();
-              //                  }
+                            if (uc.utype == "manager")
+                            {
+                                MessageBox.Show("MANAGER");
+                            }
+                            else if (uc.utype == "cashier")
+                            {
+                                MessageBox.Show("CASHIER");
+                                Home_window hm1 = new Home_window();
+                                //     hm1.Show();
+                                //     this.Hide();
+                            }
 
-                       //  }
-                      //     else
-                         //  {
-                                MessageBox.Show(" user name or password incorect");
-                       //    }
-//
+                            //   }
+                            //    else
+                            //     {
+                            //        MessageBox.Show(" user name or password incorect");
+                            //     }
+
                         }
                         else
                         {
@@ -140,7 +142,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                         //}
                         //   } // using connection
                     }
-                    
+
 
                 }
                 catch (Exception)

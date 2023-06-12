@@ -42,7 +42,9 @@
             // 
             button1log.Anchor = AnchorStyles.Bottom;
             button1log.BackColor = Color.FromArgb(128, 255, 128);
-            button1log.FlatStyle = FlatStyle.Popup;
+            button1log.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 64);
+            button1log.FlatAppearance.BorderSize = 5;
+            button1log.FlatStyle = FlatStyle.Flat;
             button1log.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             button1log.Location = new Point(251, 21);
             button1log.Name = "button1log";
@@ -56,7 +58,9 @@
             // 
             button2exit.Anchor = AnchorStyles.Bottom;
             button2exit.BackColor = Color.FromArgb(255, 128, 128);
-            button2exit.FlatStyle = FlatStyle.Popup;
+            button2exit.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 64);
+            button2exit.FlatAppearance.BorderSize = 5;
+            button2exit.FlatStyle = FlatStyle.Flat;
             button2exit.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             button2exit.Location = new Point(605, 21);
             button2exit.Name = "button2exit";
