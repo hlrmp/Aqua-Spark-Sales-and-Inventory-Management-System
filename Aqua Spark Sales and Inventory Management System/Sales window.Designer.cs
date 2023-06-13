@@ -35,6 +35,7 @@
             pictureBox2 = new PictureBox();
             button2 = new Button();
             button3 = new Button();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView_sales).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -89,7 +90,7 @@
             comboBox1.BackColor = Color.FromArgb(255, 192, 128);
             comboBox1.FlatStyle = FlatStyle.Flat;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(791, 120);
+            comboBox1.Location = new Point(791, 139);
             comboBox1.Margin = new Padding(3, 4, 3, 4);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(273, 28);
@@ -137,6 +138,22 @@
             button3.Text = "from walk in";
             button3.UseVisualStyleBackColor = false;
             // 
+            // button4
+            // 
+            button4.Anchor = AnchorStyles.Left;
+            button4.BackColor = Color.Transparent;
+            button4.FlatStyle = FlatStyle.Popup;
+            button4.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button4.ForeColor = SystemColors.ButtonFace;
+            button4.Location = new Point(66, 583);
+            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Name = "button4";
+            button4.Size = new Size(210, 87);
+            button4.TabIndex = 47;
+            button4.Text = "total sales";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
             // Sales_window
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -144,6 +161,7 @@
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1138, 634);
+            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(comboBox1);
@@ -174,5 +192,6 @@
         private PictureBox pictureBox2;
         private Button button2;
         private Button button3;
+        private Button button4;
     }
 }

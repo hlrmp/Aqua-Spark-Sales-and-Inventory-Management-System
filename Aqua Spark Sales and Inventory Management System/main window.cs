@@ -59,6 +59,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 cw.Hide();
                 sw.Hide();
                 ow.Hide();
+                sw1.Hide();
 
 
             }
@@ -232,7 +233,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             try
             {
                 conect.Open();
-                string list = "select * from products";
+                string list = "  SELECT p.product_id ,product_name,p.price,p.size ,o.order_id , o.quantity from products AS p left join orders AS o ON p.product_id = o.product_id";
                 SqlDataAdapter data = new SqlDataAdapter(list, conect);
                 DataTable table = new DataTable();
 
@@ -253,13 +254,37 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 conect.Close();
             }
         }
-
+        supplier_window_ sw1 = new supplier_window_();
         private void button2_Click_2(object sender, EventArgs e) // suplier button
         {
-            supplier_window_ sw = new supplier_window_();
-            sw.Show();
+            
+            sw1.Show();
 
 
         }//supplier button
     }
 }
+
+
+/*
+  *                    SELECT i.inventory_id, p.product_id ,s.supplier_id, i.quantity ,i.date_added FROM inventory AS s,products AS p INNER JOIN inventory AS i on i.product_id = p.product_id;
+use aquasparkdata;
+
+SELECT o.product_id ,o.order_id , ot.order_transaction_id , o.quantity , ot.payment_method ,ot.transaction_date , ot.status AS 'product Status'
+FROM orders AS o INNER JOIN order_transaction AS ot ON o.order_id = ot.order_id;
+
+select * from products;
+
+ p.product_name , p.price  ,
+  products AS p ,
+
+  SELECT p.product_id ,product_name,p.price,p.size ,o.order_id , o.quantity from products AS p left join orders AS o ON p.product_id = o.product_id ;
+  
+
+  select c.customer_id , first_name , last_name , address, ot.discount_id,ot.staff_id, ot.order_id,ot.payment_method,ot.transaction_date , ot.status , o.product_id , o.quantity
+  from  orders AS o  , customer as c  left JOIN order_transaction AS ot ON ot.customer_id = c.customer_id  LEFT JOIN orders  ON  o.order_id = ot.order_id ;
+
+  * 
+  * 
+  * 
+  */

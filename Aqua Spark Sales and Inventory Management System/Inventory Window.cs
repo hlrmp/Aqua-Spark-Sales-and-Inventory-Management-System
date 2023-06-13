@@ -36,7 +36,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 {
 
                     cn.Open();
-                    string st = "SELECT i.inventory_id, p.product_id ,s.supplier_id, i.quantity ,i.date_added FROM inventory AS s,products AS p INNER JOIN inventory AS i on i.product_id = p.product_id;\r\n";
+                    string st = "SELECT i.inventory_id, p.product_id ,s.supplier_id, i.quantity ,i.date_added FROM inventory AS s,products AS p INNER JOIN inventory AS i on i.product_id = p.product_id;";
                     SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
                     SqlCommand command = new SqlCommand();
 
