@@ -87,9 +87,9 @@
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(12, 183);
+            button1.Location = new Point(12, 84);
             button1.Name = "button1";
-            button1.Size = new Size(175, 41);
+            button1.Size = new Size(175, 80);
             button1.TabIndex = 37;
             button1.Text = "home";
             button1.UseVisualStyleBackColor = false;
@@ -112,9 +112,9 @@
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(12, 261);
+            button2.Location = new Point(12, 234);
             button2.Name = "button2";
-            button2.Size = new Size(175, 41);
+            button2.Size = new Size(175, 80);
             button2.TabIndex = 46;
             button2.Text = "ordered";
             button2.UseMnemonic = false;
@@ -127,9 +127,9 @@
             button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.ActiveCaptionText;
-            button3.Location = new Point(12, 339);
+            button3.Location = new Point(12, 381);
             button3.Name = "button3";
-            button3.Size = new Size(175, 41);
+            button3.Size = new Size(175, 80);
             button3.TabIndex = 47;
             button3.Text = "walk in";
             button3.UseMnemonic = false;
@@ -142,9 +142,9 @@
             button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button4.ForeColor = SystemColors.ActiveCaptionText;
-            button4.Location = new Point(12, 419);
+            button4.Location = new Point(12, 542);
             button4.Name = "button4";
-            button4.Size = new Size(175, 41);
+            button4.Size = new Size(175, 85);
             button4.TabIndex = 48;
             button4.Text = "total sales";
             button4.UseMnemonic = false;

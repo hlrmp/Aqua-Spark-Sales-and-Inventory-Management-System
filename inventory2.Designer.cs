@@ -42,14 +42,17 @@
             // 
             // dataGridView_sales
             // 
+            dataGridView_sales.AllowUserToAddRows = false;
+            dataGridView_sales.AllowUserToDeleteRows = false;
             dataGridView_sales.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView_sales.BackgroundColor = Color.FromArgb(194, 222, 220);
             dataGridView_sales.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_sales.Location = new Point(219, 130);
             dataGridView_sales.Name = "dataGridView_sales";
+            dataGridView_sales.ReadOnly = true;
             dataGridView_sales.RowHeadersWidth = 51;
             dataGridView_sales.RowTemplate.Height = 25;
-            dataGridView_sales.Size = new Size(962, 501);
+            dataGridView_sales.Size = new Size(958, 489);
             dataGridView_sales.TabIndex = 31;
             // 
             // label1
@@ -59,7 +62,7 @@
             label1.BackColor = Color.Navy;
             label1.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(242, 222, 186);
-            label1.Location = new Point(-8, -2);
+            label1.Location = new Point(-10, -2);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(1221, 71);
@@ -74,9 +77,9 @@
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(12, 183);
+            button1.Location = new Point(12, 99);
             button1.Name = "button1";
-            button1.Size = new Size(175, 41);
+            button1.Size = new Size(175, 80);
             button1.TabIndex = 37;
             button1.Text = "home";
             button1.UseVisualStyleBackColor = false;
@@ -88,7 +91,7 @@
             pictureBox2.BackColor = Color.CadetBlue;
             pictureBox2.Location = new Point(-6, -2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(206, 664);
+            pictureBox2.Size = new Size(206, 657);
             pictureBox2.TabIndex = 45;
             pictureBox2.TabStop = false;
             // 
@@ -99,10 +102,11 @@
             button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.ActiveCaptionText;
-            button3.Location = new Point(12, 339);
+            button3.Location = new Point(12, 395);
             button3.Name = "button3";
-            button3.Size = new Size(175, 41);
+            button3.Size = new Size(175, 80);
             button3.TabIndex = 47;
+            button3.Text = "products ";
             button3.UseMnemonic = false;
             button3.UseVisualStyleBackColor = false;
             // 
@@ -113,9 +117,9 @@
             button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button4.ForeColor = SystemColors.ActiveCaptionText;
-            button4.Location = new Point(12, 419);
+            button4.Location = new Point(12, 539);
             button4.Name = "button4";
-            button4.Size = new Size(175, 41);
+            button4.Size = new Size(175, 80);
             button4.TabIndex = 48;
             button4.Text = "TOTAL";
             button4.UseMnemonic = false;
@@ -123,12 +127,12 @@
             // 
             // comboBox1
             // 
-            comboBox1.Anchor = AnchorStyles.Top;
+            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox1.BackColor = Color.CadetBlue;
             comboBox1.FlatStyle = FlatStyle.Flat;
             comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(917, 88);
+            comboBox1.Location = new Point(940, 88);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(239, 36);
             comboBox1.TabIndex = 49;
@@ -141,9 +145,9 @@
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(12, 261);
+            button2.Location = new Point(12, 251);
             button2.Name = "button2";
-            button2.Size = new Size(175, 41);
+            button2.Size = new Size(175, 80);
             button2.TabIndex = 46;
             button2.Text = "BOTTLES";
             button2.UseMnemonic = false;
@@ -154,7 +158,7 @@
             AutoScaleDimensions = new SizeF(14F, 36F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
-            ClientSize = new Size(1216, 658);
+            ClientSize = new Size(1212, 646);
             Controls.Add(comboBox1);
             Controls.Add(button4);
             Controls.Add(button3);

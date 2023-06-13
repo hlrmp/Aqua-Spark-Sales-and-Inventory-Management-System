@@ -16,6 +16,7 @@ using Microsoft.Identity.Client;
 using System.Drawing.Design;
 using System.Text.RegularExpressions;
 using System.Collections;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Aqua_Spark_Sales_and_Inventory_Management_System
 {
@@ -80,27 +81,28 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                         SqlCommand command = new SqlCommand();
                         command = new SqlCommand(quer, connection);
                         SqlDataReader reader = command.ExecuteReader();
-/*
-                          string quer1 = "  SELECT user_type FROM users WHERE user_name = '" + uc.username + "'  AND password =  '" + uc.userpas + "' ";
-                          SqlCommand command1 = new SqlCommand();
-                          command1 = new SqlCommand(quer1, connection);
-                          SqlDataReader reader1 = command1.ExecuteReader();
- */
-                        
+
+                        //  string quer1 = "  SELECT user_type FROM users WHERE user_name = '" + uc.username + "'  AND password =  '" + uc.userpas + "' ";
+                        //  SqlCommand command1 = new SqlCommand();
+                         // command1 = new SqlCommand(quer1, connection);
+                         // SqlDataReader reader1 = command1.ExecuteReader();
+
+
+                   
                         if (reader.Read())
                         {
                             // if ( )
                             //{
-                            uc.utype = " " + reader;
+                           // uc.utype = " " + reader;
                             main_window fmain = new main_window();    // main window instance
                             fmain.Show();   // show main form 
                             this.Hide();
                              //quer1.ToString();
-                            if (uc.utype == ("manager"))
+                            if (uc.utype.Equals("manager"))
                             {
                                 MessageBox.Show("MANAGER");
                             }
-                            else if (uc.utype == ("cashier"))
+                            else if (uc.utype.Equals("cashier"))
                             {
                                 MessageBox.Show("CASHIER");
                                 Home_window hm1 = new Home_window();
@@ -206,6 +208,34 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             textBox2_password.Clear();
 
         }// clear button
+
+
+        public void position()
+        {
+            SqlConnection sqlc = new SqlConnection(cnc.conn);
+            try
+            {
+                
+                string str = "  SELECT user_type FROM users WHERE user_name = '" + uc.username + "'  AND password =  '" + uc.userpas + "' ";
+
+              //  string str = "select product_name from products";
+                SqlCommand cmd = new SqlCommand(str, sqlc);
+                cmd.CommandText = str;
+                sqlc.Open();
+                SqlDataReader drd = cmd.ExecuteReader();
+
+               uc.utype = drd.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Error ");
+            }
+
+            finally
+            {
+                sqlc.Close();
+            }
+        }
     }
 }
 

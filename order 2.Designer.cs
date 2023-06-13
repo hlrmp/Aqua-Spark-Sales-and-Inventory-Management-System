@@ -62,9 +62,9 @@
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(12, 183);
+            button1.Location = new Point(12, 100);
             button1.Name = "button1";
-            button1.Size = new Size(175, 41);
+            button1.Size = new Size(175, 80);
             button1.TabIndex = 37;
             button1.Text = "home";
             button1.UseVisualStyleBackColor = false;
@@ -74,7 +74,7 @@
             // 
             pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             pictureBox2.BackColor = Color.CadetBlue;
-            pictureBox2.Location = new Point(-10, -2);
+            pictureBox2.Location = new Point(-5, -2);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(206, 664);
             pictureBox2.TabIndex = 45;
@@ -87,9 +87,9 @@
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(12, 261);
+            button2.Location = new Point(12, 253);
             button2.Name = "button2";
-            button2.Size = new Size(175, 41);
+            button2.Size = new Size(175, 80);
             button2.TabIndex = 46;
             button2.Text = "add ";
             button2.UseMnemonic = false;
@@ -102,9 +102,9 @@
             button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.ActiveCaptionText;
-            button3.Location = new Point(12, 339);
+            button3.Location = new Point(12, 400);
             button3.Name = "button3";
-            button3.Size = new Size(175, 41);
+            button3.Size = new Size(175, 80);
             button3.TabIndex = 47;
             button3.Text = "remove";
             button3.UseMnemonic = false;
@@ -117,11 +117,11 @@
             button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button4.ForeColor = SystemColors.ActiveCaptionText;
-            button4.Location = new Point(12, 419);
+            button4.Location = new Point(12, 551);
             button4.Name = "button4";
-            button4.Size = new Size(175, 41);
+            button4.Size = new Size(175, 80);
             button4.TabIndex = 48;
-            button4.Text = "order list";
+            button4.Text = "deivery status";
             button4.UseMnemonic = false;
             button4.UseVisualStyleBackColor = false;
             // 
@@ -131,7 +131,7 @@
             comboBox1.BackColor = Color.CadetBlue;
             comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(917, 88);
+            comboBox1.Location = new Point(942, 88);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(239, 36);
             comboBox1.TabIndex = 49;
