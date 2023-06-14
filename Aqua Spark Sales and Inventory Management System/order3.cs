@@ -86,10 +86,25 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             }
         }
 
-        private void button1_Click(object sender, EventArgs e) //  cancell   button
+
+
+        private void button1_Click_1(object sender, EventArgs e)//  cancell   button
         {
+
             this.Hide();
 
+
         }//  cancell   button
+
+        private void button9_Click(object sender, EventArgs e)//clear button
+        {
+            textBox1.Clear();
+          
+            numericUpDown1.ResetText();
+
+            dataGridView1.Refresh();
+
+
+        }// clear button
     }
 }

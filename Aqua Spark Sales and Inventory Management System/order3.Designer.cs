@@ -61,6 +61,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button1.TabIndex = 50;
             button1.Text = "CANCEL";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // button2
             // 
@@ -222,6 +223,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button9.TabIndex = 72;
             button9.Text = "CLEAR";
             button9.UseVisualStyleBackColor = false;
+            button9.Click += button9_Click;
             // 
             // comboBox1
             // 

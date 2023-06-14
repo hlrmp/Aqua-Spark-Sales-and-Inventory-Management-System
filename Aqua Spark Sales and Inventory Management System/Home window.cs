@@ -30,20 +30,34 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private void button7_Click(object sender, EventArgs e) // add orders
         {
 
-            panel1.Show();
+            panel2.Show();
+
+            selection s = new selection();
+            s.FormBorderStyle = FormBorderStyle.None;
+            s.TopLevel = false;
+            s.Dock = DockStyle.Fill;
+
+            s.AutoScroll = true;
+            panel2.Controls.Add(s);
+
+            s.Show();
+
+            /*
+             * panel1.Show();
 
 
+                nor.Show();
+                nor.FormBorderStyle = FormBorderStyle.None;
+                nor.TopLevel = false;
+                nor.Dock = DockStyle.Fill;
 
-            nor.Show();
-            nor.FormBorderStyle = FormBorderStyle.None;
-            nor.TopLevel = false;
-            nor.Dock = DockStyle.Fill;
+                nor.AutoScroll = true;
+                panel1.Controls.Add(nor);
 
-            nor.AutoScroll = true;
-            panel1.Controls.Add(nor);
+                nor.Show();
+                p.Hide();
 
-            nor.Show();
-            p.Hide();
+             */
 
 
         } // add orders
@@ -81,7 +95,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button2salesinfo.Show();
             button1orders.Show();
             button1.Show();
-         
+
 
             button2.Hide();
 
@@ -102,7 +116,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button2salesinfo.Hide();
             button1orders.Hide();
             button1.Hide();
-          
+
 
             button2.Show();
 
@@ -220,7 +234,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             Form1 f2 = new Form1();
             f2.Show();
 
-         
+
 
             c2.Hide();
             i2.Hide();

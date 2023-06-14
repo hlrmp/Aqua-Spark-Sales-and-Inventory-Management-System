@@ -46,6 +46,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button2 = new Button();
             pictureBox2 = new PictureBox();
             panel1 = new Panel();
+            panel2 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -275,6 +276,16 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             panel1.TabIndex = 43;
             panel1.Visible = false;
             // 
+            // panel2
+            // 
+            panel2.Anchor = AnchorStyles.Right;
+            panel2.BackColor = Color.Transparent;
+            panel2.Location = new Point(315, 140);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(363, 228);
+            panel2.TabIndex = 51;
+            panel2.Visible = false;
+            // 
             // Home_window
             // 
             AutoScaleDimensions = new SizeF(9F, 18F);
@@ -282,6 +293,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1341, 733);
+            Controls.Add(panel2);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(button2salesinfo);
@@ -328,5 +340,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private Button button2;
         private PictureBox pictureBox2;
         private Panel panel1;
+        private Panel panel2;
     }
 }

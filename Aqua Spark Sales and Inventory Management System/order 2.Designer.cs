@@ -148,9 +148,9 @@
             // 
             panel1.Anchor = AnchorStyles.Right;
             panel1.BackColor = Color.Transparent;
-            panel1.Location = new Point(728, 176);
+            panel1.Location = new Point(634, 182);
             panel1.Name = "panel1";
-            panel1.Size = new Size(295, 201);
+            panel1.Size = new Size(363, 228);
             panel1.TabIndex = 50;
             panel1.Visible = false;
             // 

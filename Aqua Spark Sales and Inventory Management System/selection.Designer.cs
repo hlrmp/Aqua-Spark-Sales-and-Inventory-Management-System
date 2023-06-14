@@ -36,7 +36,7 @@
             // 
             // buttonX
             // 
-            buttonX.Anchor = AnchorStyles.Top;
+            buttonX.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonX.BackColor = Color.Red;
             buttonX.FlatStyle = FlatStyle.Popup;
             buttonX.Font = new Font("Stencil", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
@@ -94,9 +94,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(264, 180);
+            ClientSize = new Size(264, 194);
             Controls.Add(label1);
             Controls.Add(buttonOLD);
             Controls.Add(buttonNEW);

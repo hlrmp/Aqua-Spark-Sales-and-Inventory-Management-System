@@ -41,7 +41,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             s.FormBorderStyle = FormBorderStyle.None;
             s.TopLevel = false;
             s.Dock = DockStyle.Fill;
-         
+
             s.AutoScroll = true;
             panel1.Controls.Add(s);
 
