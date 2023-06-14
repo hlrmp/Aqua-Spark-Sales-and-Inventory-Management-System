@@ -45,6 +45,8 @@
             button6 = new Button();
             button7 = new Button();
             dataGridView1 = new DataGridView();
+            button8 = new Button();
+            button9 = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -52,7 +54,7 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(255, 128, 128);
-            button1.Location = new Point(265, 399);
+            button1.Location = new Point(630, 399);
             button1.Name = "button1";
             button1.Size = new Size(108, 39);
             button1.TabIndex = 50;
@@ -63,7 +65,7 @@
             // button2
             // 
             button2.BackColor = Color.FromArgb(128, 255, 128);
-            button2.Location = new Point(421, 399);
+            button2.Location = new Point(450, 399);
             button2.Name = "button2";
             button2.Size = new Size(108, 39);
             button2.TabIndex = 51;
@@ -94,7 +96,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(43, 274);
+            label2.Location = new Point(43, 275);
             label2.Name = "label2";
             label2.Size = new Size(75, 15);
             label2.TabIndex = 55;
@@ -103,7 +105,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(43, 337);
+            label3.Location = new Point(43, 362);
             label3.Name = "label3";
             label3.Size = new Size(105, 15);
             label3.TabIndex = 56;
@@ -111,9 +113,9 @@
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(43, 293);
+            numericUpDown1.Location = new Point(43, 300);
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(134, 23);
+            numericUpDown1.Size = new Size(173, 23);
             numericUpDown1.TabIndex = 57;
             // 
             // button3
@@ -121,7 +123,7 @@
             button3.BackgroundImage = Properties.Resources.galon1;
             button3.BackgroundImageLayout = ImageLayout.Stretch;
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(164, 102);
+            button3.Location = new Point(163, 93);
             button3.Name = "button3";
             button3.Size = new Size(122, 129);
             button3.TabIndex = 58;
@@ -132,7 +134,7 @@
             button4.BackgroundImage = Properties.Resources.bote1;
             button4.BackgroundImageLayout = ImageLayout.Stretch;
             button4.FlatStyle = FlatStyle.Flat;
-            button4.Location = new Point(43, 102);
+            button4.Location = new Point(43, 93);
             button4.Name = "button4";
             button4.Size = new Size(105, 129);
             button4.TabIndex = 59;
@@ -143,7 +145,7 @@
             button5.BackgroundImage = Properties.Resources.th;
             button5.BackgroundImageLayout = ImageLayout.Stretch;
             button5.FlatStyle = FlatStyle.Flat;
-            button5.Location = new Point(303, 102);
+            button5.Location = new Point(303, 93);
             button5.Name = "button5";
             button5.Size = new Size(121, 129);
             button5.TabIndex = 60;
@@ -153,7 +155,7 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.White;
-            label4.Location = new Point(164, 337);
+            label4.Location = new Point(154, 362);
             label4.Name = "label4";
             label4.Size = new Size(39, 15);
             label4.TabIndex = 61;
@@ -162,7 +164,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(222, 274);
+            label5.Location = new Point(251, 275);
             label5.Name = "label5";
             label5.Size = new Size(68, 15);
             label5.TabIndex = 62;
@@ -170,9 +172,9 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(222, 292);
+            textBox1.Location = new Point(251, 300);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(151, 23);
+            textBox1.Size = new Size(173, 23);
             textBox1.TabIndex = 63;
             // 
             // label7
@@ -190,7 +192,7 @@
             // button6
             // 
             button6.BackColor = Color.FromArgb(128, 255, 128);
-            button6.Location = new Point(556, 337);
+            button6.Location = new Point(606, 64);
             button6.Name = "button6";
             button6.Size = new Size(75, 23);
             button6.TabIndex = 66;
@@ -201,7 +203,7 @@
             // button7
             // 
             button7.BackColor = Color.FromArgb(255, 128, 128);
-            button7.Location = new Point(652, 337);
+            button7.Location = new Point(687, 64);
             button7.Name = "button7";
             button7.Size = new Size(75, 23);
             button7.TabIndex = 67;
@@ -212,11 +214,31 @@
             // 
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(450, 102);
+            dataGridView1.Location = new Point(450, 93);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(312, 263);
             dataGridView1.TabIndex = 68;
+            // 
+            // button8
+            // 
+            button8.BackColor = Color.FromArgb(128, 255, 128);
+            button8.Location = new Point(133, 399);
+            button8.Name = "button8";
+            button8.Size = new Size(108, 39);
+            button8.TabIndex = 72;
+            button8.Text = "ADD";
+            button8.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            button9.BackColor = Color.FromArgb(255, 128, 128);
+            button9.Location = new Point(287, 399);
+            button9.Name = "button9";
+            button9.Size = new Size(108, 39);
+            button9.TabIndex = 73;
+            button9.Text = "CLEAR";
+            button9.UseVisualStyleBackColor = false;
             // 
             // payment
             // 
@@ -224,6 +246,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(800, 478);
+            Controls.Add(button9);
+            Controls.Add(button8);
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(label7);
@@ -271,5 +295,7 @@
         private Button button6;
         private Button button7;
         private DataGridView dataGridView1;
+        private Button button8;
+        private Button button9;
     }
 }

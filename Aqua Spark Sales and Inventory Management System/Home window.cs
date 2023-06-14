@@ -19,20 +19,60 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         private void button5_Click(object sender, EventArgs e) // list button
         {
-            listBox1.Show();
+
             button12.Show();
+
 
 
         }// list button
 
+        New_Order nor = new New_Order();
         private void button7_Click(object sender, EventArgs e) // add orders
         {
-            New_Order nor = new New_Order();
-            nor.Show();
 
-            listBox1.Hide();
+            panel1.Show();
+
+
+
+            nor.Show();
+            nor.FormBorderStyle = FormBorderStyle.None;
+            nor.TopLevel = false;
+            nor.Dock = DockStyle.Fill;
+
+            nor.AutoScroll = true;
+            panel1.Controls.Add(nor);
+
+            nor.Show();
+            p.Hide();
+
 
         } // add orders
+
+
+        payment p = new payment();
+        private void button6_Click(object sender, EventArgs e)// sell button
+        {
+
+
+
+
+            panel1.Show();
+
+
+
+            p.Show();
+            p.FormBorderStyle = FormBorderStyle.None;
+            p.TopLevel = false;
+            p.Dock = DockStyle.Fill;
+
+            p.AutoScroll = true;
+            panel1.Controls.Add(p);
+
+            p.Show();
+            nor.Hide();
+
+        }// sell button
+
 
         private void button2minmize_Click(object sender, EventArgs e) // see more button
         {
@@ -43,13 +83,15 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button1.Show();
             pictureBox1.Show();
 
-
             button2.Hide();
 
             button5.Hide();
             button6.Hide();
             button7.Hide();
             button8logout.Hide();
+
+            p.Hide();
+            nor.Hide();
 
         }// see more button
 
@@ -71,35 +113,105 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         } //minimimze button
 
+
+        customer2 c2 = new customer2();
+
         private void button3customers_Click(object sender, EventArgs e) // customer button
         {
-            customer2 c2 = new customer2();
+
+
+
+            panel1.Show();
+
+
+
             c2.Show();
-            this.Hide();
+            c2.FormBorderStyle = FormBorderStyle.None;
+            c2.TopLevel = false;
+            c2.Dock = DockStyle.Fill;
+
+            c2.AutoScroll = true;
+            panel1.Controls.Add(c2);
+
+            c2.Show();
+
+            i2.Hide();
+            o2.Hide();
+            s2.Hide();
+
+
+
 
         }// customer button
 
+        inventory2 i2 = new inventory2();
         private void button4inventory_Click(object sender, EventArgs e) // inventory button
         {
-            inventory2 i2 = new inventory2();
+
+            panel1.Show();
+
+
+
             i2.Show();
-            this.Hide();
+            i2.FormBorderStyle = FormBorderStyle.None;
+            i2.TopLevel = false;
+            i2.Dock = DockStyle.Fill;
+
+            i2.AutoScroll = true;
+            panel1.Controls.Add(i2);
+
+            i2.Show();
+
+            c2.Hide();
+            o2.Hide();
+            s2.Hide();
+
+
 
         }// inventory button
 
+        order_2 o2 = new order_2();
         private void button1orders_Click(object sender, EventArgs e) // order button 
         {
-            order_2 o2 = new order_2();
+            panel1.Show();
+
             o2.Show();
-            this.Hide();
+            o2.FormBorderStyle = FormBorderStyle.None;
+            o2.TopLevel = false;
+            o2.Dock = DockStyle.Fill;
+
+            o2.AutoScroll = true;
+            panel1.Controls.Add(o2);
+
+            o2.Show();
+
+            c2.Hide();
+            i2.Hide();
+            s2.Hide();
+
 
         } // order button 
-
+        sales2 s2 = new sales2();
         private void button2salesinfo_Click(object sender, EventArgs e) // sales button
         {
-            sales2 s2 = new sales2();
+
+            panel1.Show();
+
             s2.Show();
-            this.Hide();
+            s2.FormBorderStyle = FormBorderStyle.None;
+            s2.TopLevel = false;
+            s2.Dock = DockStyle.Fill;
+
+            s2.AutoScroll = true;
+            panel1.Controls.Add(s2);
+
+            s2.Show();
+
+            c2.Hide();
+            i2.Hide();
+            o2.Hide();
+
+
 
         } // sales button
 
@@ -107,8 +219,17 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         {
             Form1 f2 = new Form1();
             f2.Show();
+
             this.Close();
 
+            c2.Hide();
+            i2.Hide();
+            o2.Hide();
+            s2.Hide();
+
         }// log out button
+
+
+
     }
 }

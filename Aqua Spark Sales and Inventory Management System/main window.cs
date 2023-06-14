@@ -257,7 +257,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         supplier_window_ sw1 = new supplier_window_();
         private void button2_Click_2(object sender, EventArgs e) // suplier button
         {
-            
+
             sw1.Show();
 
 

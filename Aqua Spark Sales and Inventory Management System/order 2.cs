@@ -5,9 +5,11 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Aqua_Spark_Sales_and_Inventory_Management_System
 {
@@ -25,7 +27,26 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             hm3.Show();
             this.Hide();
 
+
         } // home button 
+
+
+        New_Order no = new New_Order();
+        private void button2_Click(object sender, EventArgs e)   // add button
+        {
+            buttonNEW.Show();
+            buttonOLD.Show();
+            pictureBox2.Show();
+            buttonX.Show();
+
+
+        } // add button
+
+        private void button3_Click(object sender, EventArgs e) // remove button
+        {
+
+        }// remove button
+
 
 
         public void seeneworders()
@@ -49,5 +70,74 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             sqlconn.Close();
 
         }
+
+
+        public void delete()
+        {
+
+            try
+            {
+
+
+
+                using (SqlConnection cnn = new SqlConnection(cen.conn))
+                {
+                    cnn.Open();
+
+                    int st = Convert.ToInt32(dataGridView_sales.Rows[0].Selected);
+
+                    string inn = ("INSERT INTO deletedorders (order_id, product_id, quantity)SELECT* FROM orders WHERE order_id = " + st + "'");
+
+                    SqlCommand command = new SqlCommand(inn, cnn);
+
+                    command.ExecuteNonQuery();
+
+                    string del = (" DELETE FROM NET WHERE id = '" + st + "'");
+                    SqlCommand command1 = new SqlCommand(del, cnn);
+
+                    command1.ExecuteNonQuery();
+
+                    cnn.Close();
+
+
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Error ");
+            }
+
+        }
+
+        private void buttonNEW_Click(object sender, EventArgs e) // new customer button
+        {
+            no.Show();
+            buttonNEW.Hide();
+            buttonOLD.Hide();
+            pictureBox2.Hide();
+            buttonX.Hide();
+
+        } // new customer button
+
+        orders3 o3 = new orders3();
+        private void buttonOLD_Click(object sender, EventArgs e)
+        {
+            o3.Show();
+            buttonNEW.Hide();
+            buttonOLD.Hide();
+            pictureBox2.Hide();
+            buttonX.Hide();
+
+        }
+
+        private void buttonX_Click(object sender, EventArgs e) // X button
+        {
+            buttonNEW.Hide();
+            buttonOLD.Hide();
+            pictureBox2.Hide();
+            buttonX.Hide();
+
+        } // X button
     }
 }

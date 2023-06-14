@@ -26,20 +26,12 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private void button2_Click(object sender, EventArgs e) // Exit button
         {
 
-            if (button1log != null)
-            {
-                this.Hide();
                 this.Close();
 
 
-            }
-            else
-            {
+            
 
-            }
-
-            // sign_up su = new sign_up();
-            // su.Show();
+            
 
         } // Exit button
 

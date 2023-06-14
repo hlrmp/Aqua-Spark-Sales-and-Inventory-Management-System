@@ -59,24 +59,24 @@
             label1.BackColor = Color.Navy;
             label1.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.BlanchedAlmond;
-            label1.Location = new Point(-11, -2);
+            label1.Location = new Point(-10, -2);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1235, 71);
+            label1.Size = new Size(1279, 57);
             label1.TabIndex = 32;
-            label1.Text = "        aqua spark sales information        ";
+            label1.Text = "                   aqua spark sales information                     ";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // comboBox1
             // 
-            comboBox1.Anchor = AnchorStyles.Top;
+            comboBox1.Anchor = AnchorStyles.Right;
             comboBox1.BackColor = Color.CadetBlue;
             comboBox1.FlatStyle = FlatStyle.Flat;
             comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(923, 84);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(239, 36);
+            comboBox1.Size = new Size(239, 29);
             comboBox1.TabIndex = 36;
             comboBox1.Text = "           SORT BY";
             // 
@@ -149,10 +149,11 @@
             button4.Text = "total sales";
             button4.UseMnemonic = false;
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // sales2
             // 
-            AutoScaleDimensions = new SizeF(14F, 36F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(1216, 658);

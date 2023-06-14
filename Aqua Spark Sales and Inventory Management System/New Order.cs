@@ -120,7 +120,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private void button2_Click(object sender, EventArgs e) // add button
         {
 
-           
+
             SqlConnection conect = new SqlConnection(cc.conn);
             try
             {
@@ -145,11 +145,10 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
                 SqlDataReader reader = command.ExecuteReader();
 
-                string quer2 = " INSERT INTO orders(order_id,product_id ,quantity ) VALUES (@order_id,@product_id,@quantity))";
-               
+
                 int quan = 10;
-                
-                for (int i = 10; quan > i; quan+=10)
+
+                for (int i = 10; quan > i; quan += 10)
                 {
 
                 }
@@ -158,23 +157,15 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
                 }
 
-           //     string quer2 = " INSERT INTO customer(customer_id,first_name ,last_name,address,contact_number,email ) VALUES (@customer_id,@first_name,@last_name,@address,@contact_number,@email))";
 
-             //   String quer3 = "select customer_id  from  customer";
+                conect.Open();
 
-             //   SqlConnection connection = new SqlConnection(cc.conn);
-               // SqlCommand command = new SqlCommand(quer, connection);
-             
-                    conect.Open();
 
-                    //command.Parameters.AddWithValue("@order_id");
-                  //  command.Parameters.AddWithValue("@product_id", textBox3);
-              
 
-                    command.ExecuteNonQuery();
-                    command.ExecuteScalar();
-                    conect.Close();
-                
+                command.ExecuteNonQuery();
+                command.ExecuteScalar();
+                conect.Close();
+
 
 
 
@@ -191,10 +182,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             }
 
         } // add button
-        public void addtoorders()
-        {
-           
-        }
+
 
 
         public void see()
@@ -228,39 +216,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         }
 
 
-        /*
-         public void newaddorder()
-        {
-            SqlConnection sqlc = new SqlConnection(cc.conn);
-            sqlc.Open();
-            string str = "select product_name from products";
-
-            SqlDataAdapter d = new SqlDataAdapter(str, sqlc);
-            DataTable t = new DataTable();
-
-             d.Fill(t);
-           
-               
-            
-            ArrayList alist = new ArrayList
-            {
-                t
-            };
-
-            sqlc.Close();
-
-
-            foreach (string it in alist)
-            {
-             
-                    comboBox1.DataSource = dataSet1.Tables["Suppliers"];
-                    comboBox1.DisplayMember = "ProductName";
-               
-                comboBox1.Items.Add(it);
-            }
-
-        }
-         */
 
     }
 }
