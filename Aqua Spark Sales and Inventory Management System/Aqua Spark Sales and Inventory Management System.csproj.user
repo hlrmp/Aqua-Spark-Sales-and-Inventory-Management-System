@@ -32,9 +32,6 @@
     <Compile Update="New Order.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="or form.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="order 2.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -61,6 +61,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button1.TabIndex = 50;
             button1.Text = "CANCEL";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 

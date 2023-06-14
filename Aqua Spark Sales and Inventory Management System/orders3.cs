@@ -41,14 +41,13 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 SqlDataReader drd = cmd.ExecuteReader();
                 while (drd.Read())
                 {
-                    comboBox3.Items.Add(drd["product_name"].ToString());
-
+                    comboBox3.Items.Add(drd["Customer Name"].ToString());
 
                 }
             }
             catch
             {
-                MessageBox.Show("Error ");
+                MessageBox.Show(" something went wrong ", "Error " ,  MessageBoxButtons.OK);   // running without using 
             }
 
             finally
@@ -56,6 +55,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 sqlc.Close();
             }
         }
+
 
 
         public void seeitems()
@@ -72,12 +72,12 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 {
                     comboBox1.Items.Add(drd["product_name"].ToString());
 
-                 
+
                 }
             }
             catch
             {
-                MessageBox.Show("Error ");
+                MessageBox.Show("Error ", " Error ", MessageBoxButtons.OK);
             }
 
             finally
@@ -86,7 +86,10 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             }
         }
 
+        private void button1_Click(object sender, EventArgs e) //  cancell   button
+        {
+            this.Hide();
 
-
+        }//  cancell   button
     }
 }

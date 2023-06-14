@@ -206,7 +206,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             }
             catch
             {
-                MessageBox.Show("Error ");
+                MessageBox.Show("Error ", " Error ", MessageBoxButtons.OK);
             }
 
             finally

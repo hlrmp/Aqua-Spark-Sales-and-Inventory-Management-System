@@ -36,7 +36,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         {
             buttonNEW.Show();
             buttonOLD.Show();
-            pictureBox2.Show();
+            pictureBox1.Show();
             buttonX.Show();
 
 
@@ -54,7 +54,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             SqlConnection sqlconn = new SqlConnection(cen.conn);
             sqlconn.Open();
             //  string str = "select * from order_tansactions";
-            string sj = "select CONCAT(c.first_name, c.last_name)AS 'full name' ,p.product_id,order_id ,product_name,quantity\r\nfrom customer AS c,products AS p INNER JOIN orders AS o on p.product_id = o.product_id";
+            string sj = "select CONCAT(c.first_name, c.last_name)AS 'full name' ,p.product_id,order_id ,product_name,quantity from customer AS c,products AS p INNER JOIN orders AS o on p.product_id = o.product_id";
 
             SqlDataAdapter data = new SqlDataAdapter(sj, sqlconn);
             DataTable table = new DataTable();
@@ -92,10 +92,10 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
                     command.ExecuteNonQuery();
 
-                    string del = (" DELETE FROM NET WHERE id = '" + st + "'");
-                    SqlCommand command1 = new SqlCommand(del, cnn);
+               //     string del = (" DELETE FROM NET WHERE id = '" + st + "'");
+                 //   SqlCommand command1 = new SqlCommand(del, cnn);
 
-                    command1.ExecuteNonQuery();
+              //      command1.ExecuteNonQuery();
 
                     cnn.Close();
 
@@ -105,7 +105,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             }
             catch
             {
-                MessageBox.Show("Error ");
+                MessageBox.Show("Error ", " message ", MessageBoxButtons.OK);
             }
 
         }
