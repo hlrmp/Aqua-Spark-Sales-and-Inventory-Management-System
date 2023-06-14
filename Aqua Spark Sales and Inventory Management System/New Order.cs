@@ -139,6 +139,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
                 string quer = " SELECT  customer_id FROM users WHERE first_name = '" + firstname + "'  AND last_name =  '" + lastname + "' ";
                 string quer1 = " ";
+
                 SqlCommand command = new SqlCommand();
 
                 command = new SqlCommand(quer, conect);
@@ -199,9 +200,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 {
                     comboBox1.Items.Add(drd["product_name"].ToString());
 
-                    /*  comboBox1.ValueMember = drd["product_name"].ToString();
-                      comboBox1.DisplayMember = drd["product_name"].ToString();
-                     */
+                    
                 }
             }
             catch
@@ -215,6 +214,64 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             }
         }
 
+
+        public void add()
+        {
+
+            try
+            {
+
+
+
+                using (SqlConnection cnn = new SqlConnection(cc.conn))
+                {
+
+                    if (!string.IsNullOrEmpty(textBox1.Text))
+                    {
+                        cnn.Open();
+
+                        string day = DateTime.Now.ToString("M/d/yyyy");
+
+                        string quer1 = "  INSERT INTO customer (first_name ,last_name,address,contact_number,email ) VALUES (@first_name ,@last_name,@address,@contact_number,@email)";
+                        SqlCommand command = new SqlCommand(quer1, cnn);
+
+                        command.Parameters.AddWithValue("@first_name", textBoxf.Text);
+                        command.Parameters.AddWithValue("@last_name", textBoxl.Text);
+                        command.Parameters.AddWithValue("@address", textBox3.Text);
+                        command.Parameters.AddWithValue("@contact_number", textBox1.Text);
+                        command.Parameters.AddWithValue("@contact_number", textBoxe.Text);
+
+
+                        command.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        MessageBox.Show(" fill up the ff.");
+                    }
+
+
+
+
+                    cnn.Close();
+
+
+                }
+
+
+
+
+
+
+            }
+            catch
+            {
+                MessageBox.Show("Error ");
+            }
+
+
+
+
+        }
 
 
     }

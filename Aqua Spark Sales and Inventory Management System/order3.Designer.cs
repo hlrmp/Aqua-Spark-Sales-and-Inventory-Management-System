@@ -1,7 +1,7 @@
 ﻿
 namespace Aqua_Spark_Sales_and_Inventory_Management_System
 {
-    partial class orders3
+    partial class order3
     {
         /// <summary>
         /// Required designer variable.
@@ -61,7 +61,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button1.TabIndex = 50;
             button1.Text = "CANCEL";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -232,7 +231,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             comboBox1.Size = new Size(330, 23);
             comboBox1.TabIndex = 73;
             // 
-            // orders3
+            // order3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -259,7 +258,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             Controls.Add(dataGridView1);
             Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "orders3";
+            Name = "order3";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "payment";
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();

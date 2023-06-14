@@ -42,12 +42,10 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             buttonpay = new Button();
             buttoncncel = new Button();
             button12 = new Button();
-            pictureBox1 = new PictureBox();
             button1 = new Button();
             button2 = new Button();
             pictureBox2 = new PictureBox();
             panel1 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -229,16 +227,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button12.UseVisualStyleBackColor = false;
             button12.Visible = false;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            pictureBox1.Location = new Point(-1, -3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(270, 831);
-            pictureBox1.TabIndex = 38;
-            pictureBox1.TabStop = false;
-            pictureBox1.Visible = false;
-            // 
             // button1
             // 
             button1.BackColor = Color.White;
@@ -270,7 +258,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             // 
             pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             pictureBox2.BackColor = Color.FromArgb(192, 192, 255);
-            pictureBox2.Location = new Point(-1, -21);
+            pictureBox2.Location = new Point(-2, -99);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(271, 831);
             pictureBox2.TabIndex = 41;
@@ -293,7 +281,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1341, 741);
+            ClientSize = new Size(1341, 733);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(button2salesinfo);
@@ -309,7 +297,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             Controls.Add(button7);
             Controls.Add(label1);
             Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
             DoubleBuffered = true;
             Font = new Font("Stencil", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
@@ -317,7 +304,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             Name = "Home_window";
             Text = "z";
             WindowState = FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             ResumeLayout(false);
@@ -338,7 +324,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private Button buttonpay;
         private Button buttoncncel;
         private Button button12;
-        private PictureBox pictureBox1;
         private Button button1;
         private Button button2;
         private PictureBox pictureBox2;

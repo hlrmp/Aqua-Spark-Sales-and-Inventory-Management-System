@@ -12,9 +12,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Aqua_Spark_Sales_and_Inventory_Management_System
 {
-    public partial class orders3 : Form
+    public partial class order3 : Form
     {
-        public orders3()
+        public order3()
         {
             InitializeComponent();
             seecustomers();
@@ -47,7 +47,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             }
             catch
             {
-                MessageBox.Show(" something went wrong ", "Error " ,  MessageBoxButtons.OK);   // running without using 
+                MessageBox.Show(" something went wrong ", "Error ", MessageBoxButtons.OK);   // running without using 
             }
 
             finally

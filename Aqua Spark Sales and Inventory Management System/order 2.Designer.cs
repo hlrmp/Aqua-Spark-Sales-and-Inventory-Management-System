@@ -39,14 +39,10 @@
             button3 = new Button();
             button4 = new Button();
             comboBox1 = new ComboBox();
+            panel1 = new Panel();
             dataGridView_sales = new DataGridView();
-            buttonNEW = new Button();
-            buttonOLD = new Button();
-            pictureBox1 = new PictureBox();
-            buttonX = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_sales).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -148,6 +144,16 @@
             comboBox1.TabIndex = 49;
             comboBox1.Text = "           SORT BY";
             // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.Right;
+            panel1.BackColor = Color.Transparent;
+            panel1.Location = new Point(728, 176);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(295, 201);
+            panel1.TabIndex = 50;
+            panel1.Visible = false;
+            // 
             // dataGridView_sales
             // 
             dataGridView_sales.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -192,79 +198,13 @@
             dataGridView_sales.Size = new Size(962, 501);
             dataGridView_sales.TabIndex = 31;
             // 
-            // buttonNEW
-            // 
-            buttonNEW.Anchor = AnchorStyles.Right;
-            buttonNEW.BackColor = Color.FromArgb(192, 255, 192);
-            buttonNEW.FlatStyle = FlatStyle.Popup;
-            buttonNEW.Font = new Font("Stencil", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonNEW.ForeColor = SystemColors.ActiveCaptionText;
-            buttonNEW.Location = new Point(833, 242);
-            buttonNEW.Name = "buttonNEW";
-            buttonNEW.Size = new Size(175, 38);
-            buttonNEW.TabIndex = 50;
-            buttonNEW.Text = "NEW CUSTOMER ";
-            buttonNEW.UseMnemonic = false;
-            buttonNEW.UseVisualStyleBackColor = false;
-            buttonNEW.Visible = false;
-            buttonNEW.Click += buttonNEW_Click;
-            // 
-            // buttonOLD
-            // 
-            buttonOLD.Anchor = AnchorStyles.Right;
-            buttonOLD.BackColor = Color.FromArgb(192, 255, 192);
-            buttonOLD.FlatStyle = FlatStyle.Popup;
-            buttonOLD.Font = new Font("Stencil", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonOLD.ForeColor = SystemColors.ActiveCaptionText;
-            buttonOLD.Location = new Point(833, 299);
-            buttonOLD.Name = "buttonOLD";
-            buttonOLD.Size = new Size(175, 38);
-            buttonOLD.TabIndex = 51;
-            buttonOLD.Text = "OLD CUSTOMER ";
-            buttonOLD.UseMnemonic = false;
-            buttonOLD.UseVisualStyleBackColor = false;
-            buttonOLD.Visible = false;
-            buttonOLD.Click += buttonOLD_Click;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Anchor = AnchorStyles.Right;
-            pictureBox1.BackColor = Color.White;
-            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox1.Location = new Point(806, 206);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(217, 151);
-            pictureBox1.TabIndex = 52;
-            pictureBox1.TabStop = false;
-            pictureBox1.Visible = false;
-            // 
-            // buttonX
-            // 
-            buttonX.Anchor = AnchorStyles.Right;
-            buttonX.BackColor = Color.Red;
-            buttonX.FlatStyle = FlatStyle.Popup;
-            buttonX.Font = new Font("Stencil", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonX.ForeColor = SystemColors.ActiveCaptionText;
-            buttonX.Location = new Point(993, 206);
-            buttonX.Name = "buttonX";
-            buttonX.Size = new Size(30, 25);
-            buttonX.TabIndex = 53;
-            buttonX.Text = "X";
-            buttonX.UseMnemonic = false;
-            buttonX.UseVisualStyleBackColor = false;
-            buttonX.Visible = false;
-            buttonX.Click += buttonX_Click;
-            // 
             // order_2
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(1216, 658);
-            Controls.Add(buttonX);
-            Controls.Add(buttonOLD);
-            Controls.Add(buttonNEW);
-            Controls.Add(pictureBox1);
+            Controls.Add(panel1);
             Controls.Add(comboBox1);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -282,7 +222,6 @@
             Text = "sales2";
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_sales).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -295,10 +234,7 @@
         private Button button3;
         private Button button4;
         private ComboBox comboBox1;
+        private Panel panel1;
         private DataGridView dataGridView_sales;
-        private Button buttonNEW;
-        private Button buttonOLD;
-        private PictureBox pictureBox1;
-        private Button buttonX;
     }
 }

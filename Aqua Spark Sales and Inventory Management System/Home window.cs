@@ -81,7 +81,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button2salesinfo.Show();
             button1orders.Show();
             button1.Show();
-            pictureBox1.Show();
+         
 
             button2.Hide();
 
@@ -102,7 +102,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button2salesinfo.Hide();
             button1orders.Hide();
             button1.Hide();
-            pictureBox1.Hide();
+          
 
             button2.Show();
 
@@ -220,12 +220,21 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             Form1 f2 = new Form1();
             f2.Show();
 
-            this.Close();
+         
 
             c2.Hide();
             i2.Hide();
             o2.Hide();
             s2.Hide();
+
+            button4inventory.Hide();
+            button3customers.Hide();
+            button2salesinfo.Hide();
+            button1orders.Hide();
+            button1.Hide();
+
+            this.Hide();
+            this.Close();
 
         }// log out button
 

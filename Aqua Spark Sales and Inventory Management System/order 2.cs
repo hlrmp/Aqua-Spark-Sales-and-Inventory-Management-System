@@ -23,27 +23,38 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         connection_class cen = new connection_class();
         private void button1_Click(object sender, EventArgs e) // home button 
         {
-            Home_window hm3 = new Home_window();
-            hm3.Show();
-            this.Hide();
 
+            this.Hide();
+            s.Hide();
+            panel1.Hide();
 
         } // home button 
 
 
-        New_Order no = new New_Order();
+
+        selection s = new selection();
         private void button2_Click(object sender, EventArgs e)   // add button
         {
-            buttonNEW.Show();
-            buttonOLD.Show();
-            pictureBox1.Show();
-            buttonX.Show();
+            panel1.Show();
+
+
+            s.FormBorderStyle = FormBorderStyle.None;
+            s.TopLevel = false;
+            s.Dock = DockStyle.Fill;
+         
+            s.AutoScroll = true;
+            panel1.Controls.Add(s);
+
+            s.Show();
 
 
         } // add button
 
         private void button3_Click(object sender, EventArgs e) // remove button
         {
+
+            s.Hide();
+            panel1.Hide();
 
         }// remove button
 
@@ -92,10 +103,10 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
                     command.ExecuteNonQuery();
 
-               //     string del = (" DELETE FROM NET WHERE id = '" + st + "'");
-                 //   SqlCommand command1 = new SqlCommand(del, cnn);
+                    //     string del = (" DELETE FROM NET WHERE id = '" + st + "'");
+                    //   SqlCommand command1 = new SqlCommand(del, cnn);
 
-              //      command1.ExecuteNonQuery();
+                    //      command1.ExecuteNonQuery();
 
                     cnn.Close();
 
@@ -105,39 +116,10 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             }
             catch
             {
-                MessageBox.Show("Error ", " message ", MessageBoxButtons.OK);
+                MessageBox.Show("Error ", " Error ", MessageBoxButtons.OK);
             }
 
-        }
-
-        private void buttonNEW_Click(object sender, EventArgs e) // new customer button
-        {
-            no.Show();
-            buttonNEW.Hide();
-            buttonOLD.Hide();
-            pictureBox2.Hide();
-            buttonX.Hide();
-
-        } // new customer button
-
-        orders3 o3 = new orders3();
-        private void buttonOLD_Click(object sender, EventArgs e)
-        {
-            o3.Show();
-            buttonNEW.Hide();
-            buttonOLD.Hide();
-            pictureBox2.Hide();
-            buttonX.Hide();
 
         }
-
-        private void buttonX_Click(object sender, EventArgs e) // X button
-        {
-            buttonNEW.Hide();
-            buttonOLD.Hide();
-            pictureBox2.Hide();
-            buttonX.Hide();
-
-        } // X button
     }
 }
