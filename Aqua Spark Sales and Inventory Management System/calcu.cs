@@ -21,7 +21,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         {
             if (button1 != null)
             {
-               one = int.Parse(textBox1.Text);
+                one = int.Parse(textBox1.Text);
 
             }
         }

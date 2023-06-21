@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             flowLayoutPanel1 = new FlowLayoutPanel();
+            textBox1 = new TextBox();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
@@ -40,7 +41,6 @@
             button9 = new Button();
             button10 = new Button();
             button11 = new Button();
-            textBox1 = new TextBox();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -52,6 +52,13 @@
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(265, 48);
             flowLayoutPanel1.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(3, 3);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(261, 23);
+            textBox1.TabIndex = 0;
             // 
             // button1
             // 
@@ -152,13 +159,6 @@
             button11.TabIndex = 11;
             button11.Text = "button11";
             button11.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(3, 3);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(261, 23);
-            textBox1.TabIndex = 0;
             // 
             // calcu
             // 
