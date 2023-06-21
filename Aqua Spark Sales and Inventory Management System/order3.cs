@@ -20,10 +20,16 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             seecustomers();
             seeitems();
         }
+
         connection_class cc = new connection_class();
 
         private void button8_Click(object sender, EventArgs e) // ADD BUTTON 
         {
+            string cn = cbcn.Text;
+            string ci = cbi.Text;
+
+            int quantity = Convert.ToInt32(numericUpDownquan);
+
 
 
         } // ADD BUTTON 
@@ -41,7 +47,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 SqlDataReader drd = cmd.ExecuteReader();
                 while (drd.Read())
                 {
-                    comboBox3.Items.Add(drd["Customer Name"].ToString());
+                    cbcn.Items.Add(drd["Customer Name"].ToString());
 
                 }
             }
@@ -70,7 +76,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 SqlDataReader drd = cmd.ExecuteReader();
                 while (drd.Read())
                 {
-                    comboBox1.Items.Add(drd["product_name"].ToString());
+                    cbi.Items.Add(drd["product_name"].ToString());
 
 
                 }
@@ -98,13 +104,66 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         private void button9_Click(object sender, EventArgs e)//clear button
         {
-            textBox1.Clear();
-          
-            numericUpDown1.ResetText();
+            textBoxpayment.Clear();
+
+            numericUpDownquan.ResetText();
 
             dataGridView1.Refresh();
 
 
         }// clear button
+
+
+
+
+
+
+        public void add()
+        {
+
+            try
+            {
+
+
+
+                using (SqlConnection cnn = new SqlConnection(cc.conn))
+                {
+
+                    if (!string.IsNullOrEmpty(textBoxpayment.Text))
+                    {
+                        cnn.Open();
+                        string day = DateTime.Now.ToString("M/d/yyyy");
+                        string quer1 = " INSERT INTO NET (name , netdate) VALUES (@name , @day)";
+                        SqlCommand command = new SqlCommand(quer1, cnn);
+
+                        command.Parameters.AddWithValue("@name", textBoxpayment.Text);
+                        command.Parameters.AddWithValue("@day", day);
+                        command.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        MessageBox.Show(" fill up the ff.");
+                    }
+
+
+
+
+                    cnn.Close();
+
+
+                }
+
+
+            }
+            catch
+            {
+                MessageBox.Show("Error ");
+            }
+
+
+
+
+        }
+
     }
 }

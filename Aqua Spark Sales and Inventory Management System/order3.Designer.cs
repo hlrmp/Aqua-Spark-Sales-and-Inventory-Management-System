@@ -35,20 +35,20 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            numericUpDown1 = new NumericUpDown();
+            numericUpDownquan = new NumericUpDown();
             label4 = new Label();
             label5 = new Label();
-            textBox1 = new TextBox();
+            textBoxpayment = new TextBox();
             label7 = new Label();
             button6 = new Button();
             button7 = new Button();
             dataGridView1 = new DataGridView();
-            comboBox3 = new ComboBox();
+            cbcn = new ComboBox();
             label8 = new Label();
             button8 = new Button();
             button9 = new Button();
-            comboBox1 = new ComboBox();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            cbi = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownquan).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -111,12 +111,12 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             label3.TabIndex = 56;
             label3.Text = "TOTAL AMOUNT :";
             // 
-            // numericUpDown1
+            // numericUpDownquan
             // 
-            numericUpDown1.Location = new Point(200, 237);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(173, 23);
-            numericUpDown1.TabIndex = 57;
+            numericUpDownquan.Location = new Point(200, 237);
+            numericUpDownquan.Name = "numericUpDownquan";
+            numericUpDownquan.Size = new Size(173, 23);
+            numericUpDownquan.TabIndex = 57;
             // 
             // label4
             // 
@@ -137,12 +137,12 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             label5.TabIndex = 62;
             label5.Text = "PAYMENT *";
             // 
-            // textBox1
+            // textBoxpayment
             // 
-            textBox1.Location = new Point(200, 295);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(173, 23);
-            textBox1.TabIndex = 63;
+            textBoxpayment.Location = new Point(200, 295);
+            textBoxpayment.Name = "textBoxpayment";
+            textBoxpayment.Size = new Size(173, 23);
+            textBoxpayment.TabIndex = 63;
             // 
             // label7
             // 
@@ -186,13 +186,13 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             dataGridView1.Size = new Size(312, 263);
             dataGridView1.TabIndex = 68;
             // 
-            // comboBox3
+            // cbcn
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(43, 179);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(330, 23);
-            comboBox3.TabIndex = 69;
+            cbcn.FormattingEnabled = true;
+            cbcn.Location = new Point(43, 179);
+            cbcn.Name = "cbcn";
+            cbcn.Size = new Size(330, 23);
+            cbcn.TabIndex = 69;
             // 
             // label8
             // 
@@ -225,13 +225,13 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button9.UseVisualStyleBackColor = false;
             button9.Click += button9_Click;
             // 
-            // comboBox1
+            // cbi
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(43, 93);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(330, 23);
-            comboBox1.TabIndex = 73;
+            cbi.FormattingEnabled = true;
+            cbi.Location = new Point(43, 93);
+            cbi.Name = "cbi";
+            cbi.Size = new Size(330, 23);
+            cbi.TabIndex = 73;
             // 
             // order3
             // 
@@ -239,18 +239,18 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(800, 478);
-            Controls.Add(comboBox1);
+            Controls.Add(cbi);
             Controls.Add(button9);
             Controls.Add(button8);
             Controls.Add(label8);
-            Controls.Add(comboBox3);
+            Controls.Add(cbcn);
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(label7);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxpayment);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(numericUpDown1);
+            Controls.Add(numericUpDownquan);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -263,7 +263,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             Name = "order3";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "payment";
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownquan).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -277,18 +277,18 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private Label label1;
         private Label label2;
         private Label label3;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown numericUpDownquan;
         private Label label4;
         private Label label5;
-        private TextBox textBox1;
+        private TextBox textBoxpayment;
         private Label label7;
         private Button button6;
         private Button button7;
         private DataGridView dataGridView1;
-        private ComboBox comboBox3;
+        private ComboBox cbcn;
         private Label label8;
         private Button button8;
         private Button button9;
-        private ComboBox comboBox1;
+        private ComboBox cbi;
     }
 }
