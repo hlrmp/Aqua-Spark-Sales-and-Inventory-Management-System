@@ -119,6 +119,7 @@
             button2.Text = "ordered";
             button2.UseMnemonic = false;
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -134,6 +135,7 @@
             button3.Text = "walk in";
             button3.UseMnemonic = false;
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button4
             // 

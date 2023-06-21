@@ -81,5 +81,14 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         }
 
+        private void button2_Click(object sender, EventArgs e) // ordered button 
+        {
+
+        } // ordered button 
+
+        private void button3_Click(object sender, EventArgs e) // walk in button
+        {
+
+        } // walk in button
     }
 }
