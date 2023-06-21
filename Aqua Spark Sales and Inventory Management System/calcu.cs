@@ -16,5 +16,24 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (button1 != null)
+            {
+               one = int.Parse(textBox1.Text);
+
+            }
+        }
+        public int one = 1;
+
+
+        public int numone()
+        {
+            return one;
+
+
+
+        }
     }
 }

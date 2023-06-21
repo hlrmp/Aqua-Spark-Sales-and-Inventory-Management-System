@@ -51,7 +51,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 nor.TopLevel = false;
                 nor.Dock = DockStyle.Fill;
 
-                nor.AutoScroll = true;
+                nor.AutoScroll = true; 
                 panel1.Controls.Add(nor);
 
                 nor.Show();
@@ -69,7 +69,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
 
-
+            panel2.Hide();
             panel1.Show();
 
 
