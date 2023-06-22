@@ -104,7 +104,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         private void button9_Click(object sender, EventArgs e)//clear button
         {
-            textBoxpayment.Clear();
+
 
             numericUpDownquan.ResetText();
 
@@ -118,52 +118,13 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
 
-        public void add()
+
+        calcu cu = new calcu();
+        private void button3_Click(object sender, EventArgs e)
         {
-
-            try
-            {
-
-
-
-                using (SqlConnection cnn = new SqlConnection(cc.conn))
-                {
-
-                    if (!string.IsNullOrEmpty(textBoxpayment.Text))
-                    {
-                        cnn.Open();
-                        string day = DateTime.Now.ToString("M/d/yyyy");
-                        string quer1 = " INSERT INTO NET (name , netdate) VALUES (@name , @day)";
-                        SqlCommand command = new SqlCommand(quer1, cnn);
-
-                        command.Parameters.AddWithValue("@name", textBoxpayment.Text);
-                        command.Parameters.AddWithValue("@day", day);
-                        command.ExecuteNonQuery();
-                    }
-                    else
-                    {
-                        MessageBox.Show(" fill up the ff.");
-                    }
-
-
-
-
-                    cnn.Close();
-
-
-                }
-
-
-            }
-            catch
-            {
-                MessageBox.Show("Error ");
-            }
-
-
+            cu.Show();
 
 
         }
-
     }
 }

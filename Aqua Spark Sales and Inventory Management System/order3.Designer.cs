@@ -38,7 +38,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             numericUpDownquan = new NumericUpDown();
             label4 = new Label();
             label5 = new Label();
-            textBoxpayment = new TextBox();
             label7 = new Label();
             button6 = new Button();
             button7 = new Button();
@@ -48,6 +47,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button8 = new Button();
             button9 = new Button();
             cbi = new ComboBox();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDownquan).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -136,13 +136,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             label5.Size = new Size(68, 15);
             label5.TabIndex = 62;
             label5.Text = "PAYMENT *";
-            // 
-            // textBoxpayment
-            // 
-            textBoxpayment.Location = new Point(200, 295);
-            textBoxpayment.Name = "textBoxpayment";
-            textBoxpayment.Size = new Size(173, 23);
-            textBoxpayment.TabIndex = 63;
             // 
             // label7
             // 
@@ -233,12 +226,21 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             cbi.Size = new Size(330, 23);
             cbi.TabIndex = 73;
             // 
+            // button3
+            // 
+            button3.Location = new Point(187, 291);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 23);
+            button3.TabIndex = 74;
+            button3.UseVisualStyleBackColor = true;
+            // 
             // order3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(800, 478);
+            Controls.Add(button3);
             Controls.Add(cbi);
             Controls.Add(button9);
             Controls.Add(button8);
@@ -247,7 +249,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(label7);
-            Controls.Add(textBoxpayment);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(numericUpDownquan);
@@ -262,7 +263,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             FormBorderStyle = FormBorderStyle.None;
             Name = "order3";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "payment";
             ((System.ComponentModel.ISupportInitialize)numericUpDownquan).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -280,7 +280,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private NumericUpDown numericUpDownquan;
         private Label label4;
         private Label label5;
-        private TextBox textBoxpayment;
         private Label label7;
         private Button button6;
         private Button button7;
@@ -290,5 +289,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private Button button8;
         private Button button9;
         private ComboBox cbi;
+        private Button button3;
     }
 }

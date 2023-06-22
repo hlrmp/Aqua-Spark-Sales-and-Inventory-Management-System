@@ -33,8 +33,6 @@
             label2 = new Label();
             label1 = new Label();
             textBoxlname = new TextBox();
-            LABELAD = new Label();
-            textBoxaddress = new TextBox();
             label3 = new Label();
             textBoxcontactno = new TextBox();
             label4 = new Label();
@@ -46,29 +44,28 @@
             // 
             // textBoxfname
             // 
-            textBoxfname.Location = new Point(153, 169);
-            textBoxfname.Margin = new Padding(3, 4, 3, 4);
+            textBoxfname.Location = new Point(134, 127);
             textBoxfname.Name = "textBoxfname";
-            textBoxfname.Size = new Size(303, 27);
+            textBoxfname.Size = new Size(266, 23);
             textBoxfname.TabIndex = 0;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Calisto MT", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(271, 49);
+            label6.Location = new Point(237, 37);
             label6.Name = "label6";
-            label6.Size = new Size(374, 28);
+            label6.Size = new Size(258, 44);
             label6.TabIndex = 54;
-            label6.Text = "AQUA SPARK NEW SUPPLIER\r\n";
+            label6.Text = "AQUA SPARK NEW STAFF\r\n\r\n";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(38, 172);
+            label2.Location = new Point(33, 129);
             label2.Name = "label2";
-            label2.Size = new Size(109, 20);
+            label2.Size = new Size(84, 15);
             label2.TabIndex = 56;
             label2.Text = "FIRST NAME *";
             // 
@@ -76,82 +73,60 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(42, 259);
+            label1.Location = new Point(37, 194);
             label1.Name = "label1";
-            label1.Size = new Size(105, 20);
+            label1.Size = new Size(80, 15);
             label1.TabIndex = 57;
             label1.Text = "LAST NAME *";
             // 
             // textBoxlname
             // 
-            textBoxlname.Location = new Point(153, 256);
-            textBoxlname.Margin = new Padding(3, 4, 3, 4);
+            textBoxlname.Location = new Point(134, 192);
             textBoxlname.Name = "textBoxlname";
-            textBoxlname.Size = new Size(303, 27);
+            textBoxlname.Size = new Size(266, 23);
             textBoxlname.TabIndex = 58;
-            // 
-            // LABELAD
-            // 
-            LABELAD.AutoSize = true;
-            LABELAD.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            LABELAD.Location = new Point(67, 344);
-            LABELAD.Name = "LABELAD";
-            LABELAD.Size = new Size(87, 20);
-            LABELAD.TabIndex = 59;
-            LABELAD.Text = "ADDRESS *";
-            // 
-            // textBoxaddress
-            // 
-            textBoxaddress.Location = new Point(153, 340);
-            textBoxaddress.Margin = new Padding(3, 4, 3, 4);
-            textBoxaddress.Name = "textBoxaddress";
-            textBoxaddress.Size = new Size(303, 27);
-            textBoxaddress.TabIndex = 60;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(7, 427);
+            label3.Location = new Point(6, 320);
             label3.Name = "label3";
-            label3.Size = new Size(158, 20);
+            label3.Size = new Size(122, 15);
             label3.TabIndex = 61;
             label3.Text = "CONTACT NUMBER *";
             // 
             // textBoxcontactno
             // 
-            textBoxcontactno.Location = new Point(153, 423);
-            textBoxcontactno.Margin = new Padding(3, 4, 3, 4);
+            textBoxcontactno.Location = new Point(134, 317);
             textBoxcontactno.Name = "textBoxcontactno";
-            textBoxcontactno.Size = new Size(301, 27);
+            textBoxcontactno.Size = new Size(264, 23);
             textBoxcontactno.TabIndex = 62;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(96, 512);
+            label4.Location = new Point(75, 259);
             label4.Name = "label4";
-            label4.Size = new Size(55, 20);
+            label4.Size = new Size(42, 15);
             label4.TabIndex = 63;
             label4.Text = "EMAIL";
             // 
             // textBoxemail
             // 
-            textBoxemail.Location = new Point(151, 508);
-            textBoxemail.Margin = new Padding(3, 4, 3, 4);
+            textBoxemail.Location = new Point(134, 256);
             textBoxemail.Name = "textBoxemail";
-            textBoxemail.Size = new Size(303, 27);
+            textBoxemail.Size = new Size(266, 23);
             textBoxemail.TabIndex = 64;
             // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(128, 255, 128);
             button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(623, 151);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(545, 113);
             button1.Name = "button1";
-            button1.Size = new Size(175, 63);
+            button1.Size = new Size(153, 47);
             button1.TabIndex = 65;
             button1.Text = "ADD";
             button1.UseVisualStyleBackColor = false;
@@ -161,10 +136,9 @@
             // 
             button2.BackColor = Color.FromArgb(255, 128, 128);
             button2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(623, 404);
-            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Location = new Point(545, 303);
             button2.Name = "button2";
-            button2.Size = new Size(175, 63);
+            button2.Size = new Size(153, 47);
             button2.TabIndex = 66;
             button2.Text = "CANCEL";
             button2.UseVisualStyleBackColor = false;
@@ -174,20 +148,19 @@
             // 
             button3.BackColor = Color.FromArgb(255, 192, 128);
             button3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(623, 279);
-            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Location = new Point(545, 209);
             button3.Name = "button3";
-            button3.Size = new Size(175, 63);
+            button3.Size = new Size(153, 47);
             button3.TabIndex = 67;
             button3.Text = "CLEAR";
             button3.UseVisualStyleBackColor = false;
             // 
             // supplier
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
-            ClientSize = new Size(914, 637);
+            ClientSize = new Size(800, 478);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -195,15 +168,12 @@
             Controls.Add(label4);
             Controls.Add(textBoxcontactno);
             Controls.Add(label3);
-            Controls.Add(textBoxaddress);
-            Controls.Add(LABELAD);
             Controls.Add(textBoxlname);
             Controls.Add(label1);
             Controls.Add(label2);
             Controls.Add(label6);
             Controls.Add(textBoxfname);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "supplier";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "new_customer";
@@ -218,8 +188,6 @@
         private Label label2;
         private Label label1;
         private TextBox textBoxlname;
-        private Label LABELAD;
-        private TextBox textBoxaddress;
         private Label label3;
         private TextBox textBoxcontactno;
         private Label label4;

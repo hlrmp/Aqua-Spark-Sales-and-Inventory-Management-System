@@ -41,6 +41,7 @@
             button9 = new Button();
             button10 = new Button();
             button11 = new Button();
+            button12 = new Button();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -78,6 +79,7 @@
             button2.TabIndex = 2;
             button2.Text = "button2";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -87,6 +89,7 @@
             button3.TabIndex = 3;
             button3.Text = "button3";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -96,6 +99,7 @@
             button4.TabIndex = 4;
             button4.Text = "button4";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -105,6 +109,7 @@
             button5.TabIndex = 5;
             button5.Text = "button5";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
@@ -114,6 +119,7 @@
             button6.TabIndex = 6;
             button6.Text = "button6";
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // button7
             // 
@@ -123,6 +129,7 @@
             button7.TabIndex = 7;
             button7.Text = "button7";
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // button8
             // 
@@ -132,6 +139,7 @@
             button8.TabIndex = 8;
             button8.Text = "button8";
             button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
             // 
             // button9
             // 
@@ -141,30 +149,44 @@
             button9.TabIndex = 9;
             button9.Text = "button9";
             button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
             // 
             // button10
             // 
-            button10.Location = new Point(73, 338);
+            button10.Location = new Point(25, 348);
             button10.Name = "button10";
             button10.Size = new Size(75, 51);
             button10.TabIndex = 10;
             button10.Text = "button10";
             button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
             // 
             // button11
             // 
-            button11.Location = new Point(168, 338);
+            button11.Location = new Point(121, 348);
             button11.Name = "button11";
             button11.Size = new Size(75, 51);
             button11.TabIndex = 11;
-            button11.Text = "button11";
+            button11.Text = "CLEAR";
             button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
+            // 
+            // button12
+            // 
+            button12.Location = new Point(215, 348);
+            button12.Name = "button12";
+            button12.Size = new Size(75, 51);
+            button12.TabIndex = 12;
+            button12.Text = "ADD";
+            button12.UseVisualStyleBackColor = true;
+            button12.Click += button12_Click;
             // 
             // calcu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(316, 402);
+            ClientSize = new Size(316, 424);
+            Controls.Add(button12);
             Controls.Add(button11);
             Controls.Add(button10);
             Controls.Add(button9);
@@ -200,5 +222,6 @@
         private Button button10;
         private Button button11;
         private TextBox textBox1;
+        private Button button12;
     }
 }
