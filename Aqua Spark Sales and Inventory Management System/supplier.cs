@@ -39,7 +39,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                         cnn.Open();
                         string quer = " INSERT INTO staffs (first_name ,last_name,email,contact_number ) VALUES (@first_name ,@last_name,@email,@contact_number)";
 
-
                         SqlCommand command = new SqlCommand(quer, cnn);
 
                         command.Parameters.AddWithValue("@first_name", fn);
