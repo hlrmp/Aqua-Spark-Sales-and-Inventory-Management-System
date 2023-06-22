@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         public string ln;
 
         connection_class cn = new connection_class();
+        user_setup us = new user_setup();
         private void button1_Click(object sender, EventArgs e)
         {
             fn = textBoxfname.Text;
@@ -29,28 +31,31 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
             try
             {
-
-
-
-                using (SqlConnection cnn = new SqlConnection(cn.conn))
+                if (button1 != null) 
                 {
-                    cnn.Open();
-                    string quer = " INSERT INTO staffs (first_name ,last_name,email,contact_number ) VALUES (@first_name ,@last_name,@email,@contact_number)";
+
+                    using (SqlConnection cnn = new SqlConnection(cn.conn))
+                    {
+                        cnn.Open();
+                        string quer = " INSERT INTO staffs (first_name ,last_name,email,contact_number ) VALUES (@first_name ,@last_name,@email,@contact_number)";
 
 
-                    //  string quer1 = " INSERT INTO staffs (first_name ,last_name,email,contact_number ) VALUES ('" + textBoxfname + "' ,'" + textBoxlname + "','" + textBoxcontactno + "','" + textBoxemail + "')";
-                    //  SqlCommand cmm = new SqlCommand(quer1, cnn);
-                    SqlCommand command = new SqlCommand(quer, cnn);
+                        SqlCommand command = new SqlCommand(quer, cnn);
 
-                    command.Parameters.AddWithValue("@first_name", fn);
-                    command.Parameters.AddWithValue("@last_name", ln);
-                    command.Parameters.AddWithValue("@email", textBoxemail.Text);
-                    command.Parameters.AddWithValue("@contact_number", textBoxcontactno.Text);
+                        command.Parameters.AddWithValue("@first_name", fn);
+                        command.Parameters.AddWithValue("@last_name", ln);
+                        command.Parameters.AddWithValue("@email", textBoxemail.Text);
+                        command.Parameters.AddWithValue("@contact_number", textBoxcontactno.Text);
 
-                    command.ExecuteNonQuery();
+                        command.ExecuteNonQuery();
 
-                    cnn.Close();
+                        cnn.Close();
+                    }
 
+
+                }
+                else
+                { 
 
                 }
 
@@ -62,8 +67,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             {
                 MessageBox.Show("Error ");
             }
-
-
 
 
         }
