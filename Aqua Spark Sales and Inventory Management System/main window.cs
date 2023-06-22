@@ -59,7 +59,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 cw.Hide();
                 sw.Hide();
                 ow.Hide();
-               // sw1.Hide();
+                // sw1.Hide();
 
 
             }
@@ -256,8 +256,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         }
         sign_up a = new sign_up();
         private void button2_Click_2(object sender, EventArgs e) // emp button
-        { 
-        a.Show();
+        {
+            a.Show();
 
         }//emp button
 

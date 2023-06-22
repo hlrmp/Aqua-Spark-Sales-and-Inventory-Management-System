@@ -33,9 +33,11 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             foreach (string pos in clist)
             {
                 comboBox1.Items.Add(pos);
-            }
+            } 
+
         }
-       
+
+
         private void checkBox1_CheckedChanged(object sender, EventArgs e)     // password show
         {
             if (checkBox1.Checked == true)
@@ -124,7 +126,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
         }
-    
+
     }
 }
 

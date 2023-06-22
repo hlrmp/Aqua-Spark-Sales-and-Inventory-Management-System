@@ -31,7 +31,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         connection_class cnc = new connection_class();  // database connection instance
                                                         //          string cn =                                      // SqlConnection connection = new SqlConnection();
 
-     
+
         private void button1_Click(object sender, EventArgs e)   // log in button
         {
             login();
@@ -79,9 +79,9 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         }// clear button
 
 
-      
 
-       
+
+
         public void login()
         {
             using (SqlConnection connection = new SqlConnection(cnc.conn))
@@ -96,8 +96,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                         connection.Open();
 
 
-                       string quer = " SELECT user_name , password,user_type FROM users WHERE user_name = '" + un + "'  AND password =  '" + pass + "' ";
-                //   string quer = "  SELECT user_name ,password , user_type FROM users WHERE user_name = 'a'  AND password =  'b' " ;
+                        string quer = " SELECT user_name , password, user_type FROM users WHERE user_name = '" + textBox1_username.Text + "'  AND password =  '" + textBox2_password.Text + "' ";
+                        //     string quer = "  SELECT user_name ,password , user_type FROM users WHERE user_name = 'a'  AND password =  'b' " ;
 
                         SqlCommand command;
                         command = new SqlCommand(quer, connection);
@@ -155,7 +155,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 catch (Exception)
                 {
                     //MessageBox.Show(" user name or password incorect");
-                    MessageBox.Show("error", "error", MessageBoxButtons.OK);
+                    MessageBox.Show("something went wrong", "error", MessageBoxButtons.OK);
                 }
                 finally     // to close the connection
                 {
@@ -166,4 +166,3 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
     }
 }
 
-    

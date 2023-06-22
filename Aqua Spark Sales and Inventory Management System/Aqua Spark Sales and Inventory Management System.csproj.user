@@ -47,9 +47,6 @@
     <Compile Update="payment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="reciept.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Sales window.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -122,7 +122,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             try
             {
                 conect.Open();
-                string list = "SELECT activity_id ,a.user_id,user_name ,user_type ,activity_description , activity_date FROM users AS u \r\n  INNER JOIN activity_logs AS a on u.user_id = a.user_id ;";
+                string list = "SELECT activity_id ,a.user_id,user_name ,user_type ,activity_description , activity_date FROM users AS u  INNER JOIN activity_logs AS a on u.user_id = a.user_id ";
                 SqlDataAdapter data = new SqlDataAdapter(list, conect);
                 DataTable table = new DataTable();
 

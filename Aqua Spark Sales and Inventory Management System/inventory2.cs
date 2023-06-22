@@ -37,7 +37,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 {
 
                     cn.Open();
-                    string st = "SELECT i.inventory_id, p.product_id ,s.supplier_id, i.quantity ,i.date_added FROM inventory AS s,products AS p INNER JOIN inventory AS i on i.product_id = p.product_id;\r\n";
+                    string st = "SELECT i.inventory_id, p.product_id , i.quantity ,i.date_added FROM inventory AS s,products AS p INNER JOIN inventory AS i on i.product_id = p.product_id";
                     SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
                     SqlCommand command = new SqlCommand();
 
@@ -75,5 +75,58 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         }
 
+        private void button3_Click(object sender, EventArgs e) // product table 
+        {
+
+        }// product table
+
+
+        public void products()
+        {
+            using (SqlConnection cn = new SqlConnection(c.conn))
+            {
+
+
+                try
+                {
+
+                    cn.Open();
+                    string st = "SELECT * FROM products";
+                    SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
+                    SqlCommand command = new SqlCommand();
+
+                    command.CommandText = st;
+                    command.Parameters.Clear();
+                    DataTable table = new DataTable();
+                    adapt.Fill(table);
+
+                    dataGridView_sales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dataGridView_sales.DataSource = table;
+
+
+
+                }
+                catch (Exception)
+                {
+
+                    //MessageBox.Show(" user name or password incorect");
+                    MessageBox.Show("something went wrong", "error", MessageBoxButtons.OK);
+
+
+
+
+                }
+                finally     // to close the connection
+                {
+                    cn.Close();
+
+                } // to close the connection
+
+
+            }
+
+
+
+        }
     }
 }

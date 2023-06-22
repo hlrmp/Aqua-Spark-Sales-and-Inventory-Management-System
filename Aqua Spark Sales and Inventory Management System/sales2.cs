@@ -39,13 +39,11 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             using (SqlConnection cn = new SqlConnection(cnn.conn))
             {
 
-
-
                 try
                 {
 
                     cn.Open();
-                    string st = "select * from order_transaction;";
+                    string st = "select order_transaction_id,o.order_id ,discount_id,staff_id,customer_id,ot.status,payment_method , transaction_date ,product_id ,quantity from order_transaction as ot inner join orders AS o on o.order_id = ot.order_id\r\n";
                     SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
                     SqlCommand command = new SqlCommand();
 
@@ -63,7 +61,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 {
 
                     //MessageBox.Show(" user name or password incorect");
-                    MessageBox.Show("error", "error", MessageBoxButtons.OK);
+                    MessageBox.Show("something went wrong", "error", MessageBoxButtons.OK);
 
 
 

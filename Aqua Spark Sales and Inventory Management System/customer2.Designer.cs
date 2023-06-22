@@ -101,7 +101,7 @@
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(758, 95);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(239, 29);
+            comboBox1.Size = new Size(239, 36);
             comboBox1.TabIndex = 49;
             comboBox1.Text = "           SORT BY";
             // 
@@ -119,6 +119,7 @@
             button2.Text = "add";
             button2.UseMnemonic = false;
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // label1
             // 
@@ -130,7 +131,7 @@
             label1.Location = new Point(-1, -2);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1252, 57);
+            label1.Size = new Size(1562, 71);
             label1.TabIndex = 32;
             label1.Text = "                        aqua spark customer list                       ";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -149,10 +150,11 @@
             button5.Text = "see all";
             button5.UseMnemonic = false;
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // customer2
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(14F, 36F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(1216, 658);

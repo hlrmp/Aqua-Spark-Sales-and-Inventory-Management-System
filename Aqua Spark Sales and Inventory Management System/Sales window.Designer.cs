@@ -47,10 +47,10 @@
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ButtonFace;
-            button1.Location = new Point(66, 80);
+            button1.Location = new Point(12, 80);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(210, 87);
+            button1.Size = new Size(270, 87);
             button1.TabIndex = 24;
             button1.Text = "home";
             button1.UseVisualStyleBackColor = false;
@@ -76,12 +76,12 @@
             dataGridView_sales.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView_sales.BackgroundColor = Color.FromArgb(192, 255, 255);
             dataGridView_sales.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_sales.Location = new Point(338, 179);
+            dataGridView_sales.Location = new Point(348, 179);
             dataGridView_sales.Margin = new Padding(3, 4, 3, 4);
             dataGridView_sales.Name = "dataGridView_sales";
             dataGridView_sales.RowHeadersWidth = 51;
             dataGridView_sales.RowTemplate.Height = 25;
-            dataGridView_sales.Size = new Size(726, 380);
+            dataGridView_sales.Size = new Size(716, 380);
             dataGridView_sales.TabIndex = 30;
             // 
             // comboBox1
@@ -114,10 +114,10 @@
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ButtonFace;
-            button2.Location = new Point(66, 246);
+            button2.Location = new Point(12, 246);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(210, 87);
+            button2.Size = new Size(270, 87);
             button2.TabIndex = 45;
             button2.Text = "from order";
             button2.UseVisualStyleBackColor = false;
@@ -130,10 +130,10 @@
             button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.ButtonFace;
-            button3.Location = new Point(66, 412);
+            button3.Location = new Point(12, 407);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
-            button3.Size = new Size(210, 87);
+            button3.Size = new Size(270, 87);
             button3.TabIndex = 46;
             button3.Text = "from walk in";
             button3.UseVisualStyleBackColor = false;
@@ -145,10 +145,10 @@
             button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button4.ForeColor = SystemColors.ButtonFace;
-            button4.Location = new Point(66, 583);
+            button4.Location = new Point(12, 577);
             button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
-            button4.Size = new Size(210, 87);
+            button4.Size = new Size(270, 87);
             button4.TabIndex = 47;
             button4.Text = "total sales";
             button4.UseVisualStyleBackColor = false;

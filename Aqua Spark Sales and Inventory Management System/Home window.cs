@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,15 +17,67 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         {
             InitializeComponent();
         }
-
+        connection_class css = new connection_class();
         private void button5_Click(object sender, EventArgs e) // list button
         {
 
             button12.Show();
 
+            panel1.Hide();
+            panel2.Hide();
+
 
 
         }// list button
+
+        public void invent()
+        {
+            using (SqlConnection cn = new SqlConnection(css.conn))
+            {
+
+
+                try
+                {
+
+                    cn.Open();
+                    string st = "select order_transaction_id,o.order_id ,discount_id,staff_id,customer_id,ot.status,payment_method , transaction_date ,p.product_nmae,p.product_id ,quantity ,price , refil_price ,size from products as p, order_transaction as ot inner join orders AS o on o.order_id = ot.order_id";
+
+                    SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
+                    SqlCommand command = new SqlCommand();
+
+                    command.CommandText = st;
+                    command.Parameters.Clear();
+                    DataTable table = new DataTable();
+                    adapt.Fill(table);
+
+                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dataGridView1.DataSource = table;
+
+
+
+                }
+                catch (Exception)
+                {
+
+                    //MessageBox.Show(" user name or password incorect");
+                    MessageBox.Show("something went wrong", "error", MessageBoxButtons.OK);
+
+
+
+
+                }
+                finally     // to close the connection
+                {
+                    cn.Close();
+
+                } // to close the connection
+
+
+            }
+
+
+
+        }
 
         New_Order nor = new New_Order();
         private void button7_Click(object sender, EventArgs e) // add orders
@@ -70,18 +123,19 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
             panel2.Hide();
-            panel1.Show();
+            panel1.Hide();
 
 
 
-            p.Show();
-            p.FormBorderStyle = FormBorderStyle.None;
-            p.TopLevel = false;
-            p.Dock = DockStyle.Fill;
+            /*
+             * p.Show();
+               p.FormBorderStyle = FormBorderStyle.None;
+               p.TopLevel = false;
+               p.Dock = DockStyle.Fill;
 
-            p.AutoScroll = true;
-            panel1.Controls.Add(p);
-
+               p.AutoScroll = true;
+               panel1.Controls.Add(p);
+           */
             p.Show();
             nor.Hide();
 
@@ -251,7 +305,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             this.Close();
 
         }// log out button
-
 
 
     }

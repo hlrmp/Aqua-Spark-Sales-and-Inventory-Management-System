@@ -19,7 +19,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         public New_Order()
         {
             InitializeComponent();
-            //  newaddorder();
+
             see();
         }
         connection_class cc = new connection_class();
@@ -52,7 +52,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             this.customer_number = cnum;
             this.customer_email = em;
             this.quantity = 0;
-            this.payment = 0.0;
+            this.pay = 0.0;
             this.total_price = 0.0;
 
         }
@@ -88,8 +88,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         }
         public double pay
         {
-            get { return payment; }
-            set { payment = value; }
+            get { return pay; }
+            set { pay = value; }
         }
         public double totlalamount
         {
@@ -113,7 +113,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             textBox3.Clear();
             numericUpDown1.ResetText();
             numericUpDown2.ResetText();
-            numericUpDown3.ResetText();
+
 
         } // clear button
 
@@ -121,70 +121,74 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         {
 
 
-            SqlConnection conect = new SqlConnection(cc.conn);
+
+
+            fname = textBoxf.Text;
+            lname = textBoxl.Text;
+            customer_address = textBox3.Text;
+            customer_number = textBox1.Text;
+            customer_email = textBoxe.Text;
+
+            quantity = (int)numericUpDown1.Value;
+            pay = (double)numericUpDown2.Value;
+            total_price = (double)numericUpDown3.Value;
+            SqlDateTime dt = new SqlDateTime();
+            string day = DateTime.Now.ToString("M/d/yyyy");
+
+
+        } // add button
+
+        public void add()
+        {
+
             try
             {
 
-                fname = textBoxf.Text;
-                lname = textBoxl.Text;
-                customer_address = textBox3.Text;
-                customer_number = textBox1.Text;
-                customer_email = textBoxe.Text;
-
-                quantity = (int)numericUpDown1.Value;
-                payment = (double)numericUpDown2.Value;
-                total_price = (double)numericUpDown3.Value;
-                SqlDateTime dt = new SqlDateTime();
 
 
-                string quer = " SELECT  customer_id FROM users WHERE first_name = '" + firstname + "'  AND last_name =  '" + lastname + "' ";
-                string quer1 = " ";
-
-                SqlCommand command = new SqlCommand();
-
-                command = new SqlCommand(quer, conect);
-
-                SqlDataReader reader = command.ExecuteReader();
-
-
-                int quan = 10;
-
-                for (int i = 10; quan > i; quan += 10)
+                using (SqlConnection cnn = new SqlConnection(cc.conn))
                 {
 
-                }
-                if (quantity >= 10 || quantity <= 20)
-                {
+                    if (!string.IsNullOrEmpty(textBox1.Text))
+                    {
+                        cnn.Open();
+                        string day = DateTime.Now.ToString("M/d/yyyy");
+                        string quer1 = "INSERT INTO customer(first_name,last_name,address,contact_number,email)values(@first_name,@last_name,@address,@contact_number,@email)";
+                        SqlCommand command = new SqlCommand(quer1, cnn);
+
+                        command.Parameters.AddWithValue("@first_name", textBoxf.Text);
+                        command.Parameters.AddWithValue("@last_name", textBoxl.Text);
+                        command.Parameters.AddWithValue("@address", textBox3.Text);
+                        command.Parameters.AddWithValue("@contact_number", textBox1.Text);
+                        command.Parameters.AddWithValue("@email", textBoxe.Text);
+                        command.ExecuteNonQuery();
+
+
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show(" fill up the ff.");
+                    }
+
+
+                    cnn.Close();
+
 
                 }
-
-
-                conect.Open();
-
-
-
-                command.ExecuteNonQuery();
-                command.ExecuteScalar();
-                conect.Close();
-
-
-
 
 
             }
             catch
             {
-                MessageBox.Show("Error ", "something went wrong", MessageBoxButtons.OK);
+                MessageBox.Show("Error ");
             }
 
-            finally
-            {
-                conect.Close();
-            }
-
-        } // add button
 
 
+
+        }
 
         public void see()
         {
@@ -200,7 +204,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 {
                     comboBox1.Items.Add(drd["product_name"].ToString());
 
-                    
+
                 }
             }
             catch
@@ -215,7 +219,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         }
 
 
-        public void add()
+        public void inserttransaction()
         {
 
             try
@@ -240,9 +244,43 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                         command.Parameters.AddWithValue("@address", textBox3.Text);
                         command.Parameters.AddWithValue("@contact_number", textBox1.Text);
                         command.Parameters.AddWithValue("@contact_number", textBoxe.Text);
-
-
                         command.ExecuteNonQuery();
+
+
+                        SqlConnection sqlc = new SqlConnection(cc.conn);
+
+                        string n = comboBox1.Text;
+                        string st = " SELECT product_id FROM products WHERE product_name = '" + n + "' ";
+                        SqlCommand cmd1 = new SqlCommand(st, sqlc);
+                        cmd1.CommandText = st;
+                        sqlc.Open();
+                        SqlDataReader drd1 = cmd1.ExecuteReader();
+
+
+
+                        string quer2 = "INSERT INTO orders(product_id, quantity)VALUE (@product_id, @quantity);";
+                        SqlCommand command2 = new SqlCommand(quer2, cnn);
+
+                        command2.Parameters.AddWithValue("@product_id", drd1.Read());
+                        command2.Parameters.AddWithValue("@quantity", quantity);
+
+                        command2.ExecuteNonQuery();
+
+
+                        int promo = Convert.ToInt32(numericUpDown3);
+
+                        string quer3 = "insert into order_transaction (order_id,discount_id ,staff_id,,status,payment_method,transaction_date) values (@order_id,@discount_id ,@staff_id,@customer_id,@status,@payment_method,@transaction_date)";
+                        SqlCommand command3 = new SqlCommand(quer3, cnn);
+                        SqlDataReader drd = cmd1.ExecuteReader();
+
+                        command3.Parameters.AddWithValue("@order_id", drd1.Read());
+                        command3.Parameters.AddWithValue("@discount_id",promo );
+                        command3.Parameters.AddWithValue("@staff_id", drd1.Read());
+                        command3.Parameters.AddWithValue("@customer_id", promo);
+
+                        command3.ExecuteNonQuery();
+
+
                     }
                     else
                     {
@@ -272,6 +310,21 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
         }
+
+        public void paymentterms()
+        {
+            ArrayList clist = new ArrayList();
+
+            clist.Add(" pay ");
+            clist.Add(" pending payment ");
+
+            foreach (string pos in clist)
+            {
+                comboBox1.Items.Add(pos);
+            }
+
+        }
+
 
 
     }

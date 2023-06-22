@@ -35,7 +35,6 @@
             button3 = new Button();
             button4 = new Button();
             comboBox1 = new ComboBox();
-            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView_sales).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -65,7 +64,7 @@
             label1.Location = new Point(-10, -2);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1269, 57);
+            label1.Size = new Size(1581, 71);
             label1.TabIndex = 32;
             label1.Text = "                   AQUA SPARK INVENTORY REPORT                     \r\n";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -102,13 +101,14 @@
             button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.ActiveCaptionText;
-            button3.Location = new Point(1006, 391);
+            button3.Location = new Point(1006, 260);
             button3.Name = "button3";
             button3.Size = new Size(206, 80);
             button3.TabIndex = 47;
             button3.Text = "products ";
             button3.UseMnemonic = false;
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -117,7 +117,7 @@
             button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button4.ForeColor = SystemColors.ActiveCaptionText;
-            button4.Location = new Point(1006, 538);
+            button4.Location = new Point(1006, 417);
             button4.Name = "button4";
             button4.Size = new Size(206, 80);
             button4.TabIndex = 48;
@@ -134,35 +134,19 @@
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(732, 99);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(239, 29);
+            comboBox1.Size = new Size(239, 36);
             comboBox1.TabIndex = 49;
             comboBox1.Text = "           SORT BY";
             // 
-            // button2
-            // 
-            button2.Anchor = AnchorStyles.Right;
-            button2.BackColor = Color.Transparent;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(1006, 245);
-            button2.Name = "button2";
-            button2.Size = new Size(206, 80);
-            button2.TabIndex = 46;
-            button2.Text = "BOTTLES";
-            button2.UseMnemonic = false;
-            button2.UseVisualStyleBackColor = false;
-            // 
             // inventory2
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(14F, 36F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(1212, 646);
             Controls.Add(comboBox1);
             Controls.Add(button4);
             Controls.Add(button3);
-            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(dataGridView_sales);
@@ -189,6 +173,5 @@
         private Button button3;
         private Button button4;
         private ComboBox comboBox1;
-        private Button button2;
     }
 }

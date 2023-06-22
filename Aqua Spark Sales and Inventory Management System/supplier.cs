@@ -31,8 +31,9 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
             try
             {
-                if (button1 != null) 
+                if (button1 != null)
                 {
+                    us.Show();
 
                     using (SqlConnection cnn = new SqlConnection(cn.conn))
                     {
@@ -54,7 +55,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
                 }
                 else
-                { 
+                {
 
                 }
 
@@ -64,7 +65,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             }
             catch
             {
-                MessageBox.Show("Error ");
+                MessageBox.Show("error something might wrong ");
             }
 
 
@@ -82,6 +83,14 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         }// cancell button
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBoxlname.Clear();
+            textBoxfname.Clear();
 
+            textBoxcontactno.Clear();
+            textBoxemail.Clear();
+
+        }
     }
 }

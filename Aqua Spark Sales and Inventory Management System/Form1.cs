@@ -25,13 +25,13 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         private void button2_Click(object sender, EventArgs e) // Exit button
         {
-           
-                this.Close();
-                this.Visible = false;   
-      
+
+            this.Close();
+            this.Visible = false;
+
 
         } // Exit button
 
-
+        
     }
 }

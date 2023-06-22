@@ -48,7 +48,7 @@
             dataGridView_inventory.Name = "dataGridView_inventory";
             dataGridView_inventory.RowHeadersWidth = 51;
             dataGridView_inventory.RowTemplate.Height = 25;
-            dataGridView_inventory.Size = new Size(595, 395);
+            dataGridView_inventory.Size = new Size(751, 395);
             dataGridView_inventory.TabIndex = 0;
             // 
             // button1
@@ -90,7 +90,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Cyan;
-            label1.Location = new Point(313, 43);
+            label1.Location = new Point(391, 43);
             label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
             label1.Size = new Size(735, 71);
@@ -130,7 +130,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1009, 600);
+            ClientSize = new Size(1165, 600);
             Controls.Add(button3);
             Controls.Add(label1);
             Controls.Add(button2);

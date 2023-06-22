@@ -81,11 +81,11 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 {
                     cnn.Open();
                     //    string quer = " INSERT INTO customer (first_name ,last_name,address,contact_number,email ) VALUES (@first_name ,@last_name,@address,@contact_number,@email)";
-                    
+
 
                     string quer1 = " INSERT INTO customer (first_name ,last_name,address,contact_number,email ) VALUES ('" + textBoxfname + "' ,'" + textBoxlname + "','" + textBoxaddress + "','" + textBoxcontactno + "','" + textBoxemail + "')";
                     SqlCommand cmm = new SqlCommand(quer1, cnn);
-                //    SqlCommand command = new SqlCommand(quer1, cnn);
+                    //    SqlCommand command = new SqlCommand(quer1, cnn);
                     // SqlDataAdapter dataAdapter = new SqlDataAdapter(cmm);
                     //   DataTable dt = new DataTable(quer1);
                     //     dt.Rows.Add(quer1,cnn); 
@@ -96,7 +96,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                     //  command.Parameters.AddWithValue("@address",textBoxaddress.Text);
                     //  command.Parameters.AddWithValue("@contact_number",Convert.ToInt32( textBoxcontactno.Text));
                     //  command.Parameters.AddWithValue("@email",textBoxemail.Text);
-               //    cmm.ExecuteNonQuery();
+                     cmm.ExecuteNonQuery();
 
                     cnn.Close();
 
@@ -118,7 +118,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             }
         }
 
-    } 
+    }
 }
 
 
