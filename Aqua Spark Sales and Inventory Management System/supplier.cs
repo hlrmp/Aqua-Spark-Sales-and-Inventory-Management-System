@@ -18,13 +18,14 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             InitializeComponent();
         }
 
-        public string fn = textBoxfname.Text;
-        public string ln = textBoxlname.Text;
+        public string fn;
+        public string ln;
 
         connection_class cn = new connection_class();
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            fn = textBoxfname.Text;
+            ln = textBoxlname.Text;
 
             try
             {
@@ -41,8 +42,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                     //  SqlCommand cmm = new SqlCommand(quer1, cnn);
                     SqlCommand command = new SqlCommand(quer, cnn);
 
-                    command.Parameters.AddWithValue("@first_name", textBoxfname.Text);
-                    command.Parameters.AddWithValue("@last_name", textBoxlname.Text);
+                    command.Parameters.AddWithValue("@first_name", fn);
+                    command.Parameters.AddWithValue("@last_name", ln);
                     command.Parameters.AddWithValue("@email", textBoxemail.Text);
                     command.Parameters.AddWithValue("@contact_number", textBoxcontactno.Text);
 

@@ -31,7 +31,6 @@
             dataGridView_sales = new DataGridView();
             button1 = new Button();
             pictureBox2 = new PictureBox();
-            button3 = new Button();
             button4 = new Button();
             comboBox1 = new ComboBox();
             button2 = new Button();
@@ -78,21 +77,6 @@
             pictureBox2.TabIndex = 45;
             pictureBox2.TabStop = false;
             // 
-            // button3
-            // 
-            button3.Anchor = AnchorStyles.Right;
-            button3.BackColor = Color.Transparent;
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.ForeColor = SystemColors.ActiveCaptionText;
-            button3.Location = new Point(1020, 326);
-            button3.Name = "button3";
-            button3.Size = new Size(195, 68);
-            button3.TabIndex = 47;
-            button3.Text = "remove";
-            button3.UseMnemonic = false;
-            button3.UseVisualStyleBackColor = false;
-            // 
             // button4
             // 
             button4.Anchor = AnchorStyles.Right;
@@ -100,7 +84,7 @@
             button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Stencil", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             button4.ForeColor = SystemColors.ActiveCaptionText;
-            button4.Location = new Point(1020, 202);
+            button4.Location = new Point(1020, 224);
             button4.Name = "button4";
             button4.Size = new Size(195, 68);
             button4.TabIndex = 48;
@@ -128,7 +112,7 @@
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(1020, 449);
+            button2.Location = new Point(1020, 368);
             button2.Name = "button2";
             button2.Size = new Size(195, 68);
             button2.TabIndex = 46;
@@ -158,7 +142,7 @@
             button5.FlatStyle = FlatStyle.Popup;
             button5.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button5.ForeColor = SystemColors.ActiveCaptionText;
-            button5.Location = new Point(1020, 578);
+            button5.Location = new Point(1020, 510);
             button5.Name = "button5";
             button5.Size = new Size(195, 68);
             button5.TabIndex = 50;
@@ -175,7 +159,6 @@
             Controls.Add(button5);
             Controls.Add(comboBox1);
             Controls.Add(button4);
-            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
@@ -200,7 +183,6 @@
         private DataGridView dataGridView_sales;
         private Button button1;
         private PictureBox pictureBox2;
-        private Button button3;
         private Button button4;
         private ComboBox comboBox1;
         private Button button2;
