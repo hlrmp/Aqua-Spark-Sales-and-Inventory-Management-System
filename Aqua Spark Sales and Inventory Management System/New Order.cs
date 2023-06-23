@@ -306,8 +306,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
                         command3.Parameters.AddWithValue("@order_id", drd1.Read());
                         command3.Parameters.AddWithValue("@discount_id", promo);
-                        command3.Parameters.AddWithValue("@staff_id", drd1.Read());
-                        command3.Parameters.AddWithValue("@customer_id", promo);
+                       
 
                         command3.ExecuteNonQuery();
 
