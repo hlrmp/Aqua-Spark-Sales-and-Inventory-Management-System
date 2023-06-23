@@ -11,6 +11,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.Data.SqlClient;
 using System.Collections;
 using System.Data.SqlTypes;
+using System.Security.AccessControl;
 
 namespace Aqua_Spark_Sales_and_Inventory_Management_System
 {
@@ -21,6 +22,9 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             InitializeComponent();
 
             see();
+
+            paymentterms();
+
         }
         connection_class cc = new connection_class();
 
@@ -32,7 +36,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private int ordertransaactionid;
         private int discountid;
         private int customerid;
-        private int staffid;
+        private int pid;
         private string status;
         private double payment;
         private double price;
@@ -43,8 +47,9 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private string customer_email;
         private string fname;
         private string lname;
+        private double pay;
 
-        public New_Order(string ln, string fn, string add, string cnum, string em)
+        public New_Order(string ln, string fn, string add, string cnum, string em, double pay)
         {
             this.lname = ln;
             this.fname = fn;
@@ -52,9 +57,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             this.customer_number = cnum;
             this.customer_email = em;
             this.quantity = 0;
-            this.pay = 0.0;
             this.total_price = 0.0;
-
+            this.pay = pay;
         }
         public string firstname
         {
@@ -86,7 +90,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             get { return quantity; }
             set { quantity = value; }
         }
-        public double pay
+        public double paym
         {
             get { return pay; }
             set { pay = value; }
@@ -120,7 +124,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private void button2_Click(object sender, EventArgs e) // add button
         {
 
-
+            add();
 
 
             fname = textBoxf.Text;
@@ -141,52 +145,79 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         public void add()
         {
 
-            try
+
+
+
+
+            using (SqlConnection cnn = new SqlConnection(cc.conn))
             {
 
-
-
-                using (SqlConnection cnn = new SqlConnection(cc.conn))
+                if (!string.IsNullOrEmpty(textBox1.Text)) // for new customer
                 {
+                    cnn.Open();
+                    string day = DateTime.Now.ToString("M/d/yyyy");
+                    string quer1 = "INSERT INTO customer(first_name,last_name,address,contact_number,email)values(@first_name,@last_name,@address,@contact_number,@email)";
+                    SqlCommand command = new SqlCommand(quer1, cnn);
 
-                    if (!string.IsNullOrEmpty(textBox1.Text))
+                    command.Parameters.AddWithValue("@first_name", textBoxf.Text);
+                    command.Parameters.AddWithValue("@last_name", textBoxl.Text);
+                    command.Parameters.AddWithValue("@address", textBox3.Text);
+                    command.Parameters.AddWithValue("@contact_number", textBox1.Text);
+                    command.Parameters.AddWithValue("@email", textBoxe.Text);
+                    command.ExecuteNonQuery();
+
+                    if (!string.IsNullOrEmpty(comboBox1.Text)) // for order
                     {
-                        cnn.Open();
-                        string day = DateTime.Now.ToString("M/d/yyyy");
-                        string quer1 = "INSERT INTO customer(first_name,last_name,address,contact_number,email)values(@first_name,@last_name,@address,@contact_number,@email)";
-                        SqlCommand command = new SqlCommand(quer1, cnn);
 
-                        command.Parameters.AddWithValue("@first_name", textBoxf.Text);
-                        command.Parameters.AddWithValue("@last_name", textBoxl.Text);
-                        command.Parameters.AddWithValue("@address", textBox3.Text);
-                        command.Parameters.AddWithValue("@contact_number", textBox1.Text);
-                        command.Parameters.AddWithValue("@email", textBoxe.Text);
-                        command.ExecuteNonQuery();
 
+                        string quer = " select product_id , price from products where product_name  = '" + comboBox1.Text + "' ";
+
+                        SqlCommand comand;
+                        comand = new SqlCommand(quer, cnn);
+                        SqlDataReader reader = comand.ExecuteReader();
+
+
+                        reader.Read();
 
 
 
+                        pid = Convert.ToInt32(reader[0]);
+
+                        price = Convert.ToInt32(reader[1]);
+
+
+
+                        string quer2 = "INSERT INTO orders (product_id , quantity) values (@product_id , @quantity) ";
+                        SqlCommand d = new SqlCommand(quer2, cnn);
+
+                        d.Parameters.AddWithValue("@product_id", pid);
+                        d.Parameters.AddWithValue("@quantity", quantity);
+
+
+
+
+                        if (comboBox2.Text == "pay")// for order transaction paid
+                        {
+
+                        }
                     }
                     else
                     {
-                        MessageBox.Show(" fill up the ff.");
+                        // for order
                     }
 
 
-                    cnn.Close();
 
 
                 }
+                else
+                {
+                    MessageBox.Show(" fill up the ff.");
+                }
 
 
+                cnn.Close();
             }
-            catch
-            {
-                MessageBox.Show("Error ");
-            }
-
-
-
 
         }
 
@@ -250,7 +281,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                         SqlConnection sqlc = new SqlConnection(cc.conn);
 
                         string n = comboBox1.Text;
-                        string st = " SELECT product_id FROM products WHERE product_name = '" + n + "' ";
+                        string st = " SELECT product_id ,price FROM products WHERE product_name = '" + n + "' ";
                         SqlCommand cmd1 = new SqlCommand(st, sqlc);
                         cmd1.CommandText = st;
                         sqlc.Open();
@@ -274,7 +305,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                         SqlDataReader drd = cmd1.ExecuteReader();
 
                         command3.Parameters.AddWithValue("@order_id", drd1.Read());
-                        command3.Parameters.AddWithValue("@discount_id",promo );
+                        command3.Parameters.AddWithValue("@discount_id", promo);
                         command3.Parameters.AddWithValue("@staff_id", drd1.Read());
                         command3.Parameters.AddWithValue("@customer_id", promo);
 
@@ -320,12 +351,14 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
             foreach (string pos in clist)
             {
-                comboBox1.Items.Add(pos);
+                comboBox2.Items.Add(pos);
             }
 
         }
 
+        private void New_Order_Load(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

@@ -47,7 +47,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
 
-            addsup();
+            add();
 
             textBoxlname.Clear();
             textBoxfname.Clear();
@@ -59,64 +59,58 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         }// add bbutton
 
 
-        public void addsup()
+        public void add()
         {
-            //  string txtlname = textBoxlname.Text;
-            //string txtfname = textBoxfname.Text;
-            /// string txtadd = textBoxaddress.Text;
-            // string txtaddress = textBoxaddress.Text;
-            // int txtcon = Convert.ToInt32(textBoxcontactno.Text);
-            // string txte = textBoxemail.Text;
-            try
-            {
 
-                //  cs.lname = txtlname;
-                //  cs.ftname = txtlname;
-                //   cs.addr = txtadd;
-                //   cs.contacnum = txtcon;
-                //   cs.e = txte;
+      //      try
+       ///     {
+
 
 
                 using (SqlConnection cnn = new SqlConnection(ss.conn))
                 {
-                    cnn.Open();
-                    //    string quer = " INSERT INTO customer (first_name ,last_name,address,contact_number,email ) VALUES (@first_name ,@last_name,@address,@contact_number,@email)";
+
+                    if (!string.IsNullOrEmpty(textBoxlname.Text) || !string.IsNullOrEmpty(textBoxfname.Text) || !string.IsNullOrEmpty(textBoxaddress.Text) || !string.IsNullOrEmpty(textBoxcontactno.Text) || !string.IsNullOrEmpty(textBoxemail.Text))
+                    {
+                        cnn.Open();
+                        string day = DateTime.Now.ToString("M/d/yyyy");
+                        string quer1 = "INSERT INTO customer(first_name,last_name,address,contact_number,email)values(@first_name,@last_name,@address,@contact_number,@email)";
+                        SqlCommand command = new SqlCommand(quer1, cnn);
+
+                        command.Parameters.AddWithValue("@first_name", textBoxfname.Text);
+                        command.Parameters.AddWithValue("@last_name", textBoxlname.Text);
+                        command.Parameters.AddWithValue("@address", textBoxaddress.Text);
+                        command.Parameters.AddWithValue("@contact_number", textBoxcontactno.Text);
+                        command.Parameters.AddWithValue("@email", textBoxemail.Text);
+                        command.ExecuteNonQuery();
 
 
-                    string quer1 = " INSERT INTO customer (first_name ,last_name,address,contact_number,email ) VALUES ('" + textBoxfname + "' ,'" + textBoxlname + "','" + textBoxaddress + "','" + textBoxcontactno + "','" + textBoxemail + "')";
-                    SqlCommand cmm = new SqlCommand(quer1, cnn);
-                    //    SqlCommand command = new SqlCommand(quer1, cnn);
-                    // SqlDataAdapter dataAdapter = new SqlDataAdapter(cmm);
-                    //   DataTable dt = new DataTable(quer1);
-                    //     dt.Rows.Add(quer1,cnn); 
-                    // dataAdapter.Fill(dt);
 
-                    //  command.Parameters.AddWithValue("@first_name",textBoxfname.Text);
-                    //   command.Parameters.AddWithValue("@last_name",textBoxlname.Text);
-                    //  command.Parameters.AddWithValue("@address",textBoxaddress.Text);
-                    //  command.Parameters.AddWithValue("@contact_number",Convert.ToInt32( textBoxcontactno.Text));
-                    //  command.Parameters.AddWithValue("@email",textBoxemail.Text);
-                     cmm.ExecuteNonQuery();
+                    }
+                    else   
+                    {
+                        MessageBox.Show(" fill up the ff.");
+                    }
 
-                    cnn.Close();
+
 
 
                 }
 
 
-                //   sign_up Up = new sign_up();
-                //  Up.Refresh();
-                // this.Refresh();
-                // this.Hide();
+          //  }
+            //catch
+            
+            
+            //{
+             //   MessageBox.Show("Error ");
+            //}
 
 
 
-            }
-            catch
-            {
-                MessageBox.Show("Error ");
-            }
+
         }
+
 
     }
 }

@@ -35,7 +35,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private void button1_Click(object sender, EventArgs e)   // log in button
         {
             login();
-            //lgs();
+           
 
         }  // log in button 
 
@@ -81,17 +81,18 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
 
-
+        string un;
+        string pass;
         public void login()
         {
             using (SqlConnection connection = new SqlConnection(cnc.conn))
             {
-                try
-                {
+                //try
+                //{
                     if (!string.IsNullOrEmpty(textBox1_username.Text) && !string.IsNullOrEmpty(textBox2_password.Text))
                     {
-                        string un = textBox1_username.Text;
-                        string pass = textBox2_password.Text;
+                        un = textBox1_username.Text;
+                        pass = textBox2_password.Text;
                         // Open the connection
                         connection.Open();
 
@@ -112,6 +113,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                         {
                             MessageBox.Show(" log in succesfully ");
 
+                             lgs();
 
                             if (reader[2].Equals("manager"))
 
@@ -150,8 +152,10 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                         {
                             MessageBox.Show(" Enter your password ");
                         }
-                    }
+
+                    connection.Close();
                 }
+              /*  }
                 catch (Exception)
                 {
                     //MessageBox.Show(" user name or password incorect");
@@ -161,14 +165,16 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 {
                     connection.Close();
                 } // to close the connection
+
+                */
             }// using connection
         }
 
         public void lgs()
         {
 
-            try
-            {
+            //try
+            //{
 
 
 
@@ -177,11 +183,23 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                     cnn.Open();
 
 
-                    string da = DateTime.Now.ToString("M/d/yyyy");
-                    string inn = ("INSERT INTO activity_logs(user_id,activity_description ,activity_date)values(SELECT user_id FROM  users WHERE user_name = ' " + textBox1_username.Text + "'  AND password =  '" + textBox2_password.Text + "' ),'login','"+ da +"' ");
-                    SqlCommand command = new SqlCommand(inn, cnn);
 
-                    command.ExecuteNonQuery();
+                    string quer = " SELECT user_name , password, user_type FROM users WHERE user_name = '" + un + "'  AND password =  '" + pass + "' ";
+ 
+
+                    SqlCommand command;
+                    command = new SqlCommand(quer, cnn);
+                    SqlDataReader reader = command.ExecuteReader();
+
+                     reader.Read();
+
+                     
+
+                    string da = DateTime.Now.ToString("M/d/yyyy");
+                    string inn = ("INSERT INTO activity_logs(user_id,activity_description ,activity_date)values('" + reader[0] + "','login','"+ da +"' ");
+                    SqlCommand command1 = new SqlCommand(inn, cnn);
+                      
+                    command1.ExecuteNonQuery();
 
                     cnn.Close();
 
@@ -192,11 +210,11 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
 
-            }
-            catch
-            {
-                MessageBox.Show("Error something went wrong ");
-            }
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Error something went wrong ");
+            //}
         }
     }
 }
