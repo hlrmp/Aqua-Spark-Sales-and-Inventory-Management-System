@@ -195,6 +195,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
                      
 
+
                     string da = DateTime.Now.ToString("M/d/yyyy");
                     string inn = ("INSERT INTO activity_logs(user_id,activity_description ,activity_date)values('" + reader[0] + "','login','"+ da +"' ");
                     SqlCommand command1 = new SqlCommand(inn, cnn);
