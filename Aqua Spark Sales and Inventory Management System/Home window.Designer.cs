@@ -47,6 +47,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             pictureBox2 = new PictureBox();
             panel1 = new Panel();
             dataGridView1 = new DataGridView();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -290,6 +291,16 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             dataGridView1.TabIndex = 44;
             dataGridView1.Visible = false;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(1159, 105);
+            label2.Name = "label2";
+            label2.Size = new Size(85, 25);
+            label2.TabIndex = 45;
+            label2.Text = "label2";
+            // 
             // Home_window
             // 
             AutoScaleDimensions = new SizeF(9F, 18F);
@@ -297,6 +308,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1341, 733);
+            Controls.Add(label2);
             Controls.Add(dataGridView1);
             Controls.Add(button4inventory);
             Controls.Add(button2salesinfo);
@@ -346,5 +358,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private PictureBox pictureBox2;
         private Panel panel1;
         private DataGridView dataGridView1;
+        private Label label2;
     }
 }

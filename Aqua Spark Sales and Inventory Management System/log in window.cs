@@ -35,7 +35,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private void button1_Click(object sender, EventArgs e)   // log in button
         {
             login();
-           
+
 
         }  // log in button 
 
@@ -81,141 +81,220 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
 
-        string un;
-        string pass;
+        private string un;
+        private string pass;
+
+        user_class us = new user_class();
+
+
+             
+     
         public void login()
         {
             using (SqlConnection connection = new SqlConnection(cnc.conn))
             {
                 //try
                 //{
-                    if (!string.IsNullOrEmpty(textBox1_username.Text) && !string.IsNullOrEmpty(textBox2_password.Text))
+                if (!string.IsNullOrEmpty(textBox1_username.Text) && !string.IsNullOrEmpty(textBox2_password.Text))
+                {
+                    us.username = textBox1_username.Text;
+                    us.userpas = textBox2_password.Text;
+                    // Open the connection
+                    connection.Open();
+
+
+                    string quer = " SELECT user_name , password, user_type FROM users WHERE user_name = '" + us.username + "'  AND password =  '" + us.userpas + "' ";
+                    //     string quer = "  SELECT user_name ,password , user_type FROM users WHERE user_name = 'a'  AND password =  'b' " ;
+
+                    SqlCommand command;
+                    command = new SqlCommand(quer, connection);
+                    SqlDataReader reader = command.ExecuteReader();
+
+
+
+
+
+
+                    if (reader.Read())
                     {
-                        un = textBox1_username.Text;
-                        pass = textBox2_password.Text;
-                        // Open the connection
-                        connection.Open();
+                        MessageBox.Show(" log in succesfully ");
 
+                        lgs();
+                        addlogin();
 
-                        string quer = " SELECT user_name , password, user_type FROM users WHERE user_name = '" + un + "'  AND password =  '" + pass + "' ";
-                        //     string quer = "  SELECT user_name ,password , user_type FROM users WHERE user_name = 'a'  AND password =  'b' " ;
+                        if (reader[2].Equals("manager"))
 
-                        SqlCommand command;
-                        command = new SqlCommand(quer, connection);
-                        SqlDataReader reader = command.ExecuteReader();
-
-
-
-
-
-
-                        if (reader.Read())
                         {
-                            MessageBox.Show(" log in succesfully ");
 
-                             lgs();
-
-                            if (reader[2].Equals("manager"))
-
-                            {
-
-                                main_window mw = new main_window();
-                                mw.Show();
-                                this.Hide();
-
-                            }
-                            else if (reader[2].Equals("cashier"))
-                            {
-
-
-                                Home_window hm = new Home_window();
-                                hm.Show();
-                                this.Hide();
-
-                            }
-
+                            main_window mw = new main_window();
+                            mw.Show();
+                            this.Hide();
 
                         }
-                        else
+                        else if (reader[2].Equals("cashier"))
                         {
-                            MessageBox.Show(" user name or password incorect");
+
+
+                            Home_window hm = new Home_window();
+                            hm.Show();
+                            this.Hide();
+
                         }
+
+
                     }
-
                     else
                     {
-                        if (textBox1_username.Text == "")
-                        {
-                            MessageBox.Show(" Enter your user name ");
-                        }
-                        else if (textBox2_password.Text == "")
-                        {
-                            MessageBox.Show(" Enter your password ");
-                        }
+                        MessageBox.Show(" user name or password incorect");
+                    }
+                }
+
+                else
+                {
+                    if (textBox1_username.Text == "")
+                    {
+                        MessageBox.Show(" Enter your user name ");
+                    }
+                    else if (textBox2_password.Text == "")
+                    {
+                        MessageBox.Show(" Enter your password ");
+                    }
 
                     connection.Close();
                 }
-              /*  }
-                catch (Exception)
-                {
-                    //MessageBox.Show(" user name or password incorect");
-                    MessageBox.Show("something went wrong", "error", MessageBoxButtons.OK);
-                }
-                finally     // to close the connection
-                {
-                    connection.Close();
-                } // to close the connection
+                /*  }
+                  catch (Exception)
+                  {
+                      //MessageBox.Show(" user name or password incorect");
+                      MessageBox.Show("something went wrong", "error", MessageBoxButtons.OK);
+                  }
+                  finally     // to close the connection
+                  {
+                      connection.Close();
+                  } // to close the connection
 
-                */
+                  */
             }// using connection
         }
+
+
+
 
         public void lgs()
         {
 
-            //try
-            //{
 
 
 
-                using (SqlConnection cnn = new SqlConnection(cnc.conn))
-                {
+            using (SqlConnection cnn = new SqlConnection(cnc.conn))
+            {
+                cnn.Open();
+
+
+
+
+                string day = DateTime.Now.ToString("M/d/yyyy");
+                string inn = "INSERT INTO activity_logs(user_id,activity_description ,activity_date)values((select user_id FROM users WHERE user_name = '" + us.username + "'  AND password =  '" + us.userpas + "' ), 'login' ,'" + day + "'";
+                SqlCommand command = new SqlCommand(inn, cnn);
+
+
+
+
+                cnn.Close();
+
+
+
+
+            }
+
+
+
+
+
+
+
+        }
+
+
+        public void addlogin()
+        {
+
+
+
+
+            using (SqlConnection cnn = new SqlConnection(cnc.conn))
+            {
+
+
                     cnn.Open();
+                    string day = DateTime.Now.ToString("M/d/yyyy");
+
+                    string quer = " SELECT user_id FROM users WHERE user_name = '" + us.username + "'  AND password =  '" + us.userpas + "' ";
+
+                    string inn = " INSERT INTO activity_logs(user_id,activity_description ,activity_date)values(( SELECT user_id FROM users WHERE user_name = '" + us.username + "'  AND password =  '" + us.userpas + "'),@activity_description ,@activity_date)";
+
+                    SqlCommand command = new SqlCommand(inn, cnn);
+
+                    //command.Parameters.AddWithValue("@user_id",nval);
+
+                    command.Parameters.AddWithValue("@activity_description", "Log In");
+                    command.Parameters.AddWithValue("@activity_date", day);
+
+                    command.ExecuteNonQuery();
 
 
 
-                    string quer = " SELECT user_name , password, user_type FROM users WHERE user_name = '" + un + "'  AND password =  '" + pass + "' ";
- 
-
-                    SqlCommand command;
-                    command = new SqlCommand(quer, cnn);
-                    SqlDataReader reader = command.ExecuteReader();
-
-                     reader.Read();
-
-                     
+                cnn.Close();
 
 
-                    string da = DateTime.Now.ToString("M/d/yyyy");
-                    string inn = ("INSERT INTO activity_logs(user_id,activity_description ,activity_date)values('" + reader[0] + "','login','"+ da +"' ");
-                    SqlCommand command1 = new SqlCommand(inn, cnn);
-                      
-                    command1.ExecuteNonQuery();
-
-                    cnn.Close();
-
-
-
-
-                }
-
+            }
 
 
             //}
             //catch
             //{
-            //    MessageBox.Show("Error something went wrong ");
+            //    MessageBox.Show("Error ");
             //}
+
+
+
+
+        }
+
+
+        public void addlogout()
+        {
+
+
+
+
+            using (SqlConnection cnn = new SqlConnection(cnc.conn))
+            {
+
+               
+                    cnn.Open();
+                    string day = DateTime.Now.ToString("M/d/yyyy");
+
+                    string quer = " SELECT user_id FROM users WHERE user_name = '" + us.username + "'  AND password =  '" + us.userpas + "' ";
+
+                    string inn = " INSERT INTO activity_logs(user_id,activity_description ,activity_date)values(( SELECT user_id FROM users WHERE user_name = '" + us.username + "'  AND password =  '" + us.userpas + "'),@activity_description ,@activity_date)";
+
+                    SqlCommand command = new SqlCommand(inn, cnn);
+
+                    //command.Parameters.AddWithValue("@user_id",nval);
+
+                    command.Parameters.AddWithValue("@activity_description", "Log out");
+                    command.Parameters.AddWithValue("@activity_date", day);
+
+                     command.ExecuteNonQuery();
+               
+               
+
+
+                cnn.Close();
+
+
+            }
         }
     }
 }
