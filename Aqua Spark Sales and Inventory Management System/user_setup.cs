@@ -70,11 +70,11 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             {
                 if (textBox2_password == textBox1)
                 {
-
+                    pass();
                 }
                 else
                 {
-
+                    MessageBox.Show(" please make sure you enter match password to procedde " , "Error ",MessageBoxButtons.OK);
                 }
             }
             else

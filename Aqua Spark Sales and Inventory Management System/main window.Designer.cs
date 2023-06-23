@@ -51,8 +51,8 @@
             pictureBox2 = new PictureBox();
             buttonemp = new Button();
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
-            dataGridView1 = new DataGridView();
             button2 = new Button();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -160,7 +160,7 @@
             label1.Location = new Point(321, -3);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1053, 142);
+            label1.Size = new Size(846, 114);
             label1.TabIndex = 27;
             label1.Text = "aqua spark sales and inventory\r\n  management system";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -301,6 +301,21 @@
             sqlCommand1.CommandTimeout = 30;
             sqlCommand1.EnableOptimizedParameterBinding = false;
             // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.Left;
+            button2.BackColor = Color.FromArgb(128, 255, 128);
+            button2.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.Location = new Point(-1, 636);
+            button2.Margin = new Padding(4);
+            button2.Name = "button2";
+            button2.Size = new Size(270, 84);
+            button2.TabIndex = 45;
+            button2.Text = "employees";
+            button2.UseVisualStyleBackColor = false;
+            button2.Visible = false;
+            button2.Click += button2_Click_2;
+            // 
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
@@ -348,24 +363,9 @@
             dataGridView1.TabIndex = 44;
             dataGridView1.Visible = false;
             // 
-            // button2
-            // 
-            button2.Anchor = AnchorStyles.Left;
-            button2.BackColor = Color.FromArgb(128, 255, 128);
-            button2.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(-1, 636);
-            button2.Margin = new Padding(4);
-            button2.Name = "button2";
-            button2.Size = new Size(270, 84);
-            button2.TabIndex = 45;
-            button2.Text = "employees";
-            button2.UseVisualStyleBackColor = false;
-            button2.Visible = false;
-            button2.Click += button2_Click_2;
-            // 
             // main_window
             // 
-            AutoScaleDimensions = new SizeF(12F, 22F);
+            AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
@@ -423,7 +423,7 @@
         private PictureBox pictureBox2;
         private Button buttonemp;
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
-        private DataGridView dataGridView1;
         private Button button2;
+        private DataGridView dataGridView1;
     }
 }

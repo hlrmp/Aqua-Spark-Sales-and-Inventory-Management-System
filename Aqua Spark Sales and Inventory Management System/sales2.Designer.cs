@@ -30,7 +30,6 @@
         {
             dataGridView_sales = new DataGridView();
             label1 = new Label();
-            comboBox1 = new ComboBox();
             button1 = new Button();
             pictureBox2 = new PictureBox();
             button2 = new Button();
@@ -66,19 +65,6 @@
             label1.TabIndex = 32;
             label1.Text = "                   aqua spark sales information                     ";
             label1.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // comboBox1
-            // 
-            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox1.BackColor = Color.CadetBlue;
-            comboBox1.FlatStyle = FlatStyle.Flat;
-            comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(731, 91);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(239, 29);
-            comboBox1.TabIndex = 36;
-            comboBox1.Text = "           SORT BY";
             // 
             // button1
             // 
@@ -163,7 +149,6 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(comboBox1);
             Controls.Add(label1);
             Controls.Add(dataGridView_sales);
             Controls.Add(pictureBox2);
@@ -184,7 +169,6 @@
 
         private DataGridView dataGridView_sales;
         private Label label1;
-        private ComboBox comboBox1;
         private Button button1;
         private PictureBox pictureBox2;
         private Button button2;

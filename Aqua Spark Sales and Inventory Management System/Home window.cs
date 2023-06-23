@@ -20,12 +20,13 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         connection_class css = new connection_class();
         private void button5_Click(object sender, EventArgs e) // list button
         {
+            invent();
+
 
             button12.Show();
 
-            panel1.Hide();
-            panel2.Hide();
-
+            //      panel1.Hide();
+            //      panel2.Hide();
 
 
         }// list button
@@ -40,7 +41,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 {
 
                     cn.Open();
-                    string st = "select order_transaction_id,o.order_id ,discount_id,staff_id,customer_id,ot.status,payment_method , transaction_date ,p.product_nmae,p.product_id ,quantity ,price , refil_price ,size from products as p, order_transaction as ot inner join orders AS o on o.order_id = ot.order_id";
+                    string st = "select order_transaction_id,o.order_id ,discount_id,staff_id,customer_id,ot.status,payment_method , transaction_date ,p.product_name,p.product_id ,quantity ,price , refil_price ,size from products as p, order_transaction as ot inner join orders AS o on o.order_id = ot.order_id";
 
                     SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
                     SqlCommand command = new SqlCommand();
@@ -83,16 +84,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private void button7_Click(object sender, EventArgs e) // add orders
         {
 
-            panel2.Show();
 
             selection s = new selection();
-            s.FormBorderStyle = FormBorderStyle.None;
-            s.TopLevel = false;
-            s.Dock = DockStyle.Fill;
-
-            s.AutoScroll = true;
-            panel2.Controls.Add(s);
-
             s.Show();
 
             /*
@@ -122,7 +115,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
 
-            panel2.Hide();
+            // panel2.Hide();
             panel1.Hide();
 
 
@@ -171,7 +164,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button1orders.Hide();
             button1.Hide();
 
-
+            panel1.Hide();
             button2.Show();
 
             button5.Show();
@@ -187,11 +180,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private void button3customers_Click(object sender, EventArgs e) // customer button
         {
 
-
-
             panel1.Show();
-
-
 
             c2.Show();
             c2.FormBorderStyle = FormBorderStyle.None;

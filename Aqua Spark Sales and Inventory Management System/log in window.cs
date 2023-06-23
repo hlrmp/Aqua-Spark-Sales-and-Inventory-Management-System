@@ -35,7 +35,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private void button1_Click(object sender, EventArgs e)   // log in button
         {
             login();
-
+            //lgs();
 
         }  // log in button 
 
@@ -96,7 +96,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                         connection.Open();
 
 
-                        string quer = " SELECT user_name , password, user_type FROM users WHERE user_name = '" + textBox1_username.Text + "'  AND password =  '" + textBox2_password.Text + "' ";
+                        string quer = " SELECT user_name , password, user_type FROM users WHERE user_name = '" + un + "'  AND password =  '" + pass + "' ";
                         //     string quer = "  SELECT user_name ,password , user_type FROM users WHERE user_name = 'a'  AND password =  'b' " ;
 
                         SqlCommand command;
@@ -162,6 +162,41 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                     connection.Close();
                 } // to close the connection
             }// using connection
+        }
+
+        public void lgs()
+        {
+
+            try
+            {
+
+
+
+                using (SqlConnection cnn = new SqlConnection(cnc.conn))
+                {
+                    cnn.Open();
+
+
+                    string da = DateTime.Now.ToString("M/d/yyyy");
+                    string inn = ("INSERT INTO activity_logs(user_id,activity_description ,activity_date)values(SELECT user_id FROM  users WHERE user_name = ' " + textBox1_username.Text + "'  AND password =  '" + textBox2_password.Text + "' ),'login','"+ da +"' ");
+                    SqlCommand command = new SqlCommand(inn, cnn);
+
+                    command.ExecuteNonQuery();
+
+                    cnn.Close();
+
+
+
+
+                }
+
+
+
+            }
+            catch
+            {
+                MessageBox.Show("Error something went wrong ");
+            }
         }
     }
 }

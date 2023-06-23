@@ -60,13 +60,20 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             }
             catch
             {
-                MessageBox.Show("Error ");
+                MessageBox.Show("Error something went wrong" +
+                    " ");
             }
 
             finally
             {
                 sqlcc.Close();
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
+
         }
     }
 }

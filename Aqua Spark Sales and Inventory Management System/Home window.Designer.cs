@@ -46,7 +46,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button2 = new Button();
             pictureBox2 = new PictureBox();
             panel1 = new Panel();
-            panel2 = new Panel();
             dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
@@ -156,7 +155,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             label1.Location = new Point(344, 23);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1083, 142);
+            label1.Size = new Size(876, 114);
             label1.TabIndex = 27;
             label1.Text = "aqua spark sales and inventory\r\n  management system";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -271,8 +270,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(dataGridView1);
             panel1.Controls.Add(button12);
             panel1.Location = new Point(315, 156);
             panel1.Name = "panel1";
@@ -280,35 +277,27 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             panel1.TabIndex = 43;
             panel1.Visible = false;
             // 
-            // panel2
-            // 
-            panel2.Anchor = AnchorStyles.Left;
-            panel2.BackColor = Color.Transparent;
-            panel2.Location = new Point(29, 19);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(363, 228);
-            panel2.TabIndex = 51;
-            panel2.Visible = false;
-            // 
             // dataGridView1
             // 
             dataGridView1.BackgroundColor = Color.FromArgb(192, 192, 255);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.GridColor = Color.FromArgb(192, 192, 255);
-            dataGridView1.Location = new Point(0, -13);
+            dataGridView1.Location = new Point(318, 156);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(954, 563);
-            dataGridView1.TabIndex = 38;
+            dataGridView1.Size = new Size(954, 492);
+            dataGridView1.TabIndex = 44;
+            dataGridView1.Visible = false;
             // 
             // Home_window
             // 
-            AutoScaleDimensions = new SizeF(12F, 22F);
+            AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1341, 733);
+            Controls.Add(dataGridView1);
             Controls.Add(button4inventory);
             Controls.Add(button2salesinfo);
             Controls.Add(button6);
@@ -356,7 +345,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private Button button2;
         private PictureBox pictureBox2;
         private Panel panel1;
-        private Panel panel2;
         private DataGridView dataGridView1;
     }
 }

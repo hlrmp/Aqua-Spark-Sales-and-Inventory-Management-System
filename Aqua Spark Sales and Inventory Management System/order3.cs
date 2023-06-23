@@ -28,8 +28,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             string cn = cbcn.Text;
             string ci = cbi.Text;
 
-            int quantity = Convert.ToInt32(numericUpDownquan);
-
+            int count = Convert.ToInt32(Math.Round(numericUpDownquan.Value, 0));
+            Thread.Sleep(count);
 
 
         } // ADD BUTTON 
@@ -119,11 +119,10 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
 
-        calcu cu = new calcu();
+    
         private void button3_Click(object sender, EventArgs e)
         {
-            cu.Show();
-
+            
 
         }
     }
