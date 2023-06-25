@@ -24,7 +24,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             invent();
 
 
-            button12.Show();
+            //button12.Show();
 
             //      panel1.Hide();
             //      panel2.Hide();
@@ -295,31 +295,36 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             this.Close();
 
             log_in_window lw = new log_in_window();
-
+            string tbt = textBox1.Text.ToString();
+            MessageBox.Show(tbt);
+ 
             lw.addlogout();
+           
 
         }// log out button
+
+     
 
 
 
         public void see()
         {
             SqlConnection sqlc = new SqlConnection(css.conn);
-           
-           
-                string str = "select product_name from products";
-                SqlCommand cmd = new SqlCommand(str, sqlc);
-                cmd.CommandText = str;
-                sqlc.Open();
-                SqlDataReader drd = cmd.ExecuteReader();
-                if(drd.Read())
-                {  
-                    label2.Text = drd["product_name"].ToString();
 
 
-                }
-                sqlc.Close();
-            
+            string str = "select product_name from products";
+            SqlCommand cmd = new SqlCommand(str, sqlc);
+            cmd.CommandText = str;
+            sqlc.Open();
+            SqlDataReader drd = cmd.ExecuteReader();
+            if (drd.Read())
+            {
+                label2.Text = drd["product_name"].ToString();
+
+
+            }
+            sqlc.Close();
+
         }
 
     }

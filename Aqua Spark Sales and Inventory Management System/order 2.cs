@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +19,9 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         public order_2()
         {
             InitializeComponent();
-            seeneworders();
+            //  seeneworders();
+            orderstatus();
+
         }
         connection_class cen = new connection_class();
         private void button1_Click(object sender, EventArgs e) // home button 
@@ -26,7 +29,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
             this.Hide();
             s.Hide();
-            panel1.Hide();
+            //  panel1.Hide();
 
         } // home button 
 
@@ -35,15 +38,16 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         selection s = new selection();
         private void button2_Click(object sender, EventArgs e)   // add button
         {
-            panel1.Show();
+
+            // panel1.Show();
 
 
-            s.FormBorderStyle = FormBorderStyle.None;
-            s.TopLevel = false;
-            s.Dock = DockStyle.Fill;
+            //s.FormBorderStyle = FormBorderStyle.None;
+            //s.TopLevel = false;
+            //s.Dock = DockStyle.Fill;
 
-            s.AutoScroll = true;
-            panel1.Controls.Add(s);
+            //s.AutoScroll = true;
+            //   panel1.Controls.Add(s);
 
             s.Show();
 
@@ -54,7 +58,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         {
 
             s.Hide();
-            panel1.Hide();
+            //    panel1.Hide();
 
         }// remove button
 
@@ -121,5 +125,92 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
         }
+
+        private void button4_Click(object sender, EventArgs e)  // orders
+        {
+
+
+            if (comboBox1.Text == "existing")
+            {
+                see();
+                dataGridView_sales.Refresh();
+            }
+            else if (comboBox1.Text == "removed")
+            {
+                seeremoved();
+                dataGridView_sales.Refresh();
+            }
+
+
+        }  // orders
+
+        public void orderstatus()
+        {
+            ArrayList clist = new ArrayList();
+
+            clist.Add("existing");
+            clist.Add("removed");
+
+            foreach (string pos in clist)
+            {
+                comboBox1.Items.Add(pos);
+            }
+
+        }
+
+        public void see()
+        {
+            using (SqlConnection cn = new SqlConnection(cen.conn))
+            {
+
+
+                cn.Open();
+                string st = "select order_id ,p.product_id ,p.product_name, quantity from orders AS o INNER JOIN products AS p ON p.product_id = o.product_id WHERE orderstatus = '1' ";
+                SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
+                SqlCommand command = new SqlCommand();
+
+                command.CommandText = st;
+                command.Parameters.Clear();
+                DataTable table = new DataTable();
+                adapt.Fill(table);
+
+                dataGridView_sales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView_sales.DataSource = table;
+
+
+
+
+            }
+        }
+        public void seeremoved()
+        {
+            using (SqlConnection cn = new SqlConnection(cen.conn))
+            {
+
+
+                cn.Open();
+                string st = "select order_id ,p.product_id ,p.product_name, quantity from orders AS o INNER JOIN products AS p ON p.product_id = o.product_id WHERE orderstatus = '2' ";
+                SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
+                SqlCommand command = new SqlCommand();
+
+                command.CommandText = st;
+                command.Parameters.Clear();
+                DataTable table = new DataTable();
+                adapt.Fill(table);
+
+                dataGridView_sales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView_sales.DataSource = table;
+
+
+
+
+
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e) // delivery button
+        {
+
+        }// delivery button
     }
 }

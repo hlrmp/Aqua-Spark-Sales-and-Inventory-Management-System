@@ -39,8 +39,8 @@
             button3 = new Button();
             button4 = new Button();
             comboBox1 = new ComboBox();
-            panel1 = new Panel();
             dataGridView_sales = new DataGridView();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_sales).BeginInit();
             SuspendLayout();
@@ -92,7 +92,7 @@
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(1029, 242);
+            button2.Location = new Point(1029, 224);
             button2.Name = "button2";
             button2.Size = new Size(175, 51);
             button2.TabIndex = 46;
@@ -108,7 +108,7 @@
             button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.ActiveCaptionText;
-            button3.Location = new Point(1029, 359);
+            button3.Location = new Point(1029, 326);
             button3.Name = "button3";
             button3.Size = new Size(175, 51);
             button3.TabIndex = 47;
@@ -124,13 +124,14 @@
             button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button4.ForeColor = SystemColors.ActiveCaptionText;
-            button4.Location = new Point(1029, 474);
+            button4.Location = new Point(1029, 433);
             button4.Name = "button4";
             button4.Size = new Size(175, 51);
             button4.TabIndex = 48;
             button4.Text = "orders";
             button4.UseMnemonic = false;
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // comboBox1
             // 
@@ -143,16 +144,6 @@
             comboBox1.Size = new Size(239, 29);
             comboBox1.TabIndex = 49;
             comboBox1.Text = "           SORT BY";
-            // 
-            // panel1
-            // 
-            panel1.Anchor = AnchorStyles.Right;
-            panel1.BackColor = Color.Transparent;
-            panel1.Location = new Point(634, 182);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(363, 228);
-            panel1.TabIndex = 50;
-            panel1.Visible = false;
             // 
             // dataGridView_sales
             // 
@@ -198,13 +189,29 @@
             dataGridView_sales.Size = new Size(962, 501);
             dataGridView_sales.TabIndex = 31;
             // 
+            // button5
+            // 
+            button5.Anchor = AnchorStyles.Right;
+            button5.BackColor = Color.Transparent;
+            button5.FlatStyle = FlatStyle.Popup;
+            button5.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            button5.ForeColor = SystemColors.ActiveCaptionText;
+            button5.Location = new Point(1029, 538);
+            button5.Name = "button5";
+            button5.Size = new Size(175, 51);
+            button5.TabIndex = 50;
+            button5.Text = "delivery";
+            button5.UseMnemonic = false;
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
+            // 
             // order_2
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(1216, 658);
-            Controls.Add(panel1);
+            Controls.Add(button5);
             Controls.Add(comboBox1);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -234,7 +241,7 @@
         private Button button3;
         private Button button4;
         private ComboBox comboBox1;
-        private Panel panel1;
         private DataGridView dataGridView_sales;
+        private Button button5;
     }
 }

@@ -124,8 +124,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private void button2_Click(object sender, EventArgs e) // add button
         {
 
-            add();
-
+            //add();
+            inserttransaction();
 
             fname = textBoxf.Text;
             lname = textBoxl.Text;
@@ -192,7 +192,10 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
                         d.Parameters.AddWithValue("@product_id", pid);
                         d.Parameters.AddWithValue("@quantity", quantity);
+                        d.ExecuteNonQuery();
 
+
+                        cnn.Close();
 
 
 
@@ -216,7 +219,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 }
 
 
-                cnn.Close();
             }
 
         }
@@ -224,117 +226,170 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         public void see()
         {
             SqlConnection sqlc = new SqlConnection(cc.conn);
-            try
-            {
-                string str = "select product_name from products";
-                SqlCommand cmd = new SqlCommand(str, sqlc);
-                cmd.CommandText = str;
-                sqlc.Open();
-                SqlDataReader drd = cmd.ExecuteReader();
-                while (drd.Read())
-                {
-                    comboBox1.Items.Add(drd["product_name"].ToString());
+            //try
+            //{
+            string str = "select product_name from products";
+            SqlCommand cmd = new SqlCommand(str, sqlc);
+            cmd.CommandText = str;
+            sqlc.Open();
 
 
-                }
-            }
-            catch
+            SqlDataReader drd = cmd.ExecuteReader();
+            while (drd.Read())
             {
-                MessageBox.Show("Error ", " Error ", MessageBoxButtons.OK);
+                comboBox1.Items.Add(drd["product_name"].ToString());
+
+
             }
 
-            finally
-            {
-                sqlc.Close();
-            }
+
+            sqlc.Close();
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Error ", " Error ", MessageBoxButtons.OK);
+            //}
+
+            //finally
+            //{
+            //    sqlc.Close();
+            //}
         }
 
 
         public void inserttransaction()
         {
 
-            try
+
+
+
+
+            using (SqlConnection cnn = new SqlConnection(cc.conn))
             {
 
-
-
-                using (SqlConnection cnn = new SqlConnection(cc.conn))
+                if (!string.IsNullOrEmpty(textBox1.Text))
                 {
+                    cnn.Open();
 
-                    if (!string.IsNullOrEmpty(textBox1.Text))
+                    string day = DateTime.Now.ToString("M/d/yyyy");
+
+                    string quer1 = "  INSERT INTO customer (first_name ,last_name,address,contact_number,email ) VALUES (@first_name ,@last_name,@address,@contact_number,@email)";
+                    SqlCommand command = new SqlCommand(quer1, cnn);
+
+                    command.Parameters.AddWithValue("@first_name", textBoxf.Text);
+                    command.Parameters.AddWithValue("@last_name", textBoxl.Text);
+                    command.Parameters.AddWithValue("@address", textBox3.Text);
+                    command.Parameters.AddWithValue("@contact_number", textBox1.Text);
+                    command.Parameters.AddWithValue("@email", textBoxe.Text);
+                    command.ExecuteNonQuery();
+
+
+                    SqlConnection sqlc = new SqlConnection(cc.conn);
+
+
+
+                    string n = comboBox1.Text;
+                    quantity = Convert.ToInt32(Math.Round(numericUpDown1.Value, 0));
+                    Thread.Sleep(quantity);
+
+                    string quer2 = "INSERT INTO orders(product_id, quantity,orderstatus)VALUES (( SELECT product_id FROM products WHERE product_name = '" + n + "' ), @quantity,@status)";
+                    SqlCommand command2 = new SqlCommand(quer2, cnn);
+
+                    //   command2.Parameters.AddWithValue("@product_id", drd1.Read());
+                    command2.Parameters.AddWithValue("@quantity", quantity);
+                    command2.Parameters.AddWithValue("@status", "1");
+                    command2.ExecuteNonQuery();
+
+
+                    //   int promo = Convert.ToInt32(numericUpDown3);
+                    int promo = Convert.ToInt32(Math.Round(numericUpDown3.Value, 0));
+                    Thread.Sleep(promo);
+
+
+
+
+
+                    log_in_window l = new log_in_window();
+                    user_class us = new user_class();
+
+
+                    string quer3 = "insert into order_transaction (order_id,discount_id ,staff_id,customer_id,status,payment_method,transaction_date) values (( select order_id from orders where order_id = (select max(order_id) from orders)),(select discount_id from discounts where discount_id  = '" + promo + "') ,( SELECT staff_id  FROM users as u INNER JOIN activity_logs AS c ON u.user_id = c.user_id where activity_id = (select max(activity_id) from activity_logs)),(select customer_id from customer where customer_id = (select max(customer_id) from customer)),@status,@payment_method,@transaction_date)";
+                    SqlCommand command3 = new SqlCommand(quer3, cnn);
+
+                    //    command3.Parameters.AddWithValue("@order_id", drd1.Read());
+                    // command3.Parameters.AddWithValue("@discount_id", promo);
+                    //  command3.Parameters.AddWithValue("@staff_id", );
+                    // command3.Parameters.AddWithValue("@customer_id", );
+                    command3.Parameters.AddWithValue("@status", "1");         // #2 = pending 
+                    command3.Parameters.AddWithValue("@payment_method", comboBox1.Text);
+                    command3.Parameters.AddWithValue("@transaction_date", day);
+
+                    command3.ExecuteNonQuery();
+
+                    string clickeddate = monthCalendar1.SelectionRange.Start.ToString("M/d/yyyy");
+                   
+                    string quer5 = "INSERT INTO delivery(order_transacton_id , costumer_id , delivery_status , delivery_date) values((select order_transaction_id from order_transaction where order_transaction_id = (select max(order_transaction_id) from order_transaction)\r\n) ,(select customer_id from order_transaction where order_transaction_id = (select max(order_transaction_id) from order_transaction)), 1, '" + clickeddate + "')";
+
+                    sqlc.Open();
+
+                    SqlCommand command5 = new SqlCommand(quer5, sqlc);
+
+                    command5.ExecuteNonQuery();
+
+
+                    sqlc.Close();
+
+                    string st = " SELECT price FROM products WHERE product_name = '" + n + "' ";
+                    SqlCommand cmd1 = new SqlCommand(st, sqlc);
+                    cmd1.CommandText = st;
+                    sqlc.Open();
+                    SqlDataReader drd1 = cmd1.ExecuteReader();
+                    drd1.Read();
+                    double price = Convert.ToInt32(drd1[0]);
+
+                    //     int count = Convert.ToInt32(Math.Round(numericUpDown1.Value, 0));
+                    //      Thread.Sleep(count);
+
+
+                    l.addnewsell();
+
+                    sqlc.Close();
+
+                    if (MessageBox.Show(" sucessfully added " , " ", MessageBoxButtons.OK) == DialogResult.OK)
                     {
-                        cnn.Open();
-
-                        string day = DateTime.Now.ToString("M/d/yyyy");
-
-                        string quer1 = "  INSERT INTO customer (first_name ,last_name,address,contact_number,email ) VALUES (@first_name ,@last_name,@address,@contact_number,@email)";
-                        SqlCommand command = new SqlCommand(quer1, cnn);
-
-                        command.Parameters.AddWithValue("@first_name", textBoxf.Text);
-                        command.Parameters.AddWithValue("@last_name", textBoxl.Text);
-                        command.Parameters.AddWithValue("@address", textBox3.Text);
-                        command.Parameters.AddWithValue("@contact_number", textBox1.Text);
-                        command.Parameters.AddWithValue("@contact_number", textBoxe.Text);
-                        command.ExecuteNonQuery();
-
-
-                        SqlConnection sqlc = new SqlConnection(cc.conn);
-
-                        string n = comboBox1.Text;
-                        string st = " SELECT product_id ,price FROM products WHERE product_name = '" + n + "' ";
-                        SqlCommand cmd1 = new SqlCommand(st, sqlc);
-                        cmd1.CommandText = st;
-                        sqlc.Open();
-                        SqlDataReader drd1 = cmd1.ExecuteReader();
-
-
-
-                        string quer2 = "INSERT INTO orders(product_id, quantity)VALUE (@product_id, @quantity);";
-                        SqlCommand command2 = new SqlCommand(quer2, cnn);
-
-                        command2.Parameters.AddWithValue("@product_id", drd1.Read());
-                        command2.Parameters.AddWithValue("@quantity", quantity);
-
-                        command2.ExecuteNonQuery();
-
-
-                        int promo = Convert.ToInt32(numericUpDown3);
-
-                        string quer3 = "insert into order_transaction (order_id,discount_id ,staff_id,,status,payment_method,transaction_date) values (@order_id,@discount_id ,@staff_id,@customer_id,@status,@payment_method,@transaction_date)";
-                        SqlCommand command3 = new SqlCommand(quer3, cnn);
-                        SqlDataReader drd = cmd1.ExecuteReader();
-
-                        command3.Parameters.AddWithValue("@order_id", drd1.Read());
-                        command3.Parameters.AddWithValue("@discount_id", promo);
-                       
-
-                        command3.ExecuteNonQuery();
+                        textBox1.Clear();
+                        textBoxl.Clear();
+                        textBox3.Clear();
+                        textBoxe.Clear();
+                        textBoxf.Clear();
+                        textBox2.Clear();
+                        numericUpDown1.ResetText();
+                        numericUpDown2.ResetText();
+                        numericUpDown3.ResetText();
 
 
                     }
-                    else
-                    {
-                        MessageBox.Show(" fill up the ff.");
-                    }
 
-
-
-
-                    cnn.Close();
-
-
+                }
+                else
+                {
+                    MessageBox.Show(" fill up the ff.");
                 }
 
 
 
 
+                cnn.Close();
 
 
             }
-            catch
-            {
-                MessageBox.Show("Error ");
-            }
+
+
+
+
+
+
+
 
 
 
@@ -357,6 +412,17 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         private void New_Order_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            total_price = price * quantity;
+
+            textBox2.Text = Convert.ToString(total_price);
+            textBox2.Refresh();
+
 
         }
     }

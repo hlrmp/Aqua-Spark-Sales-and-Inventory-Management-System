@@ -46,8 +46,12 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         private void button8_Click(object sender, EventArgs e)  // log out window
         {
-            /*  log_in_window lg = new log_in_window();
-              lg.Show(); */
+            log_in_window lg = new log_in_window();
+            lg.addlogout();
+            
+
+
+
             if (button8logout != null)
             {
                 Form1 f = new Form1();

@@ -24,8 +24,14 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         public log_in_window()
         {
             InitializeComponent();
+
+
+
+
+
         }
 
+        user_class us = new user_class();
 
         user_class uc = new user_class();  // user class instance
         connection_class cnc = new connection_class();  // database connection instance
@@ -35,6 +41,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private void button1_Click(object sender, EventArgs e)   // log in button
         {
             login();
+
 
 
         }  // log in button 
@@ -84,11 +91,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private string un;
         private string pass;
 
-        user_class us = new user_class();
 
-
-             
-     
         public void login()
         {
             using (SqlConnection connection = new SqlConnection(cnc.conn))
@@ -99,6 +102,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 {
                     us.username = textBox1_username.Text;
                     us.userpas = textBox2_password.Text;
+
                     // Open the connection
                     connection.Open();
 
@@ -119,7 +123,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                     {
                         MessageBox.Show(" log in succesfully ");
 
-                        lgs();
+
                         addlogin();
 
                         if (reader[2].Equals("manager"))
@@ -128,7 +132,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
                             main_window mw = new main_window();
                             mw.Show();
-                            this.Hide();
+                            //  this.Hide();
 
                         }
                         else if (reader[2].Equals("cashier"))
@@ -137,7 +141,11 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
                             Home_window hm = new Home_window();
                             hm.Show();
-                            this.Hide();
+                            hm.textBox1.Text = Convert.ToString(reader[0]);
+                            hm.textBox2.Text = Convert.ToString(reader[2]);
+                     //       hm.label2.Text = Convert.ToString(reader[0]);
+                        //    hm.label3.Text = Convert.ToString(reader[2]);
+                            //  this.Hide();
 
                         }
 
@@ -180,41 +188,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
 
-        public void lgs()
-        {
-
-
-
-
-            using (SqlConnection cnn = new SqlConnection(cnc.conn))
-            {
-                cnn.Open();
-
-
-
-
-                string day = DateTime.Now.ToString("M/d/yyyy");
-                string inn = "INSERT INTO activity_logs(user_id,activity_description ,activity_date)values((select user_id FROM users WHERE user_name = '" + us.username + "'  AND password =  '" + us.userpas + "' ), 'login' ,'" + day + "'";
-                SqlCommand command = new SqlCommand(inn, cnn);
-
-
-
-
-                cnn.Close();
-
-
-
-
-            }
-
-
-
-
-
-
-
-        }
-
 
         public void addlogin()
         {
@@ -224,23 +197,22 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
             using (SqlConnection cnn = new SqlConnection(cnc.conn))
             {
+              
+                cnn.Open();
+                string day = DateTime.Now.ToString("M/d/yyyy");
 
+            //    string quer = " SELECT user_id FROM users WHERE user_name = '" + us.username + "'  AND password =  '" + us.userpas + "' ";
 
-                    cnn.Open();
-                    string day = DateTime.Now.ToString("M/d/yyyy");
+                string inn = " INSERT INTO activity_logs(user_id,activity_description ,activity_date)values(( SELECT user_id FROM users WHERE user_name = '" + us.username + "'  AND password =  '" + us.userpas + "'),@activity_description ,@activity_date)";
 
-                    string quer = " SELECT user_id FROM users WHERE user_name = '" + us.username + "'  AND password =  '" + us.userpas + "' ";
+                SqlCommand command = new SqlCommand(inn, cnn);
 
-                    string inn = " INSERT INTO activity_logs(user_id,activity_description ,activity_date)values(( SELECT user_id FROM users WHERE user_name = '" + us.username + "'  AND password =  '" + us.userpas + "'),@activity_description ,@activity_date)";
+                //command.Parameters.AddWithValue("@user_id",nval);
 
-                    SqlCommand command = new SqlCommand(inn, cnn);
+                command.Parameters.AddWithValue("@activity_description", "Log In");
+                command.Parameters.AddWithValue("@activity_date", day);
 
-                    //command.Parameters.AddWithValue("@user_id",nval);
-
-                    command.Parameters.AddWithValue("@activity_description", "Log In");
-                    command.Parameters.AddWithValue("@activity_date", day);
-
-                    command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
 
 
 
@@ -261,38 +233,71 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         }
 
-
         public void addlogout()
         {
 
+
+     
+            using (SqlConnection cnn = new SqlConnection(cnc.conn))
+            {
+
+
+                cnn.Open();
+                string day = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+
+                //string quer = " SELECT user_id FROM users WHERE user_name = '" + us.username + "'  AND password =  '" + us.userpas + "' ";
+                //  Home_window h = new Home_window();
+                string inn = " INSERT INTO activity_logs(user_id,activity_description ,activity_date)values(( select user_id from activity_logs where activity_id = (select max(activity_id) from activity_logs)),@activity_description ,@activity_date)";
+
+                SqlCommand command = new SqlCommand(inn, cnn);
+
+                //command.Parameters.AddWithValue("@user_id",nval);
+
+                command.Parameters.AddWithValue("@activity_description", "Log out");
+                command.Parameters.AddWithValue("@activity_date", day);
+
+                command.ExecuteNonQuery();
+
+                cnn.Close();
+
+
+            }
+        }
+
+        public void addnewsell()
+        {
 
 
 
             using (SqlConnection cnn = new SqlConnection(cnc.conn))
             {
 
-               
-                    cnn.Open();
-                    string day = DateTime.Now.ToString("M/d/yyyy");
 
-                    string quer = " SELECT user_id FROM users WHERE user_name = '" + us.username + "'  AND password =  '" + us.userpas + "' ";
+                cnn.Open();
+                string day = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
 
-                    string inn = " INSERT INTO activity_logs(user_id,activity_description ,activity_date)values(( SELECT user_id FROM users WHERE user_name = '" + us.username + "'  AND password =  '" + us.userpas + "'),@activity_description ,@activity_date)";
+                //string quer = " SELECT user_id FROM users WHERE user_name = '" + us.username + "'  AND password =  '" + us.userpas + "' ";
+                //  Home_window h = new Home_window();
+                string inn = " INSERT INTO activity_logs(user_id,activity_description ,activity_date)values(( select user_id from activity_logs where activity_id = (select max(activity_id) from activity_logs)),@activity_description ,@activity_date)";
 
-                    SqlCommand command = new SqlCommand(inn, cnn);
+                SqlCommand command = new SqlCommand(inn, cnn);
 
-                    //command.Parameters.AddWithValue("@user_id",nval);
+                //command.Parameters.AddWithValue("@user_id",nval);
 
-                    command.Parameters.AddWithValue("@activity_description", "Log out");
-                    command.Parameters.AddWithValue("@activity_date", day);
+                command.Parameters.AddWithValue("@activity_description", "new order");
+                command.Parameters.AddWithValue("@activity_date", day);
 
-                     command.ExecuteNonQuery();
-               
+                command.ExecuteNonQuery();
+
                 cnn.Close();
 
 
             }
         }
+
+
+
     }
 }
+
 

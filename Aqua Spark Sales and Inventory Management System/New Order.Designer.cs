@@ -40,7 +40,6 @@
             comboBox2 = new ComboBox();
             numericUpDown1 = new NumericUpDown();
             numericUpDown2 = new NumericUpDown();
-            button1 = new Button();
             label5 = new Label();
             label6 = new Label();
             button3 = new Button();
@@ -52,6 +51,9 @@
             textBox2 = new TextBox();
             numericUpDown3 = new NumericUpDown();
             label9 = new Label();
+            button4 = new Button();
+            button1 = new Button();
+            label10 = new Label();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
@@ -97,7 +99,7 @@
             // 
             // monthCalendar1
             // 
-            monthCalendar1.Location = new Point(426, 65);
+            monthCalendar1.Location = new Point(465, 99);
             monthCalendar1.Margin = new Padding(10);
             monthCalendar1.Name = "monthCalendar1";
             monthCalendar1.TabIndex = 39;
@@ -167,24 +169,13 @@
             numericUpDown2.TabIndex = 47;
             numericUpDown2.TextAlign = HorizontalAlignment.Center;
             // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(128, 128, 255);
-            button1.Location = new Point(518, 458);
-            button1.Name = "button1";
-            button1.Size = new Size(108, 39);
-            button1.TabIndex = 49;
-            button1.Text = "cancel";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
             // label5
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = SystemColors.ActiveCaptionText;
-            label5.Location = new Point(135, 296);
+            label5.Location = new Point(144, 288);
             label5.Name = "label5";
             label5.Size = new Size(69, 17);
             label5.TabIndex = 51;
@@ -202,8 +193,8 @@
             // 
             // button3
             // 
-            button3.BackColor = Color.FromArgb(60, 121, 245);
-            button3.Location = new Point(312, 458);
+            button3.BackColor = Color.FromArgb(255, 128, 128);
+            button3.Location = new Point(291, 477);
             button3.Name = "button3";
             button3.Size = new Size(108, 39);
             button3.TabIndex = 53;
@@ -213,8 +204,8 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.FromArgb(45, 205, 223);
-            button2.Location = new Point(93, 459);
+            button2.BackColor = Color.FromArgb(128, 255, 128);
+            button2.Location = new Point(160, 477);
             button2.Name = "button2";
             button2.Size = new Size(108, 39);
             button2.TabIndex = 50;
@@ -262,7 +253,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(229, 296);
+            textBox2.Location = new Point(231, 288);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(211, 25);
             textBox2.TabIndex = 59;
@@ -287,12 +278,48 @@
             label9.TabIndex = 61;
             label9.Text = "promo";
             // 
+            // button4
+            // 
+            button4.BackColor = Color.FromArgb(128, 255, 128);
+            button4.Location = new Point(232, 417);
+            button4.Name = "button4";
+            button4.Size = new Size(108, 39);
+            button4.TabIndex = 62;
+            button4.Text = "compute";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(255, 128, 128);
+            button1.Location = new Point(567, 477);
+            button1.Name = "button1";
+            button1.Size = new Size(108, 39);
+            button1.TabIndex = 49;
+            button1.Text = "cancel";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.BackColor = Color.Transparent;
+            label10.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.ForeColor = SystemColors.ActiveCaptionText;
+            label10.Location = new Point(465, 74);
+            label10.Name = "label10";
+            label10.Size = new Size(138, 17);
+            label10.TabIndex = 63;
+            label10.Text = "choose delivery date *";
+            // 
             // New_Order
             // 
             AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(729, 547);
+            Controls.Add(label10);
+            Controls.Add(button4);
             Controls.Add(label9);
             Controls.Add(numericUpDown3);
             Controls.Add(textBox2);
@@ -356,5 +383,7 @@
         private TextBox textBox2;
         private NumericUpDown numericUpDown3;
         private Label label9;
+        private Button button4;
+        private Label label10;
     }
 }

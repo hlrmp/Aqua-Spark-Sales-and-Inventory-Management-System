@@ -41,16 +41,19 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button7 = new Button();
             buttonpay = new Button();
             buttoncncel = new Button();
-            button12 = new Button();
             button1 = new Button();
             button2 = new Button();
             pictureBox2 = new PictureBox();
             panel1 = new Panel();
             dataGridView1 = new DataGridView();
-            label2 = new Label();
+            label4 = new Label();
+            pictureBox1 = new PictureBox();
+            label5 = new Label();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button5
@@ -217,19 +220,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             buttoncncel.UseVisualStyleBackColor = false;
             buttoncncel.Visible = false;
             // 
-            // button12
-            // 
-            button12.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button12.BackColor = Color.FromArgb(255, 128, 128);
-            button12.FlatStyle = FlatStyle.Flat;
-            button12.Location = new Point(917, 0);
-            button12.Name = "button12";
-            button12.Size = new Size(40, 38);
-            button12.TabIndex = 37;
-            button12.Text = "X";
-            button12.UseVisualStyleBackColor = false;
-            button12.Visible = false;
-            // 
             // button1
             // 
             button1.BackColor = Color.White;
@@ -271,10 +261,9 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(button12);
-            panel1.Location = new Point(315, 156);
+            panel1.Location = new Point(315, 200);
             panel1.Name = "panel1";
-            panel1.Size = new Size(957, 553);
+            panel1.Size = new Size(957, 509);
             panel1.TabIndex = 43;
             panel1.Visible = false;
             // 
@@ -283,23 +272,61 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             dataGridView1.BackgroundColor = Color.FromArgb(192, 192, 255);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.GridColor = Color.FromArgb(192, 192, 255);
-            dataGridView1.Location = new Point(318, 156);
+            dataGridView1.Location = new Point(318, 200);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(954, 492);
+            dataGridView1.Size = new Size(954, 448);
             dataGridView1.TabIndex = 44;
             dataGridView1.Visible = false;
             // 
-            // label2
+            // label4
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(1159, 105);
-            label2.Name = "label2";
-            label2.Size = new Size(85, 25);
-            label2.TabIndex = 45;
-            label2.Text = "label2";
+            label4.Anchor = AnchorStyles.Right;
+            label4.AutoSize = true;
+            label4.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(789, 149);
+            label4.Name = "label4";
+            label4.Size = new Size(67, 21);
+            label4.TabIndex = 47;
+            label4.Text = "USER :";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.Right;
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox1.Location = new Point(782, 140);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(490, 41);
+            pictureBox1.TabIndex = 48;
+            pictureBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.Right;
+            label5.AutoSize = true;
+            label5.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(986, 150);
+            label5.Name = "label5";
+            label5.Size = new Size(106, 21);
+            label5.TabIndex = 49;
+            label5.Text = "POSITION :";
+            // 
+            // textBox1
+            // 
+            textBox1.Anchor = AnchorStyles.Right;
+            textBox1.Location = new Point(862, 150);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(118, 25);
+            textBox1.TabIndex = 50;
+            // 
+            // textBox2
+            // 
+            textBox2.Anchor = AnchorStyles.Right;
+            textBox2.Location = new Point(1098, 149);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(118, 25);
+            textBox2.TabIndex = 51;
             // 
             // Home_window
             // 
@@ -308,7 +335,10 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1341, 733);
-            Controls.Add(label2);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(label5);
+            Controls.Add(label4);
             Controls.Add(dataGridView1);
             Controls.Add(button4inventory);
             Controls.Add(button2salesinfo);
@@ -325,6 +355,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             Controls.Add(label1);
             Controls.Add(button5);
             Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
             DoubleBuffered = true;
             Font = new Font("Stencil", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
@@ -333,8 +364,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             Text = "z";
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -352,12 +383,17 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private Button button7;
         private Button buttonpay;
         private Button buttoncncel;
-        private Button button12;
         private Button button1;
         private Button button2;
         private PictureBox pictureBox2;
         private Panel panel1;
         private DataGridView dataGridView1;
-        private Label label2;
+        public Label label2;
+        public Label label3;
+        public Label label4;
+        private PictureBox pictureBox1;
+        public Label label5;
+        public TextBox textBox1;
+        public TextBox textBox2;
     }
 }
