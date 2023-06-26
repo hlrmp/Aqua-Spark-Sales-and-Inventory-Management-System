@@ -41,8 +41,15 @@
             comboBox1 = new ComboBox();
             dataGridView_sales = new DataGridView();
             button5 = new Button();
+            comboBox2 = new ComboBox();
+            textBox2 = new TextBox();
+            button7 = new Button();
+            button6 = new Button();
+            pictureBox1 = new PictureBox();
+            button8 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_sales).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -144,6 +151,8 @@
             comboBox1.Size = new Size(239, 29);
             comboBox1.TabIndex = 49;
             comboBox1.Text = "           SORT BY";
+            comboBox1.Visible = false;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // dataGridView_sales
             // 
@@ -205,12 +214,98 @@
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
+            // comboBox2
+            // 
+            comboBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            comboBox2.BackColor = Color.CadetBlue;
+            comboBox2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(758, 86);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(239, 29);
+            comboBox2.TabIndex = 51;
+            comboBox2.Text = "           SORT BY";
+            comboBox2.Visible = false;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            // 
+            // textBox2
+            // 
+            textBox2.Anchor = AnchorStyles.Right;
+            textBox2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox2.Location = new Point(1029, 163);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(175, 55);
+            textBox2.TabIndex = 80;
+            textBox2.Visible = false;
+            // 
+            // button7
+            // 
+            button7.Anchor = AnchorStyles.Right;
+            button7.BackColor = Color.FromArgb(255, 192, 192);
+            button7.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button7.ForeColor = SystemColors.ActiveCaptionText;
+            button7.Location = new Point(1029, 230);
+            button7.Name = "button7";
+            button7.Size = new Size(80, 37);
+            button7.TabIndex = 81;
+            button7.Text = "DELETE";
+            button7.UseVisualStyleBackColor = false;
+            button7.Visible = false;
+            button7.Click += button7_Click;
+            // 
+            // button6
+            // 
+            button6.Anchor = AnchorStyles.Right;
+            button6.BackColor = Color.FromArgb(128, 255, 128);
+            button6.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button6.ForeColor = SystemColors.ActiveCaptionText;
+            button6.Location = new Point(1131, 230);
+            button6.Name = "button6";
+            button6.Size = new Size(73, 37);
+            button6.TabIndex = 82;
+            button6.Text = "UNDO";
+            button6.UseVisualStyleBackColor = false;
+            button6.Visible = false;
+            button6.Click += button6_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.Right;
+            pictureBox1.Location = new Point(1014, 121);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(206, 175);
+            pictureBox1.TabIndex = 83;
+            pictureBox1.TabStop = false;
+            pictureBox1.Visible = false;
+            // 
+            // button8
+            // 
+            button8.Anchor = AnchorStyles.Right;
+            button8.BackColor = Color.FromArgb(255, 192, 192);
+            button8.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button8.ForeColor = SystemColors.ActiveCaptionText;
+            button8.Location = new Point(1182, 120);
+            button8.Name = "button8";
+            button8.Size = new Size(38, 27);
+            button8.TabIndex = 84;
+            button8.Text = "X";
+            button8.UseVisualStyleBackColor = false;
+            button8.Visible = false;
+            button8.Click += button8_Click;
+            // 
             // order_2
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(1216, 658);
+            Controls.Add(button6);
+            Controls.Add(button7);
+            Controls.Add(button8);
+            Controls.Add(textBox2);
+            Controls.Add(pictureBox1);
+            Controls.Add(comboBox2);
             Controls.Add(button5);
             Controls.Add(comboBox1);
             Controls.Add(button4);
@@ -229,6 +324,7 @@
             Text = "sales2";
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_sales).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -243,5 +339,11 @@
         private ComboBox comboBox1;
         private DataGridView dataGridView_sales;
         private Button button5;
+        private ComboBox comboBox2;
+        private TextBox textBox2;
+        private Button button7;
+        private Button button6;
+        private PictureBox pictureBox1;
+        private Button button8;
     }
 }

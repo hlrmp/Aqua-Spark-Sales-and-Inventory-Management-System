@@ -21,6 +21,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             InitializeComponent();
             //  seeneworders();
             orderstatus();
+            deliverystatus();
+            seeor();
 
         }
         connection_class cen = new connection_class();
@@ -29,6 +31,11 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
             this.Hide();
             s.Hide();
+            pictureBox1.Hide();
+            textBox2.Hide();
+            button6.Hide();
+            button7.Hide();
+            button8.Hide();
             //  panel1.Hide();
 
         } // home button 
@@ -50,7 +57,11 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             //   panel1.Controls.Add(s);
 
             s.Show();
-
+            pictureBox1.Hide();
+            textBox2.Hide();
+            button6.Hide();
+            button7.Hide();
+            button8.Hide();
 
         } // add button
 
@@ -59,6 +70,15 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
             s.Hide();
             //    panel1.Hide();
+
+
+            textBox2.Show();
+            button6.Show();
+            button7.Show();
+            button8.Show();
+            pictureBox1.Show();
+
+            dataGridView_sales.Refresh();
 
         }// remove button
 
@@ -129,18 +149,14 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private void button4_Click(object sender, EventArgs e)  // orders
         {
 
-
-            if (comboBox1.Text == "existing")
-            {
-                see();
-                dataGridView_sales.Refresh();
-            }
-            else if (comboBox1.Text == "removed")
-            {
-                seeremoved();
-                dataGridView_sales.Refresh();
-            }
-
+            comboBox1.Show();
+            comboBox2.Hide();
+            s.Hide();
+            pictureBox1.Hide();
+            textBox2.Hide();
+            button6.Hide();
+            button7.Hide();
+            button8.Hide();
 
         }  // orders
 
@@ -158,6 +174,44 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         }
 
+        public void deliverystatus()
+        {
+            ArrayList clist = new ArrayList();
+
+            clist.Add("delivered");
+            clist.Add("for delivery");
+
+            foreach (string pos in clist)
+            {
+                comboBox2.Items.Add(pos);
+            }
+
+        }
+        public void seeor()
+        {
+            using (SqlConnection cn = new SqlConnection(cen.conn))
+            {
+
+
+                cn.Open();
+                string st = "select order_id  ,p.product_name, quantity from orders AS o INNER JOIN products AS p ON p.product_id = o.product_id WHERE orderstatus = 1  order by order_id DESC";
+                SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
+                SqlCommand command = new SqlCommand();
+
+                command.CommandText = st;
+                command.Parameters.Clear();
+                DataTable table = new DataTable();
+                adapt.Fill(table);
+
+                dataGridView_sales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView_sales.DataSource = table;
+
+
+
+
+            }
+        }
+
         public void see()
         {
             using (SqlConnection cn = new SqlConnection(cen.conn))
@@ -165,7 +219,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
                 cn.Open();
-                string st = "select order_id ,p.product_id ,p.product_name, quantity from orders AS o INNER JOIN products AS p ON p.product_id = o.product_id WHERE orderstatus = '1' ";
+                string st = "select order_id ,o.product_id ,p.product_name, quantity from orders AS o INNER JOIN products AS p ON p.product_id = o.product_id WHERE orderstatus = 1  order by order_id DESC";
                 SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
                 SqlCommand command = new SqlCommand();
 
@@ -189,7 +243,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
                 cn.Open();
-                string st = "select order_id ,p.product_id ,p.product_name, quantity from orders AS o INNER JOIN products AS p ON p.product_id = o.product_id WHERE orderstatus = '2' ";
+                string st = "select order_id ,o.product_id ,p.product_name, quantity from orders AS o INNER JOIN products AS p ON p.product_id = o.product_id WHERE orderstatus = 2  order by order_id DESC";
                 SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
                 SqlCommand command = new SqlCommand();
 
@@ -202,7 +256,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 dataGridView_sales.DataSource = table;
 
 
-
+                cn.Close();
 
 
             }
@@ -210,7 +264,142 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         private void button5_Click(object sender, EventArgs e) // delivery button
         {
+            delivery();
+
+            comboBox2.Show();
+            comboBox1.Hide();
+            s.Hide();
+            pictureBox1.Hide();
+            textBox2.Hide();
+            button6.Hide();
+            button7.Hide();
+            button8.Hide();
 
         }// delivery button
+
+        public void delivery()
+        {
+            using (SqlConnection cn = new SqlConnection(cen.conn))
+            {
+
+
+                cn.Open();
+                string st = "  select delivery_id  , address , CONCAT(first_name, ' ', last_name) AS 'Customer_Name',ot.payment_method, order_transaction_id , delivery_date  from   delivery AS d  INNER JOIN order_transaction AS ot  ON  d.order_transacton_id = ot.order_transaction_id INNER JOIN  customer AS c ON  d.costumer_id = c.customer_id where delivery_status = 1 order by delivery_id DESC\r\n";
+                SqlCommand command = new SqlCommand();
+                SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
+
+                command.CommandText = st;
+                command.Parameters.Clear();
+                DataTable table = new DataTable();
+                adapt.Fill(table);
+
+                dataGridView_sales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView_sales.DataSource = table;
+
+
+                cn.Close();
+
+
+            }
+        }
+        public void delivered()
+        {
+            using (SqlConnection cn = new SqlConnection(cen.conn))
+            {
+
+
+                cn.Open();
+                string st = "  select delivery_id  , address , CONCAT(first_name, ' ', last_name) AS 'Customer_Name',ot.payment_method, order_transaction_id , delivery_date  from   delivery AS d  INNER JOIN order_transaction AS ot  ON  d.order_transacton_id = ot.order_transaction_id INNER JOIN  customer AS c ON  d.costumer_id = c.customer_id where delivery_status = 2 order by delivery_id DESC\r\n";
+                SqlCommand command = new SqlCommand();
+                SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
+
+                command.CommandText = st;
+                command.Parameters.Clear();
+                DataTable table = new DataTable();
+                adapt.Fill(table);
+
+                dataGridView_sales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView_sales.DataSource = table;
+
+
+                cn.Close();
+
+
+            }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox2.Text == "for delivery")
+            {
+                delivery();
+                dataGridView_sales.Refresh();
+
+            }
+            else if (comboBox2.Text == "delivered")
+            {
+                delivered();
+                dataGridView_sales.Refresh();
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "existing")
+            {
+                see();
+                dataGridView_sales.Refresh();
+
+            }
+            else if (comboBox1.Text == "removed")
+            {
+                seeremoved();
+                dataGridView_sales.Refresh();
+            }
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Hide();
+            textBox2.Hide();
+            button6.Hide();
+            button7.Hide();
+            button8.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e) // delete button
+        {
+            using (SqlConnection cn = new SqlConnection(cen.conn))
+            {
+
+
+                cn.Open();
+                string st = " UPDATE orders SET orderstatus = '2' WHERE order_id = '" + textBox2.Text + "' ";
+                SqlCommand command = new SqlCommand(st, cn);
+                command.ExecuteNonQuery();
+
+                cn.Close();
+                dataGridView_sales.Refresh();
+            } // delete button
+
+
+        }
+
+        private void button6_Click(object sender, EventArgs e) // undo button
+        {
+            using (SqlConnection cn = new SqlConnection(cen.conn))
+            {
+
+
+                cn.Open();
+                string st = " UPDATE orders SET orderstatus = '1' WHERE order_id = '" + textBox2.Text + "' ";
+                SqlCommand command = new SqlCommand(st, cn);
+                command.ExecuteNonQuery();
+
+                cn.Close();
+                dataGridView_sales.Refresh();
+            }
+        }// undo button
     }
 }

@@ -54,6 +54,7 @@
             button4 = new Button();
             button1 = new Button();
             label10 = new Label();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
@@ -194,7 +195,7 @@
             // button3
             // 
             button3.BackColor = Color.FromArgb(255, 128, 128);
-            button3.Location = new Point(291, 477);
+            button3.Location = new Point(454, 477);
             button3.Name = "button3";
             button3.Size = new Size(108, 39);
             button3.TabIndex = 53;
@@ -205,7 +206,7 @@
             // button2
             // 
             button2.BackColor = Color.FromArgb(128, 255, 128);
-            button2.Location = new Point(160, 477);
+            button2.Location = new Point(27, 477);
             button2.Name = "button2";
             button2.Size = new Size(108, 39);
             button2.TabIndex = 50;
@@ -281,7 +282,7 @@
             // button4
             // 
             button4.BackColor = Color.FromArgb(128, 255, 128);
-            button4.Location = new Point(232, 417);
+            button4.Location = new Point(169, 477);
             button4.Name = "button4";
             button4.Size = new Size(108, 39);
             button4.TabIndex = 62;
@@ -292,7 +293,7 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(255, 128, 128);
-            button1.Location = new Point(567, 477);
+            button1.Location = new Point(599, 477);
             button1.Name = "button1";
             button1.Size = new Size(108, 39);
             button1.TabIndex = 49;
@@ -312,12 +313,24 @@
             label10.TabIndex = 63;
             label10.Text = "choose delivery date *";
             // 
+            // button5
+            // 
+            button5.BackColor = Color.FromArgb(128, 255, 128);
+            button5.Location = new Point(306, 477);
+            button5.Name = "button5";
+            button5.Size = new Size(108, 39);
+            button5.TabIndex = 64;
+            button5.Text = "pay";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
+            // 
             // New_Order
             // 
             AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(729, 547);
+            Controls.Add(button5);
             Controls.Add(label10);
             Controls.Add(button4);
             Controls.Add(label9);
@@ -385,5 +398,6 @@
         private Label label9;
         private Button button4;
         private Label label10;
+        private Button button5;
     }
 }

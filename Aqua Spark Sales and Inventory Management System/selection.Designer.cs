@@ -37,7 +37,7 @@
             // buttonX
             // 
             buttonX.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonX.BackColor = Color.Red;
+            buttonX.BackColor = Color.FromArgb(255, 192, 128);
             buttonX.FlatStyle = FlatStyle.Popup;
             buttonX.Font = new Font("Stencil", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             buttonX.ForeColor = SystemColors.ActiveCaptionText;
@@ -83,10 +83,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(35, 26);
+            label1.BackColor = Color.White;
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(12, 28);
             label1.Name = "label1";
-            label1.Size = new Size(195, 21);
+            label1.Size = new Size(232, 25);
             label1.TabIndex = 57;
             label1.Text = "SELECT CUSTOMER TYPE";
             // 
@@ -95,6 +96,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            BackColor = Color.White;
             ClientSize = new Size(264, 194);
             Controls.Add(label1);
             Controls.Add(buttonOLD);

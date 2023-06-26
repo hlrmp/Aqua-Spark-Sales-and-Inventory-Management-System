@@ -46,7 +46,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button8 = new Button();
             button9 = new Button();
             cbi = new ComboBox();
-            button3 = new Button();
             comboBox1 = new ComboBox();
             numericUpDown3 = new NumericUpDown();
             label9 = new Label();
@@ -55,8 +54,9 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             textBox2 = new TextBox();
             button4 = new Button();
             button5 = new Button();
-            dateTimePicker1 = new DateTimePicker();
+            monthCalendar1 = new MonthCalendar();
             label10 = new Label();
+            label11 = new Label();
             ((System.ComponentModel.ISupportInitialize)numericUpDownquan).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
@@ -107,7 +107,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(43, 239);
+            label2.Location = new Point(32, 203);
             label2.Name = "label2";
             label2.Size = new Size(75, 15);
             label2.TabIndex = 55;
@@ -116,7 +116,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(55, 370);
+            label3.Location = new Point(-5, 276);
             label3.Name = "label3";
             label3.Size = new Size(105, 15);
             label3.TabIndex = 56;
@@ -124,7 +124,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             // 
             // numericUpDownquan
             // 
-            numericUpDownquan.Location = new Point(130, 237);
+            numericUpDownquan.Location = new Point(113, 201);
             numericUpDownquan.Name = "numericUpDownquan";
             numericUpDownquan.Size = new Size(80, 23);
             numericUpDownquan.TabIndex = 57;
@@ -133,7 +133,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.White;
-            label4.Location = new Point(171, 370);
+            label4.Location = new Point(113, 276);
             label4.Name = "label4";
             label4.Size = new Size(39, 15);
             label4.TabIndex = 61;
@@ -142,7 +142,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(258, 219);
+            label5.Location = new Point(32, 314);
             label5.Name = "label5";
             label5.Size = new Size(68, 15);
             label5.TabIndex = 62;
@@ -163,7 +163,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             // button7
             // 
             button7.BackColor = Color.FromArgb(255, 192, 192);
-            button7.Location = new Point(768, 221);
+            button7.Location = new Point(835, 186);
             button7.Name = "button7";
             button7.Size = new Size(73, 37);
             button7.TabIndex = 67;
@@ -177,7 +177,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(432, 93);
+            dataGridView1.Location = new Point(499, 93);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
@@ -231,25 +231,17 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             cbi.Size = new Size(330, 23);
             cbi.TabIndex = 73;
             // 
-            // button3
-            // 
-            button3.Location = new Point(271, 359);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 74;
-            button3.UseVisualStyleBackColor = true;
-            // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(271, 237);
+            comboBox1.Location = new Point(106, 314);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(134, 23);
+            comboBox1.Size = new Size(87, 23);
             comboBox1.TabIndex = 75;
             // 
             // numericUpDown3
             // 
-            numericUpDown3.Location = new Point(130, 303);
+            numericUpDown3.Location = new Point(113, 237);
             numericUpDown3.Name = "numericUpDown3";
             numericUpDown3.Size = new Size(80, 23);
             numericUpDown3.TabIndex = 76;
@@ -258,7 +250,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(55, 307);
+            label9.Location = new Point(49, 239);
             label9.Name = "label9";
             label9.Size = new Size(51, 15);
             label9.TabIndex = 77;
@@ -267,7 +259,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             // button6
             // 
             button6.BackColor = Color.FromArgb(128, 255, 128);
-            button6.Location = new Point(844, 223);
+            button6.Location = new Point(914, 186);
             button6.Name = "button6";
             button6.Size = new Size(73, 37);
             button6.TabIndex = 66;
@@ -277,16 +269,16 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(271, 276);
+            textBox1.Location = new Point(49, 351);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(134, 46);
+            textBox1.Size = new Size(150, 34);
             textBox1.TabIndex = 78;
             // 
             // textBox2
             // 
             textBox2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.Location = new Point(768, 160);
+            textBox2.Location = new Point(835, 125);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(149, 55);
@@ -295,7 +287,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             // button4
             // 
             button4.BackColor = Color.FromArgb(255, 192, 192);
-            button4.Location = new Point(768, 291);
+            button4.Location = new Point(835, 276);
             button4.Name = "button4";
             button4.Size = new Size(149, 42);
             button4.TabIndex = 80;
@@ -306,7 +298,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             // button5
             // 
             button5.BackColor = Color.FromArgb(255, 192, 192);
-            button5.Location = new Point(768, 349);
+            button5.Location = new Point(838, 351);
             button5.Name = "button5";
             button5.Size = new Size(149, 42);
             button5.TabIndex = 81;
@@ -314,33 +306,46 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
-            // dateTimePicker1
+            // monthCalendar1
             // 
-            dateTimePicker1.Location = new Point(768, 93);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(149, 23);
-            dateTimePicker1.TabIndex = 82;
+            monthCalendar1.Location = new Point(235, 213);
+            monthCalendar1.Margin = new Padding(10);
+            monthCalendar1.Name = "monthCalendar1";
+            monthCalendar1.TabIndex = 84;
             // 
             // label10
             // 
             label10.AutoSize = true;
             label10.BackColor = Color.Transparent;
-            label10.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.ForeColor = Color.Black;
-            label10.Location = new Point(768, 69);
+            label10.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.ForeColor = SystemColors.ActiveCaptionText;
+            label10.Location = new Point(235, 186);
             label10.Name = "label10";
-            label10.Size = new Size(100, 20);
-            label10.TabIndex = 83;
-            label10.Text = "delivery date";
+            label10.Size = new Size(138, 17);
+            label10.TabIndex = 85;
+            label10.Text = "choose delivery date *";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.BackColor = Color.Transparent;
+            label11.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.ForeColor = SystemColors.ActiveCaptionText;
+            label11.Location = new Point(838, 88);
+            label11.Name = "label11";
+            label11.Size = new Size(118, 34);
+            label11.TabIndex = 86;
+            label11.Text = "choose order id to\r\n remove\r\n";
             // 
             // order3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
-            ClientSize = new Size(929, 478);
+            ClientSize = new Size(986, 478);
+            Controls.Add(label11);
             Controls.Add(label10);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(monthCalendar1);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(textBox2);
@@ -348,7 +353,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             Controls.Add(label9);
             Controls.Add(numericUpDown3);
             Controls.Add(comboBox1);
-            Controls.Add(button3);
             Controls.Add(cbi);
             Controls.Add(button9);
             Controls.Add(button8);
@@ -406,7 +410,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private TextBox textBox2;
         private Button button4;
         private Button button5;
-        private DateTimePicker dateTimePicker1;
+        private MonthCalendar monthCalendar1;
         private Label label10;
+        private Label label11;
     }
 }

@@ -289,6 +289,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
                     string n = comboBox1.Text;
+
                     quantity = Convert.ToInt32(Math.Round(numericUpDown1.Value, 0));
                     Thread.Sleep(quantity);
 
@@ -297,7 +298,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
                     //   command2.Parameters.AddWithValue("@product_id", drd1.Read());
                     command2.Parameters.AddWithValue("@quantity", quantity);
-                    command2.Parameters.AddWithValue("@status", "1");
+                    command2.Parameters.AddWithValue("@status", 1 );
                     command2.ExecuteNonQuery();
 
 
@@ -320,14 +321,14 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                     // command3.Parameters.AddWithValue("@discount_id", promo);
                     //  command3.Parameters.AddWithValue("@staff_id", );
                     // command3.Parameters.AddWithValue("@customer_id", );
-                    command3.Parameters.AddWithValue("@status", "1");         // #2 = pending 
-                    command3.Parameters.AddWithValue("@payment_method", comboBox1.Text);
+                    command3.Parameters.AddWithValue("@status", "2");         // #2 = pending 
+                    command3.Parameters.AddWithValue("@payment_method", comboBox2.Text);
                     command3.Parameters.AddWithValue("@transaction_date", day);
 
                     command3.ExecuteNonQuery();
 
                     string clickeddate = monthCalendar1.SelectionRange.Start.ToString("M/d/yyyy");
-                   
+
                     string quer5 = "INSERT INTO delivery(order_transacton_id , costumer_id , delivery_status , delivery_date) values((select order_transaction_id from order_transaction where order_transaction_id = (select max(order_transaction_id) from order_transaction)\r\n) ,(select customer_id from order_transaction where order_transaction_id = (select max(order_transaction_id) from order_transaction)), 1, '" + clickeddate + "')";
 
                     sqlc.Open();
@@ -355,7 +356,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
                     sqlc.Close();
 
-                    if (MessageBox.Show(" sucessfully added " , " ", MessageBoxButtons.OK) == DialogResult.OK)
+                    if (MessageBox.Show(" sucessfully added ", " ", MessageBoxButtons.OK) == DialogResult.OK)
                     {
                         textBox1.Clear();
                         textBoxl.Clear();
@@ -422,6 +423,29 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
             textBox2.Text = Convert.ToString(total_price);
             textBox2.Refresh();
+
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            int pay = Convert.ToInt32(Math.Round(numericUpDown2.Value, 0));
+            Thread.Sleep(pay);
+            if (pay > total_price)
+            {
+                double change = pay - total_price;
+
+                MessageBox.Show(" " + "\n" +
+                                "payment: " + pay + "\n" +
+                                "total pice: " + total_price + "\n" +
+                                "change: " + change + " " + " \n "
+                                , " payment ", MessageBoxButtons.OK);
+
+            }
+            else
+            {
+                MessageBox.Show(" input the right amount to pay ", " payment ", MessageBoxButtons.OK);
+            }
 
 
         }
