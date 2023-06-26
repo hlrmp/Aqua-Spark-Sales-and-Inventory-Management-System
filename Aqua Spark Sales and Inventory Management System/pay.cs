@@ -180,7 +180,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             this.Hide();
            
         }
-
+        log_in_window l = new log_in_window();
         private void button2_Click(object sender, EventArgs e)
         {
 
@@ -212,7 +212,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
                     cn.Close();
-
+                    l.paym();
 
                 }
                 else

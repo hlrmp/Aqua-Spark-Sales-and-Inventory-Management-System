@@ -51,6 +51,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             label5 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -63,10 +64,10 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(-2, 449);
+            button5.Location = new Point(-2, 496);
             button5.Margin = new Padding(4);
             button5.Name = "button5";
-            button5.Size = new Size(271, 111);
+            button5.Size = new Size(271, 96);
             button5.TabIndex = 18;
             button5.Text = "items";
             button5.UseVisualStyleBackColor = false;
@@ -124,10 +125,10 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button8logout.FlatStyle = FlatStyle.Popup;
             button8logout.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button8logout.ForeColor = Color.FromArgb(255, 128, 128);
-            button8logout.Location = new Point(-11, 621);
+            button8logout.Location = new Point(-11, 644);
             button8logout.Margin = new Padding(4);
             button8logout.Name = "button8logout";
-            button8logout.Size = new Size(280, 110);
+            button8logout.Size = new Size(280, 88);
             button8logout.TabIndex = 26;
             button8logout.Text = "log out";
             button8logout.UseVisualStyleBackColor = false;
@@ -171,10 +172,10 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button6.FlatStyle = FlatStyle.Flat;
             button6.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button6.ForeColor = SystemColors.ButtonFace;
-            button6.Location = new Point(-2, 264);
+            button6.Location = new Point(-2, 189);
             button6.Margin = new Padding(4);
             button6.Name = "button6";
-            button6.Size = new Size(271, 111);
+            button6.Size = new Size(271, 94);
             button6.TabIndex = 28;
             button6.Text = "deliveries";
             button6.UseVisualStyleBackColor = false;
@@ -187,10 +188,10 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button7.FlatStyle = FlatStyle.Flat;
             button7.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button7.ForeColor = SystemColors.ButtonFace;
-            button7.Location = new Point(-2, 87);
+            button7.Location = new Point(-2, 41);
             button7.Margin = new Padding(4);
             button7.Name = "button7";
-            button7.Size = new Size(271, 111);
+            button7.Size = new Size(271, 92);
             button7.TabIndex = 29;
             button7.Text = "add order";
             button7.UseVisualStyleBackColor = false;
@@ -329,6 +330,22 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             textBox2.Size = new Size(118, 25);
             textBox2.TabIndex = 51;
             // 
+            // button3
+            // 
+            button3.Anchor = AnchorStyles.Left;
+            button3.BackColor = Color.Transparent;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Stencil", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.ForeColor = SystemColors.ButtonFace;
+            button3.Location = new Point(-2, 345);
+            button3.Margin = new Padding(4);
+            button3.Name = "button3";
+            button3.Size = new Size(271, 96);
+            button3.TabIndex = 52;
+            button3.Text = "payment";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
             // Home_window
             // 
             AutoScaleDimensions = new SizeF(9F, 18F);
@@ -336,6 +353,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1341, 733);
+            Controls.Add(button5);
+            Controls.Add(button3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label5);
@@ -354,7 +373,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             Controls.Add(buttonpay);
             Controls.Add(button7);
             Controls.Add(label1);
-            Controls.Add(button5);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             DoubleBuffered = true;
@@ -396,5 +414,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         public Label label5;
         public TextBox textBox1;
         public TextBox textBox2;
+        private Button button3;
     }
 }

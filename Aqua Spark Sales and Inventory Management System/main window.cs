@@ -91,7 +91,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 // sw1.Hide();
 
 
-
+                p.Hide();
 
                 lg.addlogout();
 
@@ -154,7 +154,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             //seelist();
             orderlist();
             panel1.Hide();
-
+            p.Hide();
         }// list button
 
         payment py = new payment();
@@ -172,6 +172,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             //    dataGridView_main.Hide();
             dataGridView1.Hide();
             panel1.Hide();
+            p.Hide();
+
         }// sell button
 
         New_Order no = new New_Order();
@@ -188,6 +190,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             //    dataGridView_main.Hide();
             dataGridView1.Hide();
             panel1.Hide();
+            p.Hide();
         }// add order
 
         private void button12_Click(object sender, EventArgs e) // x button list box
@@ -200,6 +203,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             buttoncncel.Hide();
 
             panel1.Hide();
+            p.Hide();
         }// x button list box
 
 
@@ -228,6 +232,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button8logout.Show();
             dataGridView1.Hide();
             panel1.Hide();
+            p.Hide();
             // dataGridView_main.Hide();
         } //minimimze button
 
@@ -249,6 +254,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button7.Hide();
             button8logout.Hide();
             dataGridView1.Hide();
+            p.Hide();
             // dataGridView_main.Hide();
         }// see more button
 
@@ -338,9 +344,11 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
         }//emp button
-
-
-
+        pay p = new pay();
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            p.Show();
+        }
     }
 }
 

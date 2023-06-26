@@ -326,6 +326,36 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
             }
         }
+        public void paym()
+        {
+
+
+
+            using (SqlConnection cnn = new SqlConnection(cnc.conn))
+            {
+
+
+                cnn.Open();
+                string day = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+
+                //string quer = " SELECT user_id FROM users WHERE user_name = '" + us.username + "'  AND password =  '" + us.userpas + "' ";
+                //  Home_window h = new Home_window();
+                string inn = " INSERT INTO activity_logs(user_id,activity_description ,activity_date)values(( select user_id from activity_logs where activity_id = (select max(activity_id) from activity_logs)),@activity_description ,@activity_date)";
+
+                SqlCommand command = new SqlCommand(inn, cnn);
+
+                //command.Parameters.AddWithValue("@user_id",nval);
+
+                command.Parameters.AddWithValue("@activity_description", "pay an order");
+                command.Parameters.AddWithValue("@activity_date", day);
+
+                command.ExecuteNonQuery();
+
+                cnn.Close();
+
+
+            }
+        }
 
     }
 }
