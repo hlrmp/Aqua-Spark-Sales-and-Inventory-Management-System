@@ -23,7 +23,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         private void button1_Click(object sender, EventArgs e)  // HOME WINDOWS
         {
-            
+
             this.Hide();
             pictureBox1.Hide();
             textBox2.Hide();
@@ -78,7 +78,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         private void button3_Click(object sender, EventArgs e)
         {
-          
+
             textBox2.Show();
             button6.Show();
             button7.Show();

@@ -174,7 +174,7 @@
             button7.BackColor = Color.FromArgb(255, 192, 192);
             button7.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             button7.ForeColor = SystemColors.ActiveCaptionText;
-            button7.Location = new Point(47, 224);
+            button7.Location = new Point(51, 224);
             button7.Name = "button7";
             button7.Size = new Size(80, 37);
             button7.TabIndex = 87;

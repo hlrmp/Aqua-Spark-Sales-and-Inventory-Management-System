@@ -343,17 +343,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private void button5_Click(object sender, EventArgs e)
         {
 
-            SqlConnection cn = new SqlConnection(cc.conn);
-            cn.Open();
-
-            string quer3 = "UPDATE order_transaction SET status = 1 WHERE order_transaction_id = (select order_transaction_id from order_transaction where order_transaction_id = (select max(order_transaction_id) from order_transaction) )";
-
-            SqlCommand command = new SqlCommand(quer3, cn);
-            command.ExecuteNonQuery();
-
-
-            cn.Close();
-
 
 
             pay = Convert.ToInt32(Math.Round(numericUpDown2.Value, 0));
@@ -373,8 +362,21 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                                     "change: " + change + " " + " \n "
                                     , " payment ", MessageBoxButtons.OK);
 
-                }
-                else
+
+                SqlConnection cn = new SqlConnection(cc.conn);
+                cn.Open();
+
+                string quer3 = "UPDATE order_transaction SET status = 1 WHERE order_transaction_id = (select order_transaction_id from order_transaction where order_transaction_id = (select max(order_transaction_id) from order_transaction) )";
+
+                SqlCommand command = new SqlCommand(quer3, cn);
+                command.ExecuteNonQuery();
+
+
+                cn.Close();
+
+
+            }
+            else
                 {
                     MessageBox.Show(" input the right amount to pay ", " payment ", MessageBoxButtons.OK);
                 }

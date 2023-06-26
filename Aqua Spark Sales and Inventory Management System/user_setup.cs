@@ -67,21 +67,23 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private void button1_Click(object sender, EventArgs e)
         {
             position = comboBox1.Text;
-            try
-            {
-                if (textBox2_password.Text == textBox1.Text)
+
+           
+                if (Convert.ToString(textBox2_password.Text).Equals(Convert.ToString(textBox1.Text)))
                 {
                     pass();
+
+                if (MessageBox.Show("sucessfully added !! "," " , MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                this.Hide();    
+
                 }
+            }
                 else
                 {
                     MessageBox.Show(" please make sure you enter match password to procedde ", "Error ", MessageBoxButtons.OK);
                 }
-            }
-            catch
-            {
-                MessageBox.Show(" fill up the ff. ", "Error ", MessageBoxButtons.OK);
-            }
+        
 
         }
 
@@ -95,7 +97,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             using (SqlConnection cnn = new SqlConnection(scn.conn))
             {
                 cnn.Open();
-                string quer = "   INSERT INTO users (staff_id ,username,password,user_type ) VALUES((select staff_id  FROM staffs where first_name = '" + s.fn + "' and last_name = '" + s.ln + "') ,@username,@password,@user_type )";
+                string quer = "   INSERT INTO users (staff_id ,user_name,password,user_type ) VALUES((select staff_id from staffs where staff_id = (select max(staff_id) from staffs)) ,@username,@password,@user_type )";
 
                 //  string quer1 = " INSERT INTO staffs (first_name ,last_name,email,contact_number ) VALUES ('" + textBoxfname + "' ,'" + textBoxlname + "','" + textBoxcontactno + "','" + textBoxemail + "')";
                 //  SqlCommand cmm = new SqlCommand(quer1, cnn);

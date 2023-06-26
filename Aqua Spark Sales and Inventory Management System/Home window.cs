@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,7 +22,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         connection_class css = new connection_class();
         private void button5_Click(object sender, EventArgs e) // list button
         {
-         //   invent();
+            //   invent();
             products();
             dataGridView1.Show();
 
@@ -115,7 +116,31 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         payment p = new payment();
         private void button6_Click(object sender, EventArgs e)// sell button
         {
-            dataGridView1.Hide();
+            dataGridView1.Show();
+
+            using (SqlConnection cn = new SqlConnection(css.conn))
+            {
+
+
+                cn.Open();
+                string st = "  select delivery_id  , address , CONCAT(first_name, ' ', last_name) AS 'Customer_Name',ot.payment_method, order_transaction_id , delivery_date  from   delivery AS d  INNER JOIN order_transaction AS ot  ON  d.order_transacton_id = ot.order_transaction_id INNER JOIN  customer AS c ON  d.costumer_id = c.customer_id where delivery_status = 1 order by delivery_id DESC\r\n";
+                SqlCommand command = new SqlCommand();
+                SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
+
+                command.CommandText = st;
+                command.Parameters.Clear();
+                DataTable table = new DataTable();
+                adapt.Fill(table);
+
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView1.DataSource = table;
+
+
+                cn.Close();
+
+
+            }
+
 
 
             // panel2.Hide();
@@ -298,7 +323,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             this.Close();
 
             log_in_window lw = new log_in_window();
-        
+
 
             lw.addlogout();
 

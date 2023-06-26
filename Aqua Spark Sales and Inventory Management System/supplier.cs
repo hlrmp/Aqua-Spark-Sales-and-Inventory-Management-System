@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Aqua_Spark_Sales_and_Inventory_Management_System
 {
@@ -33,7 +34,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             {
                 if (button1 != null)
                 {
-                    us.Show();
+
 
                     using (SqlConnection cnn = new SqlConnection(cn.conn))
                     {
@@ -50,7 +51,21 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                         command.ExecuteNonQuery();
 
                         cnn.Close();
+
+
                     }
+
+
+                    if (MessageBox.Show("sucessfully added !!" + "\n"
+                        + "do you want to procede to add an new user " + "\n" + 
+                        " ok to procede  and cancel if not", "new staff added ", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                    {
+                        this.Hide();
+                        us.Show();
+
+                    }
+
+
 
 
                 }

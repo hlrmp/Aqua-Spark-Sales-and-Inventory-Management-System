@@ -356,17 +356,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             if (!string.IsNullOrEmpty(textBox1.Text))
             {
 
-                SqlConnection cn = new SqlConnection(cc.conn);
-                cn.Open();
-
-                string quer3 = "UPDATE order_transaction SET status = 1 WHERE order_transaction_id = (select order_transaction_id from order_transaction where order_transaction_id = (select max(order_transaction_id) from order_transaction) )";
-
-                SqlCommand command = new SqlCommand(quer3, cn);
-                command.ExecuteNonQuery();
-
-
-                cn.Close();
-
+            
                 int pay = Convert.ToInt32(Math.Round(numericUpDownquan.Value, 0));
                 Thread.Sleep(pay);
 
@@ -374,6 +364,17 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
                 if (payment >= total)
                 {
+                    SqlConnection cn = new SqlConnection(cc.conn);
+                    cn.Open();
+
+                    string quer3 = "UPDATE order_transaction SET status = 1 WHERE order_transaction_id = (select order_transaction_id from order_transaction where order_transaction_id = (select max(order_transaction_id) from order_transaction) )";
+
+                    SqlCommand command = new SqlCommand(quer3, cn);
+                    command.ExecuteNonQuery();
+
+
+                    cn.Close();
+
                     double change = payment - total;
 
                     MessageBox.Show(" " + "\n" +

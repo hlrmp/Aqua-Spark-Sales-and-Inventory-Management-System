@@ -271,7 +271,7 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Right;
             pictureBox1.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox1.Location = new Point(1014, 121);
+            pictureBox1.Location = new Point(1014, 118);
             pictureBox1.Margin = new Padding(8);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(206, 175);

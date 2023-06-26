@@ -24,17 +24,29 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         connection_class cnn = new connection_class();
 
         Inventory_Wiindow iw = new Inventory_Wiindow();
-
+        inventory2 i2 = new inventory2();
         private void button4_Click(object sender, EventArgs e)  // inventory window
         {
 
-            iw.Show();
-            this.Hide();
-            panel1.Hide();
+            panel1.Show();
+
+            i2.Show();
+            i2.FormBorderStyle = FormBorderStyle.None;
+            i2.TopLevel = false;
+            i2.Dock = DockStyle.Fill;
+
+            i2.AutoScroll = true;
+            panel1.Controls.Add(i2);
+
+            i2.Show();
+            a.Hide();
+            o2.Hide();
+            s2.Hide();
+
 
         }  // inventory window
 
-        Sales_window sw = new Sales_window();
+
         sales2 s2 = new sales2();
         private void button2_Click(object sender, EventArgs e) // sales window
         {
@@ -53,7 +65,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
             o2.Hide();
             a.Hide();
-       
+
         } // sales window
 
 
@@ -74,7 +86,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 su.Hide();
                 iw.Hide();
                 cw.Hide();
-                sw.Hide();
+                o3.Hide();
                 ow.Hide();
                 // sw1.Hide();
 
@@ -92,7 +104,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private void button1_Click(object sender, EventArgs e)  // orders window
         {
             panel1.Show();
-            
+
             o2.Show();
             o2.FormBorderStyle = FormBorderStyle.None;
             o2.TopLevel = false;
@@ -109,10 +121,25 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         }  // orders window
 
         Customers_Window cw = new Customers_Window();
+        customer2 c2 = new customer2();
         private void button3_Click(object sender, EventArgs e) // customers windows 
         {
-            cw.Show();           
-            panel1.Hide();
+            panel1.Show();
+
+            c2.Show();
+            c2.FormBorderStyle = FormBorderStyle.None;
+            c2.TopLevel = false;
+            c2.Dock = DockStyle.Fill;
+
+            c2.AutoScroll = true;
+            panel1.Controls.Add(c2);
+
+            c2.Show();
+            i2.Hide();
+            o2.Hide();
+            a.Hide();
+            s2.Hide();
+
         } // customers windows 
 
         private void button5_Click(object sender, EventArgs e) // list button
@@ -131,12 +158,14 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         }// list button
 
         payment py = new payment();
+        order3 o3 = new order3();
         private void button6_Click(object sender, EventArgs e) // sell button
         {
 
-
-            py.Show();
+            o3.Show();
+            //py.Show();
             no.Hide();
+
 
             button12.Hide();
             //    listBox1.Hide();
@@ -151,7 +180,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
             no.Show();
             py.Hide();
-
+            o3.Hide();
             button12.Hide();
             buttonpay.Hide();
             buttoncncel.Hide();
@@ -190,7 +219,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             su.Hide();
             iw.Hide();
             cw.Hide();
-            sw.Hide();
+            o3.Hide();
             ow.Hide();
 
             button5.Show();
@@ -212,7 +241,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             pictureBox1.Show();
             buttonemp.Show();
             button2.Show();
-
+            o3.Hide();
             button1.Hide();
             panel1.Hide();
             button5.Hide();
@@ -305,6 +334,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             a.Show();
             o2.Hide();
             s2.Hide();
+
+
 
         }//emp button
 

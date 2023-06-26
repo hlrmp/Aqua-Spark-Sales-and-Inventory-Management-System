@@ -35,7 +35,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         {
             dataGridView1.Show();
             sign();
-
+            s.Hide();
         } // see employee
 
 
@@ -53,37 +53,37 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
 
-                    cn.Open();
-                    string st = "select user_id , s.staff_id , s.first_name ,s.last_name ,s.email , s.contact_number, user_type from users as u right join staffs as s ON u.staff_id = s.staff_id\r\n";
-                    SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
-                    SqlCommand command = new SqlCommand();
+                cn.Open();
+                string st = "select user_id , s.staff_id , s.first_name ,s.last_name ,s.email , s.contact_number, user_type from users as u right join staffs as s ON u.staff_id = s.staff_id\r\n";
+                SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
+                SqlCommand command = new SqlCommand();
 
-                    command.CommandText = st;
-                    command.Parameters.Clear();
-                    DataTable table = new DataTable();
-                    adapt.Fill(table);
+                command.CommandText = st;
+                command.Parameters.Clear();
+                DataTable table = new DataTable();
+                adapt.Fill(table);
 
-                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-                    dataGridView1.DataSource = table;
+                dataGridView1.DataSource = table;
 
-                    cn.Close();
+                cn.Close();
 
-                } // to close the connection
-
-
-            }
+            } // to close the connection
 
 
+        }
 
-        
+
+
+
 
         private void button1_Click(object sender, EventArgs e) // home button
         {
             // main_window m2 = new main_window();
             //  m2.Show();
             this.Hide();
-
+            s.Hide();
         }// home button
 
         private void button2_Click(object sender, EventArgs e)
@@ -96,7 +96,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private void button4_Click(object sender, EventArgs e) // employee button
         {
             actlogs();
-
+            s.Hide();
         }// employee button
 
 

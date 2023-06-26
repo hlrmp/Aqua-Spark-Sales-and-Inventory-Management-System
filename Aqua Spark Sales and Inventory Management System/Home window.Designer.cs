@@ -176,7 +176,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button6.Name = "button6";
             button6.Size = new Size(271, 111);
             button6.TabIndex = 28;
-            button6.Text = "sell";
+            button6.Text = "deliveries";
             button6.UseVisualStyleBackColor = false;
             button6.Click += button6_Click;
             // 
