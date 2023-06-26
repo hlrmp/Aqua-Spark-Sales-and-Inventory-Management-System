@@ -132,6 +132,7 @@
             comboBox1.Size = new Size(212, 25);
             comboBox1.TabIndex = 42;
             comboBox1.Text = "                    items";
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label4
             // 
@@ -153,6 +154,7 @@
             comboBox2.Size = new Size(212, 25);
             comboBox2.TabIndex = 45;
             comboBox2.Text = "                    payment";
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // numericUpDown1
             // 

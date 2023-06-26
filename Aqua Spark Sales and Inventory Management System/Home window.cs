@@ -21,8 +21,9 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         connection_class css = new connection_class();
         private void button5_Click(object sender, EventArgs e) // list button
         {
-            invent();
-
+         //   invent();
+            products();
+            dataGridView1.Show();
 
             //button12.Show();
 
@@ -84,6 +85,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         New_Order nor = new New_Order();
         private void button7_Click(object sender, EventArgs e) // add orders
         {
+            dataGridView1.Hide();
 
 
             selection s = new selection();
@@ -113,7 +115,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         payment p = new payment();
         private void button6_Click(object sender, EventArgs e)// sell button
         {
-
+            dataGridView1.Hide();
 
 
             // panel2.Hide();
@@ -138,6 +140,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         private void button2minmize_Click(object sender, EventArgs e) // see more button
         {
+            dataGridView1.Hide();
             button4inventory.Show();
             button3customers.Show();
             button2salesinfo.Show();
@@ -279,7 +282,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             f2.Show();
 
 
-
+            dataGridView1.Hide();
             c2.Hide();
             i2.Hide();
             o2.Hide();
@@ -295,15 +298,14 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             this.Close();
 
             log_in_window lw = new log_in_window();
-            string tbt = textBox1.Text.ToString();
-            MessageBox.Show(tbt);
- 
+        
+
             lw.addlogout();
-           
+
 
         }// log out button
 
-     
+
 
 
 
@@ -326,6 +328,42 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             sqlc.Close();
 
         }
+        public void products()
+        {
+            using (SqlConnection cn = new SqlConnection(css.conn))
+            {
 
+
+
+
+                cn.Open();
+                string st = "SELECT * FROM products";
+                SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
+                SqlCommand command = new SqlCommand();
+
+                command.CommandText = st;
+                command.Parameters.Clear();
+                DataTable table = new DataTable();
+                adapt.Fill(table);
+
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView1.DataSource = table;
+
+
+
+                cn.Close();
+
+                // to close the connection
+
+
+            }
+
+        }
+
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

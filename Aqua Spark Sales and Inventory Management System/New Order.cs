@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Microsoft.IdentityModel.Tokens;
+﻿using System.Collections;
 using Microsoft.Data.SqlClient;
-using System.Collections;
-using System.Data.SqlTypes;
-using System.Security.AccessControl;
 
 namespace Aqua_Spark_Sales_and_Inventory_Management_System
 {
@@ -47,9 +35,9 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         private string customer_email;
         private string fname;
         private string lname;
-        private double pay;
+        private int pay;
 
-        public New_Order(string ln, string fn, string add, string cnum, string em, double pay)
+        public New_Order(string ln, string fn, string add, string cnum, string em, int pay)
         {
             this.lname = ln;
             this.fname = fn;
@@ -90,7 +78,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             get { return quantity; }
             set { quantity = value; }
         }
-        public double paym
+        public int paym
         {
             get { return pay; }
             set { pay = value; }
@@ -120,12 +108,13 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
         } // clear button
-
+        int promo;
+        string n;
         private void button2_Click(object sender, EventArgs e) // add button
         {
 
             //add();
-            inserttransaction();
+         //   inserttransaction();
 
             fname = textBoxf.Text;
             lname = textBoxl.Text;
@@ -133,95 +122,33 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             customer_number = textBox1.Text;
             customer_email = textBoxe.Text;
 
-            quantity = (int)numericUpDown1.Value;
-            pay = (double)numericUpDown2.Value;
-            total_price = (double)numericUpDown3.Value;
-            SqlDateTime dt = new SqlDateTime();
+
             string day = DateTime.Now.ToString("M/d/yyyy");
 
-
-        } // add button
-
-        public void add()
-        {
-
-
-
-
-
-            using (SqlConnection cnn = new SqlConnection(cc.conn))
+            try
             {
-
-                if (!string.IsNullOrEmpty(textBox1.Text)) // for new customer
+                if (button2 != null)
                 {
-                    cnn.Open();
-                    string day = DateTime.Now.ToString("M/d/yyyy");
-                    string quer1 = "INSERT INTO customer(first_name,last_name,address,contact_number,email)values(@first_name,@last_name,@address,@contact_number,@email)";
-                    SqlCommand command = new SqlCommand(quer1, cnn);
-
-                    command.Parameters.AddWithValue("@first_name", textBoxf.Text);
-                    command.Parameters.AddWithValue("@last_name", textBoxl.Text);
-                    command.Parameters.AddWithValue("@address", textBox3.Text);
-                    command.Parameters.AddWithValue("@contact_number", textBox1.Text);
-                    command.Parameters.AddWithValue("@email", textBoxe.Text);
-                    command.ExecuteNonQuery();
-
-                    if (!string.IsNullOrEmpty(comboBox1.Text)) // for order
-                    {
-
-
-                        string quer = " select product_id , price from products where product_name  = '" + comboBox1.Text + "' ";
-
-                        SqlCommand comand;
-                        comand = new SqlCommand(quer, cnn);
-                        SqlDataReader reader = comand.ExecuteReader();
-
-
-                        reader.Read();
-
-
-
-                        pid = Convert.ToInt32(reader[0]);
-
-                        price = Convert.ToInt32(reader[1]);
-
-
-
-                        string quer2 = "INSERT INTO orders (product_id , quantity) values (@product_id , @quantity) ";
-                        SqlCommand d = new SqlCommand(quer2, cnn);
-
-                        d.Parameters.AddWithValue("@product_id", pid);
-                        d.Parameters.AddWithValue("@quantity", quantity);
-                        d.ExecuteNonQuery();
-
-
-                        cnn.Close();
-
-
-
-                        if (comboBox2.Text == "pay")// for order transaction paid
-                        {
-
-                        }
-                    }
-                    else
-                    {
-                        // for order
-                    }
-
-
-
+                    inserttransaction();
 
                 }
                 else
                 {
-                    MessageBox.Show(" fill up the ff.");
+
                 }
 
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show(" fill up the ff.");
 
             }
 
-        }
+
+        } // add button
+
+
 
         public void see()
         {
@@ -288,27 +215,26 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
 
-                    string n = comboBox1.Text;
+                    n = comboBox1.Text;
 
                     quantity = Convert.ToInt32(Math.Round(numericUpDown1.Value, 0));
                     Thread.Sleep(quantity);
+
+
+                    promo = Convert.ToInt32(Math.Round(numericUpDown3.Value, 0));
+                    Thread.Sleep(promo);
+
 
                     string quer2 = "INSERT INTO orders(product_id, quantity,orderstatus)VALUES (( SELECT product_id FROM products WHERE product_name = '" + n + "' ), @quantity,@status)";
                     SqlCommand command2 = new SqlCommand(quer2, cnn);
 
                     //   command2.Parameters.AddWithValue("@product_id", drd1.Read());
                     command2.Parameters.AddWithValue("@quantity", quantity);
-                    command2.Parameters.AddWithValue("@status", 1 );
+                    command2.Parameters.AddWithValue("@status", 1);
                     command2.ExecuteNonQuery();
 
 
                     //   int promo = Convert.ToInt32(numericUpDown3);
-                    int promo = Convert.ToInt32(Math.Round(numericUpDown3.Value, 0));
-                    Thread.Sleep(promo);
-
-
-
-
 
                     log_in_window l = new log_in_window();
                     user_class us = new user_class();
@@ -339,17 +265,6 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
 
                     sqlc.Close();
-
-                    string st = " SELECT price FROM products WHERE product_name = '" + n + "' ";
-                    SqlCommand cmd1 = new SqlCommand(st, sqlc);
-                    cmd1.CommandText = st;
-                    sqlc.Open();
-                    SqlDataReader drd1 = cmd1.ExecuteReader();
-                    drd1.Read();
-                    double price = Convert.ToInt32(drd1[0]);
-
-                    //     int count = Convert.ToInt32(Math.Round(numericUpDown1.Value, 0));
-                    //      Thread.Sleep(count);
 
 
                     l.addnewsell();
@@ -401,8 +316,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         {
             ArrayList clist = new ArrayList();
 
-            clist.Add(" pay ");
-            clist.Add(" pending payment ");
+            clist.Add("pay");
+            clist.Add("pending payment");
 
             foreach (string pos in clist)
             {
@@ -415,38 +330,100 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         {
 
         }
-
+        int count;
         private void button4_Click(object sender, EventArgs e)
         {
-
-            total_price = price * quantity;
-
-            textBox2.Text = Convert.ToString(total_price);
-            textBox2.Refresh();
+            compute();
 
 
         }
 
+
+
         private void button5_Click(object sender, EventArgs e)
         {
-            int pay = Convert.ToInt32(Math.Round(numericUpDown2.Value, 0));
+
+            SqlConnection cn = new SqlConnection(cc.conn);
+            cn.Open();
+
+            string quer3 = "UPDATE order_transaction SET status = 1 WHERE order_transaction_id = (select order_transaction_id from order_transaction where order_transaction_id = (select max(order_transaction_id) from order_transaction) )";
+
+            SqlCommand command = new SqlCommand(quer3, cn);
+            command.ExecuteNonQuery();
+
+
+            cn.Close();
+
+
+
+            pay = Convert.ToInt32(Math.Round(numericUpDown2.Value, 0));
             Thread.Sleep(pay);
-            if (pay > total_price)
-            {
-                double change = pay - total_price;
 
-                MessageBox.Show(" " + "\n" +
-                                "payment: " + pay + "\n" +
-                                "total pice: " + total_price + "\n" +
-                                "change: " + change + " " + " \n "
-                                , " payment ", MessageBoxButtons.OK);
+            //if (comboBox2.Text.Equals("pay"))
+            //{
+            if (pay >= total_price)
+                {
+                    double change = pay - total_price;
 
-            }
-            else
-            {
-                MessageBox.Show(" input the right amount to pay ", " payment ", MessageBoxButtons.OK);
-            }
+                    MessageBox.Show(" " + "\n" +
+                                    "payment: " + pay + "\n" +
+                                    "quantity: " + count + "\n" +
+                                    "price: " + price + "\n" +
+                                    "total pice: " + total_price + "\n" +
+                                    "change: " + change + " " + " \n "
+                                    , " payment ", MessageBoxButtons.OK);
 
+                }
+                else
+                {
+                    MessageBox.Show(" input the right amount to pay ", " payment ", MessageBoxButtons.OK);
+                }
+
+            //}
+            //else
+            //{
+            //    MessageBox.Show(" select pay from payment method to pay ", " payment ", MessageBoxButtons.OK);
+            //}
+
+
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+            compute();
+
+        }
+
+        public void compute()
+        {
+            SqlConnection sqlc = new SqlConnection(cc.conn);
+
+            string st = " SELECT price FROM products WHERE product_name = '" + comboBox1.Text + "' ";
+            SqlCommand cmd1 = new SqlCommand(st, sqlc);
+            cmd1.CommandText = st;
+            sqlc.Open();
+            SqlDataReader drd1 = cmd1.ExecuteReader();
+            drd1.Read();
+
+            price = Convert.ToDouble(drd1[0]);
+
+            total_price = price * count;
+
+            sqlc.Close();
+
+
+            count = Convert.ToInt32(Math.Round(numericUpDown1.Value, 0));
+            Thread.Sleep(count);
+
+            textBox2.Text = Convert.ToString(total_price);
 
         }
     }

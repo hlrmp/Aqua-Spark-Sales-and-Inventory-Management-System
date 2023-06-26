@@ -36,6 +36,14 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button6.Hide();
             button7.Hide();
             button8.Hide();
+
+            pictureBox3.Hide();
+            textBox1.Hide();
+            button10.Hide();
+            button9.Hide();
+            button11.Hide();
+
+
             //  panel1.Hide();
 
         } // home button 
@@ -63,11 +71,19 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button7.Hide();
             button8.Hide();
 
+            pictureBox3.Hide();
+            textBox1.Hide();
+            button10.Hide();
+            button9.Hide();
+            button11.Hide();
+
+            textBox1.Clear();
+
         } // add button
 
         private void button3_Click(object sender, EventArgs e) // remove button
         {
-
+            see();
             s.Hide();
             //    panel1.Hide();
 
@@ -79,6 +95,14 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             pictureBox1.Show();
 
             dataGridView_sales.Refresh();
+
+            pictureBox3.Hide();
+            textBox1.Hide();
+            button10.Hide();
+            button9.Hide();
+            button11.Hide();
+
+            textBox1.Clear();
 
         }// remove button
 
@@ -157,6 +181,14 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button6.Hide();
             button7.Hide();
             button8.Hide();
+
+            pictureBox3.Hide();
+            textBox1.Hide();
+            button10.Hide();
+            button9.Hide();
+            button11.Hide();
+
+            textBox1.Clear();
 
         }  // orders
 
@@ -275,6 +307,15 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button7.Hide();
             button8.Hide();
 
+
+
+            textBox1.Show();
+            button10.Show();
+            button9.Show();
+            button11.Show();
+            pictureBox3.Show();
+
+
         }// delivery button
 
         public void delivery()
@@ -366,6 +407,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button6.Hide();
             button7.Hide();
             button8.Hide();
+
+            textBox2.Clear();
         }
 
         private void button7_Click(object sender, EventArgs e) // delete button
@@ -380,7 +423,10 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 command.ExecuteNonQuery();
 
                 cn.Close();
+
+                see();
                 dataGridView_sales.Refresh();
+
             } // delete button
 
 
@@ -398,8 +444,64 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 command.ExecuteNonQuery();
 
                 cn.Close();
-                dataGridView_sales.Refresh();
+
+
+
             }
         }// undo button
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection cn = new SqlConnection(cen.conn))
+            {
+
+
+                cn.Open();
+                string st = " UPDATE delivery SET delivery_status = 2 WHERE delivery_id ='" + textBox1.Text + "' ";  // #2 delivered #1 pending
+                SqlCommand command = new SqlCommand(st, cn);
+                command.ExecuteNonQuery();
+
+                cn.Close();
+
+
+                delivered();
+                dataGridView_sales.Refresh();
+            }
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            pictureBox3.Hide();
+            textBox1.Hide();
+            button10.Hide();
+            button9.Hide();
+            button11.Hide();
+
+            textBox1.Clear();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection cn = new SqlConnection(cen.conn))
+            {
+
+
+                cn.Open();
+                string st = " UPDATE delivery SET delivery_status = 1 WHERE delivery_id ='" + textBox1.Text + "' ";  // #2 delivered #1 pending
+                SqlCommand command = new SqlCommand(st, cn);
+                command.ExecuteNonQuery();
+
+                cn.Close();
+
+                delivery();
+                dataGridView_sales.Refresh();
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -34,8 +34,14 @@
             button2 = new Button();
             button3 = new Button();
             pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            button8 = new Button();
+            textBox2 = new TextBox();
+            button7 = new Button();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView_customers).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -123,6 +129,75 @@
             pictureBox2.TabIndex = 43;
             pictureBox2.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.Left;
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox1.Location = new Point(25, 112);
+            pictureBox1.Margin = new Padding(8);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(217, 175);
+            pictureBox1.TabIndex = 84;
+            pictureBox1.TabStop = false;
+            pictureBox1.Visible = false;
+            // 
+            // button8
+            // 
+            button8.Anchor = AnchorStyles.Left;
+            button8.BackColor = Color.FromArgb(255, 192, 192);
+            button8.FlatStyle = FlatStyle.Popup;
+            button8.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button8.ForeColor = SystemColors.ActiveCaptionText;
+            button8.Location = new Point(204, 112);
+            button8.Name = "button8";
+            button8.Size = new Size(38, 27);
+            button8.TabIndex = 85;
+            button8.Text = "X";
+            button8.UseVisualStyleBackColor = false;
+            button8.Visible = false;
+            button8.Click += button8_Click_1;
+            // 
+            // textBox2
+            // 
+            textBox2.Anchor = AnchorStyles.Left;
+            textBox2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox2.Location = new Point(47, 145);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(175, 55);
+            textBox2.TabIndex = 86;
+            textBox2.Visible = false;
+            // 
+            // button7
+            // 
+            button7.Anchor = AnchorStyles.Left;
+            button7.BackColor = Color.FromArgb(255, 192, 192);
+            button7.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button7.ForeColor = SystemColors.ActiveCaptionText;
+            button7.Location = new Point(47, 224);
+            button7.Name = "button7";
+            button7.Size = new Size(80, 37);
+            button7.TabIndex = 87;
+            button7.Text = "DELETE";
+            button7.UseVisualStyleBackColor = false;
+            button7.Visible = false;
+            button7.Click += button7_Click_1;
+            // 
+            // button6
+            // 
+            button6.Anchor = AnchorStyles.Left;
+            button6.BackColor = Color.FromArgb(128, 255, 128);
+            button6.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button6.ForeColor = SystemColors.ActiveCaptionText;
+            button6.Location = new Point(149, 224);
+            button6.Name = "button6";
+            button6.Size = new Size(73, 37);
+            button6.TabIndex = 88;
+            button6.Text = "UNDO";
+            button6.UseVisualStyleBackColor = false;
+            button6.Visible = false;
+            button6.Click += button6_Click;
+            // 
             // Customers_Window
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -130,6 +205,11 @@
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1036, 475);
+            Controls.Add(button6);
+            Controls.Add(button7);
+            Controls.Add(textBox2);
+            Controls.Add(button8);
+            Controls.Add(pictureBox1);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(label1);
@@ -143,6 +223,7 @@
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)dataGridView_customers).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -155,5 +236,10 @@
         private Button button2;
         private Button button3;
         private PictureBox pictureBox2;
+        private PictureBox pictureBox1;
+        private Button button8;
+        private TextBox textBox2;
+        private Button button7;
+        private Button button6;
     }
 }

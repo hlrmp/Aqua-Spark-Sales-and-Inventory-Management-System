@@ -256,6 +256,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             pictureBox2.Size = new Size(271, 831);
             pictureBox2.TabIndex = 41;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // panel1
             // 
@@ -315,7 +316,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.Right;
-            textBox1.Location = new Point(862, 150);
+            textBox1.Location = new Point(853, 150);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(118, 25);
             textBox1.TabIndex = 50;

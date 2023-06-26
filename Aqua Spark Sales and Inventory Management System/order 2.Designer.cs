@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             label1 = new Label();
             button1 = new Button();
             pictureBox2 = new PictureBox();
@@ -42,14 +42,20 @@
             dataGridView_sales = new DataGridView();
             button5 = new Button();
             comboBox2 = new ComboBox();
-            textBox2 = new TextBox();
             button7 = new Button();
             button6 = new Button();
             pictureBox1 = new PictureBox();
             button8 = new Button();
+            pictureBox3 = new PictureBox();
+            textBox1 = new TextBox();
+            button9 = new Button();
+            button10 = new Button();
+            button11 = new Button();
+            textBox2 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_sales).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -156,44 +162,47 @@
             // 
             // dataGridView_sales
             // 
+            dataGridView_sales.AllowUserToAddRows = false;
+            dataGridView_sales.AllowUserToDeleteRows = false;
             dataGridView_sales.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView_sales.BackgroundColor = Color.FromArgb(194, 222, 220);
             dataGridView_sales.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(192, 255, 255);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.Desktop;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView_sales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(192, 255, 255);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dataGridView_sales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dataGridView_sales.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(192, 255, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ButtonFace;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(128, 128, 255);
-            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView_sales.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(192, 255, 255);
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = SystemColors.ButtonFace;
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(128, 128, 255);
+            dataGridViewCellStyle6.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dataGridView_sales.DefaultCellStyle = dataGridViewCellStyle6;
             dataGridView_sales.GridColor = Color.FromArgb(192, 192, 255);
             dataGridView_sales.Location = new Point(35, 121);
             dataGridView_sales.Name = "dataGridView_sales";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(192, 255, 255);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.Desktop;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView_sales.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridView_sales.ReadOnly = true;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = Color.FromArgb(192, 255, 255);
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            dataGridView_sales.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             dataGridView_sales.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(192, 255, 255);
-            dataGridViewCellStyle4.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(192, 192, 255);
-            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
-            dataGridView_sales.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = Color.FromArgb(192, 255, 255);
+            dataGridViewCellStyle8.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle8.ForeColor = Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(192, 192, 255);
+            dataGridViewCellStyle8.SelectionForeColor = Color.Black;
+            dataGridView_sales.RowsDefaultCellStyle = dataGridViewCellStyle8;
             dataGridView_sales.RowTemplate.Height = 25;
             dataGridView_sales.Size = new Size(962, 501);
             dataGridView_sales.TabIndex = 31;
@@ -228,17 +237,6 @@
             comboBox2.Visible = false;
             comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
-            // textBox2
-            // 
-            textBox2.Anchor = AnchorStyles.Right;
-            textBox2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.Location = new Point(1029, 163);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(175, 55);
-            textBox2.TabIndex = 80;
-            textBox2.Visible = false;
-            // 
             // button7
             // 
             button7.Anchor = AnchorStyles.Right;
@@ -272,7 +270,9 @@
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.Right;
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.Location = new Point(1014, 121);
+            pictureBox1.Margin = new Padding(8);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(206, 175);
             pictureBox1.TabIndex = 83;
@@ -283,6 +283,7 @@
             // 
             button8.Anchor = AnchorStyles.Right;
             button8.BackColor = Color.FromArgb(255, 192, 192);
+            button8.FlatStyle = FlatStyle.Popup;
             button8.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             button8.ForeColor = SystemColors.ActiveCaptionText;
             button8.Location = new Point(1182, 120);
@@ -294,12 +295,98 @@
             button8.Visible = false;
             button8.Click += button8_Click;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Anchor = AnchorStyles.Right;
+            pictureBox3.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox3.Location = new Point(1014, 309);
+            pictureBox3.Margin = new Padding(8);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(206, 175);
+            pictureBox3.TabIndex = 85;
+            pictureBox3.TabStop = false;
+            pictureBox3.Visible = false;
+            // 
+            // textBox1
+            // 
+            textBox1.Anchor = AnchorStyles.Right;
+            textBox1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox1.Location = new Point(1029, 342);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(175, 55);
+            textBox1.TabIndex = 86;
+            textBox1.Visible = false;
+            // 
+            // button9
+            // 
+            button9.Anchor = AnchorStyles.Right;
+            button9.BackColor = Color.FromArgb(255, 192, 192);
+            button9.FlatStyle = FlatStyle.Popup;
+            button9.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button9.ForeColor = SystemColors.ActiveCaptionText;
+            button9.Location = new Point(1182, 309);
+            button9.Name = "button9";
+            button9.Size = new Size(38, 27);
+            button9.TabIndex = 87;
+            button9.Text = "X";
+            button9.UseVisualStyleBackColor = false;
+            button9.Visible = false;
+            button9.Click += button9_Click;
+            // 
+            // button10
+            // 
+            button10.Anchor = AnchorStyles.Right;
+            button10.BackColor = Color.FromArgb(255, 192, 192);
+            button10.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button10.ForeColor = SystemColors.ActiveCaptionText;
+            button10.Location = new Point(1029, 422);
+            button10.Name = "button10";
+            button10.Size = new Size(80, 37);
+            button10.TabIndex = 88;
+            button10.Text = "DELIVERED";
+            button10.UseVisualStyleBackColor = false;
+            button10.Visible = false;
+            button10.Click += button10_Click;
+            // 
+            // button11
+            // 
+            button11.Anchor = AnchorStyles.Right;
+            button11.BackColor = Color.FromArgb(128, 255, 128);
+            button11.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button11.ForeColor = SystemColors.ActiveCaptionText;
+            button11.Location = new Point(1131, 422);
+            button11.Name = "button11";
+            button11.Size = new Size(73, 37);
+            button11.TabIndex = 89;
+            button11.Text = "UNDO";
+            button11.UseVisualStyleBackColor = false;
+            button11.Visible = false;
+            button11.Click += button11_Click;
+            // 
+            // textBox2
+            // 
+            textBox2.Anchor = AnchorStyles.Right;
+            textBox2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox2.Location = new Point(1029, 163);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(175, 55);
+            textBox2.TabIndex = 80;
+            textBox2.Visible = false;
+            textBox2.TextChanged += textBox2_TextChanged;
+            // 
             // order_2
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(1216, 658);
+            Controls.Add(button11);
+            Controls.Add(button10);
+            Controls.Add(textBox1);
+            Controls.Add(button9);
+            Controls.Add(pictureBox3);
             Controls.Add(button6);
             Controls.Add(button7);
             Controls.Add(button8);
@@ -325,6 +412,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_sales).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -340,10 +428,15 @@
         private DataGridView dataGridView_sales;
         private Button button5;
         private ComboBox comboBox2;
-        private TextBox textBox2;
         private Button button7;
         private Button button6;
         private PictureBox pictureBox1;
         private Button button8;
+        private PictureBox pictureBox3;
+        private TextBox textBox1;
+        private Button button9;
+        private Button button10;
+        private Button button11;
+        private TextBox textBox2;
     }
 }

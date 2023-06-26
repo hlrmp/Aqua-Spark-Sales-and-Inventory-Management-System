@@ -35,6 +35,7 @@
             pictureBox2 = new PictureBox();
             button2 = new Button();
             button4 = new Button();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView_inventory).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -137,6 +138,20 @@
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
+            // comboBox1
+            // 
+            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            comboBox1.BackColor = Color.CadetBlue;
+            comboBox1.FlatStyle = FlatStyle.Flat;
+            comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(721, 83);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(239, 29);
+            comboBox1.TabIndex = 50;
+            comboBox1.Text = "           SORT BY";
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
             // Inventory_Wiindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -144,6 +159,7 @@
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1019, 512);
+            Controls.Add(comboBox1);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(label1);
@@ -170,5 +186,6 @@
         private PictureBox pictureBox2;
         private Button button2;
         private Button button4;
+        private ComboBox comboBox1;
     }
 }

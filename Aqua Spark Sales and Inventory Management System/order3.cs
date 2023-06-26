@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Identity.Client;
+using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Microsoft.VisualBasic;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -27,7 +28,12 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         }
 
         connection_class cc = new connection_class();
+
         int quantity;
+        double total;
+        double price;
+        string clickeddate;
+
         private void button8_Click(object sender, EventArgs e) // ADD BUTTON 
         {
             string cn = cbcn.Text;
@@ -37,21 +43,32 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             quantity = Convert.ToInt32(Math.Round(numericUpDownquan.Value, 0));
             Thread.Sleep(quantity);
 
-            if (button8 != null)
+
+            try
+            {
+                if (button8 != null)
+                {
+
+                    addorder();
+
+                }
+                else
+                {
+
+                }
+
+            }
+            catch (Exception)
             {
 
-                addorder();
-
-              
-            }
-            else
-            {
+                MessageBox.Show(" fill up the ff.");
 
             }
+            
 
         } // ADD BUTTON 
 
-        double total;
+
         public void addorder()
         {
             SqlConnection sqlc = new SqlConnection(cc.conn);
@@ -60,13 +77,13 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             SqlCommand command2 = new SqlCommand(quer2, sqlc);
 
             command2.Parameters.AddWithValue("@quantity", quantity);
-            command2.Parameters.AddWithValue("@orderstatus", 1 );
+            command2.Parameters.AddWithValue("@orderstatus", 1);
 
             command2.ExecuteNonQuery();
 
 
 
-          //  int promo = Convert.ToInt32(numericUpDown3);
+            //  int promo = Convert.ToInt32(numericUpDown3);
 
             int promo = Convert.ToInt32(Math.Round(numericUpDown3.Value, 0));
             Thread.Sleep(promo);
@@ -94,7 +111,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
             sqlc.Close();
 
-            string clickeddate = monthCalendar1.SelectionRange.Start.ToString("M/d/yyyy");
+             clickeddate = monthCalendar1.SelectionRange.Start.ToString("M/d/yyyy");
 
             string quer5 = "INSERT INTO delivery(order_transacton_id , costumer_id , delivery_status , delivery_date) values((select order_transaction_id from order_transaction where order_transaction_id = (select max(order_transaction_id) from order_transaction)) ,(select customer_id from order_transaction where order_transaction_id = (select max(order_transaction_id) from order_transaction)), 1, '" + clickeddate + "')";
 
@@ -104,30 +121,32 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
             command5.ExecuteNonQuery();
 
+            l.addsell();
+
+            if (MessageBox.Show(" sucessfully added ", " ", MessageBoxButtons.OK) == DialogResult.OK)
+            {
+                textBox1.Clear();
+                textBox2.Clear();
+                numericUpDown3.ResetText();
+                numericUpDownquan.ResetText();
+                comboBox1.ResetText();
+                cbcn.ResetText();
+                cbi.ResetText();
+                dataGridView1.Refresh();
+                label4.Text = "PRICE";
+
+            }
 
 
+            else
+            {
+                MessageBox.Show(" fill up the ff.");
+            }
             sqlc.Close();
 
 
 
-            string st = " SELECT price FROM products WHERE product_name = '" + cbi.Text + "' ";
-            SqlCommand cmd1 = new SqlCommand(st, sqlc);
-            cmd1.CommandText = st;
-            sqlc.Open();
-            SqlDataReader drd1 = cmd1.ExecuteReader();
-            drd1.Read();
-            double price = Convert.ToDouble(drd1[0]);
 
-            int count = Convert.ToInt32(Math.Round(numericUpDownquan.Value, 0));
-            Thread.Sleep(count);
-
-
-             total = price * count;
-
-            label4.Text = Convert.ToString(total);
-
-            sqlc.Close();
-            
         }
 
         public void seecustomers()
@@ -162,29 +181,22 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         public void seeitems()
         {
             SqlConnection sqlc = new SqlConnection(cc.conn);
-            try
+
+            string str = "select product_name from products";
+            SqlCommand cmd = new SqlCommand(str, sqlc);
+            cmd.CommandText = str;
+            sqlc.Open();
+            SqlDataReader drd = cmd.ExecuteReader();
+            while (drd.Read())
             {
-                string str = "select product_name from products";
-                SqlCommand cmd = new SqlCommand(str, sqlc);
-                cmd.CommandText = str;
-                sqlc.Open();
-                SqlDataReader drd = cmd.ExecuteReader();
-                while (drd.Read())
-                {
-                    cbi.Items.Add(drd["product_name"].ToString());
+                cbi.Items.Add(drd["product_name"].ToString());
 
 
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Error ", " Error ", MessageBoxButtons.OK);
             }
 
-            finally
-            {
-                sqlc.Close();
-            }
+
+            sqlc.Close();
+
         }
 
 
@@ -208,6 +220,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             cbcn.ResetText();
             cbi.ResetText();
             dataGridView1.Refresh();
+            label4.Text = "PRICE";
 
 
         }// clear button
@@ -220,8 +233,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         {
             ArrayList clist = new ArrayList();
 
-            clist.Add(" pay ");
-            clist.Add(" pending payment ");
+            clist.Add("pay");
+            clist.Add("pending payment");
 
             foreach (string pos in clist)
             {
@@ -291,7 +304,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         {
             dataGridView1.Refresh();
             see();
-          
+
 
         } // existing order
 
@@ -346,7 +359,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 SqlConnection cn = new SqlConnection(cc.conn);
                 cn.Open();
 
-                string quer3 = " UPDATE order_transaction SET status = '1' WHERE status = '2' ";
+                string quer3 = "UPDATE order_transaction SET status = 1 WHERE order_transaction_id = (select order_transaction_id from order_transaction where order_transaction_id = (select max(order_transaction_id) from order_transaction) )";
 
                 SqlCommand command = new SqlCommand(quer3, cn);
                 command.ExecuteNonQuery();
@@ -357,12 +370,15 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 int pay = Convert.ToInt32(Math.Round(numericUpDownquan.Value, 0));
                 Thread.Sleep(pay);
 
-                if (pay > total)
+                double payment = Convert.ToDouble(textBox1.Text);
+
+                if (payment >= total)
                 {
-                    double change = pay - total;
+                    double change = payment - total;
 
                     MessageBox.Show(" " + "\n" +
-                                    "payment: " + pay + "\n" +
+                                    "quantity: " + pay + "\n" +
+                                    "price:" + price + "\n" +
                                     "total pice: " + total + "\n" +
                                     "change: " + change + " " + " \n "
                                     , " payment ", MessageBoxButtons.OK);
@@ -379,8 +395,43 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 MessageBox.Show(" please input the payment ");
             }
 
-          
+
 
         } // pay
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlConnection sqlc = new SqlConnection(cc.conn);
+
+            string st = " SELECT price FROM products WHERE product_name = '" + cbi.Text + "' ";
+            SqlCommand cmd1 = new SqlCommand(st, sqlc);
+            cmd1.CommandText = st;
+            sqlc.Open();
+            SqlDataReader drd1 = cmd1.ExecuteReader();
+            drd1.Read();
+
+            price = Convert.ToDouble(drd1[0]);
+
+            int count = Convert.ToInt32(Math.Round(numericUpDownquan.Value, 0));
+            Thread.Sleep(count);
+
+            sqlc.Close();
+
+            if (comboBox1.Text == "pay")
+            {
+
+                total = price * count;
+
+                label4.Text = Convert.ToString(total);
+
+
+
+
+            }
+            else
+            {
+
+            }
+        }
     }
 }

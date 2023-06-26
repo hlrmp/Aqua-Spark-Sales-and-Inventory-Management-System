@@ -53,6 +53,7 @@
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             button2 = new Button();
             dataGridView1 = new DataGridView();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -363,6 +364,16 @@
             dataGridView1.TabIndex = 44;
             dataGridView1.Visible = false;
             // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.BackColor = Color.Transparent;
+            panel1.Location = new Point(308, 137);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1005, 572);
+            panel1.TabIndex = 46;
+            panel1.Visible = false;
+            // 
             // main_window
             // 
             AutoScaleDimensions = new SizeF(9F, 18F);
@@ -370,6 +381,7 @@
             BackgroundImage = Properties.Resources._int;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1354, 733);
+            Controls.Add(panel1);
             Controls.Add(button2);
             Controls.Add(button12);
             Controls.Add(buttonemp);
@@ -425,5 +437,6 @@
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
         private Button button2;
         private DataGridView dataGridView1;
+        private Panel panel1;
     }
 }

@@ -18,6 +18,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         {
             InitializeComponent();
             invent();
+            size();
         }
         connection_class ccs = new connection_class();
         private void button1_Click(object sender, EventArgs e)  // HOME
@@ -25,6 +26,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             main_window mw = new main_window();
             mw.Show();
             this.Hide();
+
         } // HOME
 
 
@@ -38,7 +40,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
             foreach (string pos in clist)
             {
-               
+
             }
 
         }
@@ -258,6 +260,141 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         {
 
             monthly();
+        }
+
+
+
+        public void size()
+        {
+            ArrayList clist = new ArrayList();
+
+            clist.Add("small");
+            clist.Add("medium");
+            clist.Add("large");
+
+            foreach (string pos in clist)
+            {
+                comboBox1.Items.Add(pos);
+            }
+
+        }
+
+        public void small()
+        {
+            using (SqlConnection cn = new SqlConnection(ccs.conn))
+            {
+
+
+
+
+                cn.Open();
+                string st = "select SUM(product_id) AS 'transaction' , SUM(quantity) AS 'total product sell' from orders where orderstatus = 1 AND product_id = 1 ";
+                SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
+                SqlCommand command = new SqlCommand();
+
+                command.CommandText = st;
+                command.Parameters.Clear();
+                DataTable table = new DataTable();
+                adapt.Fill(table);
+
+                dataGridView_inventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView_inventory.DataSource = table;
+
+
+
+                cn.Close();
+
+                // to close the connection
+
+
+            }
+
+
+        }
+        public void medium()
+        {
+            using (SqlConnection cn = new SqlConnection(ccs.conn))
+            {
+
+
+
+
+                cn.Open();
+                string st = "select SUM(product_id) AS 'transaction' , SUM(quantity) AS 'total product sell' from orders where orderstatus = 1 AND product_id = 2\r\n";
+                SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
+                SqlCommand command = new SqlCommand();
+
+                command.CommandText = st;
+                command.Parameters.Clear();
+                DataTable table = new DataTable();
+                adapt.Fill(table);
+
+                dataGridView_inventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView_inventory.DataSource = table;
+
+
+
+                cn.Close();
+
+                // to close the connection
+
+
+            }
+
+
+        }
+
+        public void large()
+        {
+            using (SqlConnection cn = new SqlConnection(ccs.conn))
+            {
+
+
+
+
+                cn.Open();
+                string st = "select SUM(product_id) AS 'transaction' , SUM(quantity) AS 'total product sell' from orders where orderstatus = 1 AND product_id = 3\r\n";
+                SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
+                SqlCommand command = new SqlCommand();
+
+                command.CommandText = st;
+                command.Parameters.Clear();
+                DataTable table = new DataTable();
+                adapt.Fill(table);
+
+                dataGridView_inventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView_inventory.DataSource = table;
+
+
+
+                cn.Close();
+
+                // to close the connection
+
+
+            }
+
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "small")
+            {
+                small();
+                dataGridView_inventory.Refresh();
+
+            }
+            else if (comboBox1.Text == "medium")
+            {
+                medium();
+                dataGridView_inventory.Refresh();
+            }
+            else if (comboBox1.Text == "large")
+            {
+                large();
+                dataGridView_inventory.Refresh();
+            }
         }
     }
 }

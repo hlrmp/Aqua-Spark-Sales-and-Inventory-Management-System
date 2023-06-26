@@ -56,7 +56,7 @@
             buttonNEW.FlatStyle = FlatStyle.Popup;
             buttonNEW.Font = new Font("Stencil", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             buttonNEW.ForeColor = SystemColors.ActiveCaptionText;
-            buttonNEW.Location = new Point(45, 69);
+            buttonNEW.Location = new Point(45, 86);
             buttonNEW.Name = "buttonNEW";
             buttonNEW.Size = new Size(175, 38);
             buttonNEW.TabIndex = 55;
@@ -85,7 +85,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.White;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(12, 28);
+            label1.Location = new Point(20, 41);
             label1.Name = "label1";
             label1.Size = new Size(232, 25);
             label1.TabIndex = 57;
@@ -96,7 +96,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            BackColor = Color.White;
+            BackColor = Color.DodgerBlue;
             ClientSize = new Size(264, 194);
             Controls.Add(label1);
             Controls.Add(buttonOLD);

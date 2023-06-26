@@ -116,7 +116,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(-5, 276);
+            label3.Location = new Point(2, 276);
             label3.Name = "label3";
             label3.Size = new Size(105, 15);
             label3.TabIndex = 56;
@@ -133,9 +133,10 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.White;
+            label4.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(113, 276);
             label4.Name = "label4";
-            label4.Size = new Size(39, 15);
+            label4.Size = new Size(71, 30);
             label4.TabIndex = 61;
             label4.Text = "PRICE";
             // 
@@ -238,6 +239,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(87, 23);
             comboBox1.TabIndex = 75;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // numericUpDown3
             // 
@@ -250,7 +252,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(49, 239);
+            label9.Location = new Point(49, 245);
             label9.Name = "label9";
             label9.Size = new Size(51, 15);
             label9.TabIndex = 77;

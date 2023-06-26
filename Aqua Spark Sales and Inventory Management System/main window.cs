@@ -30,17 +30,30 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
             iw.Show();
             this.Hide();
-
+            panel1.Hide();
 
         }  // inventory window
 
         Sales_window sw = new Sales_window();
+        sales2 s2 = new sales2();
         private void button2_Click(object sender, EventArgs e) // sales window
         {
 
-            sw.Show();
-            this.Hide();
+            s2.Show();
+            panel1.Show();
 
+            s2.Show();
+            s2.FormBorderStyle = FormBorderStyle.None;
+            s2.TopLevel = false;
+            s2.Dock = DockStyle.Fill;
+
+            o2.AutoScroll = true;
+            panel1.Controls.Add(s2);
+
+
+            o2.Hide();
+            a.Hide();
+       
         } // sales window
 
 
@@ -48,8 +61,8 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         {
             log_in_window lg = new log_in_window();
             lg.addlogout();
-            
 
+            panel1.Hide();
 
 
             if (button8logout != null)
@@ -66,25 +79,40 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
                 // sw1.Hide();
 
 
+
+
+                lg.addlogout();
+
+
             }
         } // log out window
 
         Orders_Window ow = new Orders_Window();
+        order_2 o2 = new order_2();
         private void button1_Click(object sender, EventArgs e)  // orders window
         {
+            panel1.Show();
+            
+            o2.Show();
+            o2.FormBorderStyle = FormBorderStyle.None;
+            o2.TopLevel = false;
+            o2.Dock = DockStyle.Fill;
 
-            ow.Show();
-            this.Hide();
+            o2.AutoScroll = true;
+            panel1.Controls.Add(o2);
+
+
+            o2.Show();
+            a.Hide();
+            s2.Hide();
 
         }  // orders window
 
         Customers_Window cw = new Customers_Window();
         private void button3_Click(object sender, EventArgs e) // customers windows 
         {
-
-            cw.Show();
-            this.Hide();
-
+            cw.Show();           
+            panel1.Hide();
         } // customers windows 
 
         private void button5_Click(object sender, EventArgs e) // list button
@@ -98,7 +126,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             // saleslist();
             //seelist();
             orderlist();
-
+            panel1.Hide();
 
         }// list button
 
@@ -114,6 +142,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             //    listBox1.Hide();
             //    dataGridView_main.Hide();
             dataGridView1.Hide();
+            panel1.Hide();
         }// sell button
 
         New_Order no = new New_Order();
@@ -129,6 +158,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             //  listBox1.Hide();
             //    dataGridView_main.Hide();
             dataGridView1.Hide();
+            panel1.Hide();
         }// add order
 
         private void button12_Click(object sender, EventArgs e) // x button list box
@@ -140,7 +170,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             buttonpay.Hide();
             buttoncncel.Hide();
 
-
+            panel1.Hide();
         }// x button list box
 
 
@@ -168,6 +198,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button7.Show();
             button8logout.Show();
             dataGridView1.Hide();
+            panel1.Hide();
             // dataGridView_main.Hide();
         } //minimimze button
 
@@ -183,7 +214,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             button2.Show();
 
             button1.Hide();
-
+            panel1.Hide();
             button5.Hide();
             button6.Hide();
             button7.Hide();
@@ -198,7 +229,7 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         {
 
             su.Show();
-
+            panel1.Hide();
 
         } // employee button
 
@@ -261,7 +292,19 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         sign_up a = new sign_up();
         private void button2_Click_2(object sender, EventArgs e) // emp button
         {
+            panel1.Show();
+
             a.Show();
+            a.FormBorderStyle = FormBorderStyle.None;
+            a.TopLevel = false;
+            a.Dock = DockStyle.Fill;
+
+            a.AutoScroll = true;
+            panel1.Controls.Add(a);
+
+            a.Show();
+            o2.Hide();
+            s2.Hide();
 
         }//emp button
 

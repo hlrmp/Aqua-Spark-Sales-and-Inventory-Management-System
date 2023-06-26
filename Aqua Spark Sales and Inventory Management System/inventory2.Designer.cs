@@ -28,31 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView_sales = new DataGridView();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             label1 = new Label();
             button1 = new Button();
             pictureBox2 = new PictureBox();
             button3 = new Button();
             button4 = new Button();
             comboBox1 = new ComboBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView_sales).BeginInit();
+            dataGridView_sales = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_sales).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridView_sales
-            // 
-            dataGridView_sales.AllowUserToAddRows = false;
-            dataGridView_sales.AllowUserToDeleteRows = false;
-            dataGridView_sales.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView_sales.BackgroundColor = Color.FromArgb(194, 222, 220);
-            dataGridView_sales.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_sales.Location = new Point(54, 145);
-            dataGridView_sales.Name = "dataGridView_sales";
-            dataGridView_sales.ReadOnly = true;
-            dataGridView_sales.RowHeadersWidth = 51;
-            dataGridView_sales.RowTemplate.Height = 25;
-            dataGridView_sales.Size = new Size(916, 450);
-            dataGridView_sales.TabIndex = 31;
             // 
             // label1
             // 
@@ -64,7 +53,7 @@
             label1.Location = new Point(-10, -2);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1581, 71);
+            label1.Size = new Size(1269, 57);
             label1.TabIndex = 32;
             label1.Text = "                   AQUA SPARK INVENTORY REPORT                     \r\n";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -124,6 +113,7 @@
             button4.Text = "TOTAL";
             button4.UseMnemonic = false;
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // comboBox1
             // 
@@ -134,22 +124,70 @@
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(732, 99);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(239, 36);
+            comboBox1.Size = new Size(239, 29);
             comboBox1.TabIndex = 49;
             comboBox1.Text = "           SORT BY";
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // dataGridView_sales
+            // 
+            dataGridView_sales.AllowUserToAddRows = false;
+            dataGridView_sales.AllowUserToDeleteRows = false;
+            dataGridView_sales.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView_sales.BackgroundColor = Color.FromArgb(194, 222, 220);
+            dataGridView_sales.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(192, 255, 255);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView_sales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridView_sales.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(192, 255, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ButtonFace;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(128, 128, 255);
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView_sales.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridView_sales.GridColor = Color.FromArgb(192, 192, 255);
+            dataGridView_sales.Location = new Point(36, 153);
+            dataGridView_sales.Name = "dataGridView_sales";
+            dataGridView_sales.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(192, 255, 255);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView_sales.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridView_sales.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(192, 255, 255);
+            dataGridViewCellStyle4.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(192, 192, 255);
+            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
+            dataGridView_sales.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridView_sales.RowTemplate.Height = 25;
+            dataGridView_sales.Size = new Size(938, 454);
+            dataGridView_sales.TabIndex = 50;
             // 
             // inventory2
             // 
-            AutoScaleDimensions = new SizeF(14F, 36F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(1212, 646);
+            Controls.Add(dataGridView_sales);
             Controls.Add(comboBox1);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button1);
             Controls.Add(label1);
-            Controls.Add(dataGridView_sales);
             Controls.Add(pictureBox2);
             Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = SystemColors.ButtonFace;
@@ -158,8 +196,8 @@
             Name = "inventory2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "sales2";
-            ((System.ComponentModel.ISupportInitialize)dataGridView_sales).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_sales).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

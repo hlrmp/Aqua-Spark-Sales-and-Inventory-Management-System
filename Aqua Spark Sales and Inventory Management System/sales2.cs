@@ -16,12 +16,12 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
         public sales2()
         {
             InitializeComponent();
+            see();
         }
         connection_class cnn = new connection_class();
         private void button1_Click(object sender, EventArgs e) // home button
         {
-            Home_window hm4 = new Home_window();
-            hm4.Show();
+         
             this.Hide();
 
         }// home button
@@ -39,39 +39,30 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
             using (SqlConnection cn = new SqlConnection(cnn.conn))
             {
 
-                try
-                {
-
-                    cn.Open();
-                    string st = "select order_transaction_id,o.order_id ,discount_id,staff_id,customer_id,ot.status,payment_method , transaction_date ,product_id ,quantity from order_transaction as ot inner join orders AS o on o.order_id = ot.order_id\r\n";
-                    SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
-                    SqlCommand command = new SqlCommand();
-
-                    command.CommandText = st;
-                    command.Parameters.Clear();
-                    DataTable table = new DataTable();
-                    adapt.Fill(table);
-
-                    dataGridView_sales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                    dataGridView_sales.DataSource = table;
 
 
-                }
-                catch (Exception)
-                {
 
-                    //MessageBox.Show(" user name or password incorect");
-                    MessageBox.Show("something went wrong", "error", MessageBoxButtons.OK);
+                cn.Open();
+                string st = "select order_transaction_id,o.order_id ,discount_id,staff_id,concat(c.first_name ,' ',c.last_name) as 'Customer name', transaction_date ,p.product_name ,quantity from order_transaction as ot inner join orders AS o on o.order_id = ot.order_id  inner join customer as c ON  c.customer_id = ot.customer_id inner join products AS p ON p.product_id = o.product_id\r\n";
+                SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
+                SqlCommand command = new SqlCommand();
+
+                command.CommandText = st;
+                command.Parameters.Clear();
+                DataTable table = new DataTable();
+                adapt.Fill(table);
+
+                dataGridView_sales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView_sales.DataSource = table;
 
 
 
 
-                }
-                finally     // to close the connection
-                {
-                    cn.Close();
 
-                } // to close the connection
+
+                cn.Close();
+
+                // to close the connection
 
 
             }
@@ -80,14 +71,64 @@ namespace Aqua_Spark_Sales_and_Inventory_Management_System
 
         }
 
-        private void button2_Click(object sender, EventArgs e) // ordered button 
+
+
+        private void button2_Click_1(object sender, EventArgs e)
         {
+            using (SqlConnection cn = new SqlConnection(cnn.conn))
+            {
 
-        } // ordered button 
+                cn.Open();
+                string st = "select order_transaction_id,o.order_id ,discount_id,staff_id,concat(c.first_name ,' ',c.last_name) as 'Customer name', transaction_date ,p.product_name ,quantity from order_transaction as ot inner join orders AS o on o.order_id = ot.order_id  inner join customer as c ON  c.customer_id = ot.customer_id inner join products AS p ON p.product_id = o.product_id where status = '1'";
 
-        private void button3_Click(object sender, EventArgs e) // walk in button
+                SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
+                SqlCommand command = new SqlCommand();
+
+                command.CommandText = st;
+                command.Parameters.Clear();
+                DataTable table = new DataTable();
+                adapt.Fill(table);
+
+                dataGridView_sales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView_sales.DataSource = table;
+
+
+
+                cn.Close();
+
+                // to close the connection
+
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
+            using (SqlConnection cn = new SqlConnection(cnn.conn))
+            {
 
-        } // walk in button
+
+                cn.Open();
+                string st = "select order_transaction_id,o.order_id ,discount_id,staff_id,concat(c.first_name ,' ',c.last_name) as 'Customer name', transaction_date ,p.product_name ,quantity from order_transaction as ot inner join orders AS o on o.order_id = ot.order_id  inner join customer as c ON  c.customer_id = ot.customer_id inner join products AS p ON p.product_id = o.product_id where status = '2'\r\n ";
+                SqlDataAdapter adapt = new SqlDataAdapter(st, cn);
+                SqlCommand command = new SqlCommand();
+
+                command.CommandText = st;
+                command.Parameters.Clear();
+                DataTable table = new DataTable();
+                adapt.Fill(table);
+
+                dataGridView_sales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView_sales.DataSource = table;
+
+
+
+                cn.Close();
+
+                // to close the connection
+
+
+            }
+        }
     }
 }
